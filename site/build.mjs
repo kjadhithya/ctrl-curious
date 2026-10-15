@@ -173,7 +173,7 @@ function home() {
 <div class="art" role="img" aria-label="A great wave rising and falling over moving swell lines, a small plum mountain under its curl and a wine sun high in the sky"><img src="/assets/blog/hero/bg.webp" alt="" fetchpriority="high"><img class="wave" src="/assets/blog/hero/wave.webp" alt=""><img class="band b1" src="/assets/blog/hero/band1.webp" alt=""><img class="band b2" src="/assets/blog/hero/band2.webp" alt=""><img class="band b3" src="/assets/blog/hero/band3.webp" alt=""><img class="band b4" src="/assets/blog/hero/band4.webp" alt=""><img class="band b5" src="/assets/blog/hero/band5.webp" alt=""><img class="band b6" src="/assets/blog/hero/band6.webp" alt=""></div>
 ${nav('home', false)}
 <div class="hero-copy">
-<div class="kicker"><span class="k-line" aria-hidden="true"></span><span class="k-name">A daily design digest</span><span class="k-chip"><svg width="13" height="13" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 4.5V8l2.4 1.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>Weekdays at 10:00 IST</span></div>
+<div class="kicker">A daily design digest · weekdays at 10:00 IST</div>
 <h1 id="hero-h">Catch the next wave in design.</h1>
 <p class="lede">Spot what&rsquo;s rising in design before everyone&rsquo;s talking about it.</p>
 ${signupForm('email-hero')}

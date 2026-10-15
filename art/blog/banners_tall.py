@@ -82,3 +82,13 @@ wave(im, 10, 110, 0.6, c['indigo'], c['skyb'], c['mist'], seed=5, soft=True)
 bands(im, start=1)
 save(ImageOps.mirror(im), 'banner_swell_wave_sun_tall.jpg', seed=7)
 print('done 5b')
+
+# 7 Swell lines with a wave, wine sun in the curl and a small snow-capped plum mountain behind
+im = canvas(c['paper'], c['clay'], 2)
+disc(im, 400, 300, 44, c['wine'])
+mountain(im, 350, 570, 460, 425, 575, c['plum'], snow=c['paper'])
+bands(im)
+wave(im, 10, 110, 0.6, c['indigo'], c['skyb'], c['mist'], seed=5, soft=True)
+bands(im, start=1)
+save(ImageOps.mirror(im), 'banner_swell_wave_mountain_tall.jpg', seed=7)
+print('done 7')

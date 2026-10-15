@@ -78,11 +78,18 @@ img=sky(SKYB*0.3+PAPER*0.7,PAPER,1.0); sun(img,420,330,100)
 sea=Y>380; stip(img,sea,PRUSSIAN,0.92)
 for y in range(392,H,16):
     row=(np.abs(Y-(y+4*np.sin(X/40+y)))<1.2)&sea; img[row]=SKYB
-edge=900+ (np.clip(Y-150,0,None))**0.85*-0.35 + 14*np.sin(Y/26) + 8*np.sin(Y/9)
-topline=150+30*np.clip((X-900)/300,0,1)**0.5*-1+6*np.sin(X/40)
-cl=(X>edge)&(Y>topline)
+yy=Y.astype(float); xx=X.astype(float)
+hz=380
+face=800 - 95*np.clip((yy-240)/(hz-240),0,1)**1.8 + 4*np.sin(yy/9) + 2*np.sin(yy/3.3)
+top=242 - 82*np.clip((xx-795)/405,0,1)**0.55 + 3*np.sin(xx/23)
+cl=(xx>face)&(yy>top)&(yy<=hz)
 stip(img,cl,PINE,0.94)
-grass=cl&(Y<topline+10); img[grass]=MOSS
+grass=cl&(yy<top+7); img[grass]=MOSS
+ref=(yy>hz)&(yy<hz+70)&(xx>800-95-30*((yy-hz)/70))
+img[ref]=img[ref]*0.55+PINE*0.45
+for rx,ry,rr in [(690,hz+2,12),(668,hz+3,7)]:
+    rock=((xx-rx)**2/(rr*1.5)**2+(yy-ry)**2/rr**2<1)&(yy<=hz+2)
+    img[rock]=PINE*0.8+INK*0.2
 save(img,'thu_06.jpg')
 
 # 07 Rain over hills: soft mist bands and slanted rain, muted sun

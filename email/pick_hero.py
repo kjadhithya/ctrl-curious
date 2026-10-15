@@ -10,7 +10,7 @@ Prints the public image URL, or nothing if that weekday has no pool yet.
 import datetime, random, sys, os
 
 BASE = 'https://raw.githubusercontent.com/kjadhithya/ctrl-curious/main/assets/email/days/'
-POOLS = {0: ('mon', 8), 1: ('tue', 8), 2: ('wed', 8)}        # weekday -> (folder, number of images); add tue..fri as they are made
+POOLS = {0: ('mon', 8), 1: ('tue', 8), 2: ('wed', 8), 3: ('thu', 8)}        # weekday -> (folder, number of images); add tue..fri as they are made
 START = datetime.date(2026, 10, 19)  # first Monday of the rotation
 
 def pick(day):

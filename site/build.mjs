@@ -357,3 +357,25 @@ write('404.html', notFound());
 write('feed.xml', feed());
 issues.forEach((i, idx) => write(`issues/${i.num}.html`, issuePage(i, idx)));
 console.log(`Built ${issues.length} issue(s) into public/`);
+
+// Cache busting: stamp every local asset URL with a hash of the file, so browsers fetch
+// new artwork, styles and scripts as soon as they change (assets are cached for a day).
+import crypto from 'node:crypto';
+const stampCache = {};
+function stamp(text) {
+  return text.replace(/(["'(])(\/(?:assets|static)\/[^"'()\s?#]+\.(?:webp|jpe?g|png|svg|css|js))(?=["')])/g, (m, q, url) => {
+    const f = path.join(OUT, url);
+    if (!fs.existsSync(f)) return m;
+    stampCache[url] ??= crypto.createHash('md5').update(fs.readFileSync(f)).digest('hex').slice(0, 10);
+    return `${q}${url}?v=${stampCache[url]}`;
+  });
+}
+// stamp the stylesheet first (its own references), then the pages that load it
+const cssFile = path.join(OUT, 'static/style.css');
+fs.writeFileSync(cssFile, stamp(fs.readFileSync(cssFile, 'utf8')));
+for (const f of fs.readdirSync(OUT, { recursive: true })) {
+  if (!String(f).endsWith('.html')) continue;
+  const p = path.join(OUT, String(f));
+  fs.writeFileSync(p, stamp(fs.readFileSync(p, 'utf8')));
+}
+console.log('Stamped asset URLs');

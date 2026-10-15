@@ -16,8 +16,13 @@ export async function readBody(request) {
   return form ? Object.fromEntries(form.entries()) : {};
 }
 
+// The key as pasted into Vercel, minus stray spaces, quotes or a "Bearer " prefix.
+export function resendKey() {
+  return String(process.env.RESEND_API_KEY || '').trim().replace(/^["']|["']$/g, '').replace(/^Bearer\s+/i, '').trim();
+}
+
 export async function notify(action, email, extra = '') {
-  const key = process.env.RESEND_API_KEY;
+  const key = resendKey();
   if (!key) throw new Error('RESEND_API_KEY is not set');
   const when = new Date().toISOString();
   const res = await fetch('https://api.resend.com/emails', {

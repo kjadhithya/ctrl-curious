@@ -65,7 +65,16 @@ save(im, 'signup_moonlit_swell.jpg', seed=24)
 print('done')
 
 # 5 Wine sunset: option 2's wine sky and wave-scale shore with option 3's ochre sun sinking at the horizon
-im = canvas(mixc(c['wine'], c['ink'], 0.55), mixc(c['wine'], c['ink'], 0.25), 1)
+# the original footer's background: wine fading to warm dark brown, mottled, as in the moon artwork
+rng_bg = np.random.default_rng(7)
+def _blur_noise(r):
+    n = Image.fromarray((rng_bg.random((H, W)) * 255).astype('uint8')).filter(ImageFilter.GaussianBlur(r*S))
+    a = np.asarray(n, dtype=float); return (a - a.min()) / (a.max() - a.min() + 1e-6)
+fbm = 0.5*_blur_noise(18) + 0.3*_blur_noise(6) + 0.2*_blur_noise(2)
+t = np.clip(fbm*0.6 + np.linspace(0.12, 0.55, H)[:, None], 0, 1)
+wine85 = np.array(c['wine'], float)*0.85; ink_rw = np.array(hx('2A1C18'), float)
+base = wine85[None, None]*(1 - t[..., None]) + ink_rw[None, None]*t[..., None]
+im = Image.fromarray(np.clip(base, 0, 255).astype('uint8'))
 disc(im, 900, 290, 92, c['ochre'])
 d = ImageDraw.Draw(im); d.rectangle([0, 290*S, W, H], fill=mixc(c['wine'], c['ink'], 0.7))
 rng = np.random.default_rng(5)
@@ -73,5 +82,8 @@ for k in range(5):
     y = 298 + k*9; w = 170 - k*24
     d.rounded_rectangle([(900 - w/2 + rng.normal(0, 6))*S, y*S, (900 + w/2)*S, (y+3)*S], radius=2*S, fill=c['ochre'] if k < 3 else mixc(c['ochre'], c['wine'], 0.4))
 seigaiha(im, 340, [c['plum'], mixc(c['wine'], c['ink'], 0.4)], r=18, line=mixc(c['wine'], c['ink'], 0.7))
-save(im, 'signup_wine_sunset.jpg', seed=25)
+small = im.resize((1100, 352), Image.LANCZOS)
+rng5 = np.random.default_rng(25)
+a5 = np.asarray(small, dtype=float) + rng5.normal(0, 30, (352, 1100, 1))
+Image.fromarray(np.clip(a5, 0, 255).astype('uint8')).resize((1920, 614), Image.BICUBIC).save(OUT + 'signup_wine_sunset.jpg', quality=88)
 print('done 5')

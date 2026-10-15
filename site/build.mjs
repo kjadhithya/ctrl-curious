@@ -338,7 +338,7 @@ ${art('mon/mon_02.jpg')}
 ${art('wed/wed_01.jpg')}
 <div class="ab-copy"><h2 class="h">Why it exists</h2><p>Most design newsletters are written for people starting out. Ctrl+Curious is for the people who already know the basics: senior product designers, UX and UI designers, design leads, and anyone shaping how products get made. You don't need another listicle about colour theory. You need to know what changed this week, what the best teams are learning, and what's worth an hour of your evening.</p></div>
 </section>
-<section class="ab-band"><div class="ab-grid ab-anat wrap">
+<section class="ab-band"><div class="strip" aria-hidden="true"></div><div class="ab-grid ab-anat wrap">
 <div class="ab-copy"><h2 class="h">What's in every issue</h2><ul class="about-list">${ISSUE.map(([t, d]) => `<li><b>${t}.</b> ${d}</li>`).join('')}</ul></div>
 ${anatomy}</div><span class="grain"></span></section>
 <section class="wrap ab-pick"><h2 class="h">How things get picked</h2>

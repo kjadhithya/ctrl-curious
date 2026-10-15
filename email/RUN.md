@@ -89,7 +89,7 @@ The middle cell, between the number and the text, shows the article's own share 
 <tr><td class="thumb" valign="top" width="168" style="padding:0 18px 24px 0;"><a href="https://www.youtube.com/watch?v=VIDEO_ID" target="_blank"><img src="https://img.youtube.com/vi/VIDEO_ID/mqdefault.jpg" width="168" height="95" alt="Video thumbnail" style="display:block;border:0;width:168px;height:95px;background-color:#7E4B6B;"></a></td><td valign="top" style="padding-bottom:24px;"><a href="https://www.youtube.com/watch?v=VIDEO_ID" target="_blank" style="font-size:19px;line-height:26px;font-weight:600;color:#2E1F25;text-decoration:none;">Video title</a><div style="font-size:15px;line-height:23px;color:#5E4B53;padding-top:4px;">Channel name · Why it is worth watching.</div></td></tr>
 ```
 
-## Event card (last card: drop `margin-bottom:12px;`)
+## Event card (last card: drop `margin-bottom:12px;`). The event name is the link; there is no separate Details button.
 
 Tag for in-person: `<span style="background-color:#7E4B6B;color:#F4EEE8;padding:0 7px;">Bengaluru</span>`
 Tag for online: `<span style="background-color:#C9A7B5;color:#2E1F25;padding:0 7px;">Online</span>`
@@ -98,8 +98,7 @@ Tag for online: `<span style="background-color:#C9A7B5;color:#2E1F25;padding:0 7
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#F4EEE8" background="https://raw.githubusercontent.com/kjadhithya/ctrl-curious/main/assets/email/grain_paper.jpg" style="background-color:#F4EEE8;background-image:url('https://raw.githubusercontent.com/kjadhithya/ctrl-curious/main/assets/email/grain_paper.jpg');background-repeat:repeat;margin-bottom:12px;"><tr>
 <td width="62" align="center" valign="middle" style="padding:14px 0 14px 12px;"><div style="font-size:30px;line-height:30px;font-weight:600;color:#8A2E3B;">DD</div><div style="font-size:14px;color:#5E4B53;">Mon</div></td>
 <td width="14" style="border-right:1px solid #D9C3B7;">&nbsp;</td>
-<td valign="middle" style="padding:14px 12px 14px 18px;"><div style="font-size:18px;line-height:24px;font-weight:600;">Event name</div><div style="font-size:14px;line-height:21px;color:#5E4B53;">TAG&nbsp; Known details only, e.g. Saturday · Host · Area</div></td>
-<td valign="middle" align="right" style="padding-right:16px;white-space:nowrap;"><a href="URL" target="_blank" style="font-size:14px;color:#8A2E3B;text-decoration:none;">Details →</a></td>
+<td valign="middle" style="padding:14px 16px 14px 18px;"><a href="URL" target="_blank" style="font-size:18px;line-height:24px;font-weight:600;color:#2E1F25;text-decoration:none;">Event name</a><div style="font-size:14px;line-height:21px;color:#5E4B53;">TAG&nbsp; Known details only, e.g. Saturday · Host · Area</div></td>
 </tr></table>
 ```
 

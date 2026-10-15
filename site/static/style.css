@@ -217,15 +217,16 @@ img{max-width:100%;display:block}
 .vids a.t{font-size:20px}
 .meet{position:relative;overflow:hidden;background:var(--band);padding:32px;display:flex;flex-direction:column;gap:18px}
 .meet .h{font-size:26px;position:relative;z-index:1}
-.event{position:relative;z-index:1;display:flex;gap:18px;align-items:center;background:var(--paper);padding:14px 16px}
+.event{position:relative;z-index:1;display:flex;gap:18px;align-items:center;background:var(--paper);padding:14px 16px;text-decoration:none;color:var(--ink);transition:background-color .15s}
+.event:hover{background:#FBF7F3}
+.event:hover .info b{text-decoration:underline;text-decoration-color:var(--wine);text-underline-offset:3px}
 .event .dt{width:62px;flex-shrink:0;display:flex;flex-direction:column;align-items:center;border-right:1px solid var(--clay);padding-right:14px}
 .event .dt b{font-size:30px;line-height:1;font-weight:600;color:var(--wine)}
 .event .dt span{font-size:14px;color:var(--muted)}
 .event .info{flex-grow:1;display:flex;flex-direction:column;gap:3px;min-width:0}
-.event .info b{font-size:18px;font-weight:600}
+.event .info b{font-size:18px;font-weight:600;color:var(--ink)}
 .event .info span{font-size:14px;color:var(--muted)}
 .event .info .place{color:var(--paper);display:inline-block;background:var(--plum);color:var(--paper);padding:0 7px;margin-right:6px}
-.event a{font-size:14px;color:var(--plum);text-decoration:none;white-space:nowrap}
 .prevnext{display:grid;grid-template-columns:1fr 1fr;gap:20px;border-top:2px solid var(--ink);padding-top:24px}
 .prevnext a,.prevnext div{display:flex;flex-direction:column;gap:4px;text-decoration:none}
 .prevnext small{font-size:14px;color:var(--muted)}

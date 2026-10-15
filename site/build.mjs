@@ -269,7 +269,7 @@ function issuePage(i, idx) {
   const meets = i.meetups
     .map((m) => {
       const p = parseDate(m.date);
-      return `<div class="event"><div class="dt"><b>${p.d}</b><span>${MONTHS[p.m - 1].slice(0, 3)}</span></div><div class="info"><b>${esc(m.name)}</b><span>${m.place ? `<span class="place">${esc(m.place)}</span>` : ''}${esc(m.details || '')}</span></div><a href="${esc(safeUrl(m.url))}">Details →</a></div>`;
+      return `<a class="event" href="${esc(safeUrl(m.url))}"><span class="dt"><b>${p.d}</b><span>${MONTHS[p.m - 1].slice(0, 3)}</span></span><span class="info"><b>${esc(m.name)}</b><span>${m.place ? `<span class="place">${esc(m.place)}</span>` : ''}${esc(m.details || '')}</span></span></a>`;
     })
     .join('');
   const pn = (x, label, cls) =>

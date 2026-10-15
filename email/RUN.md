@@ -9,12 +9,29 @@ The daily run fills `email/template.html` and sends it with Resend.
 | `{{DATE_LONG}}` | e.g. `Friday, 16 October 2026` (IST date) |
 | `{{ISSUE}}` | three digits, e.g. `002` (see numbering below) |
 | `{{PREHEADER}}` | one plain line under 110 characters teasing today's issue |
+| `{{HERO_URL}}` | today's hero image URL (see Hero image below) |
 | `{{SUMMARY_HTML}}` | 3–4 sentence paragraph; every claim is a link (format below) |
 | `{{READ_ROWS}}` | 5 read rows (format below) |
 | `{{WATCH_ROWS}}` | 3 watch rows (format below) |
 | `{{EVENT_CARDS}}` | 1–3 event cards (format below). If there are no verified events, delete everything from `<!-- MEETUP_START -->` to `<!-- MEETUP_END -->`. |
 
 Issue numbering: issue 001 was Thursday 15 October 2026. Count weekdays (Mon–Fri) from that date up to and including today. 16 Oct 2026 is 002, 19 Oct 2026 is 003.
+
+## Hero image
+
+Each weekday has its own rotating set of hero images. Get today's URL with:
+
+```
+curl -sSL https://raw.githubusercontent.com/kjadhithya/ctrl-curious/main/email/pick_hero.py -o pick_hero.py
+python3 pick_hero.py
+```
+
+Use the URL it prints for `{{HERO_URL}}`. If it prints nothing (that weekday has no set yet), use
+`https://raw.githubusercontent.com/kjadhithya/ctrl-curious/main/assets/email/wave_hero.jpg`.
+
+## Sending
+
+Send exactly one email per run. Once send-email returns an email ID, the issue is sent: do not send it again, even to retry or test. Retry only if the first call returned an error and no ID.
 
 ## Writing rules
 

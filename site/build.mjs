@@ -77,9 +77,10 @@ function nav(current, rule = true) {
   return `<header class="nav wrap${rule ? ' rule' : ''}">${logo()}<nav aria-label="Main"><ul>${item('/archive', 'Archive', 'archive')}${item('/#week', 'The week', 'week', 'hide-s')}${item('/about', 'About', 'about', 'hide-xs')}<li><a class="btn" href="#signup">Get the emails</a></li></ul></nav></header>`;
 }
 
-const signupForm = (id, note) => `<form class="signup" data-signup action="mailto:${SIGNUP_TO}" method="post" enctype="text/plain">
+const signupForm = (id, note) => `<form class="signup" data-signup action="/api/subscribe" method="post">
 <label class="sr" for="${id}">Your email</label>
 <input id="${id}" name="email" type="email" required autocomplete="email" placeholder="you@studio.com">
+<input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
 <button class="btn" type="submit">Get the emails</button>
 </form><p class="signup-note" aria-live="polite">${note || ''}</p>`;
 
@@ -311,6 +312,20 @@ ${band()}
   return page({ title: 'About', body, canonical: '/about' });
 }
 
+function unsubscribe() {
+  const body = `${nav('')}
+<main id="main"><div class="page-head wrap"><div class="crumb"><a href="/">Home</a> &nbsp;/&nbsp; Unsubscribe</div><h1>Unsubscribe</h1>
+<p>Sorry to see you go. Confirm your email and you won't get any more issues. You can always come back.</p>
+<form class="signup unsub" data-unsub action="/api/unsubscribe" method="post" style="margin-top:12px">
+<label class="sr" for="unsub-email">Your email</label>
+<input id="unsub-email" name="email" type="email" required autocomplete="email" placeholder="you@studio.com">
+<input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+<button class="btn" type="submit">Unsubscribe</button>
+</form><p class="signup-note" aria-live="polite"></p>
+</div><div style="height:80px"></div></main>`;
+  return page({ title: 'Unsubscribe', body, canonical: '/unsubscribe' });
+}
+
 function notFound() {
   const body = `${nav('')}
 <main id="main"><div class="page-head wrap"><h1>This wave has passed.</h1><p>The page you were looking for isn't here. Try the <a class="link" href="/archive">archive</a> or head back <a class="link" href="/">home</a>.</p></div><div style="height:80px"></div></main>`;
@@ -354,6 +369,7 @@ for (const f of ['assets/blog/seigaiha_tile.jpg', 'assets/email/wave_hero.jpg', 
 write('index.html', home());
 write('archive.html', archive());
 write('about.html', about());
+write('unsubscribe.html', unsubscribe());
 write('404.html', notFound());
 write('feed.xml', feed());
 issues.forEach((i, idx) => write(`issues/${i.num}.html`, issuePage(i, idx)));

@@ -12,6 +12,8 @@ img{max-width:100%;display:block}
 .wrap{padding-left:var(--gut);padding-right:var(--gut)}
 .grain{display:none;position:absolute;inset:0;background:url(/static/grain_light.png) 0 0/320px 320px;mix-blend-mode:multiply;opacity:.5;pointer-events:none}
 .grain-d{position:absolute;inset:0;background:url(/static/grain_dark.png) 0 0/320px 320px;mix-blend-mode:screen;opacity:.5;pointer-events:none}
+.hp{position:absolute!important;left:-9999px;width:1px;height:1px;opacity:0}
+.signup.done button{opacity:.6}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .skip{position:absolute;left:-999px;top:8px;background:var(--plum);color:var(--paper);padding:10px 16px;z-index:100}
 .skip:focus{left:8px}

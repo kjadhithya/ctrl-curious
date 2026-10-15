@@ -64,7 +64,7 @@ date_long = f"{d.strftime('%A')}, {d.day} {d.strftime('%B')} {d.year}"
 page = (tpl.replace('{{DATE_LONG}}', date_long).replace('{{ISSUE}}', f"{issue['issue']:03d}")
         .replace('{{PREHEADER}}', e(issue.get('preheader') or issue.get('dek', '')))
         .replace('{{HERO_URL}}', hero).replace('{{SUMMARY_HTML}}', summary(issue['summary']))
-        .replace('{{READ_ROWS}}', '\n'.join(rows)).replace('{{WATCH_ROWS}}', '\n'.join(vids)))
+        .replace('{{UNSUB_URL}}', 'https://ctrl-curious.vercel.app/unsubscribe').replace('{{READ_ROWS}}', '\n'.join(rows)).replace('{{WATCH_ROWS}}', '\n'.join(vids)))
 if cards:
     page = page.replace('{{EVENT_CARDS}}', '\n'.join(cards))
 else:

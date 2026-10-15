@@ -1,21 +1,34 @@
-// Signup: opens the visitor's email app with a ready-to-send request to join the list.
+// Signup and unsubscribe: post to the site's API and show the result inline.
 (function () {
-  var TO = 'kjadhithya05@gmail.com';
-  document.querySelectorAll('form[data-signup]').forEach(function (form) {
+  var params = new URLSearchParams(location.search);
+  function wire(form, done, fallback) {
+    var input = form.querySelector('input[type=email]');
+    var note = form.nextElementSibling;
+    var btn = form.querySelector('button');
+    if (form.hasAttribute('data-unsub') && params.get('e')) input.value = params.get('e');
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      var input = form.querySelector('input[type=email]');
-      var note = form.nextElementSibling;
       var email = (input.value || '').trim();
-      if (!input.checkValidity() || !email) {
-        input.reportValidity();
-        return;
-      }
-      var subject = 'Ctrl+Curious signup: ' + email;
-      var body = 'Hi,\n\nPlease add me to the Ctrl+Curious daily emails.\n\nEmail: ' + email + '\n';
-      window.location.href = 'mailto:' + TO + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-      if (note) note.textContent = 'Your email app should open with the request ready. Hit send and you will be added.';
+      if (!input.checkValidity() || !email) { input.reportValidity(); return; }
+      var label = btn.textContent;
+      btn.disabled = true; btn.textContent = 'One moment…';
+      fetch(form.getAttribute('action'), {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email, website: form.querySelector('.hp').value, source: location.pathname })
+      }).then(function (r) { return r.json().then(function (d) { return { ok: r.ok && d.ok, d: d }; }); })
+        .then(function (res) {
+          if (res.ok) { form.classList.add('done'); input.value = ''; note.textContent = done; btn.textContent = label; }
+          else { note.textContent = (res.d && res.d.error) || fallback; btn.disabled = false; btn.textContent = label; }
+        })
+        .catch(function () { note.textContent = fallback; btn.disabled = false; btn.textContent = label; });
     });
+  }
+  document.querySelectorAll('form[data-signup]').forEach(function (f) {
+    wire(f, "You're in. Your first issue arrives at 10:00 IST on the next weekday.", 'Something went wrong. Please try again in a minute.');
+  });
+  document.querySelectorAll('form[data-unsub]').forEach(function (f) {
+    wire(f, "You're unsubscribed. No more issues will be sent to that address.", 'Something went wrong. Please try again in a minute.');
   });
 })();
 

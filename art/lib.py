@@ -46,19 +46,27 @@ def sea(im, y, col, line=None, gap=20, amp=4, freq=36, top=0):
     d = ImageDraw.Draw(im)
     d.rectangle([0, y*S, W, H], fill=col)
     if line:
-        for k, y0 in enumerate(range(int(y + 14), 600, gap)):
+        for k, y0 in enumerate(range(int(y + 14), H // S, gap)):
             pts = [(x*S, (y0 + math.sin(x / freq + k) * amp)*S) for x in range(0, 1210, 5)]
             d.line(pts, fill=line, width=2*S)
 
-def wave(im, ox, oy, sc, body, stripe, foam, claws=True, seed=5):
+def wave(im, ox, oy, sc, body, stripe, foam, claws=True, seed=5, soft=False):
     rng = np.random.default_rng(abs(int(seed)))
     d = ImageDraw.Draw(im)
     P = lambda x, y: ((ox + x * sc) * S, (oy + y * sc) * S)
-    outer = np.vstack([bez(P(0, 640), P(180, 600), P(300, 140), P(600, 110)),
-                       bez(P(600, 110), P(770, 90), P(850, 260), P(760, 340))])
-    inner = np.vstack([bez(P(760, 340), P(745, 255), P(670, 205), P(590, 220)),
-                       bez(P(590, 220), P(470, 245), P(430, 460), P(480, 640))])
-    poly = [tuple(p) for p in outer] + [tuple(p) for p in inner] + [P(480, 900), P(0, 900)]
+    if soft:
+        # back of the wave slopes away into the sea; the front spreads forward at the base
+        outer = np.vstack([bez(P(-260, 720), P(40, 700), P(260, 160), P(600, 110)),
+                           bez(P(600, 110), P(770, 90), P(850, 260), P(760, 340))])
+        inner = np.vstack([bez(P(760, 340), P(745, 255), P(670, 205), P(590, 220)),
+                           bez(P(590, 220), P(470, 245), P(430, 560), P(780, 820))])
+        poly = [tuple(p) for p in outer] + [tuple(p) for p in inner] + [P(780, 1000), P(-260, 1000)]
+    else:
+        outer = np.vstack([bez(P(0, 640), P(180, 600), P(300, 140), P(600, 110)),
+                           bez(P(600, 110), P(770, 90), P(850, 260), P(760, 340))])
+        inner = np.vstack([bez(P(760, 340), P(745, 255), P(670, 205), P(590, 220)),
+                           bez(P(590, 220), P(470, 245), P(430, 460), P(480, 640))])
+        poly = [tuple(p) for p in outer] + [tuple(p) for p in inner] + [P(480, 900), P(0, 900)]
     mask = Image.new('L', (W, H), 0); ImageDraw.Draw(mask).polygon(poly, fill=255)
     layer = Image.new('RGB', (W, H), body); ld = ImageDraw.Draw(layer)
     for k in range(1, 12):
@@ -86,7 +94,7 @@ def seigaiha(im, y0, cols, r=34, line=None):
     """Fill from y0 to bottom with overlapping concentric-arc scales."""
     d = ImageDraw.Draw(im)
     row = 0; y = y0
-    while y < 600 + r:
+    while y < H / S + r:
         off = (r if row % 2 else 0)
         for x in range(-2*r + off, 1200 + 2*r, 2*r):
             for k, rr in enumerate(np.linspace(r, r * 0.2, 4)):
@@ -134,7 +142,7 @@ def front_sea(im, y, col, line=None, foam=None, gap=18, amp=5, freq=30, seed=0):
     if foam:
         d.line(top, fill=foam, width=3*S)
     if line:
-        for k, y0 in enumerate(range(int(y + 12), 600, gap)):
+        for k, y0 in enumerate(range(int(y + 12), H // S, gap)):
             pts = [(x*S, (y0 + math.sin(x / freq + k + seed) * 4)*S) for x in range(0, 1210, 5)]
             d.line(pts, fill=line, width=2*S)
 

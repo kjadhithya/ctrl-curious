@@ -55,6 +55,7 @@ const issues = fs
       p,
       day,
       long: longDate(p),
+      short: `${p.d} ${MONTHS[p.m - 1]} ${p.y}`,
       href: `/issues/${pad(j.issue)}`,
       heroSrc: img(j.hero),
       reads: j.reads || [],
@@ -138,7 +139,7 @@ function row(i, h = 'h3') {
   return `<li class="row">
 <span class="num" aria-hidden="true">${i.num}</span>
 <a class="pic" href="${i.href}" tabindex="-1" aria-hidden="true"><img src="${esc(i.heroSrc)}" alt="" loading="lazy"><span class="grain"></span></a>
-<div class="txt"><div class="meta">${tag(i)}<span>${esc(i.long)}</span></div><${h}><a href="${i.href}">${esc(i.title)}</a></${h}><p>${esc(i.dek || '')}</p></div>
+<div class="txt"><div class="meta">${tag(i)}<span>${esc(i.short)}</span></div><${h}><a href="${i.href}">${esc(i.title)}</a></${h}><p>${esc(i.dek || '')}</p></div>
 </li>`;
 }
 
@@ -202,7 +203,7 @@ function archive() {
     issue: i.issue,
     y: i.p.y,
     m: i.p.m,
-    long: i.long,
+    long: i.short,
     href: i.href,
     img: i.heroSrc,
     day: i.day.name,
@@ -279,7 +280,7 @@ function issuePage(i, idx) {
 <main id="main" class="issue">
 <div class="col issue-top">
 <div class="crumb"><a href="/archive">All issues</a> &nbsp;/&nbsp; Issue ${i.num}</div>
-<div class="meta">${tag(i)}<span>${esc(i.long)} · Issue ${i.num}</span></div>
+<div class="meta">${tag(i)}<span>${esc(i.short)} · Issue ${i.num}</span></div>
 <h1>${esc(i.title)}</h1>
 </div>
 <div class="issue-hero"><div class="pic"><img src="${esc(i.heroSrc)}" alt="${esc(i.hero_alt || "Today's Ctrl+Curious artwork")}"><span class="grain"></span></div><div class="strip" aria-hidden="true"></div></div>

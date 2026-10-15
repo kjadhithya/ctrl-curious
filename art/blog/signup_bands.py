@@ -63,3 +63,15 @@ for i, col in enumerate(cols):
     d.line(lt, fill=c['foamb'] if i % 2 == 0 else c['mauve'], width=2*S)
 save(im, 'signup_moonlit_swell.jpg', seed=24)
 print('done')
+
+# 5 Wine sunset: option 2's wine sky and wave-scale shore with option 3's ochre sun sinking at the horizon
+im = canvas(mixc(c['wine'], c['ink'], 0.55), mixc(c['wine'], c['ink'], 0.25), 1)
+disc(im, 900, 290, 92, c['ochre'])
+d = ImageDraw.Draw(im); d.rectangle([0, 290*S, W, H], fill=mixc(c['wine'], c['ink'], 0.7))
+rng = np.random.default_rng(5)
+for k in range(5):
+    y = 298 + k*9; w = 170 - k*24
+    d.rounded_rectangle([(900 - w/2 + rng.normal(0, 6))*S, y*S, (900 + w/2)*S, (y+3)*S], radius=2*S, fill=c['ochre'] if k < 3 else mixc(c['ochre'], c['wine'], 0.4))
+seigaiha(im, 340, [c['plum'], mixc(c['wine'], c['ink'], 0.4)], r=18, line=mixc(c['wine'], c['ink'], 0.7))
+save(im, 'signup_wine_sunset.jpg', seed=25)
+print('done 5')

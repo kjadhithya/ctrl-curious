@@ -50,3 +50,36 @@
   window.addEventListener('load', fit);
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
 })();
+
+// Nav: scrolls away as you read, slides back in as soon as you scroll up.
+(function () {
+  var nav = document.querySelector('header.nav');
+  if (!nav) return;
+  var spacer = document.createElement('div');
+  nav.parentNode.insertBefore(spacer, nav);
+  var inFlow = getComputedStyle(nav).position !== 'absolute';
+  var last = window.scrollY, pinned = false, ticking = false;
+  function pin() {
+    if (pinned) return;
+    pinned = true;
+    if (inFlow) spacer.style.height = nav.offsetHeight + 'px';
+    nav.classList.add('pinned', 'hidden');
+    requestAnimationFrame(function () { requestAnimationFrame(function () { nav.classList.remove('hidden'); }); });
+  }
+  function unpin() {
+    if (!pinned) return;
+    pinned = false;
+    nav.classList.remove('pinned', 'hidden');
+    spacer.style.height = '';
+  }
+  function update() {
+    ticking = false;
+    var y = window.scrollY, h = nav.offsetHeight;
+    if (y <= (pinned ? 0 : h)) { unpin(); }
+    else if (y < last - 6) { pin(); nav.classList.remove('hidden'); }
+    else if (y > last + 6 && pinned) { nav.classList.add('hidden'); }
+    if (Math.abs(y - last) > 6 || y <= 0) last = y;
+  }
+  window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+  window.addEventListener('resize', function () { inFlow = !pinned ? getComputedStyle(nav).position !== 'absolute' : inFlow; });
+})();

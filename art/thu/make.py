@@ -44,9 +44,14 @@ save(img,'thu_02.jpg')
 # 03 River valley: a winding pale river through layered hills, wine sun
 img=sky(SKYB*0.35+PAPER*0.65,PAPER,1.0); sun(img,820,210,110)
 for y0,amp,seed,freq,col,d in [(300,40,11,140,PRUSSIAN,.9),(370,34,12,100,TEAL,.92),(440,28,13,80,PINE,.94)]:
-    stip(img,below(ridge(y0,amp,seed,freq)),col,d)
-t=np.linspace(0,1,H); cx=600+260*np.sin(t*7+1)*t; wdt=2+60*t**1.6
-riv=(np.abs(X-cx[:,None])<wdt[:,None])&(Y>330)
+    rr=ridge(y0,amp,seed,freq); stip(img,below(rr),col,d)
+front=rr
+# river emerges from behind the front hill and widens toward the viewer
+x_src=520; y_src=int(front[x_src])+6
+yy=np.arange(H); t=np.clip((yy-y_src)/(H-y_src),0,1)
+cx=x_src+120*np.sin(t*3.2)*t+180*t**2
+wdt=1.5+70*t**1.7
+riv=(np.abs(X-cx[:,None])<wdt[:,None])&(Y>=y_src)&below(front)
 img[riv]=MIST*0.8+PAPER*0.2
 save(img,'thu_03.jpg')
 

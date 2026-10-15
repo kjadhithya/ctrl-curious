@@ -258,7 +258,7 @@ function issuePage(i, idx) {
   const newer = issues[idx - 1];
   const older = issues[idx + 1];
   const reads = i.reads
-    .map((r, k) => `<li><span class="n">${String(k + 1).padStart(2, '0')}</span><div><a href="${esc(safeUrl(r.url))}">${esc(r.title)}</a><span class="d">${esc(r.source)} · ${esc(r.note)}</span></div><a class="rimg" href="${esc(safeUrl(r.url))}" tabindex="-1" aria-hidden="true"><img src="/api/og?url=${encodeURIComponent(safeUrl(r.url))}" alt="" loading="lazy"></a></li>`)
+    .map((r, k) => `<li><span class="n">${String(k + 1).padStart(2, '0')}</span><a class="rimg" href="${esc(safeUrl(r.url))}" tabindex="-1" aria-hidden="true"><img src="/api/og?url=${encodeURIComponent(safeUrl(r.url))}" alt="" loading="lazy"></a><div><a href="${esc(safeUrl(r.url))}">${esc(r.title)}</a><span class="d">${esc(r.source)} · ${esc(r.note)}</span></div></li>`)
     .join('');
   const vids = i.watch
     .map((w) => {

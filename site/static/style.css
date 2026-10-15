@@ -285,7 +285,8 @@ img{max-width:100%;display:block}
   .brief{font-size:19px}
   .reads a{font-size:20px}
   .thumb{width:120px;height:68px}
-  .rimg{width:96px}
+  .rimg{width:84px}
+  .reads li{gap:14px}
   .meet{padding:22px}
   .event{flex-wrap:wrap}
   .prevnext{grid-template-columns:1fr}

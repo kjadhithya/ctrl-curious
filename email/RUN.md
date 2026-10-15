@@ -46,12 +46,12 @@ Send exactly one email per run. Once send-email returns an email ID, the issue i
 <a href="URL" style="color:#2E1F25;text-decoration:underline;text-decoration-color:#8A2E3B;">linked phrase</a>
 ```
 
-## Read row (use `padding-bottom:24px` on all three cells for rows 1–4, and leave it off row 5)
+## Read row (rows 1–4 as shown; on row 5 drop the 24px bottom padding from all three cells, so the image cell becomes `padding:4px 16px 0 0`)
 
-The third cell shows the article's own share image, served by the website at `https://ctrl-curious.vercel.app/api/og?url=URL_ENCODED`, where URL_ENCODED is the article URL percent-encoded (in Python: `urllib.parse.quote(url, safe='')`). Nothing needs fetching beforehand; if an article has no image, the site returns a Ctrl+Curious artwork instead.
+The middle cell, between the number and the text, shows the article's own share image, served by the website at `https://ctrl-curious.vercel.app/api/og?url=URL_ENCODED`, where URL_ENCODED is the article URL percent-encoded (in Python: `urllib.parse.quote(url, safe='')`). Nothing needs fetching beforehand; if an article has no image, the site returns a Ctrl+Curious artwork instead.
 
 ```html
-<tr><td valign="top" width="40" style="font-size:15px;line-height:27px;color:#8A2E3B;padding-bottom:24px;">01</td><td valign="top" style="padding-bottom:24px;"><a href="URL" style="font-size:20px;line-height:27px;font-weight:600;color:#2E1F25;text-decoration:none;">Title in sentence case</a><div style="font-size:15px;line-height:23px;color:#5E4B53;padding-top:4px;">Source name · One-line summary.</div></td><td class="rthumb" valign="top" width="120" style="padding-left:16px;padding-bottom:24px;"><a href="URL"><img src="https://ctrl-curious.vercel.app/api/og?url=URL_ENCODED" width="120" height="63" alt="" style="display:block;border:0;width:120px;height:63px;background-color:#D9C3B7;"></a></td></tr>
+<tr><td valign="top" width="40" style="font-size:15px;line-height:27px;color:#8A2E3B;padding-bottom:24px;">01</td><td class="rthumb" valign="top" width="120" style="padding:4px 16px 24px 0;"><a href="URL"><img src="https://ctrl-curious.vercel.app/api/og?url=URL_ENCODED" width="120" height="63" alt="" style="display:block;border:0;width:120px;height:63px;background-color:#D9C3B7;"></a></td><td valign="top" style="padding-bottom:24px;"><a href="URL" style="font-size:20px;line-height:27px;font-weight:600;color:#2E1F25;text-decoration:none;">Title in sentence case</a><div style="font-size:15px;line-height:23px;color:#5E4B53;padding-top:4px;">Source name · One-line summary.</div></td></tr>
 ```
 
 ## Watch row (rows 1–2: thumb cell `padding:0 18px 24px 0` and text cell `padding-bottom:24px`; row 3: thumb cell `padding:0 18px 0 0` and no padding on the text cell)

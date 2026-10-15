@@ -84,7 +84,7 @@ const signupForm = (id, note) => `<form class="signup" data-signup action="mailt
 </form><p class="signup-note" aria-live="polite">${note || ''}</p>`;
 
 const band = () => `<section class="band" id="signup" aria-labelledby="signup-h">
-<img src="/assets/blog/signup_wine_sunset_soft.jpg" alt="" loading="lazy">
+<img src="/assets/blog/signup_moon_shore.jpg" alt="" loading="lazy">
 <div class="band-copy wrap">
 <h2 id="signup-h">Get the emails.<br>Stay curious.</h2>
 <p>Every weekday at 10:00 IST: a linked summary, five reads, three videos and the meetups in Bengaluru and online.</p>
@@ -349,7 +349,7 @@ fs.mkdirSync(OUT, { recursive: true });
 copy('site/static', 'static');
 copy('assets/email/days');
 copy('assets/blog/hero');
-for (const f of ['assets/blog/seigaiha_tile.jpg', 'assets/email/wave_hero.jpg', 'assets/blog/banner_swell_wave_mountain_sun_tall.jpg', 'assets/blog/signup_wine_sunset_soft.jpg']) copy(f);
+for (const f of ['assets/blog/seigaiha_tile.jpg', 'assets/email/wave_hero.jpg', 'assets/blog/banner_swell_wave_mountain_sun_tall.jpg', 'assets/blog/signup_moon_shore.jpg']) copy(f);
 
 write('index.html', home());
 write('archive.html', archive());

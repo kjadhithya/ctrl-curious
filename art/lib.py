@@ -137,3 +137,32 @@ def front_sea(im, y, col, line=None, foam=None, gap=18, amp=5, freq=30, seed=0):
         for k, y0 in enumerate(range(int(y + 12), 600, gap)):
             pts = [(x*S, (y0 + math.sin(x / freq + k + seed) * 4)*S) for x in range(0, 1210, 5)]
             d.line(pts, fill=line, width=2*S)
+
+def glow(im, x, y, r, col, strength=0.55, blur=None):
+    """Soft light: a blurred disc blended over the image."""
+    m = Image.new('L', (W, H), 0)
+    ImageDraw.Draw(m).ellipse([(x-r)*S, (y-r)*S, (x+r)*S, (y+r)*S], fill=int(255*strength))
+    m = m.filter(ImageFilter.GaussianBlur((blur or r*0.6)*S))
+    im.paste(Image.new('RGB', (W, H), col), (0, 0), m)
+
+def crescent(im, cx, cy, r, col, sky=None, dx=0.38, dy=-0.18):
+    bx, by = cx + r*dx*2, cy + r*dy*2
+    snap = im.copy()
+    disc(im, cx, cy, r, col)
+    m = Image.new('L', (W, H), 0)
+    ImageDraw.Draw(m).ellipse([(bx - r*0.92)*S, (by - r*0.92)*S, (bx + r*0.92)*S, (by + r*0.92)*S], fill=255)
+    im.paste(snap, (0, 0), m)
+
+def ridge(im, y0, amp, freq, col, seed=0, jag=1.0):
+    rng = np.random.default_rng(seed); xs = np.arange(0, 1201, 3)
+    y = y0 + amp*np.sin(xs/freq + rng.random()*6) + 0.4*amp*np.sin(xs/(freq/2.6) + rng.random()*6)
+    y = y + np.cumsum(rng.normal(0, jag, len(xs))); y -= np.linspace(0, y[-1]-y[0], len(xs))*0.5
+    ImageDraw.Draw(im).polygon([(x*S, v*S) for x, v in zip(xs, y)] + [(W, H), (0, H)], fill=col)
+    return xs, y
+
+def pine_tree(im, x, base, h, col):
+    d = ImageDraw.Draw(im); w = h*0.36
+    for k in range(4):
+        top = base - h + k*h*0.2; bot = base - h*0.55 + k*h*0.17; ww = w*(0.45 + k*0.2)
+        d.polygon([(x*S, top*S), ((x-ww)*S, bot*S), ((x+ww)*S, bot*S)], fill=col)
+    d.rectangle([(x-w*0.07)*S, (base-h*0.1)*S, (x+w*0.07)*S, base*S], fill=col)

@@ -40,6 +40,17 @@ Send exactly one email per run. Once send-email returns an email ID, the issue i
 - Escape `&` as `&amp;` in text, and use the real `https://` link for every item.
 - Summaries are your own words. Never quote more than a few words from a source.
 
+## Choosing the Watch videos (be picky)
+
+The three videos should feel current, tied to what is happening in design this week, not evergreen advice.
+
+- Three different channels. Never two videos from the same channel in one issue, and avoid a channel used in the previous issue (check the last file in `issues/` on GitHub).
+- Fresh: published in the last 7 days. Go up to 14 days only if nothing good is newer. Confirm the upload date on the video page itself, not from a search snippet.
+- At least one video must connect to a story in today's Read list or summary, such as a launch walkthrough, a conference talk that just went up, or a first look at a new tool.
+- Good sources to check first: official channels (Figma, Adobe, Framer, Webflow, Google Design, Apple Developer), fresh conference uploads (Config, Adobe MAX, Awwwards, Figma community events), and working designers who cover new tools and trends (for example Dive Club, Juxtopposed, Mizko, DesignCourse, Flux Academy, Malewicz). A strong video from somewhere else is welcome.
+- Skip generic how-to or career advice unless it responds to something new, and skip anything older than a few weeks, however good.
+- Each note should say why it matters now (what is new or timely), not just what the video covers.
+
 ## Summary link format
 
 ```html

@@ -88,3 +88,22 @@ rng5 = np.random.default_rng(25)
 a5 = np.asarray(small, dtype=float) + rng5.normal(0, 30, (352, 1100, 1))
 Image.fromarray(np.clip(a5, 0, 255).astype('uint8')).resize((1920, 614), Image.BICUBIC).save(OUT + 'signup_wine_sunset.jpg', quality=88)
 print('done 5')
+
+# 7 Wine sunset with the moon's colour: option 5, but the sun takes the blush moon colour of the original band
+im = Image.fromarray(np.clip(base, 0, 255).astype('uint8'))
+moon_mauve = np.array(hx('E3B9A6'), float); moon_paper = np.array(hx('F5EEE3'), float)
+tone = moon_mauve[None, None]*(1 - (fbm*0.6)[..., None]) + moon_paper[None, None]*(fbm*0.6)[..., None]
+mask = Image.new('L', (W, H), 0); ImageDraw.Draw(mask).ellipse([(900-92)*S, (290-92)*S, (900+92)*S, (290+92)*S], fill=255)
+im.paste(Image.fromarray(np.clip(tone, 0, 255).astype('uint8')), (0, 0), mask)
+d = ImageDraw.Draw(im); d.rectangle([0, 290*S, W, H], fill=mixc(c['wine'], c['ink'], 0.7))
+blush = (229, 202, 186)
+rng = np.random.default_rng(5)
+for k in range(5):
+    y = 298 + k*9; w = 170 - k*24
+    d.rounded_rectangle([(900 - w/2 + rng.normal(0, 6))*S, y*S, (900 + w/2)*S, (y+3)*S], radius=2*S, fill=blush if k < 3 else mixc(blush, c['wine'], 0.4))
+seigaiha(im, 340, [c['plum'], mixc(c['wine'], c['ink'], 0.4)], r=18, line=mixc(c['wine'], c['ink'], 0.7))
+small = im.resize((1100, 352), Image.LANCZOS)
+rng7 = np.random.default_rng(27)
+a7 = np.asarray(small, dtype=float) + rng7.normal(0, 30, (352, 1100, 1))
+Image.fromarray(np.clip(a7, 0, 255).astype('uint8')).resize((1920, 614), Image.BICUBIC).save(OUT + 'signup_wine_sunset_blush.jpg', quality=88)
+print('done 7')

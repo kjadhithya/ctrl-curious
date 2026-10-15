@@ -71,3 +71,32 @@ Tag for online: `<span style="background-color:#C9A7B5;color:#2E1F25;padding:0 7
 <td valign="middle" align="right" style="padding-right:16px;white-space:nowrap;"><a href="URL" style="font-size:14px;color:#8A2E3B;text-decoration:none;">Details →</a></td>
 </tr></table>
 ```
+
+## Publishing to the website (after the email is sent)
+
+The website is built from one JSON file per issue in `issues/` of the GitHub repo `kjadhithya/ctrl-curious`. Pushing a new file to `main` makes Vercel rebuild the site within a minute or two. Do this only after the email has been sent and returned an email ID; a failure here must never cause a resend.
+
+1. Attach the repo with push access: call the `add_repo` tool with owner `kjadhithya`, repo `ctrl-curious`, access `push`, then run the clone command it gives you.
+2. Write `issues/NNN.json` (NNN = the three-digit issue number). If the file already exists, stop: today's issue is already published. Use exactly this shape, with the same content as the email:
+
+```json
+{
+  "issue": 2,
+  "date": "2026-10-16",
+  "title": "A headline for the day in sentence case, under about 90 characters",
+  "dek": "One plain sentence listing what's inside, no links.",
+  "hero": "the {{HERO_URL}} used in the email",
+  "hero_alt": "Short description of the artwork",
+  "summary": "The 'Today, in brief' text, with each link written as [linked phrase](https://source.url)",
+  "reads": [{ "title": "", "source": "", "url": "https://...", "note": "the one-line summary" }],
+  "watch": [{ "title": "", "channel": "", "id": "YouTube video ID", "note": "" }],
+  "meetups": [{ "name": "", "date": "YYYY-MM-DD", "place": "Bengaluru or Online", "details": "known details only", "url": "https://..." }]
+}
+```
+
+   Use `"meetups": []` when the Meet up section was removed. Sentence case, no ALL CAPS, no emoji.
+3. Check it builds: `node site/build.mjs` must print `Built N issue(s)`. If it fails, fix the JSON (usually a quote or comma) and rerun.
+4. Commit and push to `main`:
+   `git add issues/NNN.json && git -c user.name="kjadhithya" -c user.email="kjadhithya05@gmail.com" commit -m "Issue NNN: <title>" && git push origin HEAD:main`
+   If the push is rejected because main moved, run `git pull --rebase origin main` and push again.
+5. If the repo can't be attached or pushed, don't retry endlessly: say so in the final message and include the JSON so it can be added by hand.

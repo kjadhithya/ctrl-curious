@@ -73,3 +73,15 @@ mask = Image.new('L', (W, H), 0); ImageDraw.Draw(mask).ellipse([(MX-MR)*S, (MY-M
 im.paste(Image.fromarray(np.clip(tone, 0, 255).astype('uint8')), (0, 0), mask)
 seigaiha(im, 340, [c['plum'], mixc(c['wine'], c['ink'], 0.4)], r=18, line=mixc(c['wine'], c['ink'], 0.7))
 save(im, 'signup_moon_shore.jpg', 39)
+
+# 10 Moon shore, blue night: option 9's composition in the artwork blues and greens:
+# navy-to-indigo sky, a pale mist moon, and the wave-scale shore in prussian and teal
+im = canvas(c['navy'], c['indigo'], 1)
+stars(im, 60, 330, c['paper'], seed=22, avoid=(MX, MY, MR + 10))
+rng9 = np.random.default_rng(7)
+n = 0.5*blur_noise9(31) + 0.3*blur_noise9(10) + 0.2*blur_noise9(3.4)
+moon_mist = np.array(c['mist'], float); moon_paper = np.array(c['paper'], float)
+tone = moon_mist[None, None]*(1 - (n*0.6)[..., None]) + moon_paper[None, None]*(n*0.6)[..., None]
+im.paste(Image.fromarray(np.clip(tone, 0, 255).astype('uint8')), (0, 0), mask)
+seigaiha(im, 340, [c['skyb'], c['prussian']], r=18, line=c['navy'])
+save(im, 'signup_moon_shore_blue.jpg', 40)

@@ -315,7 +315,7 @@ function about() {
     ['Today, in brief', "The day's stories tied together in a few sentences, with every claim linked to its source so you can check it yourself."],
     ['Five reads', 'Original research, launches that change how you work, and hard-won lessons from teams who shipped. Roughly two to sharpen your craft and three to keep you current.'],
     ['Three videos', 'Fresh talks and interviews from people with real standing: design leaders, conference stages, research groups and the teams behind the tools.'],
-    ['Meetups', "Product and UX events in Bengaluru and online that are worth a senior designer's time."],
+    ['Meetups', "Product and UX events in Bengaluru and online that are worth your time."],
   ];
   const art = (src) => `<div class="pic about-pic"><img src="/assets/email/days/${src}" alt="" loading="lazy"><span class="grain"></span></div>`;
   const anatomy = `<div class="anatomy" aria-hidden="true">
@@ -336,7 +336,7 @@ ${art('mon/mon_02.jpg')}
 </section>
 <section class="ab-grid ab-flip wrap">
 ${art('wed/wed_01.jpg')}
-<div class="ab-copy"><h2 class="h">Why it exists</h2><p>Most design newsletters are written for people starting out. Ctrl+Curious is for the people who already know the basics: senior product designers, UX and UI designers, design leads, and anyone shaping how products get made. You don't need another listicle about colour theory. You need to know what changed this week, what the best teams are learning, and what's worth an hour of your evening.</p></div>
+<div class="ab-copy"><h2 class="h">Why it exists</h2><p>Most design newsletters are written for people starting out. Ctrl+Curious is for anyone who designs products and already knows the basics, whatever your title and wherever you are in your career. You don't need another listicle about colour theory. You need to know what changed this week, what the best teams are learning, and what's worth an hour of your evening.</p></div>
 </section>
 <section class="ab-band"><div class="strip" aria-hidden="true"></div><div class="ab-grid ab-anat wrap">
 <div class="ab-copy"><h2 class="h">What's in every issue</h2><ul class="about-list">${ISSUE.map(([t, d]) => `<li><b>${t}.</b> ${d}</li>`).join('')}</ul></div>
@@ -352,7 +352,7 @@ ${anatomy}</div><span class="grain"></span></section>
 </section>
 ${band()}
 </main>`;
-  return page({ title: 'About', desc: 'Ctrl+Curious is a daily design digest for senior product and UX/UI designers: five reads, three videos and the meetups worth your time, every weekday at 10:00 IST.', body, canonical: '/about' });
+  return page({ title: 'About', desc: 'Ctrl+Curious is a daily design digest for people who design products and already know the basics: five reads, three videos and the meetups worth your time, every weekday at 10:00 IST.', body, canonical: '/about' });
 }
 
 function unsubscribe() {

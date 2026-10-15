@@ -40,6 +40,14 @@ Send exactly one email per run. Once send-email returns an email ID, the issue i
 - Escape `&` as `&amp;` in text, and use the real `https://` link for every item.
 - Summaries are your own words. Never quote more than a few words from a source.
 
+## Choosing the Read stories (relevance first)
+
+The reader is a product designer in Bengaluru. Every story must pass this test: would a working product or UI designer change how they think or work after reading it? If the only reason to include it is "it's a nice piece of design", leave it out.
+
+- Favour: design tools and AI in the design workflow, design systems, interaction and UX patterns, research and testing, accessibility, product strategy and design leadership, notable app or product redesigns, typography and identity work for digital products, and design news from India.
+- Branding and identity stories only when they touch digital products or screens (an app's new design system, a product brand built for interfaces, a type family made for UI), or when the story is big industry news. A festival poster or a rebrand of a business the reader has no connection to does not qualify on looks alone.
+- Each note should make the relevance plain: what the reader can take from it, not just what happened.
+
 ## Choosing the Watch videos (be picky)
 
 The three videos should feel current, tied to what is happening in design this week, not evergreen advice.

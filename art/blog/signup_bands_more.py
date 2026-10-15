@@ -85,3 +85,22 @@ tone = moon_mist[None, None]*(1 - (n*0.6)[..., None]) + moon_paper[None, None]*(
 im.paste(Image.fromarray(np.clip(tone, 0, 255).astype('uint8')), (0, 0), mask)
 seigaiha(im, 340, [c['skyb'], c['prussian']], r=18, line=c['navy'])
 save(im, 'signup_moon_shore_blue.jpg', 40)
+
+# 11-13 Moon shore colourways, same composition as 9 and 10
+def moon_shore(name, sky_top, sky_bottom, moon_a, moon_b, shore, line, seed, star_col=None):
+    im = canvas(sky_top, sky_bottom, 1)
+    stars(im, 60, 330, star_col or c['paper'], seed=22, avoid=(MX, MY, MR + 10))
+    tone = np.array(moon_a, float)[None, None]*(1 - (n*0.6)[..., None]) + np.array(moon_b, float)[None, None]*(n*0.6)[..., None]
+    im.paste(Image.fromarray(np.clip(tone, 0, 255).astype('uint8')), (0, 0), mask)
+    seigaiha(im, 340, shore, r=18, line=line)
+    save(im, name, seed)
+
+# 11 Teal tide: deep teal night, a clay moon, teal and moss shore
+moon_shore('signup_moon_shore_teal.jpg', mixc(c['teal'], c['ink'], 0.55), mixc(c['teal'], c['pine'], 0.4),
+           c['clay'], c['paper'], [c['moss'], mixc(c['teal'], c['skyb'], 0.35)], mixc(c['teal'], c['ink'], 0.6), 41)
+# 12 Harvest moon: plum night, an ochre moon, plum and wine shore
+moon_shore('signup_moon_shore_ochre.jpg', mixc(c['plum'], c['ink'], 0.6), mixc(c['plum'], c['ink'], 0.3),
+           c['ochre'], mixc(c['ochre'], c['paper'], 0.5), [c['plum'], mixc(c['wine'], c['ink'], 0.3)], mixc(c['plum'], c['ink'], 0.65), 42)
+# 13 Ink and mauve: near-black ink night, a mauve moon, mauve and plum shore
+moon_shore('signup_moon_shore_mauve.jpg', mixc(c['ink'], c['navy'], 0.2), mixc(c['ink'], c['plum'], 0.3),
+           c['mauve'], c['paper'], [c['mauve'], c['plum']], c['ink'], 43)

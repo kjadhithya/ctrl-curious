@@ -289,7 +289,7 @@ function issuePage(i, idx) {
 <section class="sec" aria-labelledby="brief-h"><h2 class="h" id="brief-h">Today, in brief</h2><p class="brief">${linkify(i.summary)}</p></section>
 ${reads ? `<section class="sec" aria-labelledby="read-h" style="gap:12px"><h2 class="h" id="read-h">Read</h2><ol class="reads">${reads}</ol></section>` : ''}
 ${vids ? `<section class="sec" aria-labelledby="watch-h" style="gap:24px"><h2 class="h" id="watch-h">Watch</h2><ul class="vids">${vids}</ul></section>` : ''}
-${meets ? `<section class="meet" aria-labelledby="meet-h"><h2 class="h" id="meet-h">Meet up</h2>${meets}<span class="grain"></span></section>` : ''}
+${meets ? `<section class="meet" aria-labelledby="meet-h"><h2 class="h" id="meet-h">Meetups</h2>${meets}<span class="grain"></span></section>` : ''}
 <nav class="prevnext" aria-label="More issues">${pn(older, '← Previous', 'l')}${pn(newer, 'Next →', 'r')}</nav>
 </div>
 ${band()}
@@ -323,8 +323,8 @@ function about() {
 <img src="/assets/email/days/thu/thu_01.jpg" alt="">
 <div class="an-body">
 <b><i>01</i> Today, in brief</b><span class="bar" style="width:92%"></span><span class="bar" style="width:70%"></span>
-<b><i>02</i> Five reads</b><div class="an-row"><span class="sw" style="background:#C9A7B5"></span><div><span class="bar"></span><span class="bar" style="width:60%"></span></div></div>
-<b><i>03</i> Three videos</b><div class="an-vids"><span style="background:#2B4C6F"></span><span style="background:#24585C"></span><span style="background:#7E4B6B"></span></div>
+<b><i>02</i> Read</b><div class="an-row"><span class="sw" style="background:#C9A7B5"></span><div><span class="bar"></span><span class="bar" style="width:60%"></span></div></div>
+<b><i>03</i> Watch</b><div class="an-vids"><span style="background:#2B4C6F"></span><span style="background:#24585C"></span><span style="background:#7E4B6B"></span></div>
 <b><i>04</i> Meetups</b><div class="an-row"><em>28</em><span class="bar"></span></div>
 </div></div>`;
   const body = `${nav('about')}

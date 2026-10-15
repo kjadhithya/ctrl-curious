@@ -73,7 +73,7 @@ img{max-width:100%;display:block}
 .hero .nav{position:absolute;top:0;left:0;right:0}
 .hero-copy{position:absolute;left:var(--gut);top:max(140px,calc(100svh - 610 * var(--u)));width:calc(560 * var(--u));min-width:380px;display:flex;flex-direction:column;gap:calc(24 * var(--u));z-index:3}
 .kicker{font-size:max(13px,calc(15 * var(--u)));color:var(--muted)}
-.hero h1{font-size:max(44px,calc(76 * var(--u)));line-height:1;font-weight:700;letter-spacing:-.025em;margin:0}
+.hero h1{font-size:max(44px,calc(76 * var(--u)));line-height:1.04;font-weight:700;letter-spacing:0;font-variation-settings:"opsz" 40;margin:0}
 .hero .lede{font-size:max(16px,calc(20 * var(--u)));line-height:1.55;color:var(--body);max-width:calc(520 * var(--u));margin:0}
 .hero .signup{max-width:max(380px,calc(540 * var(--u)))}
 .hero .signup input,.hero .signup button{font-size:max(15px,calc(17 * var(--u)))}

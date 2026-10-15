@@ -73,3 +73,12 @@ wave(im, 300, 437, 0.28, hx('4F7BA3'), c['foamb'], c['mist'], seed=8, soft=True)
 bands(im, start=2)
 save(ImageOps.mirror(im), 'banner_two_waves_tall.jpg', seed=8)
 print('done 6')
+
+# 5b Swell lines with a wave, sun high in the open sky above the back of the wave
+im = canvas(c['paper'], c['clay'], 2)
+disc(im, 1200 - 1110, 160, 50, c['ochre'])
+bands(im)
+wave(im, 10, 110, 0.6, c['indigo'], c['skyb'], c['mist'], seed=5, soft=True)
+bands(im, start=1)
+save(ImageOps.mirror(im), 'banner_swell_wave_sun_tall.jpg', seed=7)
+print('done 5b')

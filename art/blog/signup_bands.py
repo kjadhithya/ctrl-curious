@@ -13,7 +13,6 @@ def save(im, name, amt=16, seed=3):
     rng = np.random.default_rng(seed)
     a = np.asarray(im.convert('RGB'), dtype=float) + rng.normal(0, amt, (H, W, 1))
     Image.fromarray(np.clip(a, 0, 255).astype('uint8')).resize((1920, 614), Image.LANCZOS).save(OUT + name, quality=86)
-    from heavy_grain import heavy; heavy(OUT + name)
 
 # 1 Night wave: navy sky, a small great wave on the right with the moon in its curl
 im = canvas(c['navy'], c['indigo'], 1.2)

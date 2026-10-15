@@ -9,7 +9,6 @@ def save(im, name, amt=14, seed=3):
     rng = np.random.default_rng(seed)
     a = np.asarray(im.convert('RGB'), dtype=float) + rng.normal(0, amt, (H, W, 1))
     Image.fromarray(np.clip(a, 0, 255).astype('uint8')).resize((1920, 960), Image.LANCZOS).save(OUT + name, quality=86)
-    from heavy_grain import heavy; heavy(OUT + name)
 
 # 2 Seigaiha sunrise: a big half sun rising over a sea of wave scales, open sky for the headline
 im = canvas(c['paper'], c['clay'], 1.6)

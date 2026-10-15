@@ -24,7 +24,6 @@ def finish(small,name,amt=12,seed=0):
     big=small.resize((1200,600),Image.NEAREST)
     rng=np.random.default_rng(seed); a=np.asarray(big,float)+rng.normal(0,amt,(600,1200,1))
     Image.fromarray(np.clip(a,0,255).astype('uint8')).save(OUT+name,quality=88)
-    import sys as _s, os as _o; _s.path.insert(0, _o.path.dirname(_o.path.dirname(_o.path.abspath(__file__)))); from heavy_grain import heavy; heavy(OUT+name)
 def wave_rows(im,y0,cols,period=12,amp=2):
     for y in range(y0,GH):
         for x in range(GW):

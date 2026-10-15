@@ -63,3 +63,13 @@ wave(im, 10, 110, 0.6, c['indigo'], c['skyb'], c['mist'], seed=5, soft=True)
 bands(im, start=1)
 save(ImageOps.mirror(im), 'banner_swell_wave_tall.jpg', seed=7)
 print('done')
+
+# 6 Swell lines with two waves: option 5 plus a smaller teal wave in front of the big one
+im = canvas(c['paper'], c['clay'], 2)
+disc(im, 400, 300, 44, c['ochre'])
+bands(im)
+wave(im, 10, 110, 0.6, c['indigo'], c['skyb'], c['mist'], seed=5, soft=True)
+wave(im, 300, 437, 0.28, c['teal'], c['foamb'], c['mist'], seed=8, soft=True)
+bands(im, start=2)
+save(ImageOps.mirror(im), 'banner_two_waves_tall.jpg', seed=8)
+print('done 6')

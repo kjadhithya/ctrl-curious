@@ -175,7 +175,7 @@ ${nav('home', false)}
 <div class="hero-copy">
 <div class="kicker">A daily design digest · weekdays at 10:00 IST</div>
 <h1 id="hero-h">Catch the next wave in design.</h1>
-<p class="lede">Spot what&rsquo;s rising in design before everyone&rsquo;s talking about it. Five reads, three videos, every weekday.</p>
+<p class="lede">Spot what&rsquo;s rising in design before everyone&rsquo;s talking about it.</p>
 ${signupForm('email-hero')}
 </div>
 <span class="grain"></span>

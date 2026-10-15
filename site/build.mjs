@@ -328,9 +328,6 @@ function about() {
 <h2 class="h">The art</h2>
 <p>Every issue opens with a grainy woodblock scene inspired by the great wave. Each weekday has its own edition and its own set of artworks, rotating so no two days in a month look the same. It's a small reminder that the work we do is a craft, and that a morning email can be a pleasure to open.</p>
 
-<h2 class="h">Who makes it</h2>
-<p>Ctrl+Curious is put together in Bengaluru by Adhithya, a product designer who got tired of keeping twenty tabs open to stay current. It started as a personal habit and became something worth sharing.</p>
-
 <h2 class="h">Say hello</h2>
 <p>Read something that belongs in an issue, or know of a meetup we missed? <a class="link" href="mailto:${SIGNUP_TO}?subject=Ctrl%2BCurious%20link%20suggestion">Suggest a link</a>. Every past issue is in the <a class="link" href="/archive">archive</a>, and you can leave any time with one click from the bottom of any email.</p>
 </div>

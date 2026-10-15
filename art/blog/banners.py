@@ -40,3 +40,22 @@ for i, col in enumerate(cols):
     d.line(lt, fill=c['foamb'] if i % 2 == 0 else c['mauve'], width=2*S)
 save(im, 'banner_swell.jpg', seed=6)
 print('done')
+
+# 5 Swell lines with a wave: the rolling bands, a great wave rising out of them, ochre sun in its curl
+def bands(im, start=0):
+    d = ImageDraw.Draw(im)
+    for i, col in enumerate(cols):
+        if i < start: continue
+        y0 = 430 + i*26
+        top = [(x*S, (y0 + math.sin(x/(90 - i*6) + i) * (18 - i*1.5))*S) for x in range(0, 1210, 6)]
+        d.polygon(top + [(W, H), (0, H)], fill=col)
+        lt = [(x*S, (y0 + 10 + math.sin(x/(90 - i*6) + i) * (18 - i*1.5))*S) for x in range(0, 1210, 6)]
+        d.line(lt, fill=c['foamb'] if i % 2 == 0 else c['mauve'], width=2*S)
+im = canvas(c['paper'], c['clay'], 2)
+disc(im, 500, 262, 52, c['ochre'])
+bands(im)
+wave(im, 30, -95, 0.8, c['indigo'], c['skyb'], c['mist'], seed=5)
+bands(im, start=1)
+im = ImageOps.mirror(im)
+save(im, 'banner_swell_wave.jpg', seed=7)
+print('done 5')

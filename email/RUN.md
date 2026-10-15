@@ -42,16 +42,17 @@ Send exactly one email per run. Once send-email returns an email ID, the issue i
 
 ## Who it's for and what every item must do
 
-The readers are product designers and UX/UI designers. Every read, video and meetup must do at least one of two jobs:
+The readers are senior product designers, UX/UI designers, design leads and experts. They already know the fundamentals, so skip anything introductory: no 101 guides, glossaries, basic how-tos, "tips for beginners" or listicles. Every read, video and meetup must do at least one of two jobs at a senior level:
 
-1. **Help them upskill**: a technique, method, pattern or tool they can apply at work this week (research methods, interaction and UI patterns, design systems, accessibility, prototyping, AI in the design workflow, writing for interfaces, working with engineers and PMs, presenting and influencing).
+1. **Help them upskill**: advanced practice, new methods, original research or hard-won lessons from experienced teams that a senior designer can apply at work (research methods, interaction and UI patterns, design systems, accessibility, prototyping, AI in the design workflow, writing for interfaces, working with engineers and PMs, presenting and influencing).
 2. **Keep them current**: what is changing in product and UX/UI design right now (tool launches and major updates in Figma, Framer, Adobe and AI design tools; shifts in how teams work; notable app and product redesigns; industry moves; design news from India).
 
 Before including anything, ask: would a product designer be better at their job, or better informed about their field, after this? If not, drop it.
 
 ## Choosing the Read stories
 
-- Aim for a balance across the five: roughly two to upskill (practical, how-to or deep explainer) and three to stay current (news, launches, redesign breakdowns, trend analysis). Never five pieces of news with nothing practical.
+- Aim for a balance across the five: roughly two to upskill (original research, deep analysis, case studies from real teams) and three to stay current (news, launches, breakdowns of real shipped redesigns, trend analysis). Never five pieces of news with nothing to learn from.
+- Credibility matters: prefer recognised publications, established researchers, design leaders and the teams that actually built the product. Skip personal concept redesigns of other companies' products by people with no connection to them, however polished.
 - Best sources: UX Collective (uxdesign.cc), Smashing Magazine, Nielsen Norman Group, Figma blog and Config talks, Bootcamp, UX Planet, Built for Mars, Lenny's Newsletter design posts, Intercom and Linear and Stripe design blogs, Sidebar.io picks, company design blogs (Airbnb, Uber, Spotify, Atlassian, Shopify Polaris, Google Material), and Indian design teams (Swiggy, Zomato, Razorpay, CRED, Flipkart).
 - Gallery sites (It's Nice That, Dezeen, Creative Bloq) only when the piece is about digital product or interface design. No festival identities, posters, packaging or rebrands of companies the reader has no connection to.
 - Each note says what the reader gets: the technique to try, or what changed and why it matters for their work.
@@ -63,7 +64,8 @@ The three videos follow the same rule: each must help product and UX/UI designer
 - Three different channels. Never two videos from the same channel in one issue, and avoid a channel used in the previous issue (check the last file in `issues/` on GitHub).
 - Fresh: published in the last 7 days. Go up to 14 days only if nothing good is newer. Confirm the upload date on the video page itself, not from a search snippet.
 - At least one video must connect to a story in today's Read list or summary, such as a launch walkthrough, a conference talk that just went up, or a first look at a new tool.
-- Good sources to check first: official channels (Figma, Adobe, Framer, Webflow, Google Design, Apple Developer), fresh conference uploads (Config, Adobe MAX, Awwwards, Figma community events), and working designers who cover new tools and trends (for example Dive Club, Juxtopposed, Mizko, DesignCourse, Flux Academy, Malewicz). A strong video from somewhere else is welcome.
+- Good sources to check first: official channels (Figma, Adobe, Framer, Webflow, Google Design, Apple Developer, Y Combinator), fresh conference talks (Config, Adobe MAX, Awwwards, Clarity, Into Design Systems), interviews with design leaders (Dive Club, Lenny's Podcast, Design Better) and research groups (NN/g). A strong video from somewhere else is welcome if the speaker has real standing.
+- Not for this audience: beginner tutorials, "I redesigned X" concept videos by people unconnected to the product, and creator content aimed at people starting out.
 - Skip vague motivational or career-chat videos, and anything older than a few weeks. A practical walkthrough is welcome when it teaches a real skill or shows a new tool or feature.
 - Each note should say why it matters now (what is new or timely), not just what the video covers.
 

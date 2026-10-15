@@ -348,7 +348,7 @@ ${anatomy}</div><span class="grain"></span></section>
 <section class="ab-grid wrap ab-last">
 <div class="ab-copy"><h2 class="h">The art</h2><p>Every issue opens with a grainy woodblock scene inspired by the great wave. Each weekday has its own edition and its own set of artworks, rotating so no two days in a month look the same. It's a small reminder that the work we do is a craft, and that a morning email can be a pleasure to open.</p>
 <h2 class="h" style="font-size:26px;margin-top:20px">Say hello</h2><p>Read something that belongs in an issue, or know of a meetup we missed? <a class="link" href="mailto:${SIGNUP_TO}?subject=Ctrl%2BCurious%20link%20suggestion">Suggest a link</a>. Every past issue is in the <a class="link" href="/archive">archive</a>, and you can leave any time with one click from the bottom of any email.</p></div>
-${art('tue/tue_08.jpg')}
+<div class="pic about-pic"><img src="/assets/blog/about_ochre_dawn.jpg" alt="" loading="lazy"><span class="grain"></span></div>
 </section>
 ${band()}
 </main>`;
@@ -407,7 +407,7 @@ fs.mkdirSync(OUT, { recursive: true });
 copy('site/static', 'static');
 copy('assets/email/days');
 copy('assets/blog/hero');
-for (const f of ['assets/blog/seigaiha_tile.jpg', 'assets/email/wave_hero.jpg', 'assets/blog/banner_swell_wave_mountain_sun_tall.jpg', 'assets/blog/signup_moon_shore.jpg']) copy(f);
+for (const f of ['assets/blog/seigaiha_tile.jpg', 'assets/blog/about_ochre_dawn.jpg', 'assets/email/wave_hero.jpg', 'assets/blog/banner_swell_wave_mountain_sun_tall.jpg', 'assets/blog/signup_moon_shore.jpg']) copy(f);
 
 write('index.html', home());
 write('archive.html', archive());

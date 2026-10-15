@@ -46,7 +46,7 @@ def save(im, name, seed, amt=14, alpha=False, size=(1920, 1080)):
 # background: the full static scene minus the wave
 im = canvas(c['paper'], c['clay'], 2)
 disc(im, 1200 - 1110, 160, 50, c['wine'])
-mountain(im, 350, 570, 460, 425, 575, c['plum'], snow=c['paper'])
+mountain(im, 350, 570, 460, 425, 575, c['teal'], snow=c['paper'])
 for i in range(len(cols)):
     band(im, i)
 save(im, 'bg.webp', 7)

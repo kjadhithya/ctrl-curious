@@ -30,7 +30,7 @@
   function row(i) {
     return '<li class="row"><span class="num" aria-hidden="true">' + i.n + '</span>' +
       '<a class="pic" href="' + i.href + '" tabindex="-1" aria-hidden="true"><img src="' + esc(i.img) + '" alt="" loading="lazy"><span class="grain"></span></a>' +
-      '<div class="txt"><div class="meta"><span class="tag" style="background:' + i.color + '">' + esc(i.day) + ' · ' + esc(i.theme) + '</span><span>' + esc(i.long) + '</span></div>' +
+      '<div class="txt"><div class="meta"><span class="tag" style="background:' + i.color + '">' + esc(i.day) + '</span><span>' + esc(i.long) + '</span></div>' +
       '<h3><a href="' + i.href + '">' + esc(i.title) + '</a></h3><p>' + esc(i.dek) + '</p></div>' +
       '</li>';
   }

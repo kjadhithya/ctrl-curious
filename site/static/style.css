@@ -55,7 +55,7 @@ img{max-width:100%;display:block}
 .art-ext{display:none}
 /* motion: the wave surges forward and settles; each swell band lifts on its own rhythm */
 .art .wave{transform-origin:82% 88%;animation:surge 7s ease-in-out infinite;will-change:transform}
-.art .band,.art-ext .band{animation:bob 6s ease-in-out infinite;will-change:transform}
+.art .band,.art-ext .band{height:auto;bottom:auto;animation:bob 6s ease-in-out infinite;will-change:transform}
 .b1{--lift:-.35%;animation-duration:6.4s!important;animation-delay:-.4s!important}
 .b2{--lift:-.5%;animation-duration:5.8s!important;animation-delay:-1.6s!important}
 .b3{--lift:-.6%;animation-duration:6.9s!important;animation-delay:-2.9s!important}
@@ -82,15 +82,18 @@ img{max-width:100%;display:block}
 .signup input::placeholder{color:var(--faint)}
 .signup button{padding:16px 24px;font-size:17px}
 .signup-note{font-size:15px;color:var(--muted);min-height:1.4em;margin:0}
-.strip{width:100%;height:auto;aspect-ratio:1200/32}
+.strip{height:16px;background:url(/assets/blog/seigaiha_tile.jpg) 0 0/auto 16px repeat-x}
 
 /* latest */
 .latest{padding-top:80px;padding-bottom:72px;display:flex;flex-direction:column;gap:32px}
-.latest-grid{display:grid;grid-template-columns:minmax(0,640px) 1fr;gap:56px;align-items:start}
+.latest-grid{display:grid;grid-template-columns:minmax(0,640px) 1fr;gap:56px;align-items:stretch}
 .pic{position:relative;overflow:hidden}
 .pic img{width:100%;height:100%;object-fit:cover}
 .latest .pic{aspect-ratio:16/10}
-.latest-body{display:flex;flex-direction:column;gap:18px}
+.latest-body{display:flex;flex-direction:column;gap:18px;height:0;min-height:100%}
+.latest-body .clamp{flex:1 1 0;min-height:0;overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical}
+.latest-body .more{margin-top:auto;color:var(--wine);font-weight:600;text-decoration:none;font-size:17px;white-space:nowrap}
+.latest-body .more:hover{text-decoration:underline}
 .latest-body .meta{font-size:15px}
 .latest-body h2{margin:0;font-size:40px;line-height:1.12}
 .latest-body h2 a,.row h3 a{text-decoration:none}
@@ -259,6 +262,8 @@ img{max-width:100%;display:block}
   .hero .lede{font-size:18px}
   .latest{padding-top:56px;padding-bottom:48px}
   .latest-grid{grid-template-columns:1fr;gap:24px}
+  .latest-body{height:auto;min-height:0}
+  .latest-body .clamp{flex:none;-webkit-line-clamp:5!important}
   .latest-body h2{font-size:30px}
   .week{padding-top:56px;padding-bottom:56px}
   .week-head{flex-direction:column;align-items:flex-start}

@@ -130,7 +130,7 @@ ${footer()}
 }
 
 // ---------- pieces ----------
-const tag = (i) => `<span class="tag" style="background:${i.day.color}">${esc(i.day.name)} · ${esc(i.day.theme)}</span>`;
+const tag = (i) => `<span class="tag" style="background:${i.day.color}">${esc(i.day.name)}</span>`;
 const countsLine = (i) =>
   [plural(i.reads.length, 'read'), plural(i.watch.length, 'video'), i.meetups.length ? plural(i.meetups.length, 'meetup') : ''].filter(Boolean);
 
@@ -152,8 +152,8 @@ function home() {
 <div class="latest-body">
 <div class="meta">${tag(latest)}<span>Issue ${latest.num} · ${latest.p.d} ${MONTHS[latest.p.m - 1]} ${latest.p.y}</span></div>
 <h2><a href="${latest.href}">${esc(latest.title)}</a></h2>
-<p>${linkify(latest.summary)}</p>
-<div class="counts">${countsLine(latest).map((c) => `<span>${c}</span>`).join('')}<a href="${latest.href}">Read the issue →</a></div>
+<p class="clamp">${linkify(latest.summary)}</p>
+<a class="more" href="${latest.href}">Read the issue →</a>
 </div></div></section>`
     : '';
   const days = Object.entries(DAYS)
@@ -179,7 +179,7 @@ ${signupForm('email-hero')}
 </div>
 <span class="grain"></span>
 </section>
-<img class="strip" src="/assets/email/seigaiha_strip.jpg" alt="">
+<div class="strip" aria-hidden="true"></div>
 ${latestHtml}
 <section class="week wrap" id="week" aria-labelledby="week-h">
 <div class="week-head"><h2 class="h" id="week-h">The week, by day</h2><p>Every weekday has its own look and its own rotating artwork, so Tuesday never feels like Monday.</p></div>
@@ -282,7 +282,7 @@ function issuePage(i, idx) {
 <div class="meta">${tag(i)}<span>${esc(i.long)} · Issue ${i.num}</span></div>
 <h1>${esc(i.title)}</h1>
 </div>
-<div class="issue-hero"><div class="pic"><img src="${esc(i.heroSrc)}" alt="${esc(i.hero_alt || "Today's Ctrl+Curious artwork")}"><span class="grain"></span></div><img class="strip" src="/assets/email/seigaiha_strip.jpg" alt=""></div>
+<div class="issue-hero"><div class="pic"><img src="${esc(i.heroSrc)}" alt="${esc(i.hero_alt || "Today's Ctrl+Curious artwork")}"><span class="grain"></span></div><div class="strip" aria-hidden="true"></div></div>
 <div class="col issue-body">
 <section class="sec" aria-labelledby="brief-h"><h2 class="h" id="brief-h">Today, in brief</h2><p class="brief">${linkify(i.summary)}</p></section>
 ${reads ? `<section class="sec" aria-labelledby="read-h" style="gap:12px"><h2 class="h" id="read-h">Read</h2><ol class="reads">${reads}</ol></section>` : ''}
@@ -348,7 +348,7 @@ fs.mkdirSync(OUT, { recursive: true });
 copy('site/static', 'static');
 copy('assets/email/days');
 copy('assets/blog/hero');
-for (const f of ['assets/email/seigaiha_strip.jpg', 'assets/email/wave_hero.jpg', 'assets/blog/banner_swell_wave_mountain_sun_tall.jpg', 'assets/blog/signup_wine_sunset_soft.jpg']) copy(f);
+for (const f of ['assets/blog/seigaiha_tile.jpg', 'assets/email/wave_hero.jpg', 'assets/blog/banner_swell_wave_mountain_sun_tall.jpg', 'assets/blog/signup_wine_sunset_soft.jpg']) copy(f);
 
 write('index.html', home());
 write('archive.html', archive());

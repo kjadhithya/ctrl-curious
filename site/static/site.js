@@ -18,3 +18,22 @@
     });
   });
 })();
+
+// Latest issue: trim the summary so the text column ends level with the image, then "Read the issue".
+(function () {
+  var narrow = window.matchMedia('(max-width:860px)');
+  function fit() {
+    document.querySelectorAll('.clamp').forEach(function (p) {
+      p.style.maxHeight = '';
+      if (narrow.matches) { p.style.webkitLineClamp = ''; return; }
+      var lh = parseFloat(getComputedStyle(p).lineHeight) || 30;
+      var n = Math.max(2, Math.floor(p.clientHeight / lh));
+      p.style.webkitLineClamp = String(n);
+      p.style.maxHeight = n * lh + 'px';
+    });
+  }
+  fit();
+  window.addEventListener('resize', fit);
+  window.addEventListener('load', fit);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+})();

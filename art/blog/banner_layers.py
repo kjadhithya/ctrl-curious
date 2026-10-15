@@ -20,24 +20,25 @@ BASE = 430 + 115
 
 def band(im, i):
     d = ImageDraw.Draw(im)
+    Hc = im.size[1]
     col = cols[i]
     y0 = BASE + i * 26
     top = [(x * S, (y0 + math.sin(x / (90 - i * 6) + i) * (18 - i * 1.5)) * S) for x in range(0, 1210, 6)]
-    d.polygon(top + [(W, H), (0, H)], fill=col)
+    d.polygon(top + [(W, Hc), (0, Hc)], fill=col)
     lt = [(x * S, (y0 + 10 + math.sin(x / (90 - i * 6) + i) * (18 - i * 1.5)) * S) for x in range(0, 1210, 6)]
     d.line(lt, fill=c['foamb'] if i % 2 == 0 else c['mauve'], width=2 * S)
 
 
-def save(im, name, seed, amt=14, alpha=False):
+def save(im, name, seed, amt=14, alpha=False, size=(1920, 1080)):
     im = ImageOps.mirror(im)
     rng = np.random.default_rng(seed)
     a = np.asarray(im.convert('RGBA' if alpha else 'RGB'), dtype=float)
     a[..., :3] += rng.normal(0, amt, a.shape[:2])[..., None]
     out = Image.fromarray(np.clip(a, 0, 255).astype('uint8'))
     if alpha:  # resize premultiplied so edges don't pick up dark fringes
-        out = out.convert('RGBa').resize((1920, 1080), Image.LANCZOS).convert('RGBA')
+        out = out.convert('RGBa').resize(size, Image.LANCZOS).convert('RGBA')
     else:
-        out = out.resize((1920, 1080), Image.LANCZOS)
+        out = out.resize(size, Image.LANCZOS)
     out.save(OUT + name, quality=82, method=6)
     print(name, os.path.getsize(OUT + name) // 1024, 'KB')
 
@@ -56,7 +57,9 @@ wave(im, 10, 110, 0.6, c['indigo'], c['skyb'], c['mist'], seed=5, soft=True, par
 save(im, 'wave.webp', 8, alpha=True)
 
 # front bands, one per layer
+# each band runs 60px past the bottom of the frame, so lifting it never opens a gap underneath
+EXT = 60
 for i in range(1, len(cols)):
-    im = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    im = Image.new('RGBA', (W, H + EXT * S), (0, 0, 0, 0))
     band(im, i)
-    save(im, f'band{i}.webp', 10 + i, alpha=True)
+    save(im, f'band{i}.webp', 10 + i, alpha=True, size=(1920, round(1080 * (H + EXT * S) / H)))

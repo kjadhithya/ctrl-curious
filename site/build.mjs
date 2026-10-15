@@ -130,7 +130,7 @@ ${footer()}
 }
 
 // ---------- pieces ----------
-const tag = (i) => `<span class="tag" style="background:${i.day.color}">${esc(i.day.name)}</span>`;
+const tag = (i) => `<span class="tag" style="background:${i.day.color}">${esc(i.day.name)} · ${esc(i.day.theme)}</span>`;
 const countsLine = (i) =>
   [plural(i.reads.length, 'read'), plural(i.watch.length, 'video'), i.meetups.length ? plural(i.meetups.length, 'meetup') : ''].filter(Boolean);
 

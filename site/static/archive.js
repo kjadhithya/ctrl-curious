@@ -32,7 +32,7 @@
       '<a class="pic" href="' + i.href + '" tabindex="-1" aria-hidden="true"><img src="' + esc(i.img) + '" alt="" loading="lazy"><span class="grain"></span></a>' +
       '<div class="txt"><div class="meta"><span class="tag" style="background:' + i.color + '">' + esc(i.day) + ' · ' + esc(i.theme) + '</span><span>' + esc(i.long) + '</span></div>' +
       '<h3><a href="' + i.href + '">' + esc(i.title) + '</a></h3><p>' + esc(i.dek) + '</p></div>' +
-      '<div class="side">' + i.counts.map(function (c) { return '<span>' + c + '</span>'; }).join('') + '<a href="' + i.href + '" aria-label="Open issue ' + i.n + '">Open →</a></div></li>';
+      '</li>';
   }
 
   function render(push) {

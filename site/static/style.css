@@ -115,14 +115,19 @@ img{max-width:100%;display:block}
 .recent-head{display:flex;justify-content:space-between;align-items:center;gap:16px}
 .recent-head a{font-size:17px;color:var(--plum);font-weight:600;text-decoration:none}
 .rows{display:flex;flex-direction:column;border-bottom:1px solid var(--clay);margin:0;padding:0;list-style:none}
-.row{display:grid;grid-template-columns:96px 240px 1fr 160px;gap:32px;align-items:center;padding:24px 0;border-top:1px solid var(--clay)}
+.row{display:grid;grid-template-columns:96px 240px 1fr;gap:32px;align-items:center;padding:24px 0;border-top:1px solid var(--clay)}
 .row .num{font-size:40px;line-height:1;font-weight:700;color:var(--mauve)}
 .row .pic{width:240px;height:120px}
 .row .txt{display:flex;flex-direction:column;gap:8px;min-width:0}
 .row h3{margin:0;font-size:26px;line-height:1.2}
 .row p{margin:0;font-size:17px;line-height:1.55;color:var(--body)}
-.row .side{display:flex;flex-direction:column;align-items:flex-end;font-size:14px;line-height:1.7;color:var(--muted)}
-.row .side a{color:var(--wine);font-weight:600;text-decoration:none}
+.row{position:relative;cursor:pointer;transition:background-color .15s}
+.row h3 a::after{content:"";position:absolute;inset:0}
+.row:hover h3 a{text-decoration:underline;text-decoration-color:var(--wine);text-underline-offset:4px}
+.row:hover .pic img{transform:scale(1.03)}
+.row .pic img{transition:transform .4s ease}
+.row:focus-within{outline:2px solid var(--wine);outline-offset:4px}
+.row h3 a:focus-visible{outline:none}
 .center{display:flex;justify-content:center}
 
 /* signup band */
@@ -164,12 +169,11 @@ img{max-width:100%;display:block}
 .month-head h2{font-size:30px;font-weight:700;margin:0}
 .month-head h2::before{content:"> ";color:var(--wine);white-space:pre}
 .month-head span{font-size:15px;color:var(--muted)}
-.archive .row{grid-template-columns:88px 220px 1fr 150px;gap:28px;padding:22px 0}
+.archive .row{grid-template-columns:88px 220px 1fr;gap:28px;padding:22px 0}
 .archive .row .num{font-size:36px}
 .archive .row .pic{width:220px;height:110px}
 .archive .row h3{font-size:24px;line-height:1.25}
 .archive .row p{font-size:16px}
-.archive .row .side a{color:var(--plum)}
 .empty{padding:48px 0;font-size:19px;color:var(--muted)}
 .pager{padding-top:24px;padding-bottom:80px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:16px}
 .pager .pg{display:flex;gap:8px;flex-wrap:wrap}
@@ -234,7 +238,6 @@ img{max-width:100%;display:block}
   .latest-body h2{font-size:32px}
   .row,.archive .row{grid-template-columns:72px 180px 1fr;gap:24px}
   .row .pic,.archive .row .pic{width:180px;height:90px}
-  .row .side{grid-column:3;flex-direction:row;align-items:center;gap:16px}
   .days{grid-template-columns:repeat(3,1fr)}
 }
 @media (max-width:860px){
@@ -266,7 +269,6 @@ img{max-width:100%;display:block}
   .row,.archive .row{grid-template-columns:1fr;gap:12px;padding:22px 0}
   .row .num,.archive .row .num{font-size:28px}
   .row .pic,.archive .row .pic{width:100%;height:auto;aspect-ratio:2/1}
-  .row .side{grid-column:auto}
   .row h3,.archive .row h3{font-size:22px}
   .h{font-size:26px}
   .band{min-height:0}

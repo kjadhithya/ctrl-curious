@@ -139,7 +139,6 @@ function row(i, h = 'h3') {
 <span class="num" aria-hidden="true">${i.num}</span>
 <a class="pic" href="${i.href}" tabindex="-1" aria-hidden="true"><img src="${esc(i.heroSrc)}" alt="" loading="lazy"><span class="grain"></span></a>
 <div class="txt"><div class="meta">${tag(i)}<span>${esc(i.long)}</span></div><${h}><a href="${i.href}">${esc(i.title)}</a></${h}><p>${esc(i.dek || '')}</p></div>
-<div class="side">${countsLine(i).slice(0, 2).map((c) => `<span>${c}</span>`).join('')}<a href="${i.href}" aria-label="Open issue ${i.num}">Open →</a></div>
 </li>`;
 }
 

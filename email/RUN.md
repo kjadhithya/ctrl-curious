@@ -123,7 +123,7 @@ The website is built from one JSON file per issue in `issues/` of the GitHub rep
 {
   "issue": 2,
   "date": "2026-10-16",
-  "title": "A headline for the day in sentence case, under about 90 characters",
+  "title": "A headline for the day in sentence case, under about 90 characters. Say literally what happened (who did what); no metaphors or clever phrasing that needs the summary to decode it.",
   "dek": "One plain sentence listing what's inside, no links.",
   "hero": "the {{HERO_URL}} used in the email",
   "hero_alt": "Short description of the artwork",

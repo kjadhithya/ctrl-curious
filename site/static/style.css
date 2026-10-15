@@ -87,9 +87,9 @@ img{max-width:100%;display:block}
 /* latest */
 .latest{padding-top:80px;padding-bottom:72px;display:flex;flex-direction:column;gap:32px}
 .latest-grid{display:grid;grid-template-columns:minmax(0,640px) 1fr;gap:56px;align-items:stretch}
-.pic{position:relative;overflow:hidden}
+.pic{display:block;position:relative;overflow:hidden}
 .pic img{width:100%;height:100%;object-fit:cover}
-.latest .pic{aspect-ratio:16/10}
+.latest .pic{aspect-ratio:2/1}
 .latest-body{display:flex;flex-direction:column;gap:18px;height:0;min-height:100%}
 .latest-body .clamp{flex:1 1 0;min-height:0;overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical}
 .latest-body .more{margin-top:auto;color:var(--wine);font-weight:600;text-decoration:none;font-size:17px;white-space:nowrap}
@@ -108,7 +108,7 @@ img{max-width:100%;display:block}
 .week-head p{font-size:17px;color:var(--muted);max-width:460px;text-align:right;margin:0}
 .days{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;position:relative;z-index:1}
 .day{display:flex;flex-direction:column;gap:12px}
-.day .pic{height:150px}
+.day .pic{aspect-ratio:2/1}
 .day b{font-size:20px;display:block}
 .day span{font-size:15px;color:var(--muted)}
 .day i{display:block;height:3px;font-style:normal}
@@ -269,7 +269,6 @@ img{max-width:100%;display:block}
   .week-head{flex-direction:column;align-items:flex-start}
   .week-head p{text-align:left}
   .days{grid-template-columns:repeat(2,1fr);gap:16px}
-  .day .pic{height:110px}
   .recent{padding-top:56px}
   .row,.archive .row{grid-template-columns:1fr;gap:12px;padding:22px 0}
   .row .num,.archive .row .num{font-size:28px}

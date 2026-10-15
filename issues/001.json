@@ -1,0 +1,70 @@
+{
+  "issue": 1,
+  "date": "2026-10-15",
+  "title": "Figma's Config lands in Bengaluru, and design starts writing things down",
+  "dek": "Specs for design languages, why design still wins, accessibility for the agent era, and two fresh identities.",
+  "hero": "https://raw.githubusercontent.com/kjadhithya/ctrl-curious/main/assets/email/days/thu/thu_01.jpg",
+  "hero_alt": "A wine sun over teal and green hills",
+  "summary": "Figma brought Config to Bengaluru this week, and the headline is a shift toward writing things down: [a new Specs editor](https://techcrunch.com/2026/10/14/figma-announces-new-features-to-define-how-agents-work-on-its-platform/) lets teams document their design language in Markdown so people and AI agents work from the same rules, while code layers move into public beta. On stage, Dylan Field [argued that design is still how products win](https://t2online.in/tech/tech-news/-design-is-how-you-win----figma-ceo-dylan-field-on-why-ai-can-t-replace-designers/2008651), naming India as Figma's second-largest market by daily use. That agent-heavy future raises the bar on inclusion too, with Deque making the case that [accessibility has to be a foundation](https://www.deque.com/blog/for-your-business-to-thrive-in-the-agentic-ai-era-treat-accessibility-as-foundational-to-your-ai-strategy/) of any AI strategy rather than an afterthought. On the brand side, [Pohoda Festival turns 30](https://www.itsnicethat.com/articles/andrej-and-andrej-pohoda-festival-30th-anniversary-graphic-design-project-141026) with a playful refresh and a futuristic typeface, and [Kuda gets an identity](https://www.itsnicethat.com/articles/barkas-kuda-graphic-design-project-131026) paced to Lagos.",
+  "reads": [
+    {
+      "title": "Figma launches Specs and opens code layers to everyone",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/10/14/figma-announces-new-features-to-define-how-agents-work-on-its-platform/",
+      "note": "A Markdown home for your design language that agents can read, plus code layers in public beta and 20-plus new MCP tools."
+    },
+    {
+      "title": "How to stop the stakeholder swirl",
+      "source": "Uber Design on Medium",
+      "url": "https://medium.com/uber-design/how-to-stop-the-stakeholder-swirl-78073b7e986b",
+      "note": "Practical ways to break the loop of shifting feedback and opinions that stalls design decisions."
+    },
+    {
+      "title": "Accessibility and agentic AI",
+      "source": "Deque",
+      "url": "https://www.deque.com/blog/for-your-business-to-thrive-in-the-agentic-ai-era-treat-accessibility-as-foundational-to-your-ai-strategy/",
+      "note": "Why teams building with AI agents should treat accessibility as groundwork, not a compliance checkbox."
+    },
+    {
+      "title": "Andrej & Andrej refresh Pohoda Festival for its 30th year",
+      "source": "It's Nice That",
+      "url": "https://www.itsnicethat.com/articles/andrej-and-andrej-pohoda-festival-30th-anniversary-graphic-design-project-141026",
+      "note": "An anniversary identity with 3D babies and a custom futuristic typeface."
+    },
+    {
+      "title": "Barkas gives Nigerian bank Kuda a faster-paced identity",
+      "source": "It's Nice That",
+      "url": "https://www.itsnicethat.com/articles/barkas-kuda-graphic-design-project-131026",
+      "note": "A rebrand that borrows its energy from Lagos and shifts the tone from banking to everyday life."
+    }
+  ],
+  "watch": [
+    {
+      "title": "Prevent last-minute design requests: a guide",
+      "channel": "NN/g",
+      "id": "aWKk89YoLT8",
+      "note": "How to help stakeholders understand design work so requests arrive earlier and with clearer intent."
+    },
+    {
+      "title": "Why your research findings aren't landing",
+      "channel": "NN/g",
+      "id": "ZPiKuJGv244",
+      "note": "Rachel Krause on shaping a readout as a story that pushes stakeholders to act."
+    },
+    {
+      "title": "Are you supporting legacy users?",
+      "channel": "NN/g",
+      "id": "tnZtSbJR0_E",
+      "note": "Why long-time users of complex tools need care when products change, and how to give it."
+    }
+  ],
+  "meetups": [
+    {
+      "name": "The Messy UX Conference 2026",
+      "date": "2026-11-28",
+      "place": "Bengaluru",
+      "details": "Saturday · IxDF Bengaluru · Stories of failures, pivots and trade-offs",
+      "url": "https://ixdf.org/meetups/the-messy-ux-conference-nov-28th-2026"
+    }
+  ]
+}

@@ -133,6 +133,8 @@ def finish(im, path, amt=13, seed=1):
     m = Image.fromarray((rng.random(a.shape[:2]) * 255).astype('uint8')).filter(ImageFilter.GaussianBlur(14))
     m = (np.asarray(m, dtype=float) - 127) / 127 * 7
     Image.fromarray(np.clip(a + m[..., None], 0, 255).astype('uint8')).save(path, quality=84)
+    from heavy_grain import heavy
+    heavy(path, seed=seed)
 
 def front_sea(im, y, col, line=None, foam=None, gap=18, amp=5, freq=30, seed=0):
     """Water in front of the waves, with a wavy top edge, so wave bodies rise out of it."""

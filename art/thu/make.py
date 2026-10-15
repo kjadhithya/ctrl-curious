@@ -27,6 +27,7 @@ def below(y): return Y>y[None,:]
 def save(img,name,amt=26):
     a=img+rng.normal(0,amt,img.shape[:2])[...,None]
     Image.fromarray(np.clip(a,0,255).astype('uint8')).save(OUT+name,quality=86)
+    import sys as _s, os as _o; _s.path.insert(0, _o.path.dirname(_o.path.dirname(_o.path.abspath(__file__)))); from heavy_grain import heavy; heavy(OUT+name)
 
 # 01 current template image: wine sun over teal, moss and indigo ridges (kept as is, framed to 1200x600)
 im=Image.open('/home/claude/ctrl-curious/assets/email/sun_bluegreen.jpg').convert('RGB')

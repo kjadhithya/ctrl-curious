@@ -12,7 +12,7 @@ const RAW = 'https://raw.githubusercontent.com/kjadhithya/ctrl-curious/main/';
 
 const DAYS = {
   1: { name: 'Monday', theme: 'Week ahead edition', color: '#2B4C6F', art: 'assets/email/days/mon/mon_02.jpg' },
-  2: { name: 'Tuesday', theme: 'Tools edition', color: '#1C3050', art: 'assets/email/days/tue/tue_07.jpg' },
+  2: { name: 'Tuesday', theme: 'Tools edition', color: '#1C3050', art: 'assets/email/days/tue/tue_06.jpg' },
   3: { name: 'Wednesday', theme: 'Type edition', color: '#7E4B6B', art: 'assets/email/days/wed/wed_01.jpg' },
   4: { name: 'Thursday', theme: 'Case study edition', color: '#24585C', art: 'assets/email/days/thu/thu_02.jpg' },
   5: { name: 'Friday', theme: 'Weekend edition', color: '#8A2E3B', art: 'assets/email/days/fri/fri_05.jpg' },

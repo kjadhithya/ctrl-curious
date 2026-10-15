@@ -140,7 +140,11 @@ img{max-width:100%;display:block}
 .band-copy{position:relative;z-index:2;display:flex;flex-direction:column;gap:20px;color:var(--paper);padding-top:56px;padding-bottom:56px;width:100%}
 .band h2{font-size:52px;line-height:1.05;font-weight:700;letter-spacing:-.02em;max-width:620px;margin:0}
 .band p{font-size:19px;line-height:1.5;color:#E9DFE3;max-width:520px;margin:0}
-.band .signup input{border:0}
+.band .signup input{background:rgba(244,238,232,.08);border:1.5px solid rgba(244,238,232,.55);border-right:0;color:var(--paper)}
+.band .signup input::placeholder{color:#D9C3CB}
+.band .signup input:focus{outline:2px solid var(--paper);outline-offset:2px}
+.band .signup button{background:var(--paper);color:var(--plum)!important;border:1.5px solid var(--paper)}
+.band .signup button:hover{background:#E9DCE2}
 .band .signup-note{color:#E9DFE3}
 
 /* footer */
@@ -306,7 +310,7 @@ img{max-width:100%;display:block}
 @media (max-width:420px){
   .signup{flex-direction:column}
   .signup input{border-right:2px solid var(--ink)}
-  .band .signup input{border:0}
+  .band .signup input{border:1.5px solid rgba(244,238,232,.55)}
   .signup button{width:100%}
   .hero h1{font-size:38px}
   .nav ul li.hide-xs{display:none}

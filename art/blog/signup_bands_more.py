@@ -57,14 +57,19 @@ shore(im, sun, mixc(sun, c['wine'], 0.45), w0=150,
 stars(im, 18, 120, mixc(c['paper'], c['ochre'], 0.3), seed=8, avoid=(900, 290, 260))
 save(im, 'signup_ochre_dawn.jpg', 38)
 
-# 9 Moon shore
+# 9 Moon shore: the original band's big blush moon, placed and sized as it shows in option 6,
+# on option 2's wine night, with the wave-scale shore straight below (no water or reflection)
+MX, MY, MR = 806, 123, 223
 im = canvas(mixc(c['wine'], c['ink'], 0.55), mixc(c['wine'], c['ink'], 0.25), 1)
-stars(im, 60, 270, c['paper'], seed=22, avoid=(900, 168, 110))
-n = fbm(7)
+stars(im, 60, 330, c['paper'], seed=22, avoid=(MX, MY, MR + 10))
+rng9 = np.random.default_rng(7)
+def blur_noise9(r):
+    n = Image.fromarray((rng9.random((H, W)) * 255).astype('uint8')).filter(ImageFilter.GaussianBlur(r*S))
+    a = np.asarray(n, dtype=float); return (a - a.min()) / (a.max() - a.min() + 1e-6)
+n = 0.5*blur_noise9(31) + 0.3*blur_noise9(10) + 0.2*blur_noise9(3.4)   # same mottling scale as the original moon
 moon_mauve = np.array(hx('E3B9A6'), float); moon_paper = np.array(hx('F5EEE3'), float)
 tone = moon_mauve[None, None]*(1 - (n*0.6)[..., None]) + moon_paper[None, None]*(n*0.6)[..., None]
-mask = Image.new('L', (W, H), 0); ImageDraw.Draw(mask).ellipse([(900-96)*S, (168-96)*S, (900+96)*S, (168+96)*S], fill=255)
+mask = Image.new('L', (W, H), 0); ImageDraw.Draw(mask).ellipse([(MX-MR)*S, (MY-MR)*S, (MX+MR)*S, (MY+MR)*S], fill=255)
 im.paste(Image.fromarray(np.clip(tone, 0, 255).astype('uint8')), (0, 0), mask)
-blush = (229, 202, 186)
-shore(im, blush, mixc(blush, c['wine'], 0.4))
+seigaiha(im, 340, [c['plum'], mixc(c['wine'], c['ink'], 0.4)], r=18, line=mixc(c['wine'], c['ink'], 0.7))
 save(im, 'signup_moon_shore.jpg', 39)

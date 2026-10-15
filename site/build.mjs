@@ -303,13 +303,40 @@ function about() {
 <main id="main">
 <div class="page-head wrap"><div class="crumb"><a href="/">Home</a> &nbsp;/&nbsp; About</div><h1>About Ctrl+Curious</h1></div>
 <div class="wrap prose">
-<p>Ctrl+Curious is a small daily design digest put together in Bengaluru. Every weekday at 10:00 IST it gathers what's moving in design: a short linked summary of the day, five reads worth your time, three videos, and the meetups happening in Bengaluru and online.</p>
-<p>Each weekday has its own grainy woodblock artwork inspired by the great wave, rotating through a set of scenes so no two days in a month look the same. Every issue lands here too, so you can search back through everything.</p>
-<p>Spotted something that belongs in an issue? <a class="link" href="mailto:${SIGNUP_TO}?subject=Ctrl%2BCurious%20link%20suggestion">Suggest a link</a>.</p>
+<p class="lede-p">Design moves fast now. Tools ship weekly, AI rewrites workflows overnight, and the conversation that matters is scattered across a dozen newsletters, podcasts and feeds. Ctrl+Curious is one short email that does the sorting for you, every weekday at 10:00 IST.</p>
+
+<h2 class="h">Why it exists</h2>
+<p>Most design newsletters are written for people starting out. Ctrl+Curious is for the people who already know the basics: senior product designers, UX and UI designers, design leads, and anyone shaping how products get made. You don't need another listicle about colour theory. You need to know what changed this week, what the best teams are learning, and what's worth an hour of your evening.</p>
+
+<h2 class="h">What's in every issue</h2>
+<ul class="about-list">
+<li><b>Today, in brief.</b> The day's stories tied together in a few sentences, with every claim linked to its source so you can check it yourself.</li>
+<li><b>Five reads.</b> Original research, launches that change how you work, and hard-won lessons from teams who shipped. Roughly two to sharpen your craft and three to keep you current.</li>
+<li><b>Three videos.</b> Fresh talks and interviews from people with real standing: design leaders, conference stages, research groups and the teams behind the tools.</li>
+<li><b>Meetups.</b> Product and UX events in Bengaluru and online that are worth a senior designer's time.</li>
+</ul>
+
+<h2 class="h">How things get picked</h2>
+<p>Every item has to pass one test: will a working designer be better at their job, or better informed about their field, after reading it? If not, it doesn't make the cut.</p>
+<ul class="about-list">
+<li><b>Fresh.</b> Reads from the last couple of days, videos from the last week or two.</li>
+<li><b>Credible.</b> Recognised publications, researchers, design leaders and the people who actually built the thing. No concept redesigns by people with no connection to the product.</li>
+<li><b>Varied.</b> Different sources and channels every day, so no single voice dominates.</li>
+<li><b>Honest.</b> Summaries are written fresh, never copied, and always point back to the original.</li>
+</ul>
+
+<h2 class="h">The art</h2>
+<p>Every issue opens with a grainy woodblock scene inspired by the great wave. Each weekday has its own edition and its own set of artworks, rotating so no two days in a month look the same. It's a small reminder that the work we do is a craft, and that a morning email can be a pleasure to open.</p>
+
+<h2 class="h">Who makes it</h2>
+<p>Ctrl+Curious is put together in Bengaluru by Adhithya, a product designer who got tired of keeping twenty tabs open to stay current. It started as a personal habit and became something worth sharing.</p>
+
+<h2 class="h">Say hello</h2>
+<p>Read something that belongs in an issue, or know of a meetup we missed? <a class="link" href="mailto:${SIGNUP_TO}?subject=Ctrl%2BCurious%20link%20suggestion">Suggest a link</a>. Every past issue is in the <a class="link" href="/archive">archive</a>, and you can leave any time with one click from the bottom of any email.</p>
 </div>
 ${band()}
 </main>`;
-  return page({ title: 'About', body, canonical: '/about' });
+  return page({ title: 'About', desc: 'Ctrl+Curious is a daily design digest for senior product and UX/UI designers: five reads, three videos and the meetups worth your time, every weekday at 10:00 IST.', body, canonical: '/about' });
 }
 
 function unsubscribe() {

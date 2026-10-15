@@ -93,7 +93,7 @@ ${signupForm('email-band')}
 
 const footer = () => `<footer class="foot wrap">${logo(true)}
 <ul><li><a href="/archive">Archive</a></li><li><a href="/about">About</a></li><li><a href="mailto:${SIGNUP_TO}?subject=Ctrl%2BCurious%20link%20suggestion">Suggest a link</a></li><li><a href="/feed.xml">RSS</a></li></ul>
-<small>A daily design digest from Bengaluru.</small><div class="grain-d"></div></footer>`;
+<small>A daily design digest</small><div class="grain-d"></div></footer>`;
 
 function page({ title, desc, body, canonical, image }) {
   const t = title ? `${title} · Ctrl+Curious` : 'Ctrl+Curious · Catch the next wave in design';

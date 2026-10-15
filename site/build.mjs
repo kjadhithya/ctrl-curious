@@ -83,7 +83,7 @@ const signupForm = (id, note) => `<form class="signup" data-signup action="mailt
 </form><p class="signup-note" aria-live="polite">${note || ''}</p>`;
 
 const band = () => `<section class="band" id="signup" aria-labelledby="signup-h">
-<img src="/assets/blog/signup_wine_sunset.jpg" alt="" loading="lazy">
+<img src="/assets/blog/signup_wine_sunset_soft.jpg" alt="" loading="lazy">
 <div class="band-copy wrap">
 <h2 id="signup-h">Get the emails.<br>Stay curious.</h2>
 <p>Every weekday at 10:00 IST: a linked summary, five reads, three videos and the meetups in Bengaluru and online.</p>
@@ -165,7 +165,7 @@ function home() {
         : `<div class="day">${inner}</div>`;
     })
     .join('');
-  const recent = issues.slice(0, 6).map((i) => row(i)).join('');
+  const recent = issues.slice(0, 8).map((i) => row(i)).join('');
   const body = `<main id="main">
 <section class="hero" aria-labelledby="hero-h">
 <div class="art-ext" aria-hidden="true"><img src="/assets/blog/hero/bg.webp" alt=""><img class="band b1" src="/assets/blog/hero/band1.webp" alt=""><img class="band b2" src="/assets/blog/hero/band2.webp" alt=""><img class="band b3" src="/assets/blog/hero/band3.webp" alt=""><img class="band b4" src="/assets/blog/hero/band4.webp" alt=""><img class="band b5" src="/assets/blog/hero/band5.webp" alt=""><img class="band b6" src="/assets/blog/hero/band6.webp" alt=""></div>
@@ -348,7 +348,7 @@ fs.mkdirSync(OUT, { recursive: true });
 copy('site/static', 'static');
 copy('assets/email/days');
 copy('assets/blog/hero');
-for (const f of ['assets/email/seigaiha_strip.jpg', 'assets/email/wave_hero.jpg', 'assets/blog/banner_swell_wave_mountain_sun_tall.jpg', 'assets/blog/signup_wine_sunset.jpg']) copy(f);
+for (const f of ['assets/email/seigaiha_strip.jpg', 'assets/email/wave_hero.jpg', 'assets/blog/banner_swell_wave_mountain_sun_tall.jpg', 'assets/blog/signup_wine_sunset_soft.jpg']) copy(f);
 
 write('index.html', home());
 write('archive.html', archive());

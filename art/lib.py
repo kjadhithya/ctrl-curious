@@ -50,7 +50,7 @@ def sea(im, y, col, line=None, gap=20, amp=4, freq=36, top=0):
             pts = [(x*S, (y0 + math.sin(x / freq + k) * amp)*S) for x in range(0, 1210, 5)]
             d.line(pts, fill=line, width=2*S)
 
-def wave(im, ox, oy, sc, body, stripe, foam, claws=True, seed=5, soft=False):
+def wave(im, ox, oy, sc, body, stripe, foam, claws=True, seed=5, soft=False, parallel=False):
     rng = np.random.default_rng(abs(int(seed)))
     d = ImageDraw.Draw(im)
     P = lambda x, y: ((ox + x * sc) * S, (oy + y * sc) * S)
@@ -69,7 +69,22 @@ def wave(im, ox, oy, sc, body, stripe, foam, claws=True, seed=5, soft=False):
         poly = [tuple(p) for p in outer] + [tuple(p) for p in inner] + [P(480, 900), P(0, 900)]
     mask = Image.new('L', (W, H), 0); ImageDraw.Draw(mask).polygon(poly, fill=255)
     layer = Image.new('RGB', (W, H), body); ld = ImageDraw.Draw(layer)
-    for k in range(1, 12):
+    if parallel:
+        # true parallel offsets of the inner curve, so the lines run evenly and never cross
+        dense = np.vstack([bez(*[np.array(q) for q in seg], n=400) for seg in (
+            (P(830, 385), P(860, 280), P(760, 195), P(650, 222)),
+            (P(650, 222), P(500, 255), P(430, 560), P(780, 820)))]) if soft else inner
+        tan = np.gradient(dense, axis=0); tan /= (np.linalg.norm(tan, axis=1, keepdims=True) + 1e-9)
+        nrm = np.stack([tan[:, 1], -tan[:, 0]], axis=1)
+        mk = np.asarray(mask)
+        mid = dense[len(dense) // 2] + nrm[len(dense) // 2] * 20 * S * sc
+        if not (0 <= int(mid[1]) < H and 0 <= int(mid[0]) < W and mk[int(mid[1]), int(mid[0])]):
+            nrm = -nrm
+        for k in range(1, 12):
+            pts = dense + nrm * k * 25 * sc * S
+            ld.line([tuple(p) for p in pts], fill=stripe, width=max(2, int(3 * S * max(sc, .6))), joint='curve')
+    else:
+      for k in range(1, 12):
         off = np.array([-k * 26 * sc * S, -k * 11 * sc * S])
         ld.line([tuple(p + off) for p in inner], fill=stripe, width=max(2, int(3 * S * max(sc, .6))))
     im.paste(layer, (0, 0), mask)

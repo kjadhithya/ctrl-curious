@@ -87,6 +87,11 @@ rng5 = np.random.default_rng(25)
 a5 = np.asarray(small, dtype=float) + rng5.normal(0, 30, (352, 1100, 1))
 Image.fromarray(np.clip(a5, 0, 255).astype('uint8')).resize((1920, 614), Image.BICUBIC).save(OUT + 'signup_wine_sunset.jpg', quality=88)
 print('done 5')
+# 5 soft: the same scene with finer, lighter grain for the website
+small_s = im.resize((1500, 480), Image.LANCZOS)
+a5s = np.asarray(small_s, dtype=float) + np.random.default_rng(25).normal(0, 17, (480, 1500, 1))
+Image.fromarray(np.clip(a5s, 0, 255).astype('uint8')).resize((1920, 614), Image.BICUBIC).save(OUT + 'signup_wine_sunset_soft.jpg', quality=88)
+print('done 5 soft')
 
 # 7 Wine sunset with the moon's colour: option 5, but the sun takes the blush moon colour of the original band
 im = Image.fromarray(np.clip(base, 0, 255).astype('uint8'))

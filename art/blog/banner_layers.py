@@ -52,7 +52,7 @@ save(im, 'bg.webp', 7)
 
 # the wave alone
 im = Image.new('RGBA', (W, H), (0, 0, 0, 0))
-wave(im, 10, 110, 0.6, c['indigo'], c['skyb'], c['mist'], seed=5, soft=True)
+wave(im, 10, 110, 0.6, c['indigo'], c['skyb'], c['mist'], seed=5, soft=True, parallel=True)
 save(im, 'wave.webp', 8, alpha=True)
 
 # front bands, one per layer

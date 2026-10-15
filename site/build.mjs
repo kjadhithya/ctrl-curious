@@ -85,7 +85,7 @@ const signupForm = (id, note) => `<form class="signup" data-signup action="/api/
 </form><p class="signup-note" aria-live="polite">${note || ''}</p>`;
 
 const band = () => `<section class="band" id="signup" aria-labelledby="signup-h">
-<img src="/assets/blog/signup_moon_shore.jpg" alt="" loading="lazy">
+<img draggable="false" src="/assets/blog/signup_moon_shore.jpg" alt="" loading="lazy">
 <div class="band-copy wrap">
 <h2 id="signup-h">Get the emails.<br>Stay curious.</h2>
 <p>Every weekday at 10:00 IST: a linked summary, five reads, three videos and the meetups in Bengaluru and online.</p>
@@ -139,7 +139,7 @@ const countsLine = (i) =>
 function row(i, h = 'h3') {
   return `<li class="row">
 <span class="num" aria-hidden="true">${i.num}</span>
-<a class="pic" href="${i.href}" tabindex="-1" aria-hidden="true"><img src="${esc(i.heroSrc)}" alt="" loading="lazy"><span class="grain"></span></a>
+<a class="pic" href="${i.href}" tabindex="-1" aria-hidden="true"><img draggable="false" src="${esc(i.heroSrc)}" alt="" loading="lazy"><span class="grain"></span></a>
 <div class="txt"><div class="meta">${tag(i)}<span>${esc(i.short)}</span></div><${h}><a href="${i.href}">${esc(i.title)}</a></${h}><p>${esc(i.dek || '')}</p></div>
 </li>`;
 }
@@ -150,7 +150,7 @@ function home() {
   const latestHtml = latest
     ? `<section class="latest wrap" aria-labelledby="latest-h"><h2 class="h" id="latest-h">Latest issue</h2>
 <div class="latest-grid">
-<a class="pic" href="${latest.href}" tabindex="-1" aria-hidden="true"><img src="${esc(latest.heroSrc)}" alt=""><span class="grain"></span></a>
+<a class="pic" href="${latest.href}" tabindex="-1" aria-hidden="true"><img draggable="false" src="${esc(latest.heroSrc)}" alt=""><span class="grain"></span></a>
 <div class="latest-body">
 <div class="meta">${tag(latest)}<span>Issue ${latest.num} · ${latest.p.d} ${MONTHS[latest.p.m - 1]} ${latest.p.y}</span></div>
 <h2><a href="${latest.href}">${esc(latest.title)}</a></h2>
@@ -161,7 +161,7 @@ function home() {
   const days = Object.entries(DAYS)
     .map(([wd, d]) => {
       const last = issues.find((i) => i.p.wd === Number(wd));
-      const inner = `<span class="pic"><img src="/${d.art}" alt="" loading="lazy"><span class="grain"></span></span><span><b>${d.name}</b><span>${d.theme}</span></span><i style="background:${d.color}"></i>`;
+      const inner = `<span class="pic"><img draggable="false" src="/${d.art}" alt="" loading="lazy"><span class="grain"></span></span><span><b>${d.name}</b><span>${d.theme}</span></span><i style="background:${d.color}"></i>`;
       return last
         ? `<a class="day" href="${last.href}" style="text-decoration:none" aria-label="${d.name}, ${d.theme}: latest ${d.name} issue">${inner}</a>`
         : `<div class="day">${inner}</div>`;
@@ -170,8 +170,8 @@ function home() {
   const recent = issues.slice(0, 8).map((i) => row(i)).join('');
   const body = `<main id="main">
 <section class="hero" aria-labelledby="hero-h">
-<div class="art-ext" aria-hidden="true"><img src="/assets/blog/hero/bg.webp" alt=""><img class="band b1" src="/assets/blog/hero/band1.webp" alt=""><img class="band b2" src="/assets/blog/hero/band2.webp" alt=""><img class="band b3" src="/assets/blog/hero/band3.webp" alt=""><img class="band b4" src="/assets/blog/hero/band4.webp" alt=""><img class="band b5" src="/assets/blog/hero/band5.webp" alt=""><img class="band b6" src="/assets/blog/hero/band6.webp" alt=""></div>
-<div class="art" role="img" aria-label="A great wave rising and falling over moving swell lines, a small plum mountain under its curl and a wine sun high in the sky"><img src="/assets/blog/hero/bg.webp" alt="" fetchpriority="high"><img class="wave" src="/assets/blog/hero/wave.webp" alt=""><img class="band b1" src="/assets/blog/hero/band1.webp" alt=""><img class="band b2" src="/assets/blog/hero/band2.webp" alt=""><img class="band b3" src="/assets/blog/hero/band3.webp" alt=""><img class="band b4" src="/assets/blog/hero/band4.webp" alt=""><img class="band b5" src="/assets/blog/hero/band5.webp" alt=""><img class="band b6" src="/assets/blog/hero/band6.webp" alt=""></div>
+<div class="art-ext" aria-hidden="true"><img draggable="false" src="/assets/blog/hero/bg.webp" alt=""><img draggable="false" class="band b1" src="/assets/blog/hero/band1.webp" alt=""><img draggable="false" class="band b2" src="/assets/blog/hero/band2.webp" alt=""><img draggable="false" class="band b3" src="/assets/blog/hero/band3.webp" alt=""><img draggable="false" class="band b4" src="/assets/blog/hero/band4.webp" alt=""><img draggable="false" class="band b5" src="/assets/blog/hero/band5.webp" alt=""><img draggable="false" class="band b6" src="/assets/blog/hero/band6.webp" alt=""></div>
+<div class="art" role="img" aria-label="A great wave rising and falling over moving swell lines, a small plum mountain under its curl and a wine sun high in the sky"><img draggable="false" src="/assets/blog/hero/bg.webp" alt="" fetchpriority="high"><img draggable="false" class="wave" src="/assets/blog/hero/wave.webp" alt=""><img draggable="false" class="band b1" src="/assets/blog/hero/band1.webp" alt=""><img draggable="false" class="band b2" src="/assets/blog/hero/band2.webp" alt=""><img draggable="false" class="band b3" src="/assets/blog/hero/band3.webp" alt=""><img draggable="false" class="band b4" src="/assets/blog/hero/band4.webp" alt=""><img draggable="false" class="band b5" src="/assets/blog/hero/band5.webp" alt=""><img draggable="false" class="band b6" src="/assets/blog/hero/band6.webp" alt=""></div>
 ${nav('home', false)}
 <div class="hero-copy">
 <div class="kicker">A daily design digest · weekdays at 10:00 IST</div>
@@ -259,12 +259,12 @@ function issuePage(i, idx) {
   const newer = issues[idx - 1];
   const older = issues[idx + 1];
   const reads = i.reads
-    .map((r, k) => `<li><span class="n">${String(k + 1).padStart(2, '0')}</span><a class="rimg" href="${esc(safeUrl(r.url))}" tabindex="-1" aria-hidden="true"><img src="/api/og?url=${encodeURIComponent(safeUrl(r.url))}" alt="" loading="lazy"></a><div><a href="${esc(safeUrl(r.url))}">${esc(r.title)}</a><span class="d">${esc(r.source)} · ${esc(r.note)}</span></div></li>`)
+    .map((r, k) => `<li><span class="n">${String(k + 1).padStart(2, '0')}</span><a class="rimg" href="${esc(safeUrl(r.url))}" tabindex="-1" aria-hidden="true"><img draggable="false" src="/api/og?url=${encodeURIComponent(safeUrl(r.url))}" alt="" loading="lazy"></a><div><a href="${esc(safeUrl(r.url))}">${esc(r.title)}</a><span class="d">${esc(r.source)} · ${esc(r.note)}</span></div></li>`)
     .join('');
   const vids = i.watch
     .map((w) => {
       const u = `https://www.youtube.com/watch?v=${encodeURIComponent(w.id)}`;
-      return `<li><a class="thumb" href="${u}" tabindex="-1" aria-hidden="true"><img src="https://img.youtube.com/vi/${encodeURIComponent(w.id)}/mqdefault.jpg" alt="" loading="lazy">${PLAY}</a><div><a class="t" href="${u}">${esc(w.title)}</a><span class="d">${esc(w.channel)} · ${esc(w.note)}</span></div></li>`;
+      return `<li><a class="thumb" href="${u}" tabindex="-1" aria-hidden="true"><img draggable="false" src="https://img.youtube.com/vi/${encodeURIComponent(w.id)}/mqdefault.jpg" alt="" loading="lazy">${PLAY}</a><div><a class="t" href="${u}">${esc(w.title)}</a><span class="d">${esc(w.channel)} · ${esc(w.note)}</span></div></li>`;
     })
     .join('');
   const meets = i.meetups
@@ -284,7 +284,7 @@ function issuePage(i, idx) {
 <div class="meta">${tag(i)}<span>${esc(i.short)} · Issue ${i.num}</span></div>
 <h1>${esc(i.title)}</h1>
 </div>
-<div class="issue-hero"><div class="pic"><img src="${esc(i.heroSrc)}" alt="${esc(i.hero_alt || "Today's Ctrl+Curious artwork")}"><span class="grain"></span></div><div class="strip" aria-hidden="true"></div></div>
+<div class="issue-hero"><div class="pic"><img draggable="false" src="${esc(i.heroSrc)}" alt="${esc(i.hero_alt || "Today's Ctrl+Curious artwork")}"><span class="grain"></span></div><div class="strip" aria-hidden="true"></div></div>
 <div class="col issue-body">
 <section class="sec" aria-labelledby="brief-h"><h2 class="h" id="brief-h">Today, in brief</h2><p class="brief">${linkify(i.summary)}</p></section>
 ${reads ? `<section class="sec" aria-labelledby="read-h" style="gap:12px"><h2 class="h" id="read-h">Read</h2><ol class="reads">${reads}</ol></section>` : ''}

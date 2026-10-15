@@ -9,7 +9,7 @@ def hx(h):
 C = {k: hx(v) for k, v in dict(
     ink='2E1F25', paper='F4EEE8', mauve='C9A7B5', plum='7E4B6B', wine='8A2E3B', clay='D9C3B7', ochre='C8902F',
     deep='58344A', indigo='1C3050', prussian='2B4C6F', skyb='7C9EB8', mist='C9D6DC', teal='24585C',
-    pine='264A3E', moss='4F6A3A', navy='172338', foamb='D6E2E6').items()}
+    pine='264A3E', moss='4F6A3A', navy='172338', foamb='D6E2E6', orchid='B57BB0').items()}
 
 S = 2
 W, H = 1200 * S, 600 * S
@@ -51,7 +51,7 @@ def sea(im, y, col, line=None, gap=20, amp=4, freq=36, top=0):
             d.line(pts, fill=line, width=2*S)
 
 def wave(im, ox, oy, sc, body, stripe, foam, claws=True, seed=5):
-    rng = np.random.default_rng(seed)
+    rng = np.random.default_rng(abs(int(seed)))
     d = ImageDraw.Draw(im)
     P = lambda x, y: ((ox + x * sc) * S, (oy + y * sc) * S)
     outer = np.vstack([bez(P(0, 640), P(180, 600), P(300, 140), P(600, 110)),
@@ -142,7 +142,7 @@ def glow(im, x, y, r, col, strength=0.55, blur=None):
     """Soft light: a blurred disc blended over the image."""
     m = Image.new('L', (W, H), 0)
     ImageDraw.Draw(m).ellipse([(x-r)*S, (y-r)*S, (x+r)*S, (y+r)*S], fill=int(255*strength))
-    m = m.filter(ImageFilter.GaussianBlur((blur or r*0.6)*S))
+    m = m.filter(ImageFilter.GaussianBlur(float(blur or r*0.6)*S))
     im.paste(Image.new('RGB', (W, H), col), (0, 0), m)
 
 def crescent(im, cx, cy, r, col, sky=None, dx=0.38, dy=-0.18):
@@ -166,3 +166,59 @@ def pine_tree(im, x, base, h, col):
         top = base - h + k*h*0.2; bot = base - h*0.55 + k*h*0.17; ww = w*(0.45 + k*0.2)
         d.polygon([(x*S, top*S), ((x-ww)*S, bot*S), ((x+ww)*S, bot*S)], fill=col)
     d.rectangle([(x-w*0.07)*S, (base-h*0.1)*S, (x+w*0.07)*S, base*S], fill=col)
+
+def sparkle(im, x, y, r, col):
+    d = ImageDraw.Draw(im)
+    d.polygon([(x*S, (y-r)*S), ((x+r*0.25)*S, (y-r*0.25)*S), ((x+r)*S, y*S), ((x+r*0.25)*S, (y+r*0.25)*S),
+               (x*S, (y+r)*S), ((x-r*0.25)*S, (y+r*0.25)*S), ((x-r)*S, y*S), ((x-r*0.25)*S, (y-r*0.25)*S)], fill=col)
+
+def birds(im, pts, col, size=10):
+    d = ImageDraw.Draw(im)
+    for x, y in pts:
+        d.line([((x-size)*S, (y-size*0.35)*S), (x*S, y*S), ((x+size)*S, (y-size*0.35)*S)], fill=col, width=2*S, joint='curve')
+
+def reflect(im, y_line, y_end, darken=0.55, tint=None, wobble=3):
+    """Mirror everything above y_line into the water below it, darkened, with ripple breaks."""
+    src = im.crop((0, int((2*y_line - y_end)*S), W, int(y_line*S))).transpose(Image.FLIP_TOP_BOTTOM)
+    a = np.asarray(src, dtype=float)
+    base = np.array(tint) if tint else np.zeros(3)
+    a = a*darken + base*(1-darken)
+    rows = []
+    for i in range(a.shape[0]):
+        sh = int(math.sin(i / (6*S)) * wobble * S)
+        rows.append(np.roll(a[i], sh, axis=0))
+    a = np.stack(rows)
+    im.paste(Image.fromarray(np.clip(a, 0, 255).astype('uint8')), (0, int(y_line*S)))
+
+def ripple_lines(im, y0, y1, col, gap=14, seed=0, frac=0.5):
+    rng = np.random.default_rng(seed); d = ImageDraw.Draw(im)
+    for y in range(int(y0)+6, int(y1), gap):
+        x = rng.integers(-50, 1200)
+        while x < 1250:
+            L = rng.integers(30, 140)
+            if rng.random() < frac:
+                d.line([(x*S, y*S), ((x+L)*S, y*S)], fill=col, width=2*S)
+            x += L + rng.integers(20, 90)
+
+def curl_cloud(im, cx, cy, s, col, line):
+    """Wave-shaped woodblock cloud: a scalloped body with spiral curls."""
+    d = ImageDraw.Draw(im)
+    lobes = [(-90, 8, 30), (-48, -14, 40), (0, -26, 48), (52, -10, 40), (94, 10, 28)]
+    for ox, oy, r in lobes:
+        d.ellipse([(cx+ox*s-r*s)*S, (cy+oy*s-r*s)*S, (cx+ox*s+r*s)*S, (cy+oy*s+r*s)*S], fill=col)
+    d.rounded_rectangle([(cx-118*s)*S, (cy+4*s)*S, (cx+122*s)*S, (cy+38*s)*S], radius=int(17*s*S), fill=col)
+    for ox, oy, r in lobes[1:4]:
+        for k in (0.75, 0.45, 0.18):
+            rr = r*k
+            d.arc([(cx+ox*s-rr*s)*S, (cy+oy*s-rr*s)*S, (cx+ox*s+rr*s)*S, (cy+oy*s+rr*s)*S], 150, 390, fill=line, width=max(2, int(2.5*S*s)))
+    d.line([((cx-110*s)*S, (cy+28*s)*S), ((cx+110*s)*S, (cy+28*s)*S)], fill=line, width=max(2, int(2.5*S*s)))
+
+def twilight(im, horizon, col, height=260, strength=0.6):
+    """Orchid twilight: a soft glow that rises from the horizon and fades upward."""
+    y0 = max(0, horizon - height)
+    t = np.zeros(H)
+    span = np.arange(int(y0*S), int(horizon*S))
+    t[span] = ((span - y0*S) / ((horizon - y0)*S)) ** 1.6 * strength
+    t[int(horizon*S):] = strength
+    m = Image.fromarray((np.broadcast_to(t[:, None], (H, W)) * 255).astype('uint8'))
+    im.paste(Image.new('RGB', (W, H), col), (0, 0), m)

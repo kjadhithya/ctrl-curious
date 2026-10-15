@@ -169,8 +169,8 @@ function home() {
   const recent = issues.slice(0, 6).map((i) => row(i)).join('');
   const body = `<main id="main">
 <section class="hero" aria-labelledby="hero-h">
-<img class="bg-ext" src="/assets/blog/banner_swell_wave_mountain_sun_tall.jpg" alt="" aria-hidden="true">
-<img class="bg" src="/assets/blog/banner_swell_wave_mountain_sun_tall.jpg" alt="A great wave rising from swell lines, a small plum mountain under its curl and a wine sun high in the sky" fetchpriority="high">
+<div class="art-ext" aria-hidden="true"><img src="/assets/blog/hero/bg.webp" alt=""><img class="band b1" src="/assets/blog/hero/band1.webp" alt=""><img class="band b2" src="/assets/blog/hero/band2.webp" alt=""><img class="band b3" src="/assets/blog/hero/band3.webp" alt=""><img class="band b4" src="/assets/blog/hero/band4.webp" alt=""><img class="band b5" src="/assets/blog/hero/band5.webp" alt=""><img class="band b6" src="/assets/blog/hero/band6.webp" alt=""></div>
+<div class="art" role="img" aria-label="A great wave rising and falling over moving swell lines, a small plum mountain under its curl and a wine sun high in the sky"><img src="/assets/blog/hero/bg.webp" alt="" fetchpriority="high"><img class="wave" src="/assets/blog/hero/wave.webp" alt=""><img class="band b1" src="/assets/blog/hero/band1.webp" alt=""><img class="band b2" src="/assets/blog/hero/band2.webp" alt=""><img class="band b3" src="/assets/blog/hero/band3.webp" alt=""><img class="band b4" src="/assets/blog/hero/band4.webp" alt=""><img class="band b5" src="/assets/blog/hero/band5.webp" alt=""><img class="band b6" src="/assets/blog/hero/band6.webp" alt=""></div>
 ${nav('home', false)}
 <div class="hero-copy">
 <div class="kicker">A daily design digest · weekdays at 10:00 IST</div>
@@ -348,6 +348,7 @@ fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT, { recursive: true });
 copy('site/static', 'static');
 copy('assets/email/days');
+copy('assets/blog/hero');
 for (const f of ['assets/email/seigaiha_strip.jpg', 'assets/email/wave_hero.jpg', 'assets/blog/banner_swell_wave_mountain_sun_tall.jpg', 'assets/blog/signup_wine_sunset.jpg']) copy(f);
 
 write('index.html', home());

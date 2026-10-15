@@ -72,7 +72,7 @@ The three videos follow the same rule: each must help product and UX/UI designer
 ## Summary link format
 
 ```html
-<a href="URL" style="color:#2E1F25;text-decoration:underline;text-decoration-color:#8A2E3B;">linked phrase</a>
+<a href="URL" target="_blank" style="color:#2E1F25;text-decoration:underline;text-decoration-color:#8A2E3B;">linked phrase</a>
 ```
 
 ## Read row (rows 1–4 as shown; on row 5 drop the 24px bottom padding from all three cells, so the image cell becomes `padding:4px 16px 0 0`)
@@ -80,13 +80,13 @@ The three videos follow the same rule: each must help product and UX/UI designer
 The middle cell, between the number and the text, shows the article's own share image, served by the website at `https://ctrl-curious.vercel.app/api/og?url=URL_ENCODED`, where URL_ENCODED is the article URL percent-encoded (in Python: `urllib.parse.quote(url, safe='')`). Nothing needs fetching beforehand; if an article has no image, the site returns a Ctrl+Curious artwork instead.
 
 ```html
-<tr><td valign="top" width="40" style="font-size:15px;line-height:27px;color:#8A2E3B;padding-bottom:24px;">01</td><td class="rthumb" valign="top" width="120" style="padding:4px 16px 24px 0;"><a href="URL"><img src="https://ctrl-curious.vercel.app/api/og?url=URL_ENCODED" width="120" height="63" alt="" style="display:block;border:0;width:120px;height:63px;background-color:#D9C3B7;"></a></td><td valign="top" style="padding-bottom:24px;"><a href="URL" style="font-size:20px;line-height:27px;font-weight:600;color:#2E1F25;text-decoration:none;">Title in sentence case</a><div style="font-size:15px;line-height:23px;color:#5E4B53;padding-top:4px;">Source name · One-line summary.</div></td></tr>
+<tr><td valign="top" width="40" style="font-size:15px;line-height:27px;color:#8A2E3B;padding-bottom:24px;">01</td><td class="rthumb" valign="top" width="120" style="padding:4px 16px 24px 0;"><a href="URL" target="_blank"><img src="https://ctrl-curious.vercel.app/api/og?url=URL_ENCODED" width="120" height="63" alt="" style="display:block;border:0;width:120px;height:63px;background-color:#D9C3B7;"></a></td><td valign="top" style="padding-bottom:24px;"><a href="URL" target="_blank" style="font-size:20px;line-height:27px;font-weight:600;color:#2E1F25;text-decoration:none;">Title in sentence case</a><div style="font-size:15px;line-height:23px;color:#5E4B53;padding-top:4px;">Source name · One-line summary.</div></td></tr>
 ```
 
 ## Watch row (rows 1–2: thumb cell `padding:0 18px 24px 0` and text cell `padding-bottom:24px`; row 3: thumb cell `padding:0 18px 0 0` and no padding on the text cell)
 
 ```html
-<tr><td class="thumb" valign="top" width="168" style="padding:0 18px 24px 0;"><a href="https://www.youtube.com/watch?v=VIDEO_ID"><img src="https://img.youtube.com/vi/VIDEO_ID/mqdefault.jpg" width="168" height="95" alt="Video thumbnail" style="display:block;border:0;width:168px;height:95px;background-color:#7E4B6B;"></a></td><td valign="top" style="padding-bottom:24px;"><a href="https://www.youtube.com/watch?v=VIDEO_ID" style="font-size:19px;line-height:26px;font-weight:600;color:#2E1F25;text-decoration:none;">Video title</a><div style="font-size:15px;line-height:23px;color:#5E4B53;padding-top:4px;">Channel name · Why it is worth watching.</div></td></tr>
+<tr><td class="thumb" valign="top" width="168" style="padding:0 18px 24px 0;"><a href="https://www.youtube.com/watch?v=VIDEO_ID" target="_blank"><img src="https://img.youtube.com/vi/VIDEO_ID/mqdefault.jpg" width="168" height="95" alt="Video thumbnail" style="display:block;border:0;width:168px;height:95px;background-color:#7E4B6B;"></a></td><td valign="top" style="padding-bottom:24px;"><a href="https://www.youtube.com/watch?v=VIDEO_ID" target="_blank" style="font-size:19px;line-height:26px;font-weight:600;color:#2E1F25;text-decoration:none;">Video title</a><div style="font-size:15px;line-height:23px;color:#5E4B53;padding-top:4px;">Channel name · Why it is worth watching.</div></td></tr>
 ```
 
 ## Event card (last card: drop `margin-bottom:12px;`)
@@ -99,7 +99,7 @@ Tag for online: `<span style="background-color:#C9A7B5;color:#2E1F25;padding:0 7
 <td width="62" align="center" valign="middle" style="padding:14px 0 14px 12px;"><div style="font-size:30px;line-height:30px;font-weight:600;color:#8A2E3B;">DD</div><div style="font-size:14px;color:#5E4B53;">Mon</div></td>
 <td width="14" style="border-right:1px solid #D9C3B7;">&nbsp;</td>
 <td valign="middle" style="padding:14px 12px 14px 18px;"><div style="font-size:18px;line-height:24px;font-weight:600;">Event name</div><div style="font-size:14px;line-height:21px;color:#5E4B53;">TAG&nbsp; Known details only, e.g. Saturday · Host · Area</div></td>
-<td valign="middle" align="right" style="padding-right:16px;white-space:nowrap;"><a href="URL" style="font-size:14px;color:#8A2E3B;text-decoration:none;">Details →</a></td>
+<td valign="middle" align="right" style="padding-right:16px;white-space:nowrap;"><a href="URL" target="_blank" style="font-size:14px;color:#8A2E3B;text-decoration:none;">Details →</a></td>
 </tr></table>
 ```
 

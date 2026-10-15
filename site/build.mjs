@@ -371,12 +371,19 @@ function stamp(text) {
     return `${q}${url}?v=${stampCache[url]}`;
   });
 }
+// every link to another website opens in a new tab
+function newTab(text) {
+  return text.replace(/<a\b([^>]*?)href="(https?:\/\/[^"]+)"([^>]*)>/g, (m, pre, url, post) => {
+    if (url.startsWith(SITE) || /\btarget=/.test(pre + post)) return m;
+    return `<a${pre}href="${url}"${post} target="_blank" rel="noopener">`;
+  });
+}
 // stamp the stylesheet first (its own references), then the pages that load it
 const cssFile = path.join(OUT, 'static/style.css');
 fs.writeFileSync(cssFile, stamp(fs.readFileSync(cssFile, 'utf8')));
 for (const f of fs.readdirSync(OUT, { recursive: true })) {
   if (!String(f).endsWith('.html')) continue;
   const p = path.join(OUT, String(f));
-  fs.writeFileSync(p, stamp(fs.readFileSync(p, 'utf8')));
+  fs.writeFileSync(p, newTab(stamp(fs.readFileSync(p, 'utf8'))));
 }
 console.log('Stamped asset URLs');

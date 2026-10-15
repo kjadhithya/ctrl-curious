@@ -7,6 +7,7 @@ rng = np.random.default_rng(42)
 
 # 01 Moonlit water: full moon, long broken reflection on still indigo water
 im = canvas(c['navy'], c['prussian'], 1.3)
+twilight(im, 380, c['orchid'], 200, 0.5)
 stars(im, 60, 330, c['paper'], seed=11, avoid=(760, 150, 70))
 glow(im, 760, 150, 140, c['skyb'], 0.35)
 disc(im, 760, 150, 70, c['clay'])
@@ -21,6 +22,7 @@ finish(im, OUT + 'tue_01.jpg', seed=21)
 
 # 02 Blue hour harbour: moored boats, ochre lanterns, reflections
 im = canvas(c['prussian'], c['skyb'], 1.1)
+twilight(im, 330, c['orchid'], 200, 0.55)
 disc(im, 980, 110, 34, c['paper'])
 ridge(im, 300, 26, 160, c['indigo'], seed=4)
 d = ImageDraw.Draw(im); d.rectangle([0, 395*S, W, H], fill=c['indigo'])
@@ -42,6 +44,7 @@ finish(im, OUT + 'tue_02.jpg', seed=22)
 
 # 03 Firefly forest: rows of pines, ochre fireflies, crescent moon
 im = canvas(c['navy'], c['teal'], 1.4)
+twilight(im, 360, c['orchid'], 240, 0.7)
 crescent(im, 230, 120, 48, c['clay'], tuple(int(v) for v in np.array(c['navy'])*0.85 + np.array(c['teal'])*0.15))
 stars(im, 40, 260, c['paper'], seed=13, avoid=(230, 120, 60))
 for row, (base, h, col, step) in enumerate([(380, 170, c['teal'], 70), (460, 210, c['pine'], 90), (600, 260, (24, 44, 40), 120)]):
@@ -57,6 +60,7 @@ finish(im, OUT + 'tue_03.jpg', seed=23)
 
 # 04 City night shift: skyline with lit windows, crescent moon
 im = canvas(c['indigo'], c['plum'], 1.2)
+twilight(im, 470, c['orchid'], 260, 0.5)
 crescent(im, 960, 110, 44, c['clay'], tuple(int(v) for v in np.array(c['indigo'])*0.9 + np.array(c['plum'])*0.1))
 stars(im, 35, 250, c['paper'], seed=14, avoid=(960, 110, 60))
 d = ImageDraw.Draw(im)
@@ -93,7 +97,7 @@ d.rectangle([0, 450*S, W, H], fill=c['ink'])
 d.rectangle([0, 440*S, W, 456*S], fill=c['deep'])
 glow(im, 260, 470, 220, c['ochre'], 0.35)
 d = ImageDraw.Draw(im)
-d.polygon([(180*S, 250*S), (340*S, 250*S), (300*S, 180*S), (220*S, 180*S)], fill=c['wine'])
+d.polygon([(180*S, 250*S), (340*S, 250*S), (300*S, 180*S), (220*S, 180*S)], fill=c['orchid'])
 d.line([(260*S, 250*S), (260*S, 440*S)], fill=c['clay'], width=6*S)
 d.ellipse([200*S, 432*S, 320*S, 452*S], fill=c['clay'])
 d.rectangle([520*S, 400*S, 760*S, 440*S], fill=c['clay']); d.rectangle([540*S, 380*S, 740*S, 400*S], fill=c['mauve'])
@@ -105,6 +109,7 @@ finish(im, OUT + 'tue_05.jpg', seed=25)
 
 # 06 Lighthouse: beam across a dark teal sea, rocky island
 im = canvas(c['navy'], c['indigo'], 1)
+twilight(im, 420, c['orchid'], 200, 0.5)
 stars(im, 50, 380, c['paper'], seed=16)
 beam = Image.new('L', (W, H), 0)
 ImageDraw.Draw(beam).polygon([(300*S, 205*S), (1250*S, 60*S), (1250*S, 330*S)], fill=110)
@@ -124,7 +129,7 @@ finish(im, OUT + 'tue_06.jpg', seed=26)
 # 07 Aurora: green and teal curtains over snowy peaks
 im = canvas(c['navy'], c['indigo'], 1)
 stars(im, 90, 420, c['paper'], seed=17)
-for k, (col, y0, amp) in enumerate([(c['moss'], 150, 40), (c['teal'], 200, 50), ((110, 170, 140), 120, 30)]):
+for k, (col, y0, amp) in enumerate([(c['moss'], 150, 40), (c['teal'], 200, 50), (c['orchid'], 120, 30)]):
     m = Image.new('L', (W, H), 0); md = ImageDraw.Draw(m)
     for x in range(0, 1200, 4):
         top = y0 + amp*math.sin(x/140 + k*2) + 20*math.sin(x/47 + k)
@@ -147,7 +152,7 @@ def cloud(cx, cy, s, col, line):
     for (ox, oy, r) in [(-20, -18, 30), (-20, -18, 16), (30, -6, 24)]:
         d.arc([(cx + ox*s - r*s)*S, (cy + oy*s - r*s)*S, (cx + ox*s + r*s)*S, (cy + oy*s + r*s)*S], 180, 360, fill=line, width=int(3*S*s))
     d.line([((cx - 94*s)*S, (cy + 40*s)*S), ((cx + 98*s)*S, (cy + 40*s)*S)], fill=line, width=int(3*S*s))
-cloud(300, 160, 1.6, c['plum'], c['mauve'])
+cloud(300, 160, 1.6, c['orchid'], c['paper'])
 cloud(1040, 360, 1.5, c['prussian'], c['skyb'])
 cloud(560, 430, 1.9, c['teal'], c['foamb'])
 cloud(160, 500, 1.4, c['wine'], c['mauve'])

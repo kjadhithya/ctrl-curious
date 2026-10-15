@@ -2,10 +2,10 @@
   "issue": 1,
   "date": "2026-10-15",
   "title": "Figma's Config lands in Bengaluru, and design starts writing things down",
-  "dek": "Specs for design languages, why design still wins, accessibility for the agent era, and two fresh identities.",
+  "dek": "Specs for design languages, why design still wins, accessibility for the agent era, and how to keep your AI context in order.",
   "hero": "https://raw.githubusercontent.com/kjadhithya/ctrl-curious/main/assets/email/days/thu/thu_01.jpg",
   "hero_alt": "A wine sun over teal and green hills",
-  "summary": "Figma brought Config to Bengaluru this week, and the headline is a shift toward writing things down: [a new Specs editor](https://techcrunch.com/2026/10/14/figma-announces-new-features-to-define-how-agents-work-on-its-platform/) lets teams document their design language in Markdown so people and AI agents work from the same rules, while code layers move into public beta. On stage, Dylan Field [argued that design is still how products win](https://t2online.in/tech/tech-news/-design-is-how-you-win----figma-ceo-dylan-field-on-why-ai-can-t-replace-designers/2008651), naming India as Figma's second-largest market by daily use. That agent-heavy future raises the bar on inclusion too, with Deque making the case that [accessibility has to be a foundation](https://www.deque.com/blog/for-your-business-to-thrive-in-the-agentic-ai-era-treat-accessibility-as-foundational-to-your-ai-strategy/) of any AI strategy rather than an afterthought. On the brand side, [Pohoda Festival turns 30](https://www.itsnicethat.com/articles/andrej-and-andrej-pohoda-festival-30th-anniversary-graphic-design-project-141026) with a playful refresh and a futuristic typeface, and [Kuda gets an identity](https://www.itsnicethat.com/articles/barkas-kuda-graphic-design-project-131026) paced to Lagos.",
+  "summary": "Figma brought Config to Bengaluru this week, and the headline is a shift toward writing things down: [a new Specs editor](https://techcrunch.com/2026/10/14/figma-announces-new-features-to-define-how-agents-work-on-its-platform/) lets teams document their design language in Markdown so people and AI agents work from the same rules, while code layers move into public beta. On stage, Dylan Field [argued that design is still how products win](https://t2online.in/tech/tech-news/-design-is-how-you-win----figma-ceo-dylan-field-on-why-ai-can-t-replace-designers/2008651), naming India as Figma's second-largest market by daily use. That agent-heavy future raises the bar on inclusion too, with Deque making the case that [accessibility has to be a foundation](https://www.deque.com/blog/for-your-business-to-thrive-in-the-agentic-ai-era-treat-accessibility-as-foundational-to-your-ai-strategy/) of any AI strategy rather than an afterthought. If you already work with agents, NN/g's guide to [keeping a context library in shape](https://www.nngroup.com/articles/context-libraries/) is a practical next step, and Smashing's [guide to naming things](https://www.smashingmagazine.com/2026/10/how-name-things/) is a reminder that clear names for components and tokens are design work too.",
   "reads": [
     {
       "title": "Figma launches Specs and opens code layers to everyone",
@@ -26,36 +26,36 @@
       "note": "Why teams building with AI agents should treat accessibility as groundwork, not a compliance checkbox."
     },
     {
-      "title": "Andrej & Andrej refresh Pohoda Festival for its 30th year",
-      "source": "It's Nice That",
-      "url": "https://www.itsnicethat.com/articles/andrej-and-andrej-pohoda-festival-30th-anniversary-graphic-design-project-141026",
-      "note": "An anniversary identity with 3D babies and a custom futuristic typeface."
+      "title": "Context libraries: how AI power users manage context engineering",
+      "source": "Nielsen Norman Group",
+      "url": "https://www.nngroup.com/articles/context-libraries/",
+      "note": "How to organise and scope the files you feed AI agents so their output stays on target, and why the library needs regular upkeep."
     },
     {
-      "title": "Barkas gives Nigerian bank Kuda a faster-paced identity",
-      "source": "It's Nice That",
-      "url": "https://www.itsnicethat.com/articles/barkas-kuda-graphic-design-project-131026",
-      "note": "A rebrand that borrows its energy from Lagos and shifts the tone from banking to everyday life."
+      "title": "A practical guide to naming things",
+      "source": "Smashing Magazine",
+      "url": "https://www.smashingmagazine.com/2026/10/how-name-things/",
+      "note": "Rules and resources for naming colours, components, tokens and features so design, code and users all understand them."
     }
   ],
   "watch": [
+    {
+      "title": "How Google designs for AI at scale",
+      "channel": "Dive Club",
+      "id": "owVbQwM2Zfc",
+      "note": "Rhiannon Bell on how Google's design team shapes AI features across products, useful if your roadmap is filling up with AI work."
+    },
+    {
+      "title": "I redesigned VLC after 25 years",
+      "channel": "Juxtopposed",
+      "id": "ERFeOgqk324",
+      "note": "A full redesign of a famously cluttered app, from audit to final screens, with reasoning you can borrow for your own redesigns."
+    },
     {
       "title": "Prevent last-minute design requests: a guide",
       "channel": "NN/g",
       "id": "aWKk89YoLT8",
       "note": "How to help stakeholders understand design work so requests arrive earlier and with clearer intent."
-    },
-    {
-      "title": "Why your research findings aren't landing",
-      "channel": "NN/g",
-      "id": "ZPiKuJGv244",
-      "note": "Rachel Krause on shaping a readout as a story that pushes stakeholders to act."
-    },
-    {
-      "title": "Are you supporting legacy users?",
-      "channel": "NN/g",
-      "id": "tnZtSbJR0_E",
-      "note": "Why long-time users of complex tools need care when products change, and how to give it."
     }
   ],
   "meetups": [

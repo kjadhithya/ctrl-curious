@@ -9,7 +9,7 @@ Prints the public image URL, or nothing if that weekday has no pool yet.
 """
 import datetime, random, sys, os
 
-BASE = 'https://raw.githubusercontent.com/kjadhithya/ctrl-curious/main/assets/email/days/'
+BASE = 'https://ctrl-curious.vercel.app/assets/email/days/'
 POOLS = {0: ('mon', 8), 1: ('tue', 8), 2: ('wed', 8), 3: ('thu', 8), 4: ('fri', 8)}        # weekday -> (folder, number of images)
 START = datetime.date(2026, 10, 19)  # first Monday of the rotation
 

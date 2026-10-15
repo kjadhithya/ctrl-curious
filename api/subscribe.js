@@ -1,4 +1,5 @@
 import { cleanEmail, readBody, notify, json, resendKey } from './_notify.js';
+import { welcome } from './_welcome.js';
 
 export async function POST(request) {
   const body = await readBody(request);
@@ -6,7 +7,9 @@ export async function POST(request) {
   const email = cleanEmail(body.email);
   if (!email) return json({ ok: false, error: 'Please enter a valid email address.' }, 400);
   try {
-    await notify('subscribe', email, `source: ${String(body.source || 'website').slice(0, 40)}`);
+    // Welcome first, so the note to the editor can say whether it went out.
+    const w = await welcome(email);
+    await notify('subscribe', email, `source: ${String(body.source || 'website').slice(0, 40)}\nwelcome: ${w}`);
     return json({ ok: true });
   } catch (e) {
     console.error(e);
@@ -20,7 +23,7 @@ export async function POST(request) {
 // GET /api/subscribe?check=1 also asks Resend whether it accepts the key, and shows Resend's reply.
 export async function GET(request) {
   const key = resendKey();
-  const out = { ok: true, keyConfigured: Boolean(key), keyLooksRight: key.startsWith('re_'), keyLength: key.length, runtime: 'node' };
+  const out = { ok: true, welcomeHook: Boolean(process.env.WELCOME_HOOK_URL && process.env.WELCOME_HOOK_SECRET), keyConfigured: Boolean(key), keyLooksRight: key.startsWith('re_'), keyLength: key.length, runtime: 'node' };
   if (new URL(request.url).searchParams.get('check') && key) {
     try {
       const r = await fetch('https://api.resend.com/domains', { headers: { Authorization: `Bearer ${key}` } });

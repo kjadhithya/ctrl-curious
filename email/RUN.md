@@ -28,7 +28,7 @@ python3 pick_hero.py
 ```
 
 Use the URL it prints for `{{HERO_URL}}`. If it prints nothing (that weekday has no set yet), use
-`https://raw.githubusercontent.com/kjadhithya/ctrl-curious/main/assets/email/wave_hero.jpg`.
+`https://ctrl-curious.vercel.app/assets/email/wave_hero.jpg`.
 
 ## Sending
 
@@ -105,7 +105,7 @@ Tag for in-person: `<span style="background-color:#7E4B6B;color:#F4EEE8;padding:
 Tag for online: `<span style="background-color:#C9A7B5;color:#2E1F25;padding:0 7px;">Online</span>`
 
 ```html
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#F4EEE8" background="https://raw.githubusercontent.com/kjadhithya/ctrl-curious/main/assets/email/grain_paper.jpg" style="background-color:#F4EEE8;background-image:url('https://raw.githubusercontent.com/kjadhithya/ctrl-curious/main/assets/email/grain_paper.jpg');background-repeat:repeat;margin-bottom:12px;"><tr>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#F4EEE8" background="https://ctrl-curious.vercel.app/assets/email/grain_paper.jpg" style="background-color:#F4EEE8;background-image:url('https://ctrl-curious.vercel.app/assets/email/grain_paper.jpg');background-repeat:repeat;margin-bottom:12px;"><tr>
 <td width="62" align="center" valign="middle" style="padding:14px 0 14px 12px;"><div style="font-size:30px;line-height:30px;font-weight:600;color:#8A2E3B;">DD</div><div style="font-size:14px;color:#5E4B53;">Mon</div></td>
 <td width="14" style="border-right:1px solid #D9C3B7;">&nbsp;</td>
 <td valign="middle" style="padding:14px 16px 14px 18px;"><a href="URL" target="_blank" style="font-size:18px;line-height:24px;font-weight:600;color:#2E1F25;text-decoration:none;">Event name</a><div style="font-size:14px;line-height:21px;color:#5E4B53;">TAG&nbsp; Known details only, e.g. Saturday · Host · Area</div></td>

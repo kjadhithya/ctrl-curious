@@ -405,7 +405,8 @@ function copy(rel, dest = rel) {
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT, { recursive: true });
 copy('site/static', 'static');
-copy('assets/email/days');
+copy('assets/email');
+copy('email/welcome.html');
 copy('assets/blog/hero');
 for (const f of ['assets/blog/seigaiha_tile.jpg', 'assets/blog/about_ochre_dawn.jpg', 'assets/email/wave_hero.jpg', 'assets/blog/banner_swell_wave_mountain_sun_tall.jpg', 'assets/blog/signup_moon_shore.jpg']) copy(f);
 

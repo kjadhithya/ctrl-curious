@@ -112,6 +112,8 @@ function page({ title, desc, body, canonical, image }) {
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#F4EEE8">
 <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/static/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
 <link rel="alternate" type="application/rss+xml" title="Ctrl+Curious" href="/feed.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
@@ -167,6 +169,7 @@ function home() {
   const recent = issues.slice(0, 6).map((i) => row(i)).join('');
   const body = `<main id="main">
 <section class="hero" aria-labelledby="hero-h">
+<img class="bg-ext" src="/assets/blog/banner_swell_wave_mountain_sun_tall.jpg" alt="" aria-hidden="true">
 <img class="bg" src="/assets/blog/banner_swell_wave_mountain_sun_tall.jpg" alt="A great wave rising from swell lines, a small plum mountain under its curl and a wine sun high in the sky" fetchpriority="high">
 ${nav('home', false)}
 <div class="hero-copy">

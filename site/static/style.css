@@ -45,20 +45,31 @@ img{max-width:100%;display:block}
 .tag{display:inline-block;color:var(--paper);padding:1px 9px;font-size:14px;white-space:nowrap}
 .meta{display:flex;gap:12px;align-items:center;flex-wrap:wrap;font-size:14px;color:var(--muted)}
 
-/* hero */
-.hero{position:relative;overflow:hidden;height:810px;max-height:56.25vw;min-height:640px}
-.hero>img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:right center}
+/* hero: always fills the viewport without cropping the art.
+   Narrower than 16:9 -> art spans the width, sky extends above it.
+   Wider than 16:9   -> art spans the height, a mirrored copy extends the swell to the left.
+   --u is one design pixel of the 1440 x 810 banner, so the copy scales with the art. */
+.hero{--u:.069444vw;position:relative;overflow:hidden;height:100vh;height:100svh;min-height:560px;background:#F1ECE6}
+.hero>img.bg{position:absolute;left:0;bottom:0;width:100%;height:auto}
+.hero>img.bg-ext{display:none}
+@media (min-aspect-ratio:16/9){
+  .hero{--u:.123457vh;--u:.123457svh}
+  .hero>img.bg{left:auto;right:0;width:auto;height:100%}
+  .hero>img.bg-ext{display:block;position:absolute;bottom:0;height:100%;width:auto;right:calc(100vh * 16 / 9);right:calc(100svh * 16 / 9);transform:scaleX(-1)}
+}
 .hero .nav{position:absolute;top:0;left:0;right:0}
-.hero-copy{position:absolute;left:var(--gut);top:200px;width:560px;display:flex;flex-direction:column;gap:24px;z-index:3}
-.kicker{font-size:15px;color:var(--muted)}
-.hero h1{font-size:76px;line-height:1;font-weight:700;letter-spacing:-.025em;margin:0}
-.hero .lede{font-size:20px;line-height:1.55;color:var(--body);max-width:520px;margin:0}
+.hero-copy{position:absolute;left:var(--gut);top:max(140px,calc(100svh - 610 * var(--u)));width:calc(560 * var(--u));min-width:380px;display:flex;flex-direction:column;gap:calc(24 * var(--u));z-index:3}
+.kicker{font-size:max(13px,calc(15 * var(--u)));color:var(--muted)}
+.hero h1{font-size:max(44px,calc(76 * var(--u)));line-height:1;font-weight:700;letter-spacing:-.025em;margin:0}
+.hero .lede{font-size:max(16px,calc(20 * var(--u)));line-height:1.55;color:var(--body);max-width:calc(520 * var(--u));margin:0}
+.hero .signup{max-width:max(380px,calc(540 * var(--u)))}
+.hero .signup input,.hero .signup button{font-size:max(15px,calc(17 * var(--u)))}
 .signup{display:flex;width:100%;max-width:540px}
 .signup input{flex:1;min-width:0;background:var(--paper);border:2px solid var(--ink);border-right:0;padding:14px 18px;font:inherit;font-size:17px;color:var(--ink);border-radius:0}
 .signup input::placeholder{color:var(--faint)}
 .signup button{padding:16px 24px;font-size:17px}
 .signup-note{font-size:15px;color:var(--muted);min-height:1.4em;margin:0}
-.strip{width:100%;height:16px;object-fit:cover}
+.strip{width:100%;height:auto;aspect-ratio:1200/32}
 
 /* latest */
 .latest{padding-top:80px;padding-bottom:72px;display:flex;flex-direction:column;gap:32px}
@@ -161,7 +172,6 @@ img{max-width:100%;display:block}
 .issue-top h1{font-size:52px;line-height:1.08;font-weight:700;letter-spacing:-.015em;margin:0}
 .issue-hero{width:1040px;max-width:100%;margin-top:40px}
 .issue-hero .pic{aspect-ratio:2/1}
-.issue-hero .strip{height:14px}
 .issue-body{display:flex;flex-direction:column;gap:56px;padding:56px 0 72px}
 .sec{display:flex;flex-direction:column;gap:18px}
 .brief{margin:0;font-size:21px;line-height:1.65}
@@ -204,7 +214,6 @@ img{max-width:100%;display:block}
 /* responsive */
 @media (max-width:1200px){
   :root{--gut:48px}
-  .hero h1{font-size:64px}
   .latest-grid{grid-template-columns:1fr 1fr;gap:40px}
   .latest-body h2{font-size:32px}
   .row,.archive .row{grid-template-columns:72px 180px 1fr;gap:24px}
@@ -220,10 +229,13 @@ img{max-width:100%;display:block}
   .nav ul li.hide-s{display:none}
   .logo .a,.logo .b{font-size:26px}
   .logo svg{width:18px;height:18px}
-  .hero{height:auto;max-height:none;min-height:0;display:flex;flex-direction:column}
-  .hero>img.bg{position:relative;height:auto;aspect-ratio:4/3;object-position:78% 50%;order:1;margin-top:0}
+  .hero{height:auto;min-height:0;display:flex;flex-direction:column;background:var(--paper)}
+  .hero>img.bg-ext{display:none!important}
+  .hero>img.bg{position:relative;left:auto;right:auto;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:78% 50%;order:1}
   .hero .nav{position:relative;order:0;background:var(--paper)}
-  .hero-copy{position:relative;left:auto;top:auto;width:auto;order:2;padding:36px var(--gut) 44px;gap:18px;background:var(--paper)}
+  .hero-copy{position:relative;left:auto;top:auto;width:auto;min-width:0;order:2;padding:36px var(--gut) 44px;gap:18px;background:var(--paper)}
+  .hero .lede{max-width:none}
+  .hero .signup{max-width:540px}
   .hero h1{font-size:44px}
   .hero .lede{font-size:18px}
   .latest{padding-top:56px;padding-bottom:48px}

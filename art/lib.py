@@ -56,10 +56,10 @@ def wave(im, ox, oy, sc, body, stripe, foam, claws=True, seed=5, soft=False):
     P = lambda x, y: ((ox + x * sc) * S, (oy + y * sc) * S)
     if soft:
         # back of the wave slopes away into the sea; the front spreads forward at the base
-        outer = np.vstack([bez(P(-260, 720), P(40, 700), P(260, 160), P(600, 110)),
-                           bez(P(600, 110), P(770, 90), P(850, 260), P(760, 340))])
-        inner = np.vstack([bez(P(760, 340), P(745, 255), P(670, 205), P(590, 220)),
-                           bez(P(590, 220), P(470, 245), P(430, 560), P(780, 820))])
+        outer = np.vstack([bez(P(-260, 720), P(160, 690), P(200, 110), P(530, 40)),
+                           bez(P(530, 40), P(840, -25), P(1000, 250), P(830, 385))])
+        inner = np.vstack([bez(P(830, 385), P(860, 280), P(760, 195), P(650, 222)),
+                           bez(P(650, 222), P(500, 255), P(430, 560), P(780, 820))])
         poly = [tuple(p) for p in outer] + [tuple(p) for p in inner] + [P(780, 1000), P(-260, 1000)]
     else:
         outer = np.vstack([bez(P(0, 640), P(180, 600), P(300, 140), P(600, 110)),

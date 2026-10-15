@@ -96,7 +96,7 @@ print('done 7')
 # 7b Option 7 with the sun placed like 5b: wine sun high in the open sky, plum mountain under the curl
 im = canvas(c['paper'], c['clay'], 2)
 disc(im, 1200 - 1110, 160, 50, c['wine'])
-mountain(im, 350, 570, 460, 425, 575, c['teal'], snow=c['paper'])
+mountain(im, 350, 570, 460, 425, 575, c['mauve'], snow=c['paper'])
 bands(im)
 wave(im, 10, 110, 0.6, c['indigo'], c['skyb'], c['mist'], seed=5, soft=True, parallel=True)
 bands(im, start=1)

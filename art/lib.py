@@ -1,5 +1,5 @@
 """Shared drawing helpers for Ctrl+Curious hero art (1200x600, grainy woodblock style)."""
-import math
+import math, os
 import numpy as np
 from PIL import Image, ImageDraw, ImageFilter
 
@@ -222,3 +222,36 @@ def twilight(im, horizon, col, height=260, strength=0.6):
     t[int(horizon*S):] = strength
     m = Image.fromarray((np.broadcast_to(t[:, None], (H, W)) * 255).astype('uint8'))
     im.paste(Image.new('RGB', (W, H), col), (0, 0), m)
+
+from PIL import ImageFont
+FONT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'fonts')
+
+def font(name, size, **axes):
+    """Load a font from art/fonts at size (in 1x px). Variable axes by short name: wght, opsz, wdth, soft, wonk."""
+    import glob
+    path = sorted(glob.glob(os.path.join(FONT_DIR, name + '*.ttf')))[0]
+    f = ImageFont.truetype(path, int(size * S))
+    try:
+        info = f.get_variation_axes()
+    except Exception:
+        return f
+    keymap = {b'Weight': 'wght', b'Optical size': 'opsz', b'Optical Size': 'opsz', b'Width': 'wdth', b'Softness': 'soft', b'Wonky': 'wonk'}
+    vals = []
+    for a in info:
+        k = keymap.get(a['name'])
+        default = a.get('default', a['minimum'])
+        if k == 'opsz' and 'opsz' not in axes:
+            default = min(a['maximum'], max(a['minimum'], size))
+        if k == 'wonk' and 'wonk' not in axes:
+            default = 0
+        vals.append(axes.get(k, default))
+    f.set_variation_by_axes(vals)
+    return f
+
+def text(im, xy, s, f, col, anchor='ls', **kw):
+    ImageDraw.Draw(im).text((xy[0]*S, xy[1]*S), s, font=f, fill=col, anchor=anchor, **kw)
+
+def text_mask(s, f, xy, anchor='ls'):
+    m = Image.new('L', (W, H), 0)
+    ImageDraw.Draw(m).text((xy[0]*S, xy[1]*S), s, font=f, fill=255, anchor=anchor)
+    return m

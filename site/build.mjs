@@ -299,38 +299,57 @@ ${band()}
 
 // ---------- about ----------
 function about() {
+  const ICONS = {
+    Fresh: '<svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="10" fill="#C8902F"/><g stroke="#C8902F" stroke-width="3" stroke-linecap="round"><path d="M22 3v6M22 35v6M3 22h6M35 22h6M8.5 8.5l4 4M31.5 31.5l4 4M8.5 35.5l4-4M31.5 12.5l4-4"/></g></svg>',
+    Credible: '<svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><path d="M22 3l16 6v11c0 10-7 17-16 21C13 37 6 30 6 20V9z" fill="#24585C"/><path d="M14 22l6 6 11-12" fill="none" stroke="#F4EEE8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    Varied: '<svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><g fill="none" stroke-width="3.5" stroke-linecap="round"><path d="M3 14c5-5 9-5 13 0s8 5 13 0 9-5 12 0" stroke="#7C9EB8"/><path d="M3 23c5-5 9-5 13 0s8 5 13 0 9-5 12 0" stroke="#7E4B6B"/><path d="M3 32c5-5 9-5 13 0s8 5 13 0 9-5 12 0" stroke="#4F6A3A"/></g></svg>',
+    Honest: '<svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><g fill="none" stroke="#8A2E3B" stroke-width="3.5" stroke-linecap="round"><path d="M19 25a8 8 0 0 0 11 1l6-6a8 8 0 0 0-11-11l-3 3"/><path d="M25 19a8 8 0 0 0-11-1l-6 6a8 8 0 0 0 11 11l3-3"/></g></svg>',
+  };
+  const RULES = [
+    ['Fresh', 'Reads from the last couple of days, videos from the last week or two.'],
+    ['Credible', 'Recognised publications, researchers, design leaders and the people who actually built the thing. No concept redesigns by people with no connection to the product.'],
+    ['Varied', 'Different sources and channels every day, so no single voice dominates.'],
+    ['Honest', 'Summaries are written fresh, never copied, and always point back to the original.'],
+  ];
+  const ISSUE = [
+    ['Today, in brief', "The day's stories tied together in a few sentences, with every claim linked to its source so you can check it yourself."],
+    ['Five reads', 'Original research, launches that change how you work, and hard-won lessons from teams who shipped. Roughly two to sharpen your craft and three to keep you current.'],
+    ['Three videos', 'Fresh talks and interviews from people with real standing: design leaders, conference stages, research groups and the teams behind the tools.'],
+    ['Meetups', "Product and UX events in Bengaluru and online that are worth a senior designer's time."],
+  ];
+  const art = (src) => `<div class="pic about-pic"><img src="/assets/email/days/${src}" alt="" loading="lazy"><span class="grain"></span></div>`;
+  const anatomy = `<div class="anatomy" aria-hidden="true">
+<div class="an-logo">${logo().replace('<a ', '<span ').replace('</a>', '</span>').replace(/href="[^"]*"/, '')}</div>
+<img src="/assets/email/days/thu/thu_01.jpg" alt="">
+<div class="an-body">
+<b><i>01</i> Today, in brief</b><span class="bar" style="width:92%"></span><span class="bar" style="width:70%"></span>
+<b><i>02</i> Five reads</b><div class="an-row"><span class="sw" style="background:#C9A7B5"></span><div><span class="bar"></span><span class="bar" style="width:60%"></span></div></div>
+<b><i>03</i> Three videos</b><div class="an-vids"><span style="background:#2B4C6F"></span><span style="background:#24585C"></span><span style="background:#7E4B6B"></span></div>
+<b><i>04</i> Meetups</b><div class="an-row"><em>28</em><span class="bar"></span></div>
+</div></div>`;
   const body = `${nav('about')}
-<main id="main">
-<div class="page-head wrap"><div class="crumb"><a href="/">Home</a> &nbsp;/&nbsp; About</div><h1>About Ctrl+Curious</h1></div>
-<div class="wrap prose">
-<p class="lede-p">Design moves fast now. Tools ship weekly, AI rewrites workflows overnight, and the conversation that matters is scattered across a dozen newsletters, podcasts and feeds. Ctrl+Curious is one short email that does the sorting for you, every weekday at 10:00 IST.</p>
-
-<h2 class="h">Why it exists</h2>
-<p>Most design newsletters are written for people starting out. Ctrl+Curious is for the people who already know the basics: senior product designers, UX and UI designers, design leads, and anyone shaping how products get made. You don't need another listicle about colour theory. You need to know what changed this week, what the best teams are learning, and what's worth an hour of your evening.</p>
-
-<h2 class="h">What's in every issue</h2>
-<ul class="about-list">
-<li><b>Today, in brief.</b> The day's stories tied together in a few sentences, with every claim linked to its source so you can check it yourself.</li>
-<li><b>Five reads.</b> Original research, launches that change how you work, and hard-won lessons from teams who shipped. Roughly two to sharpen your craft and three to keep you current.</li>
-<li><b>Three videos.</b> Fresh talks and interviews from people with real standing: design leaders, conference stages, research groups and the teams behind the tools.</li>
-<li><b>Meetups.</b> Product and UX events in Bengaluru and online that are worth a senior designer's time.</li>
-</ul>
-
-<h2 class="h">How things get picked</h2>
+<main id="main" class="about">
+<section class="ab-grid wrap ab-top">
+<div class="ab-copy"><div class="crumb"><a href="/">Home</a> &nbsp;/&nbsp; About</div><h1>About Ctrl+Curious</h1>
+<p class="ab-lede">Design moves fast now. Tools ship weekly, AI rewrites workflows overnight, and the conversation that matters is scattered across a dozen newsletters, podcasts and feeds. Ctrl+Curious is one short email that does the sorting for you, every weekday at 10:00 IST.</p></div>
+${art('mon/mon_02.jpg')}
+</section>
+<section class="ab-grid ab-flip wrap">
+${art('wed/wed_01.jpg')}
+<div class="ab-copy"><h2 class="h">Why it exists</h2><p>Most design newsletters are written for people starting out. Ctrl+Curious is for the people who already know the basics: senior product designers, UX and UI designers, design leads, and anyone shaping how products get made. You don't need another listicle about colour theory. You need to know what changed this week, what the best teams are learning, and what's worth an hour of your evening.</p></div>
+</section>
+<section class="ab-band"><div class="ab-grid ab-anat wrap">
+<div class="ab-copy"><h2 class="h">What's in every issue</h2><ul class="about-list">${ISSUE.map(([t, d]) => `<li><b>${t}.</b> ${d}</li>`).join('')}</ul></div>
+${anatomy}</div><span class="grain"></span></section>
+<section class="wrap ab-pick"><h2 class="h">How things get picked</h2>
 <p>Every item has to pass one test: will a working designer be better at their job, or better informed about their field, after reading it? If not, it doesn't make the cut.</p>
-<ul class="about-list">
-<li><b>Fresh.</b> Reads from the last couple of days, videos from the last week or two.</li>
-<li><b>Credible.</b> Recognised publications, researchers, design leaders and the people who actually built the thing. No concept redesigns by people with no connection to the product.</li>
-<li><b>Varied.</b> Different sources and channels every day, so no single voice dominates.</li>
-<li><b>Honest.</b> Summaries are written fresh, never copied, and always point back to the original.</li>
-</ul>
-
-<h2 class="h">The art</h2>
-<p>Every issue opens with a grainy woodblock scene inspired by the great wave. Each weekday has its own edition and its own set of artworks, rotating so no two days in a month look the same. It's a small reminder that the work we do is a craft, and that a morning email can be a pleasure to open.</p>
-
-<h2 class="h">Say hello</h2>
-<p>Read something that belongs in an issue, or know of a meetup we missed? <a class="link" href="mailto:${SIGNUP_TO}?subject=Ctrl%2BCurious%20link%20suggestion">Suggest a link</a>. Every past issue is in the <a class="link" href="/archive">archive</a>, and you can leave any time with one click from the bottom of any email.</p>
-</div>
+<div class="ab-cards">${RULES.map(([t, d]) => `<div class="ab-card">${ICONS[t]}<b>${t}</b><span>${d}</span><span class="grain"></span></div>`).join('')}</div>
+</section>
+<section class="ab-grid wrap ab-last">
+<div class="ab-copy"><h2 class="h">The art</h2><p>Every issue opens with a grainy woodblock scene inspired by the great wave. Each weekday has its own edition and its own set of artworks, rotating so no two days in a month look the same. It's a small reminder that the work we do is a craft, and that a morning email can be a pleasure to open.</p>
+<h2 class="h" style="font-size:26px;margin-top:20px">Say hello</h2><p>Read something that belongs in an issue, or know of a meetup we missed? <a class="link" href="mailto:${SIGNUP_TO}?subject=Ctrl%2BCurious%20link%20suggestion">Suggest a link</a>. Every past issue is in the <a class="link" href="/archive">archive</a>, and you can leave any time with one click from the bottom of any email.</p></div>
+${art('tue/tue_08.jpg')}
+</section>
 ${band()}
 </main>`;
   return page({ title: 'About', desc: 'Ctrl+Curious is a daily design digest for senior product and UX/UI designers: five reads, three videos and the meetups worth your time, every weekday at 10:00 IST.', body, canonical: '/about' });

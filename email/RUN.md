@@ -36,12 +36,7 @@ There are two sends, and each happens exactly once per run.
 
 1. **The editor's copy, through Resend.** Send one email to kjadhithya05@gmail.com with the Resend send-email tool (details in the task prompt). Once it returns an email ID, it is sent: never send it again, even to retry or test. Retry only if the call returned an error and no ID.
 
-2. **Subscribers, through Gmail.** Readers sign up on the website. Each signup or unsubscribe arrives in the editor's Gmail as a note from onboarding@resend.dev with the subject `Ctrl+Curious list: subscribe someone@example.com` or `Ctrl+Curious list: unsubscribe someone@example.com`.
-   - Build the list with the Gmail search_threads tool, query `from:onboarding@resend.dev subject:"Ctrl+Curious list"` (page through all results; pageSize 50). Read each subject: the action is the word after `list:`, the address is the rest, lowercased. For each address, the most recent note wins. The list is every address whose latest action is subscribe, minus kjadhithya05@gmail.com.
-   - Welcome first: for each subscriber, check Gmail with search_threads query `in:sent to:ADDRESS subject:"Welcome to Ctrl+Curious"`. If nothing is found, they are new: before their issue, send them the welcome email once with send_message (`to` = that address, `subject` = `Welcome to Ctrl+Curious`, `htmlBody` = https://raw.githubusercontent.com/kjadhithya/ctrl-curious/main/email/welcome.html with `{{UNSUB_URL}}` set to their personal unsubscribe link, `body` = a short plain-text version). Never send anyone a second welcome.
-   - For each subscriber, send the issue with the Gmail send_message tool: `to` = that one address, `subject` = the same subject as the editor's copy, `htmlBody` = issue.html (built with the editor's unsubscribe link) with `href="https://ctrl-curious.vercel.app/unsubscribe"` replaced by `href="https://ctrl-curious.vercel.app/unsubscribe?e=` + their percent-encoded address + `"`, `body` = the plain-text version. One call per subscriber, each address once; keep a list of who has been sent so a retry never doubles anyone.
-   - If there are more than 100 subscribers, stop after 100 individual sends and email the rest in batches of up to 90 using `bcc`, with `to` = kjadhithya05+ctrl@gmail.com and the plain `https://ctrl-curious.vercel.app/unsubscribe` link, and mention in the final message that it's time to move to a domain.
-   - If there are no subscribers yet, skip this step. Report the subscriber count and how many sends succeeded in the final message.
+2. **Subscribers: do not email them from this run.** The Gmail tool strips every image, so subscriber copies and welcome emails are sent by the editor's Google Apps Script instead. It checks the website every five minutes, and as soon as today's email file is published (see "Publishing to the website") it sends each subscriber their own copy with images and a personal unsubscribe link, and welcomes anyone new. Your job is only to publish the files below promptly, right after the editor's copy is sent. Never call the Gmail send tool for subscribers or welcomes.
 
 ## Writing rules
 
@@ -112,7 +107,7 @@ Tag for online: `<span style="background-color:#C9A7B5;color:#2E1F25;padding:0 7
 </tr></table>
 ```
 
-## Publishing to the website (after the email is sent)
+## Publishing to the website (right after the editor's copy is sent; subscribers are emailed from this)
 
 The website is built from one JSON file per issue in `issues/` of the GitHub repo `kjadhithya/ctrl-curious`. Pushing a new file to `main` makes Vercel rebuild the site within a minute or two. Do this only after the email has been sent and returned an email ID; a failure here must never cause a resend.
 
@@ -135,8 +130,11 @@ The website is built from one JSON file per issue in `issues/` of the GitHub rep
 ```
 
    Use `"meetups": []` when the Meet up section was removed. Sentence case, no ALL CAPS, no emoji.
-3. Check it builds: `node site/build.mjs` must print `Built N issue(s)`. If it fails, fix the JSON (usually a quote or comma) and rerun.
-4. Commit and push to `main`:
-   `git add issues/NNN.json && git -c user.name="kjadhithya" -c user.email="kjadhithya05@gmail.com" commit -m "Issue NNN: <title>" && git push origin HEAD:main`
+3. Save the finished email for the subscriber sender:
+   - `email/issues/NNN.html`: exactly the issue.html you sent to the editor (with the plain `https://ctrl-curious.vercel.app/unsubscribe` link; the sender swaps in each subscriber's own link).
+   - `email/issues/NNN.txt`: the plain-text version, with its unsubscribe line ending in exactly `https://ctrl-curious.vercel.app/unsubscribe` on its own line.
+4. Check it builds: `node site/build.mjs` must print `Built N issue(s)`. If it fails, fix the JSON (usually a quote or comma) and rerun.
+5. Commit and push to `main` (all three files in one commit):
+   `git add issues/NNN.json email/issues/NNN.html email/issues/NNN.txt && git -c user.name="kjadhithya" -c user.email="kjadhithya05@gmail.com" commit -m "Issue NNN: <title>" && git push origin HEAD:main`
    If the push is rejected because main moved, run `git pull --rebase origin main` and push again.
-5. If the repo can't be attached or pushed, don't retry endlessly: say so in the final message and include the JSON so it can be added by hand.
+6. If the repo can't be attached or pushed, don't retry endlessly: say so in the final message and include the JSON so it can be added by hand.

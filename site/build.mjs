@@ -407,6 +407,19 @@ fs.mkdirSync(OUT, { recursive: true });
 copy('site/static', 'static');
 copy('assets/email');
 copy('email/welcome.html');
+// The Apps Script sender reads latest.json and emails the newest issue to subscribers.
+if (fs.existsSync(path.join(ROOT, 'email/issues'))) {
+  copy('email/issues');
+  const nums = fs.readdirSync(path.join(ROOT, 'email/issues')).map(f => (f.match(/^(\d{3})\.html$/) || [])[1]).filter(Boolean).sort();
+  const n = nums[nums.length - 1];
+  const iss = n && issues.find(i => String(i.issue).padStart(3, '0') === n);
+  if (iss) {
+    const d = new Date(iss.date + 'T00:00:00Z');
+    const long = d.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).replace(/^(\w+) /, '$1, ');
+    const latest = { issue: iss.issue, date: iss.date, subject: `Ctrl+Curious · ${long} · Issue ${n}`, html: `/email/issues/${n}.html`, text: `/email/issues/${n}.txt`, web: `/issues/${n}` };
+    fs.writeFileSync(path.join(OUT, 'email/latest.json'), JSON.stringify(latest));
+  }
+}
 copy('assets/blog/hero');
 for (const f of ['assets/blog/seigaiha_tile.jpg', 'assets/blog/about_ochre_dawn.jpg', 'assets/email/wave_hero.jpg', 'assets/blog/banner_swell_wave_mountain_sun_tall.jpg', 'assets/blog/signup_moon_shore.jpg', 'assets/blog/signup_moon_shore_bg.jpg', 'assets/blog/signup_moon_shore_waves.png']) copy(f);
 

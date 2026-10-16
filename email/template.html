@@ -9,7 +9,7 @@
 <style>
 body{margin:0;padding:0;background-color:#E9E1D9}
 a{color:#2E1F25}
-@media (max-width:620px){.wrap{width:100% !important}.pad{padding-left:22px !important;padding-right:22px !important}.thumb{width:120px !important}.thumb img{width:120px !important;height:auto !important}.rthumb{width:84px !important;padding-right:12px !important}.rthumb img{width:84px !important;height:44px !important}}
+@media (max-width:620px){.wk{display:block !important;width:100% !important;box-sizing:border-box}.wks{display:block !important;height:10px !important;width:100% !important}.ed-img{display:block !important;width:100% !important;padding:0 0 16px 0 !important}.ed-img img{width:100% !important;height:auto !important}.wrap{width:100% !important}.pad{padding-left:22px !important;padding-right:22px !important}.thumb{width:120px !important}.thumb img{width:120px !important;height:auto !important}.rthumb{width:84px !important;padding-right:12px !important}.rthumb img{width:84px !important;height:44px !important}}
 </style>
 </head>
 <body style="margin:0;padding:0;background-color:#E9E1D9;">
@@ -29,6 +29,7 @@ a{color:#2E1F25}
 
 <tr><td class="pad" style="padding:52px 36px 18px 36px;font-size:30px;line-height:33px;font-weight:700;color:#2E1F25;"><span style="color:#8A2E3B;">&gt;</span>&nbsp; Today, in brief</td></tr>
 <tr><td class="pad" style="padding:0 36px 48px 36px;font-size:19px;line-height:30px;">{{SUMMARY_HTML}}</td></tr>
+{{EDITION_TOP}}
 
 <tr><td class="pad" style="padding:0 36px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="border-top:2px solid #2E1F25;font-size:0;line-height:0;">&nbsp;</td></tr></table></td></tr>
 
@@ -41,12 +42,13 @@ a{color:#2E1F25}
 {{READ_ROWS}}
 </table>
 </td></tr>
+{{EDITION_MID}}
 
 <tr><td class="pad" style="padding:0 36px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="border-top:2px solid #2E1F25;font-size:0;line-height:0;">&nbsp;</td></tr></table></td></tr>
 
 <tr><td class="pad" style="padding:48px 36px 24px 36px;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
-<td style="font-size:30px;line-height:33px;font-weight:700;color:#2E1F25;"><span style="color:#8A2E3B;">&gt;</span>&nbsp; Watch</td></tr></table>
+<td style="font-size:30px;line-height:33px;font-weight:700;color:#2E1F25;"><span style="color:#8A2E3B;">&gt;</span>&nbsp; {{WATCH_TITLE}}</td></tr></table>
 </td></tr>
 <tr><td class="pad" style="padding:0 36px 52px 36px;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">

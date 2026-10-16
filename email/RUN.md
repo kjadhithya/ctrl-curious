@@ -38,6 +38,20 @@ There are two sends, and each happens exactly once per run.
 
 2. **Subscribers: do not email them from this run.** The Gmail tool strips every image, so subscriber copies and welcome emails are sent by the editor's Google Apps Script instead. It checks the website every five minutes, and as soon as today's email file is published (see "Publishing to the website") it sends each subscriber their own copy with images and a personal unsubscribe link, and welcomes anyone new. Your job is only to publish the files below promptly, right after the editor's copy is sent. Never call the Gmail send tool for subscribers or welcomes.
 
+## Edition sections (one extra section per weekday)
+
+Each weekday has its own edition, and each edition adds one section to the usual summary, Read, Watch and Meet up. Research it with the same care as the reads: real, recent, verified, with a working link, and useful to designers who already know the basics. If you cannot verify a good one, leave that section out (omit its key); never invent one. Put it in the issue JSON under `"edition"`.
+
+- **Monday · Week ahead: "This week in design".** Exactly three things happening this week (Monday to Sunday), in date order: ideally one launch, release or deadline, one talk or livestream to catch, and one contest or call for entries. Each needs a confirmed date and a link.
+  `"edition": {"week": [{"when": "Wednesday · Launch", "title": "What is happening, in sentence case", "url": "https://..."}, ...3 items]}`
+- **Tuesday · Tools: "Tool of the day".** One tool, plugin or AI feature that is new or meaningfully updated in the last two weeks, from its maker's own page. Two sentences: what it does and the one job it is best at. `meta` is the price and platform, if known.
+  `"edition": {"tool": {"name": "", "url": "https://maker.page", "what": "Two sentences.", "meta": "Free · Figma plugin"}}`
+- **Wednesday · Type: "Typeface spotlight".** One typeface released or notably updated recently (foundry release, Google Fonts addition, a type-news piece). Link the foundry or specimen page, since its share image is shown as the specimen.
+  `"edition": {"typeface": {"name": "", "url": "https://foundry/specimen", "by": "Designer, foundry", "get": "Google Fonts (free)" or "Foundry site (paid)", "pair": "One pairing idea", "good_for": "Headlines, editorial, UI", "note": "One sentence on what makes it notable."}}`
+- **Thursday · Case study: "Case study".** One real case study published recently by the team or studio that did the work (a company design blog, a studio's project page, a detailed write-up). Not a concept by someone unconnected to the product.
+  `"edition": {"case": {"title": "", "url": "https://...", "studio": "Studio or team", "client": "Client, if any", "note": "The problem in one line, what they made, and the one decision that made it work."}}`
+- **Friday · Weekend: "Weekend watchlist".** Five videos instead of three (same rules as Watch; five different channels). No `edition` key is needed; the five videos go in `watch` and the section is titled automatically.
+
 ## Writing rules
 
 - Sentence case everywhere. No ALL CAPS text, no italics, no emoji.
@@ -107,7 +121,7 @@ Tag for online: `<span style="background-color:#C9A7B5;color:#2E1F25;padding:0 7
 </tr></table>
 ```
 
-## Publishing to the website (right after the editor's copy is sent; subscribers are emailed from this)
+## Building and publishing (steps 1–3 before sending the editor's copy, steps 4–5 right after; publishing is what emails subscribers)
 
 The website is built from one JSON file per issue in `issues/` of the GitHub repo `kjadhithya/ctrl-curious`. Pushing a new file to `main` makes Vercel rebuild the site within a minute or two. Do this only after the email has been sent and returned an email ID; a failure here must never cause a resend.
 
@@ -125,14 +139,13 @@ The website is built from one JSON file per issue in `issues/` of the GitHub rep
   "summary": "The 'Today, in brief' text, with each link written as [linked phrase](https://source.url)",
   "reads": [{ "title": "", "source": "", "url": "https://...", "note": "the one-line summary" }],
   "watch": [{ "title": "", "channel": "", "id": "YouTube video ID", "note": "" }],
-  "meetups": [{ "name": "", "date": "YYYY-MM-DD", "place": "Bengaluru or Online", "details": "known details only", "url": "https://..." }]
+  "meetups": [{ "name": "", "date": "YYYY-MM-DD", "place": "Bengaluru or Online", "details": "known details only", "url": "https://..." }],
+  "edition": {}
 }
 ```
 
-   Use `"meetups": []` when the Meet up section was removed. Sentence case, no ALL CAPS, no emoji.
-3. Save the finished email for the subscriber sender:
-   - `email/issues/NNN.html`: exactly the issue.html you sent to the editor (with the plain `https://ctrl-curious.vercel.app/unsubscribe` link; the sender swaps in each subscriber's own link).
-   - `email/issues/NNN.txt`: the plain-text version, with its unsubscribe line ending in exactly `https://ctrl-curious.vercel.app/unsubscribe` on its own line.
+   Fill `"edition"` with today's key from 'Edition sections' (empty `{}` on Fridays or if none could be verified). Use `"meetups": []` when the Meet up section was removed. Sentence case, no ALL CAPS, no emoji.
+3. The email files: `python3 email/build_issue.py issues/NNN.json email/issues/NNN.html` builds the finished email (every row, card and edition section, from the JSON) and writes `email/issues/NNN.txt`, the plain-text version, next to it. This HTML is also exactly what you send to the editor, so build it before sending.
 4. Check it builds: `node site/build.mjs` must print `Built N issue(s)`. If it fails, fix the JSON (usually a quote or comma) and rerun.
 5. Commit and push to `main` (all three files in one commit):
    `git add issues/NNN.json email/issues/NNN.html email/issues/NNN.txt && git -c user.name="kjadhithya" -c user.email="kjadhithya05@gmail.com" commit -m "Issue NNN: <title>" && git push origin HEAD:main`

@@ -59,11 +59,67 @@ for k, m in enumerate(issue.get('meetups', [])):
         x = x.replace('margin-bottom:12px;', '')
     cards.append(x)
 
+# ---------- edition sections (one per weekday; each is optional) ----------
+SITE = 'https://ctrl-curious.vercel.app'
+ed = issue.get('edition') or {}
+og = lambda u: f"{SITE}/api/og?url={urllib.parse.quote(u, safe='')}"
+A = lambda u, t, st: f'<a href="{html.escape(u)}" target="_blank" style="{st}">{e(t)}</a>'
+def head(t, mark='#8A2E3B', col='#2E1F25'):
+    return f'<div style="font-size:30px;line-height:33px;font-weight:700;color:{col};"><span style="color:{mark};">&gt;</span>&nbsp; {t}</div>'
+RULE = '<tr><td class="pad" style="padding:0 36px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="border-top:2px solid #2E1F25;font-size:0;line-height:0;">&nbsp;</td></tr></table></td></tr>\n'
+STRIP = f'<tr><td bgcolor="#EDE4DD" style="background-color:#EDE4DD;"><img src="{SITE}/assets/email/seigaiha_strip.jpg" width="600" height="10" alt="" style="display:block;border:0;width:100%;max-width:600px;height:10px;"></td></tr>\n'
+top, mid = '', ''
+
+if ed.get('tool'):   # Tuesday: tool of the day, right under the summary
+    t = ed['tool']
+    top = (f'<tr><td class="pad" style="padding:0 36px 48px 36px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#C9A7B5" style="background-color:#C9A7B5;"><tr><td style="padding:26px 28px 28px 28px;color:#2E1F25;">'
+           f'<div style="font-size:24px;line-height:28px;font-weight:700;"><span style="color:#8A2E3B;">&gt;</span>&nbsp; Tool of the day</div>'
+           + A(t['url'], t['name'], 'display:block;padding-top:14px;font-size:22px;line-height:29px;font-weight:700;color:#2E1F25;text-decoration:underline;text-decoration-color:#8A2E3B;text-underline-offset:3px;')
+           + f'<div style="font-size:17px;line-height:26px;padding-top:8px;">{e(t["what"])}</div>'
+           + (f'<div style="font-size:14px;line-height:21px;color:#4A3540;padding-top:12px;">{e(t["meta"])}</div>' if t.get('meta') else '')
+           + '</td></tr></table></td></tr>\n')
+
+if ed.get('week'):   # Monday: three things happening this week
+    cols = [('#2E1F25', '#C9A7B5', '#F4EEE8'), ('#7E4B6B', '#E9D7DE', '#F4EEE8'), ('#C9A7B5', '#5E4B53', '#2E1F25')]
+    cells = []
+    for k, w in enumerate(ed['week'][:3]):
+        bg, lab, fg = cols[k]
+        cells.append(f'<td class="wk" width="33%" valign="top" bgcolor="{bg}" style="background-color:{bg};padding:16px;"><div style="font-size:14px;line-height:20px;color:{lab};">{e(w["when"])}</div>'
+                     + A(w['url'], w['title'], f'display:block;padding-top:8px;font-size:17px;line-height:23px;font-weight:600;color:{fg};text-decoration:none;') + '</td>')
+    mid += RULE + (f'<tr><td class="pad" style="padding:48px 36px 22px 36px;">{head("This week in design")}</td></tr>\n'
+                   f'<tr><td class="pad" style="padding:0 36px 52px 36px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>'
+                   + '<td class="wks" width="12" style="font-size:0;line-height:0;">&nbsp;</td>'.join(cells) + '</tr></table></td></tr>\n')
+
+if ed.get('typeface'):   # Wednesday: typeface spotlight
+    t = ed['typeface']
+    lab = lambda k, v: f'<td valign="top" width="50%" style="padding:0 12px 16px 0;"><div style="font-size:14px;line-height:20px;color:#C9A7B5;">{k}</div><div style="font-size:16px;line-height:24px;color:#F4EEE8;">{v}</div></td>'
+    mid += (f'<tr><td class="pad" bgcolor="#2E1F25" background="{SITE}/assets/email/grain_dark.jpg" style="background-color:#2E1F25;background-image:url(\'{SITE}/assets/email/grain_dark.jpg\');background-repeat:repeat;padding:48px 36px 36px 36px;color:#F4EEE8;">'
+            + head('Typeface spotlight', '#C9A7B5', '#F4EEE8')
+            + A(t['url'], t['name'], 'display:block;padding-top:20px;font-size:40px;line-height:44px;font-weight:700;color:#F4EEE8;text-decoration:none;letter-spacing:-0.5px;')
+            + (f'<div style="font-size:17px;line-height:26px;color:#E9DFE3;padding-top:10px;">{e(t["note"])}</div>' if t.get('note') else '')
+            + f'<a href="{html.escape(t["url"])}" target="_blank"><img src="{og(t["url"])}" width="528" alt="{e(t["name"])} specimen" style="display:block;border:0;width:100%;max-width:528px;height:auto;margin-top:22px;"></a>'
+            + '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:22px;"><tr>'
+            + lab('Made by', e(t['by'])) + lab('Get it', A(t['url'], t.get('get', 'Foundry page'), 'color:#F4EEE8;text-decoration:underline;text-underline-offset:2px;')) + '</tr><tr>'
+            + lab('Pair it with', e(t.get('pair', ''))) + lab('Good for', e(t.get('good_for', ''))) + '</tr></table></td></tr>\n')
+
+if ed.get('case'):   # Thursday: case study
+    c = ed['case']
+    mid += STRIP + (f'<tr><td class="pad" bgcolor="#EDE4DD" background="{SITE}/assets/email/grain_band.jpg" style="background-color:#EDE4DD;background-image:url(\'{SITE}/assets/email/grain_band.jpg\');background-repeat:repeat;padding:42px 36px 52px 36px;">'
+            + head('Case study') + '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:22px;"><tr>'
+            + f'<td class="ed-img" valign="top" width="200" style="padding:0 20px 0 0;"><a href="{html.escape(c["url"])}" target="_blank"><img src="{og(c["url"])}" width="200" alt="" style="display:block;border:0;width:200px;height:auto;"></a></td>'
+            + f'<td valign="top"><div style="font-size:14px;line-height:20px;color:#5E4B53;">{e(c["studio"])}{" · " + e(c["client"]) if c.get("client") else ""}</div>'
+            + A(c['url'], c['title'], 'display:block;padding-top:6px;font-size:20px;line-height:27px;font-weight:600;color:#2E1F25;text-decoration:none;')
+            + f'<div style="font-size:15px;line-height:23px;color:#5E4B53;padding-top:6px;">{e(c["note"])}</div></td></tr></table></td></tr>\n')
+if ed.get('case') or ed.get('typeface'):
+    mid += '<tr><td style="height:48px;font-size:0;line-height:0;">&nbsp;</td></tr>\n'   # breathing room before the Watch rule
+watch_title = 'Weekend watchlist' if len(issue['watch']) > 3 else 'Watch'
+
 d = datetime.date.fromisoformat(issue['date'])
 date_long = f"{d.strftime('%A')}, {d.day} {d.strftime('%B')} {d.year}"
 page = (tpl.replace('{{DATE_LONG}}', date_long).replace('{{ISSUE}}', f"{issue['issue']:03d}")
         .replace('{{PREHEADER}}', e(issue.get('preheader') or issue.get('dek', '')))
         .replace('{{HERO_URL}}', hero).replace('{{SUMMARY_HTML}}', summary(issue['summary']))
+        .replace('{{EDITION_TOP}}', top).replace('{{EDITION_MID}}', mid).replace('{{WATCH_TITLE}}', watch_title)
         .replace('{{UNSUB_URL}}', 'https://ctrl-curious.vercel.app/unsubscribe').replace('{{READ_ROWS}}', '\n'.join(rows)).replace('{{WATCH_ROWS}}', '\n'.join(vids)))
 if cards:
     page = page.replace('{{EVENT_CARDS}}', '\n'.join(cards))
@@ -72,3 +128,17 @@ else:
 assert '{{' not in page, 'unfilled placeholder'
 out.write_text(page)
 print('wrote', out)
+
+# Plain-text version next to it (same name, .txt)
+txt = [f"Ctrl+Curious · {date_long} · Issue {issue['issue']:03d}", f"View online: {SITE}/issues/{issue['issue']:03d}", '',
+       'Today, in brief', re.sub(r'\[([^\]]+)\]\((https?://[^)\s]+)\)', r'\1 (\2)', issue['summary']), '']
+if ed.get('tool'): txt += ['Tool of the day', f"{ed['tool']['name']}: {ed['tool']['url']}", '']
+txt += ['Read'] + [f"{r['title']}: {r['url']}" for r in issue['reads']] + ['']
+if ed.get('week'): txt += ['This week in design'] + [f"{w['when']} · {w['title']}: {w['url']}" for w in ed['week']] + ['']
+if ed.get('typeface'): txt += ['Typeface spotlight', f"{ed['typeface']['name']}: {ed['typeface']['url']}", '']
+if ed.get('case'): txt += ['Case study', f"{ed['case']['title']}: {ed['case']['url']}", '']
+txt += [watch_title] + [f"{w['title']}: https://www.youtube.com/watch?v={w['id']}" for w in issue['watch']] + ['']
+if issue.get('meetups'): txt += ['Meet up'] + [f"{m['name']} ({m['date']}): {m['url']}" for m in issue['meetups']] + ['']
+txt += ["That's all for today. Stay curious.", '', f'Unsubscribe: {SITE}/unsubscribe', '']
+out.with_suffix('.txt').write_text('\n'.join(txt))
+print('wrote', out.with_suffix('.txt'))

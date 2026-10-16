@@ -273,6 +273,25 @@ function issuePage(i, idx) {
       return `<a class="event" href="${esc(safeUrl(m.url))}"><span class="dt"><b>${p.d}</b><span>${MONTHS[p.m - 1].slice(0, 3)}</span></span><span class="info"><b>${esc(m.name)}</b><span>${m.place ? `<span class="place">${esc(m.place)}</span>` : ''}${esc(m.details || '')}</span></span></a>`;
     })
     .join('');
+  // Edition sections: Monday week ahead, Tuesday tool, Wednesday typeface, Thursday case study
+  const ed = i.edition || {};
+  const L = (u, t, c = '') => `<a${c ? ` class="${c}"` : ''} href="${esc(safeUrl(u))}">${esc(t)}</a>`;
+  const og = (u) => `/api/og?url=${encodeURIComponent(safeUrl(u))}`;
+  const edTop = ed.tool
+    ? `<section class="ed-tool" aria-labelledby="tool-h"><h2 class="h" id="tool-h">Tool of the day</h2>${L(ed.tool.url, ed.tool.name, 'nm')}<p>${esc(ed.tool.what)}</p>${ed.tool.meta ? `<small>${esc(ed.tool.meta)}</small>` : ''}<span class="grain"></span></section>`
+    : '';
+  let edMid = '';
+  if (ed.week && ed.week.length)
+    edMid += `<section class="sec" aria-labelledby="wk-h"><h2 class="h" id="wk-h">This week in design</h2><div class="ed-week">${ed.week.slice(0, 3).map((w) => `<a href="${esc(safeUrl(w.url))}"><small>${esc(w.when)}</small><b>${esc(w.title)}</b></a>`).join('')}</div></section>`;
+  if (ed.typeface) {
+    const t = ed.typeface;
+    edMid += `<section class="ed-type" aria-labelledby="type-h"><h2 class="h" id="type-h">Typeface spotlight</h2>${L(t.url, t.name, 'nm')}${t.note ? `<p>${esc(t.note)}</p>` : ''}<a class="spec" href="${esc(safeUrl(t.url))}" tabindex="-1" aria-hidden="true"><img draggable="false" src="${og(t.url)}" alt="" loading="lazy"></a><dl><div><dt>Made by</dt><dd>${esc(t.by)}</dd></div><div><dt>Get it</dt><dd>${L(t.url, t.get || 'Foundry page')}</dd></div><div><dt>Pair it with</dt><dd>${esc(t.pair || '')}</dd></div><div><dt>Good for</dt><dd>${esc(t.good_for || '')}</dd></div></dl><span class="grain-d"></span></section>`;
+  }
+  if (ed.case) {
+    const c = ed.case;
+    edMid += `<section class="meet ed-case" aria-labelledby="case-h"><h2 class="h" id="case-h">Case study</h2><div class="row-c"><a class="cimg" href="${esc(safeUrl(c.url))}" tabindex="-1" aria-hidden="true"><img draggable="false" src="${og(c.url)}" alt="" loading="lazy"></a><div><small>${esc(c.studio)}${c.client ? ' · ' + esc(c.client) : ''}</small>${L(c.url, c.title, 'nm')}<p>${esc(c.note)}</p></div></div><span class="grain"></span></section>`;
+  }
+  const watchTitle = i.watch.length > 3 ? 'Weekend watchlist' : 'Watch';
   const pn = (x, label, cls) =>
     x
       ? `<a class="${cls}" href="${x.href}"><small>${label}</small><b>Issue ${x.num} · ${x.long.replace(/ \d{4}$/, '')}</b></a>`
@@ -287,8 +306,10 @@ function issuePage(i, idx) {
 <div class="issue-hero"><div class="pic"><img draggable="false" src="${esc(i.heroSrc)}" alt="${esc(i.hero_alt || "Today's Ctrl+Curious artwork")}"><span class="grain"></span></div><div class="strip" aria-hidden="true"></div></div>
 <div class="col issue-body">
 <section class="sec" aria-labelledby="brief-h"><h2 class="h" id="brief-h">Today, in brief</h2><p class="brief">${linkify(i.summary)}</p></section>
+${edTop}
 ${reads ? `<section class="sec" aria-labelledby="read-h" style="gap:12px"><h2 class="h" id="read-h">Read</h2><ol class="reads">${reads}</ol></section>` : ''}
-${vids ? `<section class="sec" aria-labelledby="watch-h" style="gap:24px"><h2 class="h" id="watch-h">Watch</h2><ul class="vids">${vids}</ul></section>` : ''}
+${edMid}
+${vids ? `<section class="sec" aria-labelledby="watch-h" style="gap:24px"><h2 class="h" id="watch-h">${watchTitle}</h2><ul class="vids">${vids}</ul></section>` : ''}
 ${meets ? `<section class="meet" aria-labelledby="meet-h"><h2 class="h" id="meet-h">Meetups</h2>${meets}<span class="grain"></span></section>` : ''}
 <nav class="prevnext" aria-label="More issues">${pn(older, '← Previous', 'l')}${pn(newer, 'Next →', 'r')}</nav>
 </div>

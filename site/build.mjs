@@ -328,7 +328,7 @@ function about() {
   };
   const RULES = [
     ['Fresh', 'Reads from the last couple of days, videos from the last week or two.'],
-    ['Credible', 'Recognised publications, researchers, design leaders and the people who actually built the thing. No concept redesigns by people with no connection to the product.'],
+    ['Credible', 'Recognised publications, researchers, design leaders and the people who actually built the thing.'],
     ['Varied', 'Different sources and channels every day, so no single voice dominates.'],
     ['Honest', 'Summaries are written fresh, never copied, and always point back to the original.'],
   ];

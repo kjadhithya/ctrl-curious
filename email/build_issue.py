@@ -83,8 +83,9 @@ LEARN_TITLES = {'skill': 'Skill of the week', 'pattern': 'Pattern breakdown', 'm
                 'principle': 'One principle, three examples', 'teardown': 'Teardown', 'tool': 'Tool to master', 'craft': 'Career and craft',
                 'workflow': 'Workflow upgrade', 'steal': 'Steal this', 'people': 'How they work', 'prompt': 'Prompt of the week',
                 'brief': '10-minute brief', 'decision': 'Decision toolkit'}
-if ed.get('learn'):   # Monday: one practical thing to learn this week
-    l = ed['learn']
+learns = ed.get('learn') or []
+if isinstance(learns, dict): learns = [learns]
+for l in learns:   # practical sections: skill, prompt, tool, steal, brief, people, decision
     li = lambda t: f'<div style="font-size:16px;line-height:25px;color:#2E1F25;padding:0 0 8px 0;">{t}</div>'
     body = ''
     if l.get('before'):
@@ -151,7 +152,7 @@ if ed.get('case'):   # Thursday: case study
             + f'<td valign="top"><div style="font-size:14px;line-height:20px;color:#5E4B53;">{e(c["studio"])}{" · " + e(c["client"]) if c.get("client") else ""}</div>'
             + A(c['url'], c['title'], 'display:block;padding-top:6px;font-size:20px;line-height:27px;font-weight:600;color:#2E1F25;text-decoration:none;')
             + f'<div style="font-size:15px;line-height:23px;color:#5E4B53;padding-top:6px;">{e(c["note"])}</div></td></tr></table></td></tr>\n')
-if ed.get('case') or ed.get('typeface') or (ed.get('learn') and not ed.get('week')):
+if ed.get('case') or ed.get('typeface') or (learns and not ed.get('week')):
     mid += '<tr><td style="height:48px;font-size:0;line-height:0;">&nbsp;</td></tr>\n'   # breathing room before the Watch rule
 watch_title = 'Weekend watchlist' if len(issue['watch']) > 3 else 'Watch'
 
@@ -209,7 +210,7 @@ txt = [f"Ctrl+Curious · {date_long} · Issue {issue['issue']:03d}", f"View onli
        'Today, in brief', re.sub(r'\[([^\]]+)\]\((https?://[^)\s]+)\)', r'\1 (\2)', issue['summary']), '']
 if ed.get('tool'): txt += ['Tool of the day', f"{ed['tool']['name']}: {ed['tool']['url']}", '']
 txt += ['Read'] + [f"{r['title']}: {r['url']}" for r in issue['reads']] + ['']
-if ed.get('learn'): txt += [LEARN_TITLES.get(ed['learn'].get('kind'), 'Learn this week'), f"{ed['learn']['title']}: {ed['learn']['url']}", '']
+for l in learns: txt += [LEARN_TITLES.get(l.get('kind'), 'Learn this week'), f"{l['title']}: {l['url']}", '']
 if ed.get('week'): txt += ['This week in design'] + [f"{w['when']} · {w['title']}: {w['url']}" for w in ed['week']] + ['']
 if ed.get('typeface'): txt += ['Typeface spotlight', f"{ed['typeface']['name']}: {ed['typeface']['url']}", '']
 if ed.get('case'): txt += ['Case study', f"{ed['case']['title']}: {ed['case']['url']}", '']

@@ -61,6 +61,26 @@ Each weekday has its own edition, and each edition adds one section to the usual
 - **Friday · Weekend: "Weekend watchlist" and "Inspiration shelf".** Five videos instead of three (same rules as Watch; five different channels); put the best long one first, since it is shown big, and ideally include a talk or studio visit and something lighter. They go in `watch`, and the section is titled and laid out automatically. Then the Inspiration shelf: three pieces of recent, real work worth looking at over the weekend, ideally a poster or piece of graphic design, an interface, and a small product detail, each linked to the maker's own page (studio site, Behance, the product's own post), since that page's share image is shown. Credit the designer, studio or product.
   `"edition": {"shelf": [{"title": "What it is", "credit": "Designer, studio or product", "url": "https://..."}, ...3 items]}`
 
+## Practical sections (go in `"edition": {"learn": [...]}`, next to the day's other edition key)
+
+These sections are for senior designers who want to work better this week and keep learning. Each must be something a reader can use straight away, grounded in a real, recent source you have actually read (an article, docs page, talk or post from the last two weeks where possible). Write the steps yourself from what the source says; if a step is your own advice rather than the source's, say so in `take`. Research these as carefully as the edition section: shortlist a few candidates, pick the most useful and timely, and never repeat a topic from the last month.
+
+Which ones go on which day:
+- **Monday:** `skill` (Skill of the week) and `prompt` (Prompt of the week)
+- **Tuesday:** `tool` (Tool to master)
+- **Wednesday:** `steal` (Steal this) and `brief` (10-minute brief)
+- **Thursday:** `people` (How they work) and `decision` (Decision toolkit)
+- **Friday:** none for now
+
+What each one is, and the fields it uses (every item needs `kind`, `title`, `url`, `intro` and at least one `links` entry `{"title", "url", "source"}`):
+- `skill`: one practical skill a senior designer can apply this week (AI workflows, research, systems, accessibility, writing, working with engineers). `steps`: 3 to 5 short steps.
+- `prompt`: one tested AI prompt for a real design job (critique, synthesis, UX copy, edge cases), for a named tool. `code`: the prompt itself, ready to copy; `code_note`: how to use it; `take`: when not to trust it.
+- `tool`: a deeper workflow in a tool designers already use, beyond "what's new": `steps`: 3 to 5 moves that save real time, from the tool's own docs; `take` for plan or seat limits.
+- `steal`: one free, ready-to-use asset (template, checklist, file format, spec, starter file). Put a short usable excerpt in `code` when it is text, with `code_note` on how to use it, and link the original.
+- `brief`: one thing changing around designers explained in plain words, with `examples`: 2 or 3 `{"name", "text", "url"}` showing where it turned up recently, and `take`: why it matters to their work.
+- `people`: a respected designer or design team and how they work, from their own interview, talk or post: `steps`: 3 takeaways worth copying; say in `take` that these are your takeaways.
+- `decision`: a framework for a recurring senior call (where AI help lives, when to push back, when a component should exist): `columns`: two `{"label", "items": [...]}` lists, `examples` with one real product, and `take`.
+
 ## Writing rules
 
 - Sentence case everywhere. No ALL CAPS text, no italics, no emoji.

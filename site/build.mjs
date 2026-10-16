@@ -291,6 +291,22 @@ function issuePage(i, idx) {
     const c = ed.case;
     edMid += `<section class="meet ed-case" aria-labelledby="case-h"><h2 class="h" id="case-h">Case study</h2><div class="row-c"><a class="cimg" href="${esc(safeUrl(c.url))}" tabindex="-1" aria-hidden="true"><img draggable="false" src="${og(c.url)}" alt="" loading="lazy"></a><div><small>${esc(c.studio)}${c.client ? ' · ' + esc(c.client) : ''}</small>${L(c.url, c.title, 'nm')}<p>${esc(c.note)}</p></div></div><span class="grain"></span></section>`;
   }
+  // Practical sections (skill, prompt, tool, steal this, brief, people, decision): same shapes as the email
+  const LT = { skill: 'Skill of the week', prompt: 'Prompt of the week', tool: 'Tool to master', steal: 'Steal this', brief: '10-minute brief', people: 'How they work', decision: 'Decision toolkit', pattern: 'Pattern breakdown', workflow: 'Workflow upgrade' };
+  let learns = ed.learn || [];
+  if (!Array.isArray(learns)) learns = [learns];
+  const learnHtml = learns.map((l, n) => {
+    let b = '';
+    if (l.before) b += `<div class="ba"><div><small>Before</small><p>${esc(l.before)}</p></div><div class="after"><small>After</small><p>${esc(l.after || '')}</p></div></div>`;
+    if (l.steps) b += `<ol class="steps">${l.steps.map((x) => `<li>${esc(x)}</li>`).join('')}</ol>`;
+    if (l.columns) b += `<div class="cols">${l.columns.slice(0, 2).map((c) => `<div><small>${esc(c.label)}</small><ul>${c.items.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>`).join('')}</div>`;
+    if (l.examples) b += `<div class="exs">${l.examples.map((x) => `<div>${L(x.url, x.name, 'nm')}<p>${esc(x.text)}</p></div>`).join('')}</div>`;
+    if (l.code) b += `<pre class="code">${esc(l.code)}</pre>${l.code_note ? `<small class="cn">${esc(l.code_note)}</small>` : ''}`;
+    if (l.take) b += `<p class="take"><b>Our take</b> ${esc(l.take)}</p>`;
+    const links = (l.links || []).map((x) => `${L(x.url, x.title)}${x.source ? ` <span>· ${esc(x.source)}</span>` : ''}`).join('<br>');
+    return `<section class="meet ed-learn" aria-labelledby="learn-h${n}"><h2 class="h" id="learn-h${n}">${LT[l.kind] || 'Learn this week'}</h2>${L(l.url, l.title, 'ttl')}<p class="intro">${esc(l.intro)}</p>${b}${links ? `<p class="deeper"><span>Go deeper</span> ${links}</p>` : ''}<span class="grain"></span></section>`;
+  }).join('');
+  edMid = learnHtml + edMid;
   const watchTitle = i.watch.length > 3 ? 'Weekend watchlist' : 'Watch';
   // Friday: dark Weekend watchlist (one feature video, then a grid) and the Inspiration shelf
   let weekend = '';

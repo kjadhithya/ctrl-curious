@@ -143,7 +143,8 @@ img{max-width:100%;display:block;-webkit-user-drag:none;user-select:none}
 .center{display:flex;justify-content:center}
 
 /* signup band */
-.band{position:relative;overflow:hidden;min-height:460px;display:flex;align-items:center;container-type:inline-size}
+.band{position:relative;overflow:hidden;min-height:460px;display:flex;align-items:center}
+section.band{container-type:inline-size}
 .band>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 100%}
 /* the wave-scale shore drifts gently from side to side; it tiles, so it never shows an edge */
 .band-waves{position:absolute;left:0;right:0;bottom:0;height:max(16.15%,5.165cqw);background:url(/assets/blog/signup_moon_shore_waves.png) repeat-x 0 0/auto 100%;pointer-events:none;animation:drift 8s ease-in-out infinite alternate;will-change:background-position}

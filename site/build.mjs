@@ -98,7 +98,7 @@ const footer = () => `<footer class="foot wrap">${logo(true)}
 
 function page({ title, desc, body, canonical, image }) {
   const t = title ? `${title} · Ctrl+Curious` : 'Ctrl+Curious · Catch the next wave in design';
-  const d = desc || "A daily design digest. Spot what's rising in design before everyone's talking about it. Five reads, three videos, every weekday.";
+  const d = desc || "A daily design digest. Spot what's rising in design before everyone's talking about it. Reads, videos and meetups, every weekday.";
   const og = SITE + (image || '/assets/blog/banner_swell_wave_mountain_sun_tall.jpg');
   return `<!doctype html>
 <html lang="en">
@@ -361,8 +361,8 @@ function about() {
   ];
   const ISSUE = [
     ['Today, in brief', "The day's stories tied together in a few sentences, with every claim linked to its source so you can check it yourself."],
-    ['Five reads', 'Original research, launches that change how you work, and hard-won lessons from teams who shipped. Roughly two to sharpen your craft and three to keep you current.'],
-    ['Three videos', 'Fresh talks and interviews from people with real standing: design leaders, conference stages, research groups and the teams behind the tools.'],
+    ['Reads', 'Original research, launches that change how you work, and hard-won lessons from teams who shipped. Some to sharpen your craft, some to keep you current.'],
+    ['Videos', 'Fresh talks and interviews from people with real standing: design leaders, conference stages, research groups and the teams behind the tools.'],
     ['Meetups', "Product and UX events in Bengaluru and online that are worth your time."],
   ];
   const art = (src) => `<div class="pic about-pic"><img src="/assets/email/days/${src}" alt="" loading="lazy"><span class="grain"></span></div>`;
@@ -400,7 +400,7 @@ ${anatomy}</div><span class="grain"></span></section>
 </section>
 ${band()}
 </main>`;
-  return page({ title: 'About', desc: 'Ctrl+Curious is a daily design digest for people who design products and already know the basics: five reads, three videos and the meetups worth your time, every weekday at 9 AM IST.', body, canonical: '/about' });
+  return page({ title: 'About', desc: 'Ctrl+Curious is a daily design digest for people who design products and already know the basics: reads, videos and the meetups worth your time, every weekday at 9 AM IST.', body, canonical: '/about' });
 }
 
 function unsubscribe() {

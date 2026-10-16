@@ -91,6 +91,14 @@ img{max-width:100%;display:block;-webkit-user-drag:none;user-select:none}
 .signup input::placeholder{color:var(--faint)}
 .signup button{padding:16px 24px;font-size:17px}
 .signup-note{font-size:15px;color:var(--muted);min-height:1.4em;margin:0}
+.signup-ok{display:flex;flex-direction:column;gap:6px;max-width:540px;padding:16px 0 4px;border-top:2px solid currentColor;animation:ok-in .5s cubic-bezier(.2,.7,.3,1) both}
+.signup-ok strong{font-size:30px;line-height:1.1;font-weight:700;letter-spacing:-.01em}
+.signup-ok strong span{color:#24585C}
+.signup-ok p{margin:0;font-size:17px;line-height:1.5;color:var(--muted)}
+.band .signup-ok strong span{color:#9ED0CF}
+.band .signup-ok p{color:#E9DFE3}
+@keyframes ok-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.signup-ok{animation:none}}
 .strip{height:16px;background:url(/assets/blog/seigaiha_tile.jpg) 0 0/auto 16px repeat-x}
 
 /* latest */

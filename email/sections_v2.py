@@ -54,15 +54,15 @@ def take(l):
 
 
 def deeper(l, dark=False):
+    """One quiet line: 'More: Title (Source)', several links joined with a middle dot. No arrows, no label row."""
     links = l.get('links') or []
     if not links:
         return ''
     lc, sc = (PAPER, MAUVE) if dark else (INK, MUTED)
-    rows = ''.join(
-        f'<div style="padding-top:6px;"><span style="color:{WINE if not dark else MAUVE};">&rarr;</span>&nbsp; '
-        + a(x['url'], x['title'], f'color:{lc};text-decoration:underline;text-decoration-color:{WINE if not dark else MAUVE};text-underline-offset:3px;')
-        + (f' <span style="color:{sc};">· {e(x["source"])}</span>' if x.get('source') else '') + '</div>' for x in links)
-    return f'<div style="font-size:15px;line-height:23px;padding-top:20px;"><div style="font-size:13px;line-height:18px;color:{sc};">Go deeper</div>{rows}</div>'
+    items = ' &nbsp;·&nbsp; '.join(
+        a(x['url'], x['title'], f'color:{lc};text-decoration:underline;text-decoration-color:{sc};text-underline-offset:3px;')
+        + (f' <span style="color:{sc};">({e(x["source"])})</span>' if x.get('source') else '') for x in links)
+    return f'<div style="font-size:14px;line-height:22px;color:{sc};padding-top:18px;">More: {items}</div>'
 
 
 def rule():

@@ -312,8 +312,8 @@ function issuePage(i, idx) {
     if (l.rule) b += `<p class="take"><b>Rule of thumb</b> ${esc(l.rule)}</p>`;
     if (l.code) b += `<pre class="code">${esc(l.code)}</pre>${l.code_note ? `<small class="cn">${esc(l.code_note)}</small>` : ''}`;
     if (l.take) b += `<p class="take"><b>Our take</b> ${esc(l.take)}</p>`;
-    const links = (l.links || []).map((x) => `${L(x.url, x.title)}${x.source ? ` <span>· ${esc(x.source)}</span>` : ''}`).join('<br>');
-    return `<section class="meet ed-learn" aria-labelledby="learn-h${n}"><h2 class="h" id="learn-h${n}">${LT[l.kind] || 'Learn this week'}</h2>${L(l.url, l.title, 'ttl')}<p class="intro">${esc(l.intro)}</p>${b}${links ? `<p class="deeper"><span>Go deeper</span> ${links}</p>` : ''}<span class="grain"></span></section>`;
+    const links = (l.links || []).map((x) => `${L(x.url, x.title)}${x.source ? ` <span>(${esc(x.source)})</span>` : ''}`).join(' &nbsp;·&nbsp; ');
+    return `<section class="meet ed-learn" aria-labelledby="learn-h${n}"><h2 class="h" id="learn-h${n}">${LT[l.kind] || 'Learn this week'}</h2>${L(l.url, l.title, 'ttl')}<p class="intro">${esc(l.intro)}</p>${b}${links ? `<p class="deeper">More: ${links}</p>` : ''}<span class="grain"></span></section>`;
   }).join('');
   edMid = edMid + learnHtml;
   const watchTitle = i.watch.length > 3 ? 'Weekend watchlist' : 'Watch';

@@ -419,3 +419,5 @@ section.band{container-type:inline-size}
 .ed-weekend .thumb{width:100%;height:auto;aspect-ratio:16/9}
 .ed-weekend .thumb.big svg{width:56px;height:56px}
 .ed-shelf .pic{display:block;background:var(--plum)}
+.ed-case .cimg{background:var(--plum);aspect-ratio:1.91}.ed-case .cimg img{height:100%;object-fit:cover}
+.ed-type .spec{display:block;background:#3A2830;aspect-ratio:1.91;margin-top:10px}.ed-type .spec img{margin-top:0;height:100%;object-fit:cover}

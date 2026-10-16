@@ -176,6 +176,29 @@ if cards:
 else:
     page = re.sub(r'<!-- MEETUP_START -->.*?<!-- MEETUP_END -->', '', page, flags=re.S)
 assert '{{' not in page, 'unfilled placeholder'
+def night_shift(page):
+    """Tuesday's dark 'Night shift' look: swap the light palette for the dark one above the footer
+    (the footer art and bar are already dark). The Tool of the day card and small mauve or plum
+    labels keep their own colours."""
+    cut = page.find('<tr><td><img src="https://ctrl-curious.vercel.app/assets/email/footer_b3.jpg"')
+    head, foot = (page[:cut], page[cut:]) if cut > 0 else (page, '')
+    keep = {}
+    def protect(m):
+        keep[f'@@K{len(keep)}@@'] = m.group(0); return f'@@K{len(keep)-1}@@'
+    head = re.sub(r'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#C9A7B5".*?</table>', protect, head, flags=re.S)
+    head = re.sub(r'background-color:#(?:C9A7B5|7E4B6B);color:#(?:2E1F25|F4EEE8)', protect, head)
+    head = re.sub(r'background="[^"]*grain_page\.jpg"', 'background="https://ctrl-curious.vercel.app/assets/email/grain_page_dark.jpg"', head)
+    head = head.replace('grain_page.jpg', 'grain_page_dark.jpg').replace('grain_paper.jpg', 'grain_dark.jpg').replace('grain_band.jpg', 'grain_dark.jpg')
+    head = head.replace('logo_light.png', 'logo_dark.png').replace('seigaiha_strip.jpg', 'seigaiha_strip_dark.jpg')
+    swap = {'E9E1D9': '1E1418', 'F4EEE8': '2E1F25', '2E1F25': 'F4EEE8', 'EDE4DD': '3A2830', '5E4B53': 'C9A7B5',
+            '4A3540': 'E9DFE3', '8A2E3B': 'C9A7B5', 'D9C3B7': '5E4B53'}
+    head = re.sub(r'#([0-9A-Fa-f]{6})\b', lambda m: '#' + swap.get(m.group(1).upper(), m.group(1)), head)
+    for k, v in keep.items():
+        head = head.replace(k, v)
+    return head + foot
+
+if datetime.date.fromisoformat(issue['date']).weekday() == 1:   # Tuesday
+    page = night_shift(page)
 out.write_text(page)
 print('wrote', out)
 

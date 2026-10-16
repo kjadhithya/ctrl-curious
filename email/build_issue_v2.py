@@ -105,8 +105,9 @@ if ed.get('typeface'):   # Wednesday: typeface spotlight
             + V2.heading('Typeface spotlight', 'New in type · ' + t.get('get', 'foundry page'), dark=True)
             + A(t['url'], t['name'], 'display:block;padding-top:20px;font-size:40px;line-height:44px;font-weight:700;color:#F4EEE8;text-decoration:none;letter-spacing:-0.5px;')
             + (f'<div style="font-size:17px;line-height:26px;color:#E9DFE3;padding-top:10px;">{e(t["note"])}</div>' if t.get('note') else '')
-            # Only a real specimen of the typeface goes here (t['image'], from the foundry); never a stand-in picture.
-            + (f'<a href="{html.escape(t["url"])}" target="_blank"><img src="{html.escape(t["image"])}" width="528" alt="{e(t["name"])} specimen from the foundry" style="display:block;border:0;width:100%;max-width:528px;height:auto;margin-top:22px;"></a>' if t.get('image') else '')
+            # A real specimen: t['image'] (rendered from the font files when the font is free, or the foundry's own image),
+            # otherwise the foundry page's share image.
+            + f'<a href="{html.escape(t["url"])}" target="_blank"><img class="spec" src="{html.escape(t.get("image") or og(t["url"]))}" width="528" alt="{e(t["name"])} specimen" style="display:block;border:0;width:100%;max-width:528px;height:auto;margin-top:22px;"></a>'
             + '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:22px;"><tr>'
             + lab('Made by', e(t['by'])) + lab('Get it', A(t['url'], t.get('get', 'Foundry page'), 'color:#F4EEE8;text-decoration:underline;text-underline-offset:2px;')) + '</tr><tr>'
             + lab('Pair it with', e(t.get('pair', ''))) + lab('Good for', e(t.get('good_for', ''))) + '</tr></table></td></tr>\n')

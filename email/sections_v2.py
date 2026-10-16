@@ -148,13 +148,19 @@ def brief(l):
                      + f'<div style="font-size:14px;line-height:21px;color:{MUTED};padding-top:6px;">{e(x["text"])}</div></td>')
     grid = ''
     if cells:
-        grid = (f'<div style="font-size:14px;line-height:20px;font-weight:700;color:{WINE};padding-top:26px;">Where it showed up this week</div>'
+        grid = (f'<div style="font-size:14px;line-height:20px;font-weight:700;color:{WINE};padding-top:26px;">{e(l.get("examples_label") or "Where it showed up this week")}</div>'
                 f'{TABLE} style="margin-top:10px;"><tr>' + '<td class="wks" width="10" style="font-size:0;line-height:0;">&nbsp;</td>'.join(cells) + '</tr></table>')
+    tips = ''
+    if l.get('tips'):   # practical design advice: what to actually do differently
+        rows = ''.join(f'<tr><td width="34" valign="top" style="padding:12px 0 0 0;font-size:15px;line-height:24px;font-weight:700;color:{OCHRE};">{k+1:02d}</td>'
+                       f'<td valign="top" style="padding:12px 0 0 0;font-size:16px;line-height:24px;color:{INK};">{e(t)}</td></tr>' for k, t in enumerate(l['tips']))
+        tips = (f'<div style="font-size:14px;line-height:20px;font-weight:700;color:{WINE};padding-top:26px;">{e(l.get("tips_label") or "How to design for it")}</div>'
+                f'{TABLE} style="margin-top:2px;">{rows}</table>')
     why = ''
     if l.get('why'):
         why = (f'<div style="font-size:14px;line-height:20px;font-weight:700;color:{WINE};padding-top:24px;">Why it matters to you</div>'
                f'<div style="font-size:17px;line-height:27px;color:{INK};padding-top:6px;">{e(l["why"])}</div>')
-    return 'band', heading('10-minute brief', l.get('meta') or 'About a 10-minute read, explained plainly') + title(l) + intro(l) + define + grid + why + take(l) + deeper(l)
+    return 'band', heading('10-minute brief', l.get('meta') or 'About a 10-minute read, explained plainly') + title(l) + intro(l) + define + grid + tips + why + take(l) + deeper(l)
 
 
 # ---------- How they work ----------

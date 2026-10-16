@@ -88,7 +88,7 @@ const band = () => `<section class="band" id="signup" aria-labelledby="signup-h"
 <img draggable="false" src="/assets/blog/signup_moon_shore.jpg" alt="" loading="lazy">
 <div class="band-copy wrap">
 <h2 id="signup-h">Get the emails.<br>Stay curious.</h2>
-<p>Every weekday at 10:00 IST: a linked summary, five reads, three videos and the meetups in Bengaluru and online.</p>
+<p>Every weekday at 9:00 IST: a linked summary, five reads, three videos and the meetups in Bengaluru and online.</p>
 ${signupForm('email-band')}
 </div></section>`;
 
@@ -174,7 +174,7 @@ function home() {
 <div class="art" role="img" aria-label="A great wave rising and falling over moving swell lines, a small plum mountain under its curl and a wine sun high in the sky"><img draggable="false" src="/assets/blog/hero/bg.webp" alt="" fetchpriority="high"><img draggable="false" class="wave" src="/assets/blog/hero/wave.webp" alt=""><img draggable="false" class="band b1" src="/assets/blog/hero/band1.webp" alt=""><img draggable="false" class="band b2" src="/assets/blog/hero/band2.webp" alt=""><img draggable="false" class="band b3" src="/assets/blog/hero/band3.webp" alt=""><img draggable="false" class="band b4" src="/assets/blog/hero/band4.webp" alt=""><img draggable="false" class="band b5" src="/assets/blog/hero/band5.webp" alt=""><img draggable="false" class="band b6" src="/assets/blog/hero/band6.webp" alt=""></div>
 ${nav('home', false)}
 <div class="hero-copy">
-<div class="kicker">A daily design digest · weekdays at 10:00 IST</div>
+<div class="kicker">A daily design digest · weekdays at 9:00 IST</div>
 <h1 id="hero-h">Catch the next wave in design.</h1>
 <p class="lede">Spot what&rsquo;s rising in design before everyone&rsquo;s talking about it.</p>
 ${signupForm('email-hero')}
@@ -331,7 +331,7 @@ function about() {
 <main id="main" class="about">
 <section class="ab-grid wrap ab-top">
 <div class="ab-copy"><div class="crumb"><a href="/">Home</a> &nbsp;/&nbsp; About</div><h1>About Ctrl+Curious</h1>
-<p class="ab-lede">Design moves fast now. Tools ship weekly, AI rewrites workflows overnight, and the conversation that matters is scattered across a dozen newsletters, podcasts and feeds. Ctrl+Curious is one short email that does the sorting for you, every weekday at 10:00 IST.</p></div>
+<p class="ab-lede">Design moves fast now. Tools ship weekly, AI rewrites workflows overnight, and the conversation that matters is scattered across a dozen newsletters, podcasts and feeds. Ctrl+Curious is one short email that does the sorting for you, every weekday at 9:00 IST.</p></div>
 ${art('mon/mon_02.jpg')}
 </section>
 <section class="ab-grid ab-flip wrap">
@@ -352,7 +352,7 @@ ${anatomy}</div><span class="grain"></span></section>
 </section>
 ${band()}
 </main>`;
-  return page({ title: 'About', desc: 'Ctrl+Curious is a daily design digest for people who design products and already know the basics: five reads, three videos and the meetups worth your time, every weekday at 10:00 IST.', body, canonical: '/about' });
+  return page({ title: 'About', desc: 'Ctrl+Curious is a daily design digest for people who design products and already know the basics: five reads, three videos and the meetups worth your time, every weekday at 9:00 IST.', body, canonical: '/about' });
 }
 
 function unsubscribe() {
@@ -383,7 +383,7 @@ function feed() {
     )
     .join('\n');
   return `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0"><channel><title>Ctrl+Curious</title><link>${SITE}/</link><description>A daily design digest, weekdays at 10:00 IST.</description><language>en</language>
+<rss version="2.0"><channel><title>Ctrl+Curious</title><link>${SITE}/</link><description>A daily design digest, weekdays at 9:00 IST.</description><language>en</language>
 ${items}
 </channel></rss>
 `;

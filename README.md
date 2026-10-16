@@ -1,6 +1,6 @@
 # Ctrl+Curious
 
-*A field guide to everything else.* A daily design digest, weekdays at 10:00 IST.
+*A field guide to everything else.* A daily design digest, weekdays at 9:00 IST.
 
 ## Brand
 

@@ -22,14 +22,14 @@ function doPost(e) {
   const html = UrlFetchApp.fetch(SITE + '/email/welcome.html').getContentText().replace(/\{\{UNSUB_URL\}\}/g, unsub);
   const text = [
     "You're in.", '',
-    "Thanks for subscribing to Ctrl+Curious. From the next weekday, every morning at 10:00 IST, you'll get one short email with what's moving in product and UX/UI design.", '',
+    "Thanks for subscribing to Ctrl+Curious. From the next weekday, every morning at 9:00 IST, you'll get one short email with what's moving in product and UX/UI design.", '',
     'In every issue',
     "01 Today, in brief: the day's stories in a few sentences, every claim linked to its source.",
     '02 Five reads: research, launches and lessons from real teams. No beginner guides.',
     '03 Three videos: fresh talks and interviews from people who build products.',
     '04 Meetups: design events in Bengaluru and online that are worth your evening.', '',
     "Can't wait until tomorrow? Every past issue is at " + SITE + '/archive', '',
-    'See you at 10. Stay curious.',
+    'See you at 9. Stay curious.',
     'Unsubscribe: ' + unsub,
   ].join('\n');
   GmailApp.sendEmail(email, SUBJECT, text, { htmlBody: html, name: 'Ctrl+Curious' });

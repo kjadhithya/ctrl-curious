@@ -25,7 +25,7 @@
     });
   }
   document.querySelectorAll('form[data-signup]').forEach(function (f) {
-    wire(f, "You're in. Your first issue arrives at 10:00 IST on the next weekday.", 'Something went wrong. Please try again in a minute.');
+    wire(f, "You're in. Your first issue arrives at 9:00 IST on the next weekday.", 'Something went wrong. Please try again in a minute.');
   });
   document.querySelectorAll('form[data-unsub]').forEach(function (f) {
     wire(f, "You're unsubscribed. No more issues will be sent to that address.", 'Something went wrong. Please try again in a minute.');

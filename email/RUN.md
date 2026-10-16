@@ -50,7 +50,8 @@ Each weekday has its own edition, and each edition adds one section to the usual
   `"edition": {"typeface": {"name": "", "url": "https://foundry/specimen", "by": "Designer, foundry", "get": "Google Fonts (free)" or "Foundry site (paid)", "pair": "One pairing idea", "good_for": "Headlines, editorial, UI", "note": "One sentence on what makes it notable."}}`
 - **Thursday · Case study: "Case study".** One real case study published recently by the team or studio that did the work (a company design blog, a studio's project page, a detailed write-up). Not a concept by someone unconnected to the product.
   `"edition": {"case": {"title": "", "url": "https://...", "studio": "Studio or team", "client": "Client, if any", "note": "The problem in one line, what they made, and the one decision that made it work."}}`
-- **Friday · Weekend: "Weekend watchlist".** Five videos instead of three (same rules as Watch; five different channels). No `edition` key is needed; the five videos go in `watch` and the section is titled automatically.
+- **Friday · Weekend: "Weekend watchlist" and "Inspiration shelf".** Five videos instead of three (same rules as Watch; five different channels); put the best long one first, since it is shown big, and ideally include a talk or studio visit and something lighter. They go in `watch`, and the section is titled and laid out automatically. Then the Inspiration shelf: three pieces of recent, real work worth looking at over the weekend, ideally a poster or piece of graphic design, an interface, and a small product detail, each linked to the maker's own page (studio site, Behance, the product's own post), since that page's share image is shown. Credit the designer, studio or product.
+  `"edition": {"shelf": [{"title": "What it is", "credit": "Designer, studio or product", "url": "https://..."}, ...3 items]}`
 
 ## Writing rules
 
@@ -144,7 +145,7 @@ The website is built from one JSON file per issue in `issues/` of the GitHub rep
 }
 ```
 
-   Fill `"edition"` with today's key from 'Edition sections' (empty `{}` on Fridays or if none could be verified). Use `"meetups": []` when the Meet up section was removed. Sentence case, no ALL CAPS, no emoji.
+   Fill `"edition"` with today's key from 'Edition sections' (`{}` if none could be verified). Use `"meetups": []` when the Meet up section was removed. Sentence case, no ALL CAPS, no emoji.
 3. The email files: `python3 email/build_issue.py issues/NNN.json email/issues/NNN.html` builds the finished email (every row, card and edition section, from the JSON) and writes `email/issues/NNN.txt`, the plain-text version, next to it. This HTML is also exactly what you send to the editor, so build it before sending.
 4. Check it builds: `node site/build.mjs` must print `Built N issue(s)`. If it fails, fix the JSON (usually a quote or comma) and rerun.
 5. Commit and push to `main` (all three files in one commit):

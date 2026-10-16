@@ -292,6 +292,15 @@ function issuePage(i, idx) {
     edMid += `<section class="meet ed-case" aria-labelledby="case-h"><h2 class="h" id="case-h">Case study</h2><div class="row-c"><a class="cimg" href="${esc(safeUrl(c.url))}" tabindex="-1" aria-hidden="true"><img draggable="false" src="${og(c.url)}" alt="" loading="lazy"></a><div><small>${esc(c.studio)}${c.client ? ' · ' + esc(c.client) : ''}</small>${L(c.url, c.title, 'nm')}<p>${esc(c.note)}</p></div></div><span class="grain"></span></section>`;
   }
   const watchTitle = i.watch.length > 3 ? 'Weekend watchlist' : 'Watch';
+  // Friday: dark Weekend watchlist (one feature video, then a grid) and the Inspiration shelf
+  let weekend = '';
+  if (i.watch.length > 3) {
+    const yt = (w) => `https://www.youtube.com/watch?v=${encodeURIComponent(w.id)}`;
+    const [v0, ...rest] = i.watch;
+    weekend = `<section class="ed-weekend" aria-labelledby="wl-h"><h2 class="h" id="wl-h">Weekend watchlist</h2><a class="thumb big" href="${yt(v0)}" tabindex="-1" aria-hidden="true"><img draggable="false" src="/api/yt?id=${encodeURIComponent(v0.id)}" alt="" loading="lazy">${PLAY}</a><a class="t big" href="${yt(v0)}">${esc(v0.title)}</a><span class="d">${esc(v0.channel)} · ${esc(v0.note)}</span><div class="wl-grid">${rest.slice(0, 4).map((w) => `<div><a class="thumb" href="${yt(w)}" tabindex="-1" aria-hidden="true"><img draggable="false" src="https://img.youtube.com/vi/${encodeURIComponent(w.id)}/mqdefault.jpg" alt="" loading="lazy">${PLAY}</a><a class="t" href="${yt(w)}">${esc(w.title)}</a></div>`).join('')}</div><span class="grain-d"></span></section>`;
+    if (ed.shelf && ed.shelf.length)
+      weekend += `<section class="sec" aria-labelledby="shelf-h"><h2 class="h" id="shelf-h">Inspiration shelf</h2><div class="ed-shelf">${ed.shelf.slice(0, 3).map((x) => `<div><a class="pic" href="${esc(safeUrl(x.url))}" tabindex="-1" aria-hidden="true"><img draggable="false" src="${og(x.url)}" alt="" loading="lazy"></a>${L(x.url, x.title, 'nm')}<small>${esc(x.credit)}</small></div>`).join('')}</div></section>`;
+  }
   const pn = (x, label, cls) =>
     x
       ? `<a class="${cls}" href="${x.href}"><small>${label}</small><b>Issue ${x.num} · ${x.long.replace(/ \d{4}$/, '')}</b></a>`
@@ -309,7 +318,8 @@ function issuePage(i, idx) {
 ${edTop}
 ${reads ? `<section class="sec" aria-labelledby="read-h" style="gap:12px"><h2 class="h" id="read-h">Read</h2><ol class="reads">${reads}</ol></section>` : ''}
 ${edMid}
-${vids ? `<section class="sec" aria-labelledby="watch-h" style="gap:24px"><h2 class="h" id="watch-h">${watchTitle}</h2><ul class="vids">${vids}</ul></section>` : ''}
+${weekend}
+${vids && !weekend ? `<section class="sec" aria-labelledby="watch-h" style="gap:24px"><h2 class="h" id="watch-h">${watchTitle}</h2><ul class="vids">${vids}</ul></section>` : ''}
 ${meets ? `<section class="meet" aria-labelledby="meet-h"><h2 class="h" id="meet-h">Meetups</h2>${meets}<span class="grain"></span></section>` : ''}
 <nav class="prevnext" aria-label="More issues">${pn(older, '← Previous', 'l')}${pn(newer, 'Next →', 'r')}</nav>
 </div>

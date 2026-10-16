@@ -114,6 +114,36 @@ if ed.get('case') or ed.get('typeface'):
     mid += '<tr><td style="height:48px;font-size:0;line-height:0;">&nbsp;</td></tr>\n'   # breathing room before the Watch rule
 watch_title = 'Weekend watchlist' if len(issue['watch']) > 3 else 'Watch'
 
+# Friday: the Weekend watchlist replaces the Watch section with a dark feature block
+# (one big video, then a two-by-two grid), and the Inspiration shelf follows it.
+weekend = ''
+if len(issue['watch']) > 3:
+    yt = lambda i: f"https://www.youtube.com/watch?v={i}"
+    v0 = issue['watch'][0]
+    def small(w):
+        return (f'<td class="wk" width="50%" valign="top" style="padding:0 0 22px 0;"><a href="{yt(w["id"])}" target="_blank"><img src="https://img.youtube.com/vi/{w["id"]}/mqdefault.jpg" width="256" alt="" style="display:block;border:0;width:100%;max-width:256px;height:auto;"></a>'
+                + A(yt(w['id']), w['title'], 'display:block;padding-top:10px;font-size:17px;line-height:23px;font-weight:600;color:#F4EEE8;text-decoration:none;') + '</td>')
+    rest = issue['watch'][1:5]
+    grid = ''
+    for k in range(0, len(rest), 2):
+        pair = rest[k:k+2]
+        grid += '<tr>' + small(pair[0]) + '<td class="wks" width="16" style="font-size:0;line-height:0;">&nbsp;</td>' + (small(pair[1]) if len(pair) > 1 else '<td></td>') + '</tr>'
+    weekend = (f'<tr><td class="pad" bgcolor="#2E1F25" background="{SITE}/assets/email/grain_dark.jpg" style="background-color:#2E1F25;background-image:url(\'{SITE}/assets/email/grain_dark.jpg\');background-repeat:repeat;padding:48px 36px 30px 36px;color:#F4EEE8;">'
+               + head('Weekend watchlist', '#C9902F', '#F4EEE8')
+               + f'<a href="{yt(v0["id"])}" target="_blank"><img src="{SITE}/api/yt?id={v0["id"]}" width="528" alt="" style="display:block;border:0;width:100%;max-width:528px;height:auto;margin-top:24px;"></a>'
+               + A(yt(v0['id']), v0['title'], 'display:block;padding-top:16px;font-size:22px;line-height:29px;font-weight:700;color:#F4EEE8;text-decoration:none;')
+               + f'<div style="font-size:15px;line-height:23px;color:#C9A7B5;padding-top:4px;">{e(v0["channel"])} · {e(v0["note"])}</div>'
+               + f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:26px;">{grid}</table></td></tr>\n')
+    if ed.get('shelf'):
+        cells = []
+        for it in ed['shelf'][:3]:
+            cells.append(f'<td class="wk" width="33%" valign="top" style="padding:0 0 8px 0;"><a href="{html.escape(it["url"])}" target="_blank"><img src="{og(it["url"])}" width="168" alt="" style="display:block;border:0;width:100%;max-width:168px;height:auto;"></a>'
+                         + A(it['url'], it['title'], 'display:block;padding-top:10px;font-size:16px;line-height:22px;font-weight:600;color:#2E1F25;text-decoration:none;')
+                         + f'<div style="font-size:14px;line-height:20px;color:#5E4B53;padding-top:4px;">{e(it["credit"])}</div></td>')
+        weekend += (f'<tr><td class="pad" style="padding:48px 36px 48px 36px;">{head("Inspiration shelf")}'
+                    + '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:24px;"><tr>'
+                    + '<td class="wks" width="12" style="font-size:0;line-height:0;">&nbsp;</td>'.join(cells) + '</tr></table></td></tr>\n')
+
 d = datetime.date.fromisoformat(issue['date'])
 date_long = f"{d.strftime('%A')}, {d.day} {d.strftime('%B')} {d.year}"
 page = (tpl.replace('{{DATE_LONG}}', date_long).replace('{{ISSUE}}', f"{issue['issue']:03d}")
@@ -121,6 +151,10 @@ page = (tpl.replace('{{DATE_LONG}}', date_long).replace('{{ISSUE}}', f"{issue['i
         .replace('{{HERO_URL}}', hero).replace('{{SUMMARY_HTML}}', summary(issue['summary']))
         .replace('{{EDITION_TOP}}', top).replace('{{EDITION_MID}}', mid).replace('{{WATCH_TITLE}}', watch_title)
         .replace('{{UNSUB_URL}}', 'https://ctrl-curious.vercel.app/unsubscribe').replace('{{READ_ROWS}}', '\n'.join(rows)).replace('{{WATCH_ROWS}}', '\n'.join(vids)))
+if weekend:
+    page = re.sub(r'<!-- WATCH_START -->.*?<!-- WATCH_END -->\n', lambda m: weekend, page, count=1, flags=re.S)
+else:
+    page = page.replace('<!-- WATCH_START -->', '').replace('<!-- WATCH_END -->\n', '')
 if cards:
     page = page.replace('{{EVENT_CARDS}}', '\n'.join(cards))
 else:
@@ -137,6 +171,7 @@ txt += ['Read'] + [f"{r['title']}: {r['url']}" for r in issue['reads']] + ['']
 if ed.get('week'): txt += ['This week in design'] + [f"{w['when']} · {w['title']}: {w['url']}" for w in ed['week']] + ['']
 if ed.get('typeface'): txt += ['Typeface spotlight', f"{ed['typeface']['name']}: {ed['typeface']['url']}", '']
 if ed.get('case'): txt += ['Case study', f"{ed['case']['title']}: {ed['case']['url']}", '']
+if ed.get('shelf'): txt += ['Inspiration shelf'] + [f"{x['title']} ({x['credit']}): {x['url']}" for x in ed['shelf']] + ['']
 txt += [watch_title] + [f"{w['title']}: https://www.youtube.com/watch?v={w['id']}" for w in issue['watch']] + ['']
 if issue.get('meetups'): txt += ['Meet up'] + [f"{m['name']} ({m['date']}): {m['url']}" for m in issue['meetups']] + ['']
 txt += ["That's all for today. Stay curious.", '', f'Unsubscribe: {SITE}/unsubscribe', '']

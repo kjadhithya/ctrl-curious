@@ -85,6 +85,7 @@ LEARN_TITLES = {'skill': 'Skill of the week', 'pattern': 'Pattern breakdown', 'm
                 'brief': '10-minute brief', 'decision': 'Decision toolkit'}
 learns = ed.get('learn') or []
 if isinstance(learns, dict): learns = [learns]
+learn_html = ''
 for l in learns:   # practical sections: skill, prompt, tool, steal, brief, people, decision
     li = lambda t: f'<div style="font-size:16px;line-height:25px;color:#2E1F25;padding:0 0 8px 0;">{t}</div>'
     body = ''
@@ -113,7 +114,7 @@ for l in learns:   # practical sections: skill, prompt, tool, steal, brief, peop
     if l.get('take'):
         body += f'<div style="margin-top:14px;padding:14px 16px;background-color:#F4EEE8;font-size:15px;line-height:23px;color:#2E1F25;"><b style="color:#8A2E3B;">Our take&nbsp;</b> {e(l["take"])}</div>'
     links = ''.join(A(x['url'], x['title'], 'color:#2E1F25;text-decoration:underline;text-decoration-color:#8A2E3B;text-underline-offset:2px;') + (f' <span style="color:#5E4B53;">· {e(x["source"])}</span>' if x.get('source') else '') + '<br>' for x in l.get('links', []))
-    mid += STRIP + (f'<tr><td class="pad" bgcolor="#EDE4DD" background="{SITE}/assets/email/grain_band.jpg" style="background-color:#EDE4DD;background-image:url(\'{SITE}/assets/email/grain_band.jpg\');background-repeat:repeat;padding:42px 36px 46px 36px;">'
+    learn_html += STRIP + (f'<tr><td class="pad" bgcolor="#EDE4DD" background="{SITE}/assets/email/grain_band.jpg" style="background-color:#EDE4DD;background-image:url(\'{SITE}/assets/email/grain_band.jpg\');background-repeat:repeat;padding:42px 36px 46px 36px;">'
             + head(LEARN_TITLES.get(l.get('kind'), 'Learn this week'))
             + A(l['url'], l['title'], 'display:block;padding-top:16px;font-size:24px;line-height:31px;font-weight:700;color:#2E1F25;text-decoration:none;')
             + f'<div style="font-size:17px;line-height:27px;color:#4A3540;padding-top:8px;">{e(l["intro"])}</div>'
@@ -128,7 +129,7 @@ if ed.get('week'):   # Monday: three things happening this week
         bg, lab, fg = cols[k]
         cells.append(f'<td class="wk" width="33%" valign="top" bgcolor="{bg}" style="background-color:{bg};padding:16px;"><div style="font-size:14px;line-height:20px;color:{lab};">{e(w["when"])}</div>'
                      + A(w['url'], w['title'], f'display:block;padding-top:8px;font-size:17px;line-height:23px;font-weight:600;color:{fg};text-decoration:none;') + '</td>')
-    mid += ('' if ed.get('learn') else RULE) + (f'<tr><td class="pad" style="padding:40px 36px 22px 36px;">{head("This week in design")}</td></tr>\n'
+    mid += RULE + (f'<tr><td class="pad" style="padding:40px 36px 22px 36px;">{head("This week in design")}</td></tr>\n'
                    f'<tr><td class="pad" style="padding:0 36px 52px 36px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>'
                    + '<td class="wks" width="12" style="font-size:0;line-height:0;">&nbsp;</td>'.join(cells) + '</tr></table></td></tr>\n')
 
@@ -152,7 +153,8 @@ if ed.get('case'):   # Thursday: case study
             + f'<td valign="top"><div style="font-size:14px;line-height:20px;color:#5E4B53;">{e(c["studio"])}{" · " + e(c["client"]) if c.get("client") else ""}</div>'
             + A(c['url'], c['title'], 'display:block;padding-top:6px;font-size:20px;line-height:27px;font-weight:600;color:#2E1F25;text-decoration:none;')
             + f'<div style="font-size:15px;line-height:23px;color:#5E4B53;padding-top:6px;">{e(c["note"])}</div></td></tr></table></td></tr>\n')
-if ed.get('case') or ed.get('typeface') or (learns and not ed.get('week')):
+mid += learn_html   # practical sections come after the day's edition section
+if ed.get('case') or ed.get('typeface') or learns:
     mid += '<tr><td style="height:48px;font-size:0;line-height:0;">&nbsp;</td></tr>\n'   # breathing room before the Watch rule
 watch_title = 'Weekend watchlist' if len(issue['watch']) > 3 else 'Watch'
 
@@ -197,6 +199,9 @@ if weekend:
     page = re.sub(r'<!-- WATCH_START -->.*?<!-- WATCH_END -->\n', lambda m: weekend, page, count=1, flags=re.S)
 else:
     page = page.replace('<!-- WATCH_START -->', '').replace('<!-- WATCH_END -->\n', '')
+if weekend:   # Friday sign-off art just above the footer
+    foot = '<tr><td><img src="https://ctrl-curious.vercel.app/assets/email/footer_b3.jpg"'
+    page = page.replace(foot, f'<tr><td><img src="{SITE}/assets/email/weekend_signoff.jpg" width="600" alt="The weekend is here. Rest up. See you on Monday." style="display:block;border:0;width:100%;max-width:600px;height:auto;"></td></tr>\n' + foot, 1)
 if cards:
     page = page.replace('{{EVENT_CARDS}}', '\n'.join(cards))
 else:

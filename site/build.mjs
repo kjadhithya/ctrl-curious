@@ -306,7 +306,7 @@ function issuePage(i, idx) {
     const links = (l.links || []).map((x) => `${L(x.url, x.title)}${x.source ? ` <span>· ${esc(x.source)}</span>` : ''}`).join('<br>');
     return `<section class="meet ed-learn" aria-labelledby="learn-h${n}"><h2 class="h" id="learn-h${n}">${LT[l.kind] || 'Learn this week'}</h2>${L(l.url, l.title, 'ttl')}<p class="intro">${esc(l.intro)}</p>${b}${links ? `<p class="deeper"><span>Go deeper</span> ${links}</p>` : ''}<span class="grain"></span></section>`;
   }).join('');
-  edMid = learnHtml + edMid;
+  edMid = edMid + learnHtml;
   const watchTitle = i.watch.length > 3 ? 'Weekend watchlist' : 'Watch';
   // Friday: dark Weekend watchlist (one feature video, then a grid) and the Inspiration shelf
   let weekend = '';
@@ -337,6 +337,7 @@ ${edMid}
 ${weekend}
 ${vids && !weekend ? `<section class="sec" aria-labelledby="watch-h" style="gap:24px"><h2 class="h" id="watch-h">${watchTitle}</h2><ul class="vids">${vids}</ul></section>` : ''}
 ${meets ? `<section class="meet" aria-labelledby="meet-h"><h2 class="h" id="meet-h">Meetups</h2>${meets}<span class="grain"></span></section>` : ''}
+${i.watch.length > 3 ? `<div class="pic weekend-art"><img draggable="false" src="/assets/email/weekend_signoff.jpg" alt="The weekend is here. Rest up. See you on Monday." loading="lazy"><span class="grain"></span></div>` : ''}
 <nav class="prevnext" aria-label="More issues">${pn(older, '← Previous', 'l')}${pn(newer, 'Next →', 'r')}</nav>
 </div>
 ${band()}

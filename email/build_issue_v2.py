@@ -80,7 +80,7 @@ if ed.get('tool'):   # Tuesday: tool of the day, right under the summary
            + f'<div style="font-size:17px;line-height:26px;padding-top:8px;">{e(t["what"])}</div>'
            + '</td></tr></table></td></tr>\n')
 
-LEARN_TITLES = {'skill': 'Skill of the week', 'pattern': 'Pattern breakdown', 'method': 'Research method in practice',
+LEARN_TITLES = {'skill': 'Method of the week', 'install': 'Skill to install', 'pattern': 'Pattern breakdown', 'method': 'Research method in practice',
                 'principle': 'One principle, three examples', 'teardown': 'Teardown', 'tool': 'Tool to master', 'craft': 'Career and craft',
                 'workflow': 'Workflow upgrade', 'steal': 'Steal this', 'people': 'How they work', 'prompt': 'Prompt of the week',
                 'brief': '10-minute brief', 'decision': 'Decision toolkit'}
@@ -123,7 +123,7 @@ if ed.get('case'):   # Thursday: case study
 prev = 'band' if ed.get('case') else ('dark' if ed.get('typeface') else 'paper')
 learn_html, last = V2.render(learns, prev)
 mid += learn_html   # practical sections come after the day's edition section
-if (learns and last != 'paper') or (not learns and (ed.get('case') or ed.get('typeface'))):
+if len(issue['watch']) <= 3 and ((learns and last != 'paper') or (not learns and (ed.get('case') or ed.get('typeface')))):
     mid += '<tr><td style="height:48px;font-size:0;line-height:0;">&nbsp;</td></tr>\n'   # breathing room before the Watch rule
 watch_title = 'Weekend watchlist' if len(issue['watch']) > 3 else 'Watch'
 

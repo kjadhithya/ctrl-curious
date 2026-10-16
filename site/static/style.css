@@ -123,7 +123,7 @@ img{max-width:100%;display:block;-webkit-user-drag:none;user-select:none}
 .day i{display:block;height:3px;font-style:normal}
 
 /* list rows */
-.recent{padding-top:80px;padding-bottom:64px;display:flex;flex-direction:column;gap:28px;box-sizing:border-box;width:100%;max-width:calc(1280px + 2 * var(--gut));margin-left:auto;margin-right:auto}
+.recent{padding-top:80px;padding-bottom:64px;display:flex;flex-direction:column;gap:28px;box-sizing:border-box;width:100%;max-width:1920px;margin-left:auto;margin-right:auto}
 .recent-head{display:flex;justify-content:space-between;align-items:center;gap:16px}
 .recent-head a{font-size:17px;color:var(--plum);font-weight:600;text-decoration:none}
 .rows{display:flex;flex-direction:column;border-bottom:1px solid var(--clay);margin:0;padding:0;list-style:none}

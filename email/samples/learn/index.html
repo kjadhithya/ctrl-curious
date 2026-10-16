@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex">
+<title>Monday learning section options</title>
+<style>
+body{margin:0;background:#E9E1D9;font-family:Georgia,serif;color:#2E1F25}
+h1{font-size:22px;font-weight:700;margin:24px 24px 4px}
+p{margin:0 24px 18px;color:#5E4B53;font-size:15px}
+.row{display:flex;gap:24px;overflow-x:auto;padding:0 24px 24px}
+.col{flex:0 0 680px}.col b{display:block;font-size:16px;margin:0 0 8px}
+iframe{width:680px;height:calc(100vh - 150px);min-height:700px;border:0;background:#fff}
+</style></head><body>
+<h1>Monday learning section: seven options</h1>
+<p>Each is the Monday 5 October sample with one option added after Read, filled with real material from that week. Each email opens at the new section; scroll sideways to compare.</p>
+<div class="row" id="row"></div>
+<script>
+var opts=[['skill','1 · Skill of the week'],['pattern','2 · Pattern breakdown'],['method','3 · Research method in practice'],['principle','4 · One principle, three examples'],['teardown','5 · Teardown'],['tool','6 · Tool to master'],['craft','7 · Career and craft']];
+var labels={skill:'Skill of the week',pattern:'Pattern breakdown',method:'Research method in practice',principle:'One principle, three examples',teardown:'Teardown',tool:'Tool to master',craft:'Career and craft'};
+var row=document.getElementById('row');
+opts.forEach(function(o){
+  var c=document.createElement('div');c.className='col';
+  c.innerHTML='<b>'+o[1]+'</b>';
+  var f=document.createElement('iframe');f.src='/email/samples/learn/'+o[0];f.title=o[1];
+  f.onload=function(){try{var d=f.contentDocument;var t=[].slice.call(d.querySelectorAll('div')).find(function(x){return x.textContent.indexOf(labels[o[0]])>-1&&x.textContent.length<80});if(t)f.contentWindow.scrollTo(0,t.getBoundingClientRect().top+f.contentWindow.scrollY-40);}catch(e){}};
+  c.appendChild(f);row.appendChild(c);
+});
+</script></body></html>

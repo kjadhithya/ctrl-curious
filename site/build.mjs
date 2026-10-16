@@ -88,7 +88,7 @@ const band = () => `<section class="band" id="signup" aria-labelledby="signup-h"
 <img draggable="false" src="/assets/blog/signup_moon_shore_bg.jpg" alt="" loading="lazy"><div class="band-waves" aria-hidden="true"></div>
 <div class="band-copy wrap">
 <h2 id="signup-h">Get the emails.<br>Stay curious.</h2>
-<p>Every weekday at 9:00 IST: a linked summary, five reads, three videos and the meetups in Bengaluru and online.</p>
+<p>Every weekday at 9:00 IST: a linked summary, reads, videos and the meetups in Bengaluru and online.</p>
 ${signupForm('email-band')}
 </div></section>`;
 

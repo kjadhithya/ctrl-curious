@@ -74,7 +74,7 @@ const logo = (dark = false) =>
 function nav(current, rule = true) {
   const item = (href, label, key, cls = '') =>
     `<li${cls ? ` class="${cls}"` : ''}><a href="${href}"${current === key ? ' aria-current="page"' : ''}>${label}</a></li>`;
-  return `<header class="nav wrap${rule ? ' rule' : ''}">${logo()}<nav aria-label="Main"><ul>${item('/archive', 'Archive', 'archive')}${item('/#week', 'The week', 'week', 'hide-s')}${item('/about', 'About', 'about', 'hide-xs')}<li><a class="btn" href="#signup">Get the emails</a></li></ul></nav></header>`;
+  return `<header class="nav wrap${rule ? ' rule' : ''}">${logo()}<nav aria-label="Main"><ul>${item('/archive', 'Archive', 'archive')}${item('/about', 'About', 'about', 'hide-xs')}<li><a class="btn" href="#signup">Get the emails</a></li></ul></nav></header>`;
 }
 
 const signupForm = (id, note) => `<form class="signup" data-signup action="/api/subscribe" method="post">

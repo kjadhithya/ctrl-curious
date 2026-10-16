@@ -438,6 +438,7 @@ fs.mkdirSync(OUT, { recursive: true });
 copy('site/static', 'static');
 copy('assets/email');
 copy('email/welcome.html');
+if (fs.existsSync(path.join(ROOT, 'email/samples'))) copy('email/samples');
 // The Apps Script sender reads latest.json and emails the newest issue to subscribers.
 if (fs.existsSync(path.join(ROOT, 'email/issues'))) {
   copy('email/issues');

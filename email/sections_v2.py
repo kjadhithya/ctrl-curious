@@ -79,7 +79,7 @@ def band_row(inner):
                     f'background-image:url(\'{SITE}/assets/email/grain_band.jpg\');background-repeat:repeat;padding:42px 36px 50px 36px;">{inner}</td></tr>\n')
 
 
-# ---------- Ctrl+Learn (Monday) ----------
+# ---------- Skill of the week (Monday) ----------
 def skill(l):
     steps = l.get('steps') or []
     rows = ''.join(
@@ -88,7 +88,7 @@ def skill(l):
         for k, s in enumerate(steps))
     body = f'{TABLE} style="margin-top:22px;border-bottom:1px solid {CLAY};">{rows}</table>'
     meta = f'{len(steps)} steps to try this week'
-    return 'paper', heading('Ctrl+Learn', meta) + title(l) + intro(l) + body + take(l) + deeper(l)
+    return 'paper', heading('Skill of the week', meta) + title(l) + intro(l) + body + take(l) + deeper(l)
 
 
 # ---------- Prompt of the week ----------

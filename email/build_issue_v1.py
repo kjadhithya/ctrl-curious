@@ -4,8 +4,6 @@
 
 Handy for previews and samples; the daily run can use it too."""
 import html, json, re, sys, urllib.parse, datetime, pathlib
-sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
-import sections_v2 as V2
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 tpl = (ROOT / 'email/template.html').read_text()
@@ -75,18 +73,55 @@ top, mid = '', ''
 if ed.get('tool'):   # Tuesday: tool of the day, right under the summary
     t = ed['tool']
     top = (f'<tr><td class="pad" style="padding:0 36px 48px 36px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#C9A7B5" style="background-color:#C9A7B5;"><tr><td style="padding:26px 28px 28px 28px;color:#2E1F25;">'
-           + V2.heading('Tool of the day', 'New this fortnight' + (' · ' + t['meta'] if t.get('meta') else ''))
+           f'<div style="font-size:24px;line-height:28px;font-weight:700;"><span style="color:#8A2E3B;">&gt;</span>&nbsp; Tool of the day</div>'
            + A(t['url'], t['name'], 'display:block;padding-top:14px;font-size:22px;line-height:29px;font-weight:700;color:#2E1F25;text-decoration:underline;text-decoration-color:#8A2E3B;text-underline-offset:3px;')
            + f'<div style="font-size:17px;line-height:26px;padding-top:8px;">{e(t["what"])}</div>'
+           + (f'<div style="font-size:14px;line-height:21px;color:#4A3540;padding-top:12px;">{e(t["meta"])}</div>' if t.get('meta') else '')
            + '</td></tr></table></td></tr>\n')
 
-LEARN_TITLES = {'skill': 'Ctrl+Learn', 'install': 'Power-up', 'pattern': 'Pattern breakdown', 'method': 'Research method in practice',
+LEARN_TITLES = {'skill': 'Skill of the week', 'pattern': 'Pattern breakdown', 'method': 'Research method in practice',
                 'principle': 'One principle, three examples', 'teardown': 'Teardown', 'tool': 'Tool to master', 'craft': 'Career and craft',
                 'workflow': 'Workflow upgrade', 'steal': 'Steal this', 'people': 'How they work', 'prompt': 'Prompt of the week',
                 'brief': '10-minute brief', 'decision': 'Decision toolkit'}
 learns = ed.get('learn') or []
 if isinstance(learns, dict): learns = [learns]
-learn_html = ''   # rendered below, once we know what the practical sections follow
+learn_html = ''
+for l in learns:   # practical sections: skill, prompt, tool, steal, brief, people, decision
+    li = lambda t: f'<div style="font-size:16px;line-height:25px;color:#2E1F25;padding:0 0 8px 0;">{t}</div>'
+    body = ''
+    if l.get('before'):
+        body += ('<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:18px;"><tr>'
+                 f'<td class="wk" width="50%" valign="top" bgcolor="#F4EEE8" style="background-color:#F4EEE8;padding:14px 16px;"><div style="font-size:14px;line-height:20px;font-weight:700;color:#5E4B53;">Before</div><div style="font-size:15px;line-height:23px;color:#2E1F25;padding-top:4px;">{e(l["before"])}</div></td>'
+                 '<td class="wks" width="12" style="font-size:0;line-height:0;">&nbsp;</td>'
+                 f'<td class="wk" width="50%" valign="top" bgcolor="#2E1F25" style="background-color:#2E1F25;padding:14px 16px;"><div style="font-size:14px;line-height:20px;font-weight:700;color:#C9A7B5;">After</div><div style="font-size:15px;line-height:23px;color:#F4EEE8;padding-top:4px;">{e(l["after"])}</div></td></tr></table>')
+    if l.get('steps'):
+        body += '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:18px;">' + ''.join(
+            f'<tr><td valign="top" width="34" style="font-size:15px;line-height:25px;color:#8A2E3B;font-weight:700;padding-bottom:10px;">{k+1:02d}</td><td valign="top" style="font-size:16px;line-height:25px;color:#2E1F25;padding-bottom:10px;">{e(st)}</td></tr>'
+            for k, st in enumerate(l['steps'])) + '</table>'
+    if l.get('columns'):
+        cols = l['columns']
+        cell = lambda c: (f'<td class="wk" width="50%" valign="top" style="padding:0 0 6px 0;"><div style="font-size:14px;line-height:20px;font-weight:700;color:#8A2E3B;padding-bottom:8px;">{e(c["label"])}</div>'
+                          + ''.join(li('&#8212;&nbsp; ' + e(x)) for x in c['items']) + '</td>')
+        body += ('<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:18px;"><tr>'
+                 + '<td class="wks" width="20" style="font-size:0;line-height:0;">&nbsp;</td>'.join(cell(c) for c in cols[:2]) + '</tr></table>')
+    if l.get('examples'):
+        body += '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:16px;">' + ''.join(
+            f'<tr><td style="border-top:1px solid #D9C3B7;padding:12px 0;">' + A(x['url'], x['name'], 'font-size:16px;line-height:23px;font-weight:700;color:#2E1F25;text-decoration:none;')
+            + f'<div style="font-size:15px;line-height:23px;color:#5E4B53;padding-top:2px;">{e(x["text"])}</div></td></tr>' for x in l['examples']) + '</table>'
+    if l.get('code'):
+        body += (f'<div style="margin-top:18px;padding:16px 18px;background-color:#2E1F25;color:#F4EEE8;font-family:Menlo,Consolas,monospace;font-size:13px;line-height:20px;white-space:pre-wrap;word-break:break-word;">{e(l["code"])}</div>'
+                 + (f'<div style="font-size:13px;line-height:19px;color:#5E4B53;padding-top:6px;">{e(l["code_note"])}</div>' if l.get('code_note') else ''))
+    if l.get('take'):
+        body += f'<div style="margin-top:14px;padding:14px 16px;background-color:#F4EEE8;font-size:15px;line-height:23px;color:#2E1F25;"><b style="color:#8A2E3B;">Our take&nbsp;</b> {e(l["take"])}</div>'
+    links = ''.join(A(x['url'], x['title'], 'color:#2E1F25;text-decoration:underline;text-decoration-color:#8A2E3B;text-underline-offset:2px;') + (f' <span style="color:#5E4B53;">· {e(x["source"])}</span>' if x.get('source') else '') + '<br>' for x in l.get('links', []))
+    learn_html += STRIP + (f'<tr><td class="pad" bgcolor="#EDE4DD" background="{SITE}/assets/email/grain_band.jpg" style="background-color:#EDE4DD;background-image:url(\'{SITE}/assets/email/grain_band.jpg\');background-repeat:repeat;padding:42px 36px 46px 36px;">'
+            + head(LEARN_TITLES.get(l.get('kind'), 'Learn this week'))
+            + A(l['url'], l['title'], 'display:block;padding-top:16px;font-size:24px;line-height:31px;font-weight:700;color:#2E1F25;text-decoration:none;')
+            + f'<div style="font-size:17px;line-height:27px;color:#4A3540;padding-top:8px;">{e(l["intro"])}</div>'
+            + body
+            + (f'<div style="font-size:15px;line-height:24px;padding-top:16px;"><span style="color:#5E4B53;">Go deeper&nbsp; </span>{links}</div>' if links else '')
+            + '</td></tr>\n')
+
 if ed.get('week'):   # Monday: three things happening this week
     cols = [('#2E1F25', '#C9A7B5', '#F4EEE8'), ('#7E4B6B', '#E9D7DE', '#F4EEE8'), ('#C9A7B5', '#5E4B53', '#2E1F25')]
     cells = []
@@ -94,7 +129,7 @@ if ed.get('week'):   # Monday: three things happening this week
         bg, lab, fg = cols[k]
         cells.append(f'<td class="wk" width="33%" valign="top" bgcolor="{bg}" style="background-color:{bg};padding:16px;"><div style="font-size:14px;line-height:20px;color:{lab};">{e(w["when"])}</div>'
                      + A(w['url'], w['title'], f'display:block;padding-top:8px;font-size:17px;line-height:23px;font-weight:600;color:{fg};text-decoration:none;') + '</td>')
-    mid += RULE + (f'<tr><td class="pad" style="padding:40px 36px 22px 36px;">{V2.heading('This week in design', 'Three dates for your calendar')}</td></tr>\n'
+    mid += RULE + (f'<tr><td class="pad" style="padding:40px 36px 22px 36px;">{head("This week in design")}</td></tr>\n'
                    f'<tr><td class="pad" style="padding:0 36px 52px 36px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>'
                    + '<td class="wks" width="12" style="font-size:0;line-height:0;">&nbsp;</td>'.join(cells) + '</tr></table></td></tr>\n')
 
@@ -102,12 +137,10 @@ if ed.get('typeface'):   # Wednesday: typeface spotlight
     t = ed['typeface']
     lab = lambda k, v: f'<td valign="top" width="50%" style="padding:0 12px 16px 0;"><div style="font-size:14px;line-height:20px;color:#C9A7B5;">{k}</div><div style="font-size:16px;line-height:24px;color:#F4EEE8;">{v}</div></td>'
     mid += (f'<tr><td class="pad" bgcolor="#2E1F25" background="{SITE}/assets/email/grain_dark.jpg" style="background-color:#2E1F25;background-image:url(\'{SITE}/assets/email/grain_dark.jpg\');background-repeat:repeat;padding:48px 36px 36px 36px;color:#F4EEE8;">'
-            + V2.heading('Typeface spotlight', 'New in type · ' + t.get('get', 'foundry page'), dark=True)
+            + head('Typeface spotlight', '#C9A7B5', '#F4EEE8')
             + A(t['url'], t['name'], 'display:block;padding-top:20px;font-size:40px;line-height:44px;font-weight:700;color:#F4EEE8;text-decoration:none;letter-spacing:-0.5px;')
             + (f'<div style="font-size:17px;line-height:26px;color:#E9DFE3;padding-top:10px;">{e(t["note"])}</div>' if t.get('note') else '')
-            # A real specimen: t['image'] (rendered from the font files when the font is free, or the foundry's own image),
-            # otherwise the foundry page's share image.
-            + f'<a href="{html.escape(t["url"])}" target="_blank"><img class="spec" src="{html.escape(t.get("image") or og(t["url"]))}" width="528" alt="{e(t["name"])} specimen" style="display:block;border:0;width:100%;max-width:528px;height:auto;margin-top:22px;"></a>'
+            + f'<a href="{html.escape(t["url"])}" target="_blank"><img src="{og(t["url"])}" width="528" alt="{e(t["name"])} specimen" style="display:block;border:0;width:100%;max-width:528px;height:auto;margin-top:22px;"></a>'
             + '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:22px;"><tr>'
             + lab('Made by', e(t['by'])) + lab('Get it', A(t['url'], t.get('get', 'Foundry page'), 'color:#F4EEE8;text-decoration:underline;text-underline-offset:2px;')) + '</tr><tr>'
             + lab('Pair it with', e(t.get('pair', ''))) + lab('Good for', e(t.get('good_for', ''))) + '</tr></table></td></tr>\n')
@@ -115,15 +148,13 @@ if ed.get('typeface'):   # Wednesday: typeface spotlight
 if ed.get('case'):   # Thursday: case study
     c = ed['case']
     mid += STRIP + (f'<tr><td class="pad" bgcolor="#EDE4DD" background="{SITE}/assets/email/grain_band.jpg" style="background-color:#EDE4DD;background-image:url(\'{SITE}/assets/email/grain_band.jpg\');background-repeat:repeat;padding:42px 36px 52px 36px;">'
-            + V2.heading('Case study', 'How a real team solved it') + '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:22px;"><tr>'
+            + head('Case study') + '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:22px;"><tr>'
             + f'<td class="ed-img" valign="top" width="200" style="padding:0 20px 0 0;"><a href="{html.escape(c["url"])}" target="_blank"><img src="{og(c["url"])}" width="200" alt="" style="display:block;border:0;width:200px;height:auto;"></a></td>'
             + f'<td valign="top"><div style="font-size:14px;line-height:20px;color:#5E4B53;">{e(c["studio"])}{" · " + e(c["client"]) if c.get("client") else ""}</div>'
             + A(c['url'], c['title'], 'display:block;padding-top:6px;font-size:20px;line-height:27px;font-weight:600;color:#2E1F25;text-decoration:none;')
             + f'<div style="font-size:15px;line-height:23px;color:#5E4B53;padding-top:6px;">{e(c["note"])}</div></td></tr></table></td></tr>\n')
-prev = 'band' if ed.get('case') else ('dark' if ed.get('typeface') else 'paper')
-learn_html, last = V2.render(learns, prev)
 mid += learn_html   # practical sections come after the day's edition section
-if len(issue['watch']) <= 3 and ((learns and last != 'paper') or (not learns and (ed.get('case') or ed.get('typeface')))):
+if ed.get('case') or ed.get('typeface') or learns:
     mid += '<tr><td style="height:48px;font-size:0;line-height:0;">&nbsp;</td></tr>\n'   # breathing room before the Watch rule
 watch_title = 'Weekend watchlist' if len(issue['watch']) > 3 else 'Watch'
 
@@ -142,7 +173,7 @@ if len(issue['watch']) > 3:
         pair = rest[k:k+2]
         grid += '<tr>' + small(pair[0]) + '<td class="wks" width="16" style="font-size:0;line-height:0;">&nbsp;</td>' + (small(pair[1]) if len(pair) > 1 else '<td></td>') + '</tr>'
     weekend = (f'<tr><td class="pad" bgcolor="#2E1F25" background="{SITE}/assets/email/grain_dark.jpg" style="background-color:#2E1F25;background-image:url(\'{SITE}/assets/email/grain_dark.jpg\');background-repeat:repeat;padding:48px 36px 30px 36px;color:#F4EEE8;">'
-               + V2.heading('Weekend watchlist', 'Five to watch with a slow coffee', dark=True)
+               + head('Weekend watchlist', '#C9902F', '#F4EEE8')
                + f'<a href="{yt(v0["id"])}" target="_blank"><img src="{SITE}/api/yt?id={v0["id"]}" width="528" alt="" style="display:block;border:0;width:100%;max-width:528px;height:auto;margin-top:24px;"></a>'
                + A(yt(v0['id']), v0['title'], 'display:block;padding-top:16px;font-size:22px;line-height:29px;font-weight:700;color:#F4EEE8;text-decoration:none;')
                + f'<div style="font-size:15px;line-height:23px;color:#C9A7B5;padding-top:4px;">{e(v0["channel"])} · {e(v0["note"])}</div>'
@@ -154,7 +185,7 @@ if len(issue['watch']) > 3:
         # and titles get their own row so they line up whatever the images do. Three columns on phones too.
         imgs = sp.join(f'<td width="33%" valign="top"><a href="{html.escape(it["url"])}" target="_blank" class="sh" style="display:block;height:88px;overflow:hidden;background-color:#7E4B6B;"><img src="{og(it["url"])}" width="168" alt="" style="display:block;border:0;width:100%;height:auto;min-height:88px;"></a></td>' for it in items)
         caps = sp.join(f'<td width="33%" valign="top" style="padding:10px 0 8px 0;">' + A(it['url'], it['title'], 'display:block;font-size:16px;line-height:22px;font-weight:600;color:#2E1F25;text-decoration:none;') + f'<div style="font-size:14px;line-height:20px;color:#5E4B53;padding-top:4px;">{e(it["credit"])}</div></td>' for it in items)
-        weekend += (f'<tr><td class="pad" style="padding:48px 36px 48px 36px;">{V2.heading('Inspiration shelf', 'Three things worth a closer look')}'
+        weekend += (f'<tr><td class="pad" style="padding:48px 36px 48px 36px;">{head("Inspiration shelf")}'
                     + f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:24px;"><tr>{imgs}</tr><tr>{caps}</tr></table></td></tr>\n')
 
 d = datetime.date.fromisoformat(issue['date'])
@@ -168,9 +199,9 @@ if weekend:
     page = re.sub(r'<!-- WATCH_START -->.*?<!-- WATCH_END -->\n', lambda m: weekend, page, count=1, flags=re.S)
 else:
     page = page.replace('<!-- WATCH_START -->', '').replace('<!-- WATCH_END -->\n', '')
-if weekend:   # Friday: a bigger weekend sign-off replaces the usual footer art
-    page = re.sub(r'<tr><td><img src="https://ctrl-curious\.vercel\.app/assets/email/footer_b3\.jpg"[^>]*></td></tr>',
-                  f'<tr><td><img src="{SITE}/assets/email/weekend_footer.jpg" width="600" alt="The weekend’s here. Rest up. See you on Monday." style="display:block;border:0;width:100%;max-width:600px;height:auto;"></td></tr>', page, count=1)
+if weekend:   # Friday sign-off art just above the footer
+    foot = '<tr><td><img src="https://ctrl-curious.vercel.app/assets/email/footer_b3.jpg"'
+    page = page.replace(foot, f'<tr><td><img src="{SITE}/assets/email/weekend_signoff.jpg" width="600" alt="The weekend is here. Rest up. See you on Monday." style="display:block;border:0;width:100%;max-width:600px;height:auto;"></td></tr>\n' + foot, 1)
 if cards:
     page = page.replace('{{EVENT_CARDS}}', '\n'.join(cards))
 else:

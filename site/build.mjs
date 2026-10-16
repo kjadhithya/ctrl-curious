@@ -285,22 +285,31 @@ function issuePage(i, idx) {
     edMid += `<section class="sec" aria-labelledby="wk-h"><h2 class="h" id="wk-h">This week in design</h2><div class="ed-week">${ed.week.slice(0, 3).map((w) => `<a href="${esc(safeUrl(w.url))}"><small>${esc(w.when)}</small><b>${esc(w.title)}</b></a>`).join('')}</div></section>`;
   if (ed.typeface) {
     const t = ed.typeface;
-    edMid += `<section class="ed-type" aria-labelledby="type-h"><h2 class="h" id="type-h">Typeface spotlight</h2>${L(t.url, t.name, 'nm')}${t.note ? `<p>${esc(t.note)}</p>` : ''}<a class="spec" href="${esc(safeUrl(t.url))}" tabindex="-1" aria-hidden="true"><img draggable="false" src="${og(t.url)}" alt="" loading="lazy"></a><dl><div><dt>Made by</dt><dd>${esc(t.by)}</dd></div><div><dt>Get it</dt><dd>${L(t.url, t.get || 'Foundry page')}</dd></div><div><dt>Pair it with</dt><dd>${esc(t.pair || '')}</dd></div><div><dt>Good for</dt><dd>${esc(t.good_for || '')}</dd></div></dl><span class="grain-d"></span></section>`;
+    edMid += `<section class="ed-type" aria-labelledby="type-h"><h2 class="h" id="type-h">Typeface spotlight</h2>${L(t.url, t.name, 'nm')}${t.note ? `<p>${esc(t.note)}</p>` : ''}<a class="spec" href="${esc(safeUrl(t.url))}" tabindex="-1" aria-hidden="true"><img draggable="false" src="${t.image ? esc(safeUrl(t.image)) : og(t.url)}" alt="${esc(t.name)} specimen" loading="lazy"></a><dl><div><dt>Made by</dt><dd>${esc(t.by)}</dd></div><div><dt>Get it</dt><dd>${L(t.url, t.get || 'Foundry page')}</dd></div><div><dt>Pair it with</dt><dd>${esc(t.pair || '')}</dd></div><div><dt>Good for</dt><dd>${esc(t.good_for || '')}</dd></div></dl><span class="grain-d"></span></section>`;
   }
   if (ed.case) {
     const c = ed.case;
     edMid += `<section class="meet ed-case" aria-labelledby="case-h"><h2 class="h" id="case-h">Case study</h2><div class="row-c"><a class="cimg" href="${esc(safeUrl(c.url))}" tabindex="-1" aria-hidden="true"><img draggable="false" src="${og(c.url)}" alt="" loading="lazy"></a><div><small>${esc(c.studio)}${c.client ? ' · ' + esc(c.client) : ''}</small>${L(c.url, c.title, 'nm')}<p>${esc(c.note)}</p></div></div><span class="grain"></span></section>`;
   }
   // Practical sections (skill, prompt, tool, steal this, brief, people, decision): same shapes as the email
-  const LT = { skill: 'Skill of the week', prompt: 'Prompt of the week', tool: 'Tool to master', steal: 'Steal this', brief: '10-minute brief', people: 'How they work', decision: 'Decision toolkit', pattern: 'Pattern breakdown', workflow: 'Workflow upgrade' };
+  const LT = { skill: 'Skill of the week', prompt: 'Prompt of the week', tool: 'Tool to master', steal: 'Steal this', brief: '10-minute brief', people: 'How they work', decision: 'Decision toolkit', install: 'Power-up', pattern: 'Pattern breakdown', workflow: 'Workflow upgrade' };
   let learns = ed.learn || [];
   if (!Array.isArray(learns)) learns = [learns];
   const learnHtml = learns.map((l, n) => {
     let b = '';
+    if (l.person && l.person.name) b += `<p class="who"><b>${esc(l.person.name)}</b> ${esc(l.person.role || '')}</p>`;
+    if (l.define) b += `<p class="define">${esc(l.define)}</p>`;
+    if (l.skill && l.skill.name) b += `<p class="who"><code>${esc(l.skill.name)}</code> ${esc([l.skill.by, l.skill.cost].filter(Boolean).join(' · '))}</p>`;
+    if (l.changes) b += `<small class="lbl">What it changes</small><ul class="dots">${l.changes.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>`;
     if (l.before) b += `<div class="ba"><div><small>Before</small><p>${esc(l.before)}</p></div><div class="after"><small>After</small><p>${esc(l.after || '')}</p></div></div>`;
     if (l.steps) b += `<ol class="steps">${l.steps.map((x) => `<li>${esc(x)}</li>`).join('')}</ol>`;
     if (l.columns) b += `<div class="cols">${l.columns.slice(0, 2).map((c) => `<div><small>${esc(c.label)}</small><ul>${c.items.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>`).join('')}</div>`;
     if (l.examples) b += `<div class="exs">${l.examples.map((x) => `<div>${L(x.url, x.name, 'nm')}<p>${esc(x.text)}</p></div>`).join('')}</div>`;
+    if (l.tips) b += `<small class="lbl">${esc(l.tips_label || 'How to design for it')}</small><ol class="steps">${l.tips.map((x) => `<li>${esc(x)}</li>`).join('')}</ol>`;
+    if (l.why) b += `<small class="lbl">Why it matters to you</small><p>${esc(l.why)}</p>`;
+    if (l.install) b += `<small class="lbl">Install it</small>${l.install.map((x, k) => `<p class="inst"><b>${k ? 'Or, ' + esc(x.where.charAt(0).toLowerCase() + x.where.slice(1)) : esc(x.where)}</b> ${esc(x.how || '')}</p>${x.code ? `<pre class="code">${esc(x.code)}</pre>` : ''}`).join('')}`;
+    if (l.try) b += `<small class="lbl">Then try asking</small><p class="define">${esc(l.try)}</p>`;
+    if (l.rule) b += `<p class="take"><b>Rule of thumb</b> ${esc(l.rule)}</p>`;
     if (l.code) b += `<pre class="code">${esc(l.code)}</pre>${l.code_note ? `<small class="cn">${esc(l.code_note)}</small>` : ''}`;
     if (l.take) b += `<p class="take"><b>Our take</b> ${esc(l.take)}</p>`;
     const links = (l.links || []).map((x) => `${L(x.url, x.title)}${x.source ? ` <span>· ${esc(x.source)}</span>` : ''}`).join('<br>');

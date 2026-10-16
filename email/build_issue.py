@@ -80,11 +80,18 @@ if ed.get('tool'):   # Tuesday: tool of the day, right under the summary
            + '</td></tr></table></td></tr>\n')
 
 LEARN_TITLES = {'skill': 'Skill of the week', 'pattern': 'Pattern breakdown', 'method': 'Research method in practice',
-                'principle': 'One principle, three examples', 'teardown': 'Teardown', 'tool': 'Tool to master', 'craft': 'Career and craft'}
+                'principle': 'One principle, three examples', 'teardown': 'Teardown', 'tool': 'Tool to master', 'craft': 'Career and craft',
+                'workflow': 'Workflow upgrade', 'steal': 'Steal this', 'people': 'How they work', 'prompt': 'Prompt of the week',
+                'brief': '10-minute brief', 'decision': 'Decision toolkit'}
 if ed.get('learn'):   # Monday: one practical thing to learn this week
     l = ed['learn']
     li = lambda t: f'<div style="font-size:16px;line-height:25px;color:#2E1F25;padding:0 0 8px 0;">{t}</div>'
     body = ''
+    if l.get('before'):
+        body += ('<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:18px;"><tr>'
+                 f'<td class="wk" width="50%" valign="top" bgcolor="#F4EEE8" style="background-color:#F4EEE8;padding:14px 16px;"><div style="font-size:14px;line-height:20px;font-weight:700;color:#5E4B53;">Before</div><div style="font-size:15px;line-height:23px;color:#2E1F25;padding-top:4px;">{e(l["before"])}</div></td>'
+                 '<td class="wks" width="12" style="font-size:0;line-height:0;">&nbsp;</td>'
+                 f'<td class="wk" width="50%" valign="top" bgcolor="#2E1F25" style="background-color:#2E1F25;padding:14px 16px;"><div style="font-size:14px;line-height:20px;font-weight:700;color:#C9A7B5;">After</div><div style="font-size:15px;line-height:23px;color:#F4EEE8;padding-top:4px;">{e(l["after"])}</div></td></tr></table>')
     if l.get('steps'):
         body += '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:18px;">' + ''.join(
             f'<tr><td valign="top" width="34" style="font-size:15px;line-height:25px;color:#8A2E3B;font-weight:700;padding-bottom:10px;">{k+1:02d}</td><td valign="top" style="font-size:16px;line-height:25px;color:#2E1F25;padding-bottom:10px;">{e(st)}</td></tr>'
@@ -99,6 +106,9 @@ if ed.get('learn'):   # Monday: one practical thing to learn this week
         body += '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:16px;">' + ''.join(
             f'<tr><td style="border-top:1px solid #D9C3B7;padding:12px 0;">' + A(x['url'], x['name'], 'font-size:16px;line-height:23px;font-weight:700;color:#2E1F25;text-decoration:none;')
             + f'<div style="font-size:15px;line-height:23px;color:#5E4B53;padding-top:2px;">{e(x["text"])}</div></td></tr>' for x in l['examples']) + '</table>'
+    if l.get('code'):
+        body += (f'<div style="margin-top:18px;padding:16px 18px;background-color:#2E1F25;color:#F4EEE8;font-family:Menlo,Consolas,monospace;font-size:13px;line-height:20px;white-space:pre-wrap;word-break:break-word;">{e(l["code"])}</div>'
+                 + (f'<div style="font-size:13px;line-height:19px;color:#5E4B53;padding-top:6px;">{e(l["code_note"])}</div>' if l.get('code_note') else ''))
     if l.get('take'):
         body += f'<div style="margin-top:14px;padding:14px 16px;background-color:#F4EEE8;font-size:15px;line-height:23px;color:#2E1F25;"><b style="color:#8A2E3B;">Our take&nbsp;</b> {e(l["take"])}</div>'
     links = ''.join(A(x['url'], x['title'], 'color:#2E1F25;text-decoration:underline;text-decoration-color:#8A2E3B;text-underline-offset:2px;') + (f' <span style="color:#5E4B53;">· {e(x["source"])}</span>' if x.get('source') else '') + '<br>' for x in l.get('links', []))

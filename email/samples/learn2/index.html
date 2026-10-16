@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex">
+<title>Monday section options, round two</title>
+<style>
+body{margin:0;background:#E9E1D9;font-family:Georgia,serif;color:#2E1F25}
+h1{font-size:22px;font-weight:700;margin:24px 24px 4px}
+p{margin:0 24px 18px;color:#5E4B53;font-size:15px}
+.row{display:flex;gap:24px;overflow-x:auto;padding:0 24px 24px}
+.col{flex:0 0 680px}.col b{display:block;font-size:16px;margin:0 0 8px}
+iframe{width:680px;height:calc(100vh - 150px);min-height:700px;border:0;background:#fff}
+</style></head><body>
+<h1>Monday section: six new formats, plus more Skill of the week and Tool to master</h1>
+<p>Each is the Monday 5 October sample with one option added after Read, filled with real material from that week. Each email opens at the new section; scroll sideways to compare.</p>
+<div class="row" id="row"></div>
+<script>
+var opts=[["workflow", "1 \u00b7 Workflow upgrade", "Workflow upgrade"], ["steal", "2 \u00b7 Steal this", "Steal this"], ["people", "3 \u00b7 How they work", "How they work"], ["prompt", "4 \u00b7 Prompt of the week", "Prompt of the week"], ["brief", "5 \u00b7 10-minute brief", "10-minute brief"], ["decision", "6 \u00b7 Decision toolkit", "Decision toolkit"], ["skill2", "7 \u00b7 Skill of the week (another)", "Skill of the week"], ["skill3", "8 \u00b7 Skill of the week (another)", "Skill of the week"], ["tool2", "9 \u00b7 Tool to master (another)", "Tool to master"], ["tool3", "10 \u00b7 Tool to master (another)", "Tool to master"]];
+var row=document.getElementById('row');
+opts.forEach(function(o){
+  var c=document.createElement('div');c.className='col';c.innerHTML='<b>'+o[1]+'</b>';
+  var f=document.createElement('iframe');f.src='/email/samples/learn2/'+o[0];f.title=o[1];
+  f.onload=function(){try{var d=f.contentDocument;var t=[].slice.call(d.querySelectorAll('div')).find(function(x){return x.textContent.indexOf(o[2])>-1&&x.textContent.length<80});if(t)f.contentWindow.scrollTo(0,t.getBoundingClientRect().top+f.contentWindow.scrollY-40);}catch(e){}};
+  c.appendChild(f);row.appendChild(c);
+});
+</script></body></html>

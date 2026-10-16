@@ -26,7 +26,7 @@
     var box = document.createElement('div');
     box.className = 'signup-ok';
     box.setAttribute('role', 'status');
-    box.innerHTML = '<strong>You\u2019re in<span>.</span></strong><p>A welcome email is on its way. Your first issue lands at 9:00 IST on the next weekday.</p>';
+    box.innerHTML = '<strong>You\u2019re in<span>.</span></strong><p>A welcome email is on its way. Your first issue lands at 9 AM IST on the next weekday.</p>';
     form.replaceWith(box);
     note.textContent = '';
   }
@@ -55,7 +55,7 @@
     });
   }
   document.querySelectorAll('form[data-signup]').forEach(function (f) {
-    wire(f, "You're in. Your first issue arrives at 9:00 IST on the next weekday.", 'Something went wrong. Please try again in a minute.');
+    wire(f, "You're in. Your first issue arrives at 9 AM IST on the next weekday.", 'Something went wrong. Please try again in a minute.');
   });
   document.querySelectorAll('form[data-unsub]').forEach(function (f) {
     wire(f, "You're unsubscribed. No more issues will be sent to that address.", 'Something went wrong. Please try again in a minute.');

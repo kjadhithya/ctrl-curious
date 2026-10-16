@@ -135,14 +135,14 @@ if len(issue['watch']) > 3:
                + f'<div style="font-size:15px;line-height:23px;color:#C9A7B5;padding-top:4px;">{e(v0["channel"])} · {e(v0["note"])}</div>'
                + f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:26px;">{grid}</table></td></tr>\n')
     if ed.get('shelf'):
-        cells = []
-        for it in ed['shelf'][:3]:
-            cells.append(f'<td class="wk" width="33%" valign="top" style="padding:0 0 8px 0;"><a href="{html.escape(it["url"])}" target="_blank"><img src="{og(it["url"])}" width="168" alt="" style="display:block;border:0;width:100%;max-width:168px;height:auto;"></a>'
-                         + A(it['url'], it['title'], 'display:block;padding-top:10px;font-size:16px;line-height:22px;font-weight:600;color:#2E1F25;text-decoration:none;')
-                         + f'<div style="font-size:14px;line-height:20px;color:#5E4B53;padding-top:4px;">{e(it["credit"])}</div></td>')
+        items = ed['shelf'][:3]
+        sp = '<td width="12" style="width:12px;min-width:12px;font-size:0;line-height:0;">&nbsp;</td>'
+        # Images sit in fixed 1.91:1 boxes (the shape of most share images) so the row stays even,
+        # and titles get their own row so they line up whatever the images do. Three columns on phones too.
+        imgs = sp.join(f'<td width="33%" valign="top"><a href="{html.escape(it["url"])}" target="_blank" class="sh" style="display:block;height:88px;overflow:hidden;background-color:#7E4B6B;"><img src="{og(it["url"])}" width="168" alt="" style="display:block;border:0;width:100%;height:auto;min-height:88px;"></a></td>' for it in items)
+        caps = sp.join(f'<td width="33%" valign="top" style="padding:10px 0 8px 0;">' + A(it['url'], it['title'], 'display:block;font-size:16px;line-height:22px;font-weight:600;color:#2E1F25;text-decoration:none;') + f'<div style="font-size:14px;line-height:20px;color:#5E4B53;padding-top:4px;">{e(it["credit"])}</div></td>' for it in items)
         weekend += (f'<tr><td class="pad" style="padding:48px 36px 48px 36px;">{head("Inspiration shelf")}'
-                    + '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:24px;"><tr>'
-                    + '<td class="wks" width="12" style="font-size:0;line-height:0;">&nbsp;</td>'.join(cells) + '</tr></table></td></tr>\n')
+                    + f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:24px;"><tr>{imgs}</tr><tr>{caps}</tr></table></td></tr>\n')
 
 d = datetime.date.fromisoformat(issue['date'])
 date_long = f"{d.strftime('%A')}, {d.day} {d.strftime('%B')} {d.year}"

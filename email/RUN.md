@@ -42,6 +42,14 @@ There are two sends, and each happens exactly once per run.
 
 Each weekday has its own edition, and each edition adds one section to the usual summary, Read, Watch and Meet up. Research it with the same care as the reads: real, recent, verified, with a working link, and useful to designers who already know the basics. If you cannot verify a good one, leave that section out (omit its key); never invent one. Put it in the issue JSON under `"edition"`.
 
+**How to research the edition section (do this properly, it is the most distinctive part of each issue):**
+- Spend real effort here: run at least five or six different searches and look at several sources before choosing. Never take the first result.
+- Fresh means new or newly updated in the last two weeks (the last month at most for typefaces and case studies), with the date confirmed on the maker's own page.
+- Trending means people in the design community are actually talking about it: covered by more than one credible source, featured by the maker's community or a respected newsletter, climbing on Product Hunt or Figma Community, or shared by well-known designers. Prefer something with that signal over something merely new.
+- Build a shortlist of three to five candidates, compare them on freshness, how much buzz they have, and how useful they are to working designers, then pick the strongest. Mention in your final message which candidates you considered and why you chose the winner.
+- Where to look: for tools, Product Hunt (design and AI), Figma Community and release notes, Framer, Adobe, Webflow and AI design tool blogs, and design newsletters. For typefaces, foundry news pages, Google Fonts' new additions, Creative Boom's type drop, I Love Typography, Typewolf and It's Nice That. For case studies, company design blogs (Airbnb, Spotify, Duolingo, Shopify, Linear, Atlassian, Uber and others), studio project pages and Case Study Club. For the week ahead, conference and event calendars, launch schedules and awards sites.
+- Never repeat a pick from a previous issue (check the last month of files in issues/).
+
 - **Monday · Week ahead: "This week in design".** Exactly three things happening this week (Monday to Sunday), in date order: ideally one launch, release or deadline, one talk or livestream to catch, and one contest or call for entries. Each needs a confirmed date and a link.
   `"edition": {"week": [{"when": "Wednesday · Launch", "title": "What is happening, in sentence case", "url": "https://..."}, ...3 items]}`
 - **Tuesday · Tools: "Tool of the day".** One tool, plugin or AI feature that is new or meaningfully updated in the last two weeks, from its maker's own page. Two sentences: what it does and the one job it is best at. `meta` is the price and platform, if known.

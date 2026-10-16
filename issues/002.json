@@ -1,0 +1,84 @@
+{
+  "issue": 2,
+  "date": "2026-10-16",
+  "title": "Figma will take lower margins to fund AI; Apple holds back its Health app redesign",
+  "dek": "Figma's AI spending and new India survey, Apple's delayed Health redesign, generative UI and design systems, and why generated UI is not UX.",
+  "hero": "https://ctrl-curious.vercel.app/assets/email/days/fri/fri_01.jpg",
+  "hero_alt": "A grainy woodblock-style browser window with tabs, an image block and text lines on deep blue",
+  "summary": "A day after Config India, Figma's finance chief said the company is [willing to accept thinner margins to keep funding AI](https://www.ksl.com/article/51636598/figma-cfo-says-design-platform-willing-to-put-margins-on-the-line-to-boost-ai-demand), a sign that metered agents and AI credits are a lasting part of the toolkit. Figma also shared [new survey data from India](https://www.figma.com/blog/figma-deepens-investment-in-india/), where builders are more excited than their US and European peers about AI changing their work. Apple, meanwhile, [pulled its redesigned Health app](https://appleinsider.com/articles/26/10/13/ios-272-beta-4-apple-music-goes-black-and-white-apple-health-redesign-pulled) from the iOS 27.2 beta, a reminder that even big platform redesigns slip late. On the craft side, The Gradient argues that [generative UI is only as good as the design system behind it](https://thegradient.com/thinking/generative-ui-design-system), and UX Collective makes the case that [AI-generated UI is fast design, not UX](https://newsletter.uxdesign.cc/p/ai-generated-ui-is-fast-design-not).",
+  "reads": [
+    {
+      "title": "Figma CFO says the design platform is willing to put margins on the line to boost AI demand",
+      "source": "Reuters via KSL.com",
+      "url": "https://www.ksl.com/article/51636598/figma-cfo-says-design-platform-willing-to-put-margins-on-the-line-to-boost-ai-demand",
+      "note": "Praveer Melwani says gross margins may stay in the mid-80s as Figma keeps spending on AI, so expect credits and agent features to keep shaping your plan and your workflow."
+    },
+    {
+      "title": "Figma deepens investment in India with its largest international Config yet",
+      "source": "Figma Blog",
+      "url": "https://www.figma.com/blog/figma-deepens-investment-in-india/",
+      "note": "A survey of 1,800 builders finds Indian teams far keener on AI reshaping their work than peers in the US and Europe, plus a Sarvam AI partnership and India's place as Figma's second-largest market."
+    },
+    {
+      "title": "iOS 27.2 beta 4: Apple Music goes black-and-white, Apple Health redesign pulled",
+      "source": "AppleInsider",
+      "url": "https://appleinsider.com/articles/26/10/13/ios-272-beta-4-apple-music-goes-black-and-white-apple-health-redesign-pulled",
+      "note": "Apple has held back its rebuilt Health app, with its Insights tab and Health Age score, until later this year, a real case of a platform redesign slipping in late beta."
+    },
+    {
+      "title": "Generative UI runs on your design system",
+      "source": "The Gradient",
+      "url": "https://thegradient.com/thinking/generative-ui-design-system",
+      "note": "A framework for when a model should compose from your components and when it may generate freely, with first steps: audit for machine readability, define what it must never build, design streaming states and plan fallbacks."
+    },
+    {
+      "title": "AI-generated UI is fast design, not UX",
+      "source": "UX Collective",
+      "url": "https://newsletter.uxdesign.cc/p/ai-generated-ui-is-fast-design-not",
+      "note": "Fabricio Teixeira compares generated screens to fast furniture, quick to make and short on care, a useful framing when you need to explain where design judgement still adds value."
+    }
+  ],
+  "watch": [
+    {
+      "title": "Meta Muse: the AI agent people actually love",
+      "channel": "How I AI",
+      "id": "4TOLm1g-gCE",
+      "note": "Alex Cornell, design director for Muse at Meta, on showing agent activity at different levels of detail and judging non-deterministic output by usefulness; Muse just joined Figma's MCP partners at Config India."
+    },
+    {
+      "title": "iPhone Duo group lab, 15 October 2026",
+      "channel": "Apple Developer",
+      "id": "kmf3gkQMex4",
+      "note": "Apple engineers and designers answer questions on adaptive layouts across displays and poses, the hinge and Split View, the most practical way into foldable design as the device opens for preorders."
+    },
+    {
+      "title": "Ep 19: Big news. Near Future is now Mostly Working",
+      "channel": "Mostly Working",
+      "id": "9HsedX_BH4c",
+      "note": "Tom Harman and Jonny Burch on senior designers building their own tools in a workshop, and a full brand built with Claude Code, from a Figma mark to generated palette tools and motion principles."
+    }
+  ],
+  "meetups": [
+    {
+      "name": "STHLM Xperience Conference 2026",
+      "date": "2026-11-12",
+      "place": "Online",
+      "details": "Thursday · Streamed from Stockholm · Designing a sustainable future with ethical AI",
+      "url": "https://www.sxc.se/"
+    },
+    {
+      "name": "Design Matters 26",
+      "date": "2026-11-14",
+      "place": "Online",
+      "details": "14–15 November · Livestream from Tokyo · Speakers from Duolingo, Figma and Medium",
+      "url": "https://designmatters.io/"
+    },
+    {
+      "name": "The Messy UX Conference 2026",
+      "date": "2026-11-28",
+      "place": "Bengaluru",
+      "details": "Saturday · IxDF Bengaluru · Stories of failures, pivots and trade-offs",
+      "url": "https://ixdf.org/meetups/the-messy-ux-conference-nov-28th-2026"
+    }
+  ]
+}

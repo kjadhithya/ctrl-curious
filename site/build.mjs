@@ -85,7 +85,7 @@ const signupForm = (id, note) => `<form class="signup" data-signup action="/api/
 </form><p class="signup-note" aria-live="polite">${note || ''}</p>`;
 
 const band = () => `<section class="band" id="signup" aria-labelledby="signup-h">
-<img draggable="false" src="/assets/blog/signup_moon_shore.jpg" alt="" loading="lazy">
+<img draggable="false" src="/assets/blog/signup_moon_shore_bg.jpg" alt="" loading="lazy"><div class="band-waves" aria-hidden="true"></div>
 <div class="band-copy wrap">
 <h2 id="signup-h">Get the emails.<br>Stay curious.</h2>
 <p>Every weekday at 9:00 IST: a linked summary, five reads, three videos and the meetups in Bengaluru and online.</p>
@@ -408,7 +408,7 @@ copy('site/static', 'static');
 copy('assets/email');
 copy('email/welcome.html');
 copy('assets/blog/hero');
-for (const f of ['assets/blog/seigaiha_tile.jpg', 'assets/blog/about_ochre_dawn.jpg', 'assets/email/wave_hero.jpg', 'assets/blog/banner_swell_wave_mountain_sun_tall.jpg', 'assets/blog/signup_moon_shore.jpg']) copy(f);
+for (const f of ['assets/blog/seigaiha_tile.jpg', 'assets/blog/about_ochre_dawn.jpg', 'assets/email/wave_hero.jpg', 'assets/blog/banner_swell_wave_mountain_sun_tall.jpg', 'assets/blog/signup_moon_shore.jpg', 'assets/blog/signup_moon_shore_bg.jpg', 'assets/blog/signup_moon_shore_waves.png']) copy(f);
 
 write('index.html', home());
 write('archive.html', archive());

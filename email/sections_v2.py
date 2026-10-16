@@ -2,7 +2,7 @@
 
 Every section shares the same skeleton so the email reads as one system:
   - the usual '> Heading' in 30px bold with a wine chevron,
-  - a small meta line under the heading (what kind of thing it is, at a glance),
+  - no subtitle under the heading (standing rule: no section subtitles),
   - a 24px bold title that links to the source,
   - one shared 'Our take' note and one shared 'Go deeper' link row.
 What changes from section to section is the body, so each has its own recognisable shape:
@@ -31,10 +31,9 @@ def a(url, text, style):
     return f'<a href="{html.escape(url)}" target="_blank" style="{style}">{e(text)}</a>'
 
 
-def heading(title, meta, dark=False):
+def heading(title, meta=None, dark=False):  # meta kept for compatibility; no subtitles
     col, mark, mcol = (PAPER, MAUVE, MAUVE) if dark else (INK, WINE, MUTED)
-    return (f'<div style="font-size:30px;line-height:33px;font-weight:700;color:{col};"><span style="color:{mark};">&gt;</span>&nbsp; {e(title)}</div>'
-            f'<div style="font-size:14px;line-height:20px;color:{mcol};padding-top:8px;">{e(meta)}</div>')
+    return (f'<div style="font-size:30px;line-height:33px;font-weight:700;color:{col};"><span style="color:{mark};">&gt;</span>&nbsp; {e(title)}</div>')
 
 
 def title(l, dark=False):

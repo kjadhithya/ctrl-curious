@@ -79,7 +79,7 @@ def band_row(inner):
                     f'background-image:url(\'{SITE}/assets/email/grain_band.jpg\');background-repeat:repeat;padding:42px 36px 50px 36px;">{inner}</td></tr>\n')
 
 
-# ---------- Method of the week (Monday) ----------
+# ---------- Ctrl+Learn (Monday) ----------
 def skill(l):
     steps = l.get('steps') or []
     rows = ''.join(
@@ -88,7 +88,7 @@ def skill(l):
         for k, s in enumerate(steps))
     body = f'{TABLE} style="margin-top:22px;border-bottom:1px solid {CLAY};">{rows}</table>'
     meta = f'{len(steps)} steps to try this week'
-    return 'paper', heading('Method of the week', meta) + title(l) + intro(l) + body + take(l) + deeper(l)
+    return 'paper', heading('Ctrl+Learn', meta) + title(l) + intro(l) + body + take(l) + deeper(l)
 
 
 # ---------- Prompt of the week ----------
@@ -204,7 +204,7 @@ def decision(l):
     return 'paper', heading('Decision toolkit', l.get('meta') or 'A framework for a call you make often') + title(l) + intro(l) + grid + ex + rule_of_thumb + take(l) + deeper(l)
 
 
-# ---------- Skill to install (Friday) ----------
+# ---------- Power-up (Friday) ----------
 def install(l):
     sk = l.get('skill') or {}
     head = (f'{TABLE} style="margin-top:22px;"><tr><td bgcolor="{PLUM}" style="background-color:{PLUM};padding:12px 18px;">'
@@ -226,7 +226,7 @@ def install(l):
         tryit = (f'<div style="font-size:14px;line-height:20px;font-weight:700;color:{WINE};padding-top:26px;">Then try asking</div>'
                  f'{TABLE} style="margin-top:10px;"><tr><td width="4" bgcolor="{PLUM}" style="background-color:{PLUM};font-size:0;line-height:0;">&nbsp;</td>'
                  f'<td bgcolor="{PAPER}" style="background-color:{PAPER};padding:14px 16px;font-size:17px;line-height:26px;color:{INK};">{e(l["try"])}</td></tr></table>')
-    return 'band', heading('Skill to install') + title(l) + intro(l) + card + inst + tryit + take(l) + deeper(l)
+    return 'band', heading('Power-up') + title(l) + intro(l) + card + inst + tryit + take(l) + deeper(l)
 
 
 

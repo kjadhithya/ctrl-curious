@@ -80,7 +80,7 @@ if ed.get('tool'):   # Tuesday: tool of the day, right under the summary
            + f'<div style="font-size:17px;line-height:26px;padding-top:8px;">{e(t["what"])}</div>'
            + '</td></tr></table></td></tr>\n')
 
-LEARN_TITLES = {'skill': 'Method of the week', 'install': 'Skill to install', 'pattern': 'Pattern breakdown', 'method': 'Research method in practice',
+LEARN_TITLES = {'skill': 'Ctrl+Learn', 'install': 'Power-up', 'pattern': 'Pattern breakdown', 'method': 'Research method in practice',
                 'principle': 'One principle, three examples', 'teardown': 'Teardown', 'tool': 'Tool to master', 'craft': 'Career and craft',
                 'workflow': 'Workflow upgrade', 'steal': 'Steal this', 'people': 'How they work', 'prompt': 'Prompt of the week',
                 'brief': '10-minute brief', 'decision': 'Decision toolkit'}

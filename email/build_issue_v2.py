@@ -166,9 +166,9 @@ if weekend:
     page = re.sub(r'<!-- WATCH_START -->.*?<!-- WATCH_END -->\n', lambda m: weekend, page, count=1, flags=re.S)
 else:
     page = page.replace('<!-- WATCH_START -->', '').replace('<!-- WATCH_END -->\n', '')
-if weekend:   # Friday sign-off art just above the footer
-    foot = '<tr><td><img src="https://ctrl-curious.vercel.app/assets/email/footer_b3.jpg"'
-    page = page.replace(foot, f'<tr><td><img src="{SITE}/assets/email/weekend_signoff.jpg" width="600" alt="The weekend is here. Rest up. See you on Monday." style="display:block;border:0;width:100%;max-width:600px;height:auto;"></td></tr>\n' + foot, 1)
+if weekend:   # Friday: a bigger weekend sign-off replaces the usual footer art
+    page = re.sub(r'<tr><td><img src="https://ctrl-curious\.vercel\.app/assets/email/footer_b3\.jpg"[^>]*></td></tr>',
+                  f'<tr><td><img src="{SITE}/assets/email/weekend_footer.jpg" width="600" alt="The weekend’s here. Rest up. See you on Monday." style="display:block;border:0;width:100%;max-width:600px;height:auto;"></td></tr>', page, count=1)
 if cards:
     page = page.replace('{{EVENT_CARDS}}', '\n'.join(cards))
 else:

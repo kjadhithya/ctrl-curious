@@ -195,7 +195,7 @@ def night_shift(page):
     head = re.sub(r'#([0-9A-Fa-f]{6})\b', lambda m: '#' + swap.get(m.group(1).upper(), m.group(1)), head)
     for k, v in keep.items():
         head = head.replace(k, v)
-    return head + foot
+    return head + foot.replace('grain_dark.jpg', 'grain_dark_soft.jpg')
 
 if datetime.date.fromisoformat(issue['date']).weekday() == 1:   # Tuesday
     page = night_shift(page)

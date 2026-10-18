@@ -455,13 +455,10 @@ section.band{container-type:inline-size}
    Goals: nothing clipped in the header, thumbnails that never squeeze the text into a narrow
    column, lists that scan quickly with one thumb, and every tap target at least 44px tall. */
 @media (max-width:640px){
-  /* Header: keep logo, Archive and the button on one line down to 320px */
-  .nav ul{gap:16px}
-  .nav .btn{padding:10px 14px;font-size:15px}
-  .nav.pinned{padding-top:max(12px,env(safe-area-inset-top));padding-bottom:12px}
-
-  /* Text links that act as buttons get a full-height tap area */
-  .latest-body .more,.recent-head a{display:inline-flex;align-items:center;min-height:44px}
+  /* Header (not on the home page): keep logo, Archive and the button on one line down to 320px */
+  body:not(:has(.hero)) .nav ul{gap:16px}
+  body:not(:has(.hero)) .nav .btn{padding:10px 14px;font-size:15px}
+  body:not(:has(.hero)) .nav.pinned{padding-top:max(12px,env(safe-area-inset-top));padding-bottom:12px}
 
   /* Reads: title and a small thumbnail side by side, the note runs full width underneath */
   .reads li{display:grid;grid-template-columns:1fr 92px;grid-template-areas:"n img" "t img" "d d";column-gap:16px;row-gap:2px;align-items:start;padding:20px 0}
@@ -499,8 +496,8 @@ section.band{container-type:inline-size}
   .field label{font-size:13px}
 }
 @media (max-width:360px){
-  .nav ul{gap:12px}
-  .nav .btn{padding:9px 12px;font-size:14px}
-  .logo .a,.logo .b{font-size:23px}
+  body:not(:has(.hero)) .nav ul{gap:12px}
+  body:not(:has(.hero)) .nav .btn{padding:9px 12px;font-size:14px}
+  body:not(:has(.hero)) .logo .a,body:not(:has(.hero)) .logo .b{font-size:23px}
   .field select{padding:12px 30px 12px 12px;background-position:right 10px center;font-size:16px}
 }

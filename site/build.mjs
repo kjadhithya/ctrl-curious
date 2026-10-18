@@ -240,7 +240,7 @@ function archive() {
 <div class="field grow"><label for="q">Search</label><div class="search"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><circle cx="7.5" cy="7.5" r="5.5" fill="none" stroke="#2E1F25" stroke-width="1.8"/><path d="M11.5 11.5l4.5 4.5" stroke="#2E1F25" stroke-width="1.8"/></svg><input id="q" type="search" placeholder="Search stories, sources and summaries" autocomplete="off"></div></div>
 <div class="field"><label for="month">Month</label><select id="month" class="wide"><option value="">All months</option>${MONTHS.map((m, k) => `<option value="${k + 1}">${m}</option>`).join('')}</select></div>
 <div class="field"><label for="year">Year</label><select id="year"><option value="">All years</option>${years.map((y) => `<option value="${y}">${y}</option>`).join('')}</select></div>
-<div class="field"><label for="sort">Sort</label><select id="sort" class="wide"><option value="new">Newest first</option><option value="old">Oldest first</option></select></div>
+<div class="field full"><label for="sort">Sort</label><select id="sort" class="wide"><option value="new">Newest first</option><option value="old">Oldest first</option></select></div>
 <span class="grain"></span>
 </form>
 <div class="showing wrap" id="showing" aria-live="polite">Showing ${plural(issues.length, 'issue')}</div>

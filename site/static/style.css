@@ -450,3 +450,57 @@ section.band{container-type:inline-size}
 .ed-learn .inst{margin:0;font-size:16px;line-height:1.5;color:var(--muted)}.ed-learn .inst b{color:var(--ink);display:block}
 @media (max-width:640px){.ed-learn .cols,.ed-learn .ba{grid-template-columns:1fr}}
 .weekend-art img{display:block;width:100%;height:auto}
+
+/* ---------- phone layout pass ----------
+   Goals: nothing clipped in the header, thumbnails that never squeeze the text into a narrow
+   column, lists that scan quickly with one thumb, and every tap target at least 44px tall. */
+@media (max-width:640px){
+  /* Header: keep logo, Archive and the button on one line down to 320px */
+  .nav ul{gap:16px}
+  .nav .btn{padding:10px 14px;font-size:15px}
+  .nav.pinned{padding-top:max(12px,env(safe-area-inset-top));padding-bottom:12px}
+
+  /* Text links that act as buttons get a full-height tap area */
+  .latest-body .more,.recent-head a{display:inline-flex;align-items:center;min-height:44px}
+
+  /* Reads: title and a small thumbnail side by side, the note runs full width underneath */
+  .reads li{display:grid;grid-template-columns:1fr 92px;grid-template-areas:"n img" "t img" "d d";column-gap:16px;row-gap:2px;align-items:start;padding:20px 0}
+  .reads li>div{display:contents}
+  .reads .n{grid-area:n;width:auto;font-size:14px;line-height:1.4}
+  .reads .rimg{grid-area:img;width:92px;margin-top:2px}
+  .reads li>div>a{grid-area:t;font-size:19px;line-height:1.3}
+  .reads .d{grid-area:d;margin-top:8px;font-size:15px}
+
+  /* Watch: thumbnail beside the title, the note full width underneath */
+  .vids li{display:grid;grid-template-columns:128px 1fr;grid-template-areas:"th t" "d d";column-gap:14px;row-gap:8px;align-items:start}
+  .vids li>div{display:contents}
+  .vids .thumb{grid-area:th;width:128px;height:72px}
+  .vids .thumb svg{width:28px;height:28px}
+  .vids a.t{grid-area:t;font-size:18px;line-height:1.3}
+  .vids .d{grid-area:d;margin-top:0;font-size:15px}
+
+  /* Meet up: date stays beside the details instead of sitting on its own row */
+  .event{flex-wrap:nowrap;align-items:flex-start;gap:14px;padding:14px}
+  .event .dt{width:46px;padding-right:12px}
+  .event .dt b{font-size:24px}
+  .event .info b{font-size:17px;line-height:1.3}
+
+  /* The week, by day: a compact list with the day's colour as a side bar */
+  .days{grid-template-columns:1fr;gap:0}
+  .day{display:grid;grid-template-columns:4px 96px 1fr;align-items:center;column-gap:14px;padding:10px 0;border-bottom:1px solid var(--clay)}
+  .day i{order:-1;width:4px;height:100%;min-height:48px}
+  .day .pic{aspect-ratio:2/1}
+  .day b{font-size:18px}
+
+  /* Archive filters: search full width, month and year side by side, sort below */
+  .filters{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:18px}
+  .filters .field.grow,.filters .field.full{grid-column:1/-1}
+  .meet{padding:20px 16px}
+  .field label{font-size:13px}
+}
+@media (max-width:360px){
+  .nav ul{gap:12px}
+  .nav .btn{padding:9px 12px;font-size:14px}
+  .logo .a,.logo .b{font-size:23px}
+  .field select{padding:12px 30px 12px 12px;background-position:right 10px center;font-size:15px}
+}

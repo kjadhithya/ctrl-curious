@@ -188,7 +188,7 @@ def night_shift(page):
     head = re.sub(r'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#C9A7B5".*?</table>', protect, head, flags=re.S)
     head = re.sub(r'background-color:#(?:C9A7B5|7E4B6B);color:#(?:2E1F25|F4EEE8)', protect, head)
     head = re.sub(r'background="[^"]*grain_page\.jpg"', 'background="https://ctrl-curious.vercel.app/assets/email/grain_page_dark.jpg"', head)
-    head = head.replace('grain_page.jpg', 'grain_page_dark.jpg').replace('grain_paper.jpg', 'grain_dark.jpg').replace('grain_band.jpg', 'grain_dark.jpg')
+    head = head.replace('grain_dark.jpg', 'grain_dark_soft.jpg').replace('grain_page.jpg', 'grain_page_dark.jpg').replace('grain_paper.jpg', 'grain_dark_soft.jpg').replace('grain_band.jpg', 'grain_dark_soft.jpg')
     head = head.replace('logo_light.png', 'logo_dark.png').replace('seigaiha_strip.jpg', 'seigaiha_strip_dark.jpg')
     swap = {'E9E1D9': '1E1418', 'F4EEE8': '2E1F25', '2E1F25': 'F4EEE8', 'EDE4DD': '3A2830', '5E4B53': 'C9A7B5',
             '4A3540': 'E9DFE3', '8A2E3B': 'C9A7B5', 'D9C3B7': '5E4B53'}

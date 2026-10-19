@@ -102,7 +102,7 @@ img{max-width:100%;display:block;-webkit-user-drag:none;user-select:none}
 .strip{height:16px;background:url(/assets/blog/seigaiha_tile.jpg) 0 0/auto 16px repeat-x}
 
 /* latest */
-.latest{padding-top:112px;padding-bottom:112px;display:flex;flex-direction:column;gap:32px}
+.latest{padding-top:88px;padding-bottom:120px;display:flex;flex-direction:column;gap:32px}
 .latest-grid{display:grid;grid-template-columns:minmax(0,640px) 1fr;gap:56px;align-items:stretch}
 .pic{display:block;position:relative;overflow:hidden}
 .pic img{width:100%;height:100%;object-fit:cover}
@@ -120,7 +120,7 @@ img{max-width:100%;display:block;-webkit-user-drag:none;user-select:none}
 .counts a{margin-left:auto;color:var(--plum);font-weight:600;text-decoration:none}
 
 /* week */
-.week{position:relative;overflow:hidden;background:var(--band);padding-top:104px;padding-bottom:112px;display:flex;flex-direction:column;gap:32px}
+.week{position:relative;overflow:hidden;background:var(--band);padding-top:72px;padding-bottom:80px;display:flex;flex-direction:column;gap:32px}
 .week-head{display:flex;justify-content:space-between;align-items:end;gap:24px}
 .week-head p{font-size:17px;color:var(--muted);max-width:460px;text-align:right;margin:0}
 .days{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;position:relative;z-index:1}
@@ -131,7 +131,7 @@ img{max-width:100%;display:block;-webkit-user-drag:none;user-select:none}
 .day i{display:block;height:3px;font-style:normal}
 
 /* list rows */
-.recent{padding-top:112px;padding-bottom:104px;display:flex;flex-direction:column;gap:28px;box-sizing:border-box;width:100%;max-width:1920px;margin-left:auto;margin-right:auto}
+.recent{padding-top:120px;padding-bottom:120px;display:flex;flex-direction:column;gap:28px;box-sizing:border-box;width:100%;max-width:1920px;margin-left:auto;margin-right:auto}
 .recent-head{display:flex;justify-content:space-between;align-items:center;gap:16px}
 .recent-head a{font-size:17px;color:var(--plum);font-weight:600;text-decoration:none}
 .rows{display:flex;flex-direction:column;border-bottom:1px solid var(--clay);margin:0;padding:0;list-style:none}
@@ -356,16 +356,16 @@ section.band{container-type:inline-size}
   .hero .signup{max-width:540px}
   .hero h1{font-size:44px}
   .hero .lede{font-size:18px}
-  .latest{padding-top:72px;padding-bottom:72px}
+  .latest{padding-top:56px;padding-bottom:80px}
   .latest-grid{grid-template-columns:1fr;gap:24px}
   .latest-body{height:auto;min-height:0}
   .latest-body .clamp{flex:none;-webkit-line-clamp:5!important}
   .latest-body h2{font-size:30px}
-  .week{padding-top:72px;padding-bottom:72px}
+  .week{padding-top:56px;padding-bottom:56px}
   .week-head{flex-direction:column;align-items:flex-start}
   .week-head p{text-align:left}
   .days{grid-template-columns:repeat(2,1fr);gap:16px}
-  .recent{padding-top:72px}
+  .recent{padding-top:80px;padding-bottom:80px}
   .row,.archive .row{grid-template-columns:1fr;gap:12px;padding:22px 0}
   .row .num,.archive .row .num{font-size:28px}
   .row .pic,.archive .row .pic{width:100%;height:auto;aspect-ratio:2/1}

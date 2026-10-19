@@ -1,0 +1,37 @@
+Ctrl+Curious · Monday, 19 October 2026 · Issue 003
+View online: https://ctrl-curious.vercel.app/issues/003
+
+Today, in brief
+Nielsen Norman Group put 120 synthetic respondents against 604 real professionals and found they reach the same headline answer but collapse into a dozen labels where humans gave fifty (https://www.nngroup.com/articles/synthetic-users-vs-human-respondents/), a sharp warning for anyone using AI personas in discovery. Paul Boag argues in Smashing that most teams are rolling out AI like a software licence instead of a culture change (https://www.smashingmagazine.com/2026/10/is-your-organization-messing-up-ai-adoption/), and Jakob Nielsen adds that AI now generates faster than people can review (https://jakobnielsenphd.substack.com/p/ux-roundup-20261016), so interfaces should offer a few distinct directions first. From Bengaluru, Dylan Field used Config India to launch Figma Specs and code layers and tell builders not to hand their thinking to AI (https://dqindia.com/news/igma-ai-building-teams-config-india-2026-12680992). And Google is rolling out a rebuilt Translate app on Android (https://www.androidheadlines.com/2026/10/google-translate-android-app-redesign.html) with bottom navigation and a much bigger input card.
+
+Read
+Synthetic users vs. human respondents: same conclusion, less variation: https://www.nngroup.com/articles/synthetic-users-vs-human-respondents/
+Is your organization messing up AI adoption?: https://www.smashingmagazine.com/2026/10/is-your-organization-messing-up-ai-adoption/
+UX roundup: AI output outruns human review: https://jakobnielsenphd.substack.com/p/ux-roundup-20261016
+Don't delegate your thinking to AI, says Figma CEO Dylan Field: https://dqindia.com/news/igma-ai-building-teams-config-india-2026-12680992
+Google Translate's Android app gets a big visual overhaul: https://www.androidheadlines.com/2026/10/google-translate-android-app-redesign.html
+
+Skill of the week
+Name components so people and agents find them: https://www.smashingmagazine.com/2026/10/how-name-things/
+
+Prompt of the week
+Break a design deadlock with hybrids: https://jakobnielsenphd.substack.com/p/ux-roundup-20261016
+
+This week in design
+Thursday · Conference · PUSH UX 2026 opens in Munich, two days of applied AI and research talks: https://www.push-conference.com/
+Friday · Launch · iPhone Duo goes on sale, so adaptive foldable layouts meet real users: https://macrumors.com/2026/10/18/apple-product-releases-next-four-fridays
+Friday · Deadline · Last call for the Communication Arts 2027 Interactive competition: https://commarts.secure-platform.com/
+
+Watch
+Getting started with code layers: https://www.youtube.com/watch?v=ukY9Dvwm7Gc
+Why every company now needs to think and operate like a lab team: https://www.youtube.com/watch?v=3I6QYkccd3o
+Rhiannon Bell: how Google designs for AI at scale: https://www.youtube.com/watch?v=owVbQwM2Zfc
+
+Meet up
+STHLM Xperience Conference 2026 (2026-11-12): https://www.sxc.se/
+Design Matters 26 (2026-11-14): https://designmatters.io/
+The Messy UX Conference 2026 (2026-11-28): https://ixdf.org/meetups/the-messy-ux-conference-nov-28th-2026
+
+That's all for today. Stay curious.
+
+Unsubscribe: https://ctrl-curious.vercel.app/unsubscribe

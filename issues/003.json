@@ -1,0 +1,128 @@
+{
+  "issue": 3,
+  "date": "2026-10-19",
+  "title": "NN/g finds synthetic users agree with humans but flatten their answers; Google redesigns Translate",
+  "dek": "Synthetic users versus real respondents, why AI adoption stalls in teams, Figma's Config India launches, AI output outrunning review, and Google Translate's new layout.",
+  "preheader": "Synthetic users reach the same answer as people, with far less range. Plus Figma Specs and the iPhone Duo week.",
+  "hero": "https://ctrl-curious.vercel.app/assets/email/days/mon/mon_02.jpg",
+  "hero_alt": "Grainy illustration of two curling blue waves under a pale moon over a green sea",
+  "summary": "Nielsen Norman Group put 120 synthetic respondents against 604 real professionals and found they [reach the same headline answer but collapse into a dozen labels where humans gave fifty](https://www.nngroup.com/articles/synthetic-users-vs-human-respondents/), a sharp warning for anyone using AI personas in discovery. Paul Boag argues in Smashing that most teams are [rolling out AI like a software licence instead of a culture change](https://www.smashingmagazine.com/2026/10/is-your-organization-messing-up-ai-adoption/), and Jakob Nielsen adds that [AI now generates faster than people can review](https://jakobnielsenphd.substack.com/p/ux-roundup-20261016), so interfaces should offer a few distinct directions first. From Bengaluru, Dylan Field used Config India to [launch Figma Specs and code layers and tell builders not to hand their thinking to AI](https://dqindia.com/news/igma-ai-building-teams-config-india-2026-12680992). And Google is rolling out a [rebuilt Translate app on Android](https://www.androidheadlines.com/2026/10/google-translate-android-app-redesign.html) with bottom navigation and a much bigger input card.",
+  "reads": [
+    {
+      "title": "Synthetic users vs. human respondents: same conclusion, less variation",
+      "source": "Nielsen Norman Group",
+      "url": "https://www.nngroup.com/articles/synthetic-users-vs-human-respondents/",
+      "note": "Rachel Banawa compares 120 synthetic respondents with 604 people: both land on the same top answer, but the AI answers converge on about a dozen labels against over fifty from humans, so use synthetic users for hypotheses, never for range."
+    },
+    {
+      "title": "Is your organization messing up AI adoption?",
+      "source": "Smashing Magazine",
+      "url": "https://www.smashingmagazine.com/2026/10/is-your-organization-messing-up-ai-adoption/",
+      "note": "Paul Boag on why AI rollouts stall: treat it as culture change with role-specific training, peer champions and a few short trust-based principles, and read shadow AI as a sign of where official tools fall short."
+    },
+    {
+      "title": "UX roundup: AI output outruns human review",
+      "source": "Jakob Nielsen",
+      "url": "https://jakobnielsenphd.substack.com/p/ux-roundup-20261016",
+      "note": "Measure generation, review and repair time together; show a few distinct directions with their assumptions before expanding one; and size touch targets for gloves and moving buses, starting at 1 by 1 cm."
+    },
+    {
+      "title": "Don't delegate your thinking to AI, says Figma CEO Dylan Field",
+      "source": "DQ India",
+      "url": "https://dqindia.com/news/igma-ai-building-teams-config-india-2026-12680992",
+      "note": "The Indian view of Config India in Bengaluru: Figma Specs, code layers, a design systems workspace in development, Sarvam AI as the first Indian MCP partner, and India as Figma's second-largest market."
+    },
+    {
+      "title": "Google Translate's Android app gets a big visual overhaul",
+      "source": "Android Headlines",
+      "url": "https://www.androidheadlines.com/2026/10/google-translate-android-app-redesign.html",
+      "note": "A shipped redesign worth studying: bottom navigation, a far larger input card, and handwriting and paste pulled out of menus onto the main screen, at the cost of pushing practice prompts and history lower."
+    }
+  ],
+  "watch": [
+    {
+      "title": "Getting started with code layers",
+      "channel": "Figma",
+      "id": "ukY9Dvwm7Gc",
+      "note": "Code layers went into open beta at Config India last week; Anthony DiSpezio shows starting from a codebase, comparing variations with the agent, pulling results into editable layers and pushing a branch for review."
+    },
+    {
+      "title": "Why every company now needs to think and operate like a lab team",
+      "channel": "Lenny's Podcast",
+      "id": "3I6QYkccd3o",
+      "note": "Josh Woodward, who runs Google Labs and the Gemini app, on his almost-possible framework, spotting early fit and when to kill an idea, a useful lens as teams rethink how AI work gets staffed."
+    },
+    {
+      "title": "Rhiannon Bell: how Google designs for AI at scale",
+      "channel": "Dive Club",
+      "id": "owVbQwM2Zfc",
+      "note": "Google's VP of UX for Search on the decisions behind AI Mode and dynamic component systems, a good companion to today's reads on design systems and review load."
+    }
+  ],
+  "meetups": [
+    {
+      "name": "STHLM Xperience Conference 2026",
+      "date": "2026-11-12",
+      "place": "Online",
+      "details": "Thursday · Streamed from Stockholm · Designing a sustainable future with ethical AI",
+      "url": "https://www.sxc.se/"
+    },
+    {
+      "name": "Design Matters 26",
+      "date": "2026-11-14",
+      "place": "Online",
+      "details": "Livestream from Tokyo · Speakers from Duolingo, Figma and Medium",
+      "url": "https://designmatters.io/"
+    },
+    {
+      "name": "The Messy UX Conference 2026",
+      "date": "2026-11-28",
+      "place": "Bengaluru",
+      "details": "Saturday · IxDF Bengaluru · Stories of failures, pivots and trade-offs",
+      "url": "https://ixdf.org/meetups/the-messy-ux-conference-nov-28th-2026"
+    }
+  ],
+  "edition": {
+    "week": [
+      {"when": "Thursday · Conference", "title": "PUSH UX 2026 opens in Munich, two days of applied AI and research talks", "url": "https://www.push-conference.com/"},
+      {"when": "Friday · Launch", "title": "iPhone Duo goes on sale, so adaptive foldable layouts meet real users", "url": "https://macrumors.com/2026/10/18/apple-product-releases-next-four-fridays"},
+      {"when": "Friday · Deadline", "title": "Last call for the Communication Arts 2027 Interactive competition", "url": "https://commarts.secure-platform.com/"}
+    ],
+    "learn": [
+      {
+        "kind": "skill",
+        "title": "Name components so people and agents find them",
+        "url": "https://www.smashingmagazine.com/2026/10/how-name-things/",
+        "intro": "With agents and MCP reading your library, a component name is now an API. Vitaly Friedman's guide to naming in design systems gives a practical way to settle names before they spread into code.",
+        "steps": [
+          "Before naming or renaming, check what other systems call the same thing in Component Gallery, which collects names for more than 50 components.",
+          "If you can describe the pattern but not name it, look it up by how it looks or behaves in Name That UI.",
+          "Choose the word your engineers and users already use, not one team's internal jargon.",
+          "Keep a naming backlog of conflicts and resolve them on purpose, since muddled names slow adoption.",
+          "Keep names short, structured and consistent, and describe purpose rather than visual properties."
+        ],
+        "take": "The steps are our ordering of Friedman's advice. Our own addition: run your top ten names past an agent with your MCP connected and see whether it picks the right component without help.",
+        "links": [
+          {"title": "Component Gallery", "url": "https://component.gallery/components/", "source": "Component Gallery"},
+          {"title": "Name That UI", "url": "https://namethatui.com/", "source": "Name That UI"}
+        ]
+      },
+      {
+        "kind": "prompt",
+        "title": "Break a design deadlock with hybrids",
+        "url": "https://jakobnielsenphd.substack.com/p/ux-roundup-20261016",
+        "intro": "When a team is stuck between two directions, Jakob Nielsen suggests letting AI lay out both positions plus hybrids, so the group critiques a spread of options instead of defending one. This prompt keeps the output small enough to review.",
+        "tool": "Any AI assistant",
+        "code": "You are a senior product designer helping a team that is stuck between two directions for [screen or flow].\nDirection A: [describe or attach]\nDirection B: [describe or attach]\nUsers and context: [who, where, constraints such as one hand or poor signal]\n\n1. State the strongest case for A and for B in three bullets each, including the assumption each one rests on.\n2. Propose up to 8 hybrids. For each: one-line idea, what it takes from A and from B, and the assumption it tests.\n3. Critique all 10 against [goal metric] and [two heuristics or accessibility needs], in a table.\n4. Recommend the 3 most distinct options to prototype. Do not add visual detail yet.",
+        "code_note": "Attach screenshots where you can. Ask for detail only after the team picks a direction, and time the whole loop, generation plus review, against how long the debate was taking.",
+        "columns": [
+          {"label": "Use it for", "items": ["Two strong directions and a stalled review", "Getting quieter people to critique options nobody owns"]},
+          {"label": "Not for", "items": ["Choices that need real user evidence to settle", "Replacing a usability test of the final candidates"]}
+        ],
+        "links": [
+          {"title": "Synthetic users vs. human respondents", "url": "https://www.nngroup.com/articles/synthetic-users-vs-human-respondents/", "source": "Nielsen Norman Group"}
+        ]
+      }
+    ]
+  }
+}

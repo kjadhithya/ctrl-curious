@@ -120,7 +120,7 @@
           {"label": "Not for", "items": ["Choices that need real user evidence to settle", "Replacing a usability test of the final candidates"]}
         ],
         "links": [
-          {"title": "Synthetic users vs. human respondents", "url": "https://www.nngroup.com/articles/synthetic-users-vs-human-respondents/", "source": "Nielsen Norman Group"}
+          {"title": "Synthetic users vs. human respondents", "url": "https://www.nngroup.com/articles/synthetic-users-vs-human-respondents/", "source": "Nielsen Norman Group", "anchor": "Jakob Nielsen suggests"}
         ]
       }
     ]

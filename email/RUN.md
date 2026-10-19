@@ -74,7 +74,7 @@ Which ones go on which day (the headings are set by the builder):
 - **Thursday:** `people` (How they work) and `decision` (Decision toolkit)
 - **Friday:** `install` (Power-up)
 
-What each one is, and the fields it uses (every item needs `kind`, `title`, `url`, `intro` and at least one `links` entry `{"title", "url", "source"}`; `take` is optional and shows as "Our take"):
+What each one is, and the fields it uses (every item needs `kind`, `title`, `url`, `intro` and at least one `links` entry `{"title", "url", "source", "anchor"}`; `take` is optional and shows as "Our take"). There is no separate "More" line: each link is placed on its `anchor`, a short phrase copied exactly from the section's own text (intro, steps, tips, changes, define, why, take, code_note, try or an example). Pick a phrase that reads naturally as the link, and give each link a different phrase. The builder prints a warning if a link can't be placed; fix the anchor before sending:
 - `skill` (Skill of the week): one practical method a designer can apply this week (research, AI workflows, systems, accessibility, writing, working with engineers). `steps`: 3 to 5 short steps.
 - `prompt`: one tested AI prompt for a real design job (critique, synthesis, UX copy, edge cases). `tool`: which assistant it is for ("Any AI assistant" is fine); `code`: the prompt, ready to copy, with [brackets] for what the reader fills in; `code_note`: how to use it; `columns`: two lists, `{"label": "Use it for", "items": [2 items]}` and `{"label": "Not for", "items": [2 items]}`.
 - `tool` (Tool to master): a deeper workflow in a tool designers already use, beyond "what's new": `steps`: 3 to 5 moves that save real time, from the tool's own docs; `take` for plan or seat limits.

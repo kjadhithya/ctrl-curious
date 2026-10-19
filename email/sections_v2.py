@@ -15,7 +15,7 @@ What changes from section to section is the body, so each has its own recognisab
   decision  two option cards with filled headers, then a 'rule of thumb' bar
 All of it is table-based, inline-styled HTML that holds up in Gmail, Apple Mail and Outlook.
 """
-import html
+import html, json, re, sys
 from urllib.parse import quote
 
 SITE = 'https://ctrl-curious.vercel.app'
@@ -54,15 +54,70 @@ def take(l):
 
 
 def deeper(l, dark=False):
-    """One quiet line: 'More: Title (Source)', several links joined with a middle dot. No arrows, no label row."""
-    links = l.get('links') or []
-    if not links:
-        return ''
-    lc, sc = (PAPER, MAUVE) if dark else (INK, MUTED)
-    items = ' &nbsp;·&nbsp; '.join(
-        a(x['url'], x['title'], f'color:{lc};text-decoration:underline;text-decoration-color:{sc};text-underline-offset:3px;')
-        + (f' <span style="color:{sc};">({e(x["source"])})</span>' if x.get('source') else '') for x in links)
-    return f'<div style="font-size:14px;line-height:22px;color:{sc};padding-top:18px;">More: {items}</div>'
+    """Links now live inside the section's own text (see link_in_text); no separate 'More' line."""
+    return ''
+
+
+# ---------- links inside the body text ----------
+# Each entry in l['links'] is linked on a phrase that already appears in the section's text:
+# its 'anchor' if given, else its title, else a part of its source (e.g. an author's name).
+# The first match wins, in reading order. Code boxes and headings are never linked.
+TEXT_KEYS = ['intro', 'steps', 'tips', 'changes', 'define', 'why', 'take', 'code_note', 'try']
+_S, _M, _E = '\ue000', '\ue001', '\ue002'
+
+
+def link_in_text(l):
+    l = json.loads(json.dumps(l))
+    targets = []
+    for x in l.get('links') or []:
+        cands = [x.get('anchor'), x.get('title')] + [p.strip() for p in str(x.get('source') or '').split(',')]
+        cands = [c for c in cands if c and len(c) > 2]
+        placed = False
+        for c in cands:
+            lo = c.lower()
+            def spots():
+                for k in TEXT_KEYS:
+                    v = l.get(k)
+                    if isinstance(v, str):
+                        yield (k, None)
+                    elif isinstance(v, list):
+                        for i, it in enumerate(v):
+                            if isinstance(it, str):
+                                yield (k, i)
+                for i, ex in enumerate(l.get('examples') or []):
+                    yield ('examples', i)
+            for k, i in spots():
+                if k == 'examples':
+                    txt = l['examples'][i].get('text', '')
+                else:
+                    txt = l[k] if i is None else l[k][i]
+                j = txt.lower().find(lo)
+                if j < 0 or _S in txt[max(0, j - 1):j + len(c) + 1]:
+                    continue
+                new = txt[:j] + _S + str(len(targets)) + _M + txt[j:j + len(c)] + _E + txt[j + len(c):]
+                if k == 'examples':
+                    l['examples'][i]['text'] = new
+                elif i is None:
+                    l[k] = new
+                else:
+                    l[k][i] = new
+                placed = True
+                break
+            if placed:
+                break
+        if not placed:
+            print(f"warning: link not placed in text ({l.get('kind')}): {x.get('title')} -> set 'anchor' to a phrase from the text", file=sys.stderr)
+        targets.append(x['url'])
+    return l, targets
+
+
+def apply_links(html_str, targets, dark=False):
+    col, line = (PAPER, MAUVE) if dark else (INK, WINE)
+    def rep(m):
+        url = targets[int(m.group(1))]
+        return (f'<a href="{html.escape(url)}" target="_blank" style="color:{col};text-decoration:underline;'
+                f'text-decoration-color:{line};text-underline-offset:3px;">{m.group(2)}</a>')
+    return re.sub(_S + '(\\d+)' + _M + '(.*?)' + _E, rep, html_str, flags=re.S)
 
 
 def rule():
@@ -241,7 +296,9 @@ def render(learns, prev_surface='paper'):
         fn = RENDER.get(l.get('kind'))
         if not fn:
             continue
-        surface, inner = fn(l)
+        linked, targets = link_in_text(l)
+        surface, inner = fn(linked)
+        inner = apply_links(inner, targets)
         if surface == 'band':
             out += band_row(inner)
         else:

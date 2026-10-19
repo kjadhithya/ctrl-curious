@@ -121,7 +121,22 @@ function subscribers() {
     }));
     if (threads.length < 100) break;
   }
-  return Object.keys(latest).filter(e => latest[e].action === 'subscribe' && e !== EDITOR && EMAIL_RE.test(e));
+  const dead = bounced();
+  return Object.keys(latest).filter(e => latest[e].action === 'subscribe' && e !== EDITOR && EMAIL_RE.test(e) && !dead[e]);
+}
+
+// Addresses that bounced ("Address not found") when we emailed them, so typos stop getting mail.
+function bounced() {
+  const dead = {};
+  GmailApp.search('from:mailer-daemon subject:"Delivery Status Notification" newer_than:180d', 0, 100).forEach(t => {
+    const msgs = t.getMessages();
+    if (!msgs.some(m => /Ctrl\+Curious/.test(m.getSubject()))) return;
+    msgs.forEach(m => {
+      if (/mailer-daemon/i.test(m.getFrom())) return;
+      m.getTo().split(',').forEach(a => { const x = (a.match(/[^<\s]+@[^>\s]+/) || [])[0]; if (x) dead[x.toLowerCase()] = true; });
+    });
+  });
+  return dead;
 }
 
 function unsubUrl(email) { return SITE + '/unsubscribe?e=' + encodeURIComponent(email); }

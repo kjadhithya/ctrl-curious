@@ -1,11 +1,24 @@
 import { cleanEmail, readBody, notify, json, resendKey } from './_notify.js';
 import { welcome } from './_welcome.js';
+import { promises as dns } from 'node:dns';
+
+// Catch typos like name@company.asd: the domain must be able to receive email.
+async function domainTakesMail(email) {
+  const domain = email.split('@')[1];
+  try {
+    const mx = await Promise.race([dns.resolveMx(domain), new Promise((_, no) => setTimeout(() => no(new Error('timeout')), 2500))]);
+    return mx.length > 0;
+  } catch (e) {
+    return !['ENOTFOUND', 'ENODATA', 'ESERVFAIL'].includes(e.code); // unsure (timeout etc.): let it through
+  }
+}
 
 export async function POST(request) {
   const body = await readBody(request);
   if (body.website) return json({ ok: true }); // honeypot: bots fill the hidden field
   const email = cleanEmail(body.email);
   if (!email) return json({ ok: false, error: 'Please enter a valid email address.' }, 400);
+  if (!(await domainTakesMail(email))) return json({ ok: false, error: `Check the address: ${email.split('@')[1]} can't receive email.` }, 400);
   try {
     // Welcome first, so the note to the editor can say whether it went out.
     const w = await welcome(email);

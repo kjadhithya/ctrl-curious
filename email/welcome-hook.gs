@@ -14,7 +14,7 @@ const SECRET = 'PASTE_THE_SECRET_HERE';
 const SITE = 'https://ctrl-curious.vercel.app';
 const EDITOR = 'kjadhithya05@gmail.com';
 const WELCOME = 'Welcome to Ctrl+Curious';
-const EMAIL_RE = /^[^\s@<>()[\]\\,;:"]{1,64}@[A-Za-z0-9.-]{1,253}\.[A-Za-z]{2,24}$/;
+const EMAIL_RE = /^(?!\.)(?!.*\.\.)[^\s@<>()[\]\\,;:"]{1,64}(?<!\.)@(?!-)[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,24}$/;
 
 // ---------- run once ----------
 function setup() {
@@ -79,12 +79,17 @@ function sendIssue() {
         p.setProperty(key, JSON.stringify(done));  // carry on in the next run
         return;
       }
-      welcome(email);
-      const unsub = unsubUrl(email);
-      GmailApp.sendEmail(email, latest.subject, text.split(SITE + '/unsubscribe\n').join(unsub + '\n'), {
-        htmlBody: html.split('href="' + SITE + '/unsubscribe"').join('href="' + unsub + '"'),
-        name: 'Ctrl+Curious',
-      });
+      // One bad address must never stop everyone after it from getting the issue.
+      try {
+        welcome(email);
+        const unsub = unsubUrl(email);
+        GmailApp.sendEmail(email, latest.subject, text.split(SITE + '/unsubscribe\n').join(unsub + '\n'), {
+          htmlBody: html.split('href="' + SITE + '/unsubscribe"').join('href="' + unsub + '"'),
+          name: 'Ctrl+Curious',
+        });
+      } catch (err) {
+        Logger.log('Skipped ' + email + ': ' + err);
+      }
       done.push(email);
       p.setProperty(key, JSON.stringify(done));
     }

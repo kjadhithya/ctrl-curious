@@ -2,7 +2,7 @@
 // The daily run reads these notes from Gmail to build the subscriber list.
 // Resend's free plan can only send to the account owner, which is exactly who these go to.
 const OWNER = 'kjadhithya05@gmail.com';
-const EMAIL_RE = /^[^\s@<>()[\]\\,;:"]{1,64}@[A-Za-z0-9.-]{1,253}\.[A-Za-z]{2,24}$/;
+const EMAIL_RE = /^(?!\.)(?!.*\.\.)[^\s@<>()[\]\\,;:"]{1,64}(?<!\.)@(?!-)[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,24}$/;
 
 export function cleanEmail(raw) {
   const e = String(raw || '').trim().toLowerCase();

@@ -65,13 +65,13 @@ img{max-width:100%;display:block;-webkit-user-drag:none;user-select:none}
 /* motion: the wave surges forward and settles; each swell band lifts on its own rhythm */
 .art .wave{transform-origin:82% 88%;animation:surge 7s ease-in-out infinite;will-change:transform}
 .art .band,.art-ext .band{height:auto;bottom:auto;animation:bob 6s ease-in-out infinite;will-change:transform}
-.b1{--lift:-.35%;animation-duration:6.4s!important;animation-delay:-.4s!important}
-.b2{--lift:-.5%;animation-duration:5.8s!important;animation-delay:-1.6s!important}
-.b3{--lift:-.6%;animation-duration:6.9s!important;animation-delay:-2.9s!important}
-.b4{--lift:-.75%;animation-duration:5.4s!important;animation-delay:-.9s!important}
-.b5{--lift:-.85%;animation-duration:6.2s!important;animation-delay:-3.7s!important}
-.b6{--lift:-1%;animation-duration:5.1s!important;animation-delay:-2.2s!important}
-@keyframes surge{0%,100%{transform:translateY(0) rotate(0) scale(1)}45%{transform:translateY(-.9%) rotate(-1.6deg) scale(1.02)}70%{transform:translateY(-.3%) rotate(-.5deg) scale(1.006)}}
+.b1{--lift:-.55%;animation-duration:6.4s!important;animation-delay:-.4s!important}
+.b2{--lift:-.75%;animation-duration:5.8s!important;animation-delay:-1.6s!important}
+.b3{--lift:-.9%;animation-duration:6.9s!important;animation-delay:-2.9s!important}
+.b4{--lift:-1.1%;animation-duration:5.4s!important;animation-delay:-.9s!important}
+.b5{--lift:-1.25%;animation-duration:6.2s!important;animation-delay:-3.7s!important}
+.b6{--lift:-1.5%;animation-duration:5.1s!important;animation-delay:-2.2s!important}
+@keyframes surge{0%,100%{transform:translateY(0) rotate(0) scale(1)}45%{transform:translateY(-1.4%) rotate(-2.4deg) scale(1.03)}70%{transform:translateY(-.45%) rotate(-.8deg) scale(1.01)}}
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(var(--lift,-.5%))}}
 @media (prefers-reduced-motion:reduce){.art img,.art-ext img{animation:none!important}}
 @media (min-aspect-ratio:16/9){
@@ -155,8 +155,8 @@ img{max-width:100%;display:block;-webkit-user-drag:none;user-select:none}
 section.band{container-type:inline-size}
 .band>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 100%}
 /* the wave-scale shore drifts gently from side to side; it tiles, so it never shows an edge */
-.band-waves{position:absolute;left:0;right:0;bottom:0;height:max(16.15%,5.165cqw);background:url(/assets/blog/signup_moon_shore_waves.png) repeat-x 0 0/auto 100%;pointer-events:none;animation:drift 8s ease-in-out infinite alternate;will-change:background-position}
-@keyframes drift{from{background-position-x:0}to{background-position-x:34px}}
+.band-waves{position:absolute;left:0;right:0;bottom:0;height:max(16.15%,5.165cqw);background:url(/assets/blog/signup_moon_shore_waves.png) repeat-x 0 0/auto 100%;pointer-events:none;animation:drift 7s ease-in-out infinite alternate;will-change:background-position}
+@keyframes drift{from{background-position-x:0}to{background-position-x:56px}}
 @media (prefers-reduced-motion:reduce){.band-waves{animation:none}}
 .band::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none}
 .band-copy{position:relative;z-index:2;display:flex;flex-direction:column;gap:20px;color:var(--paper);padding-top:56px;padding-bottom:56px;width:100%}

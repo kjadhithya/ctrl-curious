@@ -158,7 +158,7 @@ def prompt(l):
     if l.get('columns'):
         cells = []
         for c in l['columns'][:2]:
-            items = ''.join(f'<div style="font-size:15px;line-height:23px;color:{INK};padding-top:6px;">&#8212;&nbsp; {e(x)}</div>' for x in c['items'])
+            items = ''.join(f'<div style="font-size:15px;line-height:23px;color:{INK};padding-top:6px;padding-left:12px;text-indent:-12px;"><span style="color:{WINE};font-weight:700;">&#8250;</span>&nbsp; {e(x)}</div>' for x in c['items'])
             cells.append(f'<td class="wk" width="50%" valign="top"><div style="font-size:14px;line-height:20px;font-weight:700;color:{WINE};">{e(c["label"])}</div>{items}</td>')
         cols = f'{TABLE} style="margin-top:20px;"><tr>' + '<td class="wks" width="20" style="font-size:0;line-height:0;">&nbsp;</td>'.join(cells) + '</tr></table>'
     return 'paper', heading('Prompt of the week', f'Ready to copy · for {tool}') + title(l) + intro(l) + card + note + cols + take(l) + deeper(l)
@@ -242,7 +242,7 @@ def decision(l):
     heads = [INK, PLUM]
     cells = []
     for k, c in enumerate(cols[:2]):
-        items = ''.join(f'<div style="font-size:15px;line-height:23px;color:{INK};padding-top:8px;">&#8212;&nbsp; {e(x)}</div>' for x in c['items'])
+        items = ''.join(f'<div style="font-size:15px;line-height:23px;color:{INK};padding-top:8px;padding-left:12px;text-indent:-12px;"><span style="color:{WINE};font-weight:700;">&#8250;</span>&nbsp; {e(x)}</div>' for x in c['items'])
         cells.append(f'<td class="wk" width="50%" valign="top" bgcolor="{PAPER}" style="background-color:{PAPER};border:1px solid {CLAY};">'
                      f'<div style="background-color:{heads[k]};padding:12px 16px;font-size:16px;line-height:22px;font-weight:700;color:{PAPER};">{e(c["label"])}</div>'
                      f'<div style="padding:6px 16px 16px 16px;">{items}</div></td>')

@@ -295,25 +295,57 @@ function issuePage(i, idx) {
   const LT = { skill: 'Skill of the week', prompt: 'Prompt of the week', tool: 'Tool to master', steal: 'Steal this', brief: '10-minute brief', people: 'How they work', decision: 'Decision toolkit', install: 'Power-up', pattern: 'Pattern breakdown', workflow: 'Workflow upgrade' };
   let learns = ed.learn || [];
   if (!Array.isArray(learns)) learns = [learns];
-  const learnHtml = learns.map((l, n) => {
+  // Source links sit on a phrase inside the section's own text (same rules as the email builder); no 'More' line.
+  const TEXT_KEYS = ['intro', 'steps', 'tips', 'changes', 'define', 'why', 'take', 'code_note', 'try'];
+  const [S_, M_, E_] = ['\ue000', '\ue001', '\ue002'];
+  const linkInText = (src) => {
+    const l = JSON.parse(JSON.stringify(src));
+    const targets = [];
+    for (const x of l.links || []) {
+      const cands = [x.anchor, x.title, ...String(x.source || '').split(',').map((p) => p.trim())].filter((c) => c && c.length > 2);
+      let placed = false;
+      const spots = [];
+      for (const k of TEXT_KEYS) {
+        if (typeof l[k] === 'string') spots.push([l, k]);
+        else if (Array.isArray(l[k])) l[k].forEach((it, i) => typeof it === 'string' && spots.push([l[k], i]));
+      }
+      (l.examples || []).forEach((ex) => spots.push([ex, 'text']));
+      for (const c of cands) {
+        for (const [o, k] of spots) {
+          const txt = o[k] || '';
+          const j = txt.toLowerCase().indexOf(c.toLowerCase());
+          if (j < 0 || txt.slice(Math.max(0, j - 1), j + c.length + 1).includes(S_)) continue;
+          o[k] = txt.slice(0, j) + S_ + targets.length + M_ + txt.slice(j, j + c.length) + E_ + txt.slice(j + c.length);
+          placed = true;
+          break;
+        }
+        if (placed) break;
+      }
+      if (!placed) console.warn(`warning: link not placed in text (${l.kind}): ${x.title}`);
+      targets.push(x.url);
+    }
+    return [l, targets];
+  };
+  const applyLinks = (h, targets) => h.replace(new RegExp(S_ + '(\\d+)' + M_ + '([\\s\\S]*?)' + E_, 'g'), (_, n, t) => `<a class="inl" href="${esc(safeUrl(targets[+n]))}">${t}</a>`);
+  const learnHtml = learns.map((src, n) => {
+    const [l, targets] = linkInText(src);
     let b = '';
     if (l.person && l.person.name) b += `<p class="who"><b>${esc(l.person.name)}</b> ${esc(l.person.role || '')}</p>`;
     if (l.define) b += `<p class="define">${esc(l.define)}</p>`;
     if (l.skill && l.skill.name) b += `<p class="who"><code>${esc(l.skill.name)}</code> ${esc([l.skill.by, l.skill.cost].filter(Boolean).join(' · '))}</p>`;
     if (l.changes) b += `<small class="lbl">What it changes</small><ul class="dots">${l.changes.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>`;
     if (l.before) b += `<div class="ba"><div><small>Before</small><p>${esc(l.before)}</p></div><div class="after"><small>After</small><p>${esc(l.after || '')}</p></div></div>`;
-    if (l.steps) b += `<ol class="steps">${l.steps.map((x) => `<li>${esc(x)}</li>`).join('')}</ol>`;
+    if (l.steps) b += `<ol class="steps">${l.steps.map((x) => `<li><span>${esc(x)}</span></li>`).join('')}</ol>`;
     if (l.columns) b += `<div class="cols">${l.columns.slice(0, 2).map((c) => `<div><small>${esc(c.label)}</small><ul>${c.items.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>`).join('')}</div>`;
     if (l.examples) b += `<div class="exs">${l.examples.map((x) => `<div>${L(x.url, x.name, 'nm')}<p>${esc(x.text)}</p></div>`).join('')}</div>`;
-    if (l.tips) b += `<small class="lbl">${esc(l.tips_label || 'How to design for it')}</small><ol class="steps">${l.tips.map((x) => `<li>${esc(x)}</li>`).join('')}</ol>`;
+    if (l.tips) b += `<small class="lbl">${esc(l.tips_label || 'How to design for it')}</small><ol class="steps">${l.tips.map((x) => `<li><span>${esc(x)}</span></li>`).join('')}</ol>`;
     if (l.why) b += `<small class="lbl">Why it matters to you</small><p>${esc(l.why)}</p>`;
     if (l.install) b += `<small class="lbl">Install it</small>${l.install.map((x, k) => `<p class="inst"><b>${k ? 'Or, ' + esc(x.where.charAt(0).toLowerCase() + x.where.slice(1)) : esc(x.where)}</b> ${esc(x.how || '')}</p>${x.code ? `<pre class="code">${esc(x.code)}</pre>` : ''}`).join('')}`;
     if (l.try) b += `<small class="lbl">Then try asking</small><p class="define">${esc(l.try)}</p>`;
     if (l.rule) b += `<p class="take"><b>Rule of thumb</b> ${esc(l.rule)}</p>`;
     if (l.code) b += `<pre class="code">${esc(l.code)}</pre>${l.code_note ? `<small class="cn">${esc(l.code_note)}</small>` : ''}`;
     if (l.take) b += `<p class="take"><b>Our take</b> ${esc(l.take)}</p>`;
-    const links = (l.links || []).map((x) => `${L(x.url, x.title)}${x.source ? ` <span>(${esc(x.source)})</span>` : ''}`).join(' &nbsp;·&nbsp; ');
-    return `<section class="meet ed-learn" aria-labelledby="learn-h${n}"><h2 class="h" id="learn-h${n}">${LT[l.kind] || 'Learn this week'}</h2>${L(l.url, l.title, 'ttl')}<p class="intro">${esc(l.intro)}</p>${b}${links ? `<p class="deeper">More: ${links}</p>` : ''}<span class="grain"></span></section>`;
+    return applyLinks(`<section class="meet ed-learn" aria-labelledby="learn-h${n}"><h2 class="h" id="learn-h${n}">${LT[l.kind] || 'Learn this week'}</h2>${L(l.url, l.title, 'ttl')}<p class="intro">${esc(l.intro)}</p>${b}<span class="grain"></span></section>`, targets);
   }).join('');
   edMid = edMid + learnHtml;
   const watchTitle = i.watch.length > 3 ? 'Weekend watchlist' : 'Watch';

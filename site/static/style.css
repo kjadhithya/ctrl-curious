@@ -433,7 +433,7 @@ section.band{container-type:inline-size}
 .ed-learn .cols{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .ed-learn .cols small,.ed-learn .ba small{font-size:14px;font-weight:700;color:var(--wine)}
 .ed-learn .cols ul{margin:8px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
-.ed-learn .cols li{font-size:16px;line-height:1.5}.ed-learn .cols li::before{content:"— ";color:var(--muted)}
+.ed-learn .cols li{font-size:16px;line-height:1.5;padding-left:15px;text-indent:-15px}.ed-learn .cols li::before{content:"\203A\00a0\00a0";color:var(--wine);font-weight:700}
 .ed-learn .exs>div{border-top:1px solid var(--clay);padding:12px 0}
 .ed-learn .exs .nm{font-weight:700;font-size:17px;text-decoration:none}.ed-learn .exs p{margin:2px 0 0;font-size:16px;line-height:1.5;color:var(--muted)}
 .ed-learn .ba{display:grid;grid-template-columns:1fr 1fr;gap:12px}
@@ -442,7 +442,7 @@ section.band{container-type:inline-size}
 .ed-learn .code{margin:0;background:var(--ink);color:var(--paper);padding:16px 18px;font:14px/1.55 Menlo,Consolas,monospace;white-space:pre-wrap;word-break:break-word}
 .ed-learn .cn{font-size:14px;color:var(--muted)}
 .ed-learn .take{margin:0;background:var(--paper);padding:14px 16px;font-size:16px;line-height:1.5}.ed-learn .take b{color:var(--wine)}
-.ed-learn .deeper{margin:0;font-size:15px;line-height:1.6;color:var(--muted)}.ed-learn .deeper a{text-decoration-color:var(--muted)}.ed-learn .deeper span{color:var(--muted)}
+.ed-learn a.inl{color:inherit;font:inherit;text-decoration:underline;text-decoration-color:var(--wine,#8A2E3B);text-decoration-thickness:1px;text-underline-offset:3px}.ed-learn a.inl:hover{color:var(--wine,#8A2E3B)}
 .ed-learn .lbl{font-size:14px;font-weight:700;color:var(--wine);margin-bottom:-8px}
 .ed-learn .define{margin:0;border-left:4px solid var(--ochre,#C8913A);padding:4px 0 4px 16px;font-size:19px;line-height:1.5;font-weight:600}
 .ed-learn .who{margin:0;font-size:16px;color:var(--muted)}.ed-learn .who b{font-size:20px;color:var(--ink);margin-right:6px}.ed-learn .who code{font:700 15px Menlo,Consolas,monospace;background:var(--plum);color:var(--paper);padding:4px 8px;margin-right:6px}

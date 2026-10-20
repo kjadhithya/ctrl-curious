@@ -51,24 +51,23 @@ sea(im, 470, c['teal'], c['foamb'], gap=16, amp=3, freq=30)
 finish(im, OUT + 'tech_03_headphones.jpg', seed=43)
 
 # 4 Code window: an editor at night, code as coloured bars, a blinking caret
-im = canvas(c['clay'], c['paper'], 1)
-disc(im, 1100, 96, 44, c['wine'])
-rr(im, 176, 78, 1036, 538, 18, c['mauve'])
-rr(im, 170, 70, 1030, 530, 18, c['plum'])
-rr(im, 170, 70, 1030, 118, 18, c['deep']); rr(im, 170, 100, 1030, 118, 0, c['deep'])
+im = canvas(c['plum'], c['deep'], 1)
+rr(im, 170, 70, 1030, 530, 18, c['navy'])
+rr(im, 170, 70, 1030, 118, 18, c['indigo']); rr(im, 170, 100, 1030, 118, 0, c['indigo'])
 for k, col in enumerate([c['wine'], c['ochre'], c['moss']]): disc(im, 202 + k*28, 94, 8, col)
 rng = np.random.default_rng(44)
 y = 150
 for ln in range(11):
-    disc(im, 215, y + 8, 3, c['mauve'])
+    disc(im, 215, y + 8, 3, c['prussian'])
     x = 250 + (ln in (2, 3, 4, 7, 8)) * 40 + (ln in (3, 8)) * 40
     for seg in range(rng.integers(2, 5)):
         w_ = int(rng.integers(40, 150))
-        rr(im, x, y, x + w_, y + 16, 8, [c['paper'], c['ochre'], c['mist'], c['skyb'], c['clay']][int(rng.integers(0, 5))])
+        rr(im, x, y, x + w_, y + 16, 8, [c['skyb'], c['mauve'], c['ochre'], c['teal'], c['clay']][int(rng.integers(0, 5))])
         x += w_ + 14
     if ln == 6: rr(im, x + 4, y - 4, x + 10, y + 20, 2, c['paper'])
     y += 34
-finish(im, OUT + 'tech_04_code_plum.jpg', amt=15, seed=44)
+disc(im, 1040, 120, 0, c['wine'])
+finish(im, OUT + 'tech_04_code.jpg', amt=15, seed=44)
 
 # 5 Loading: a progress ring eclipsing the sun, a progress bar for a horizon
 im = canvas(c['paper'], c['clay'], 1.2)

@@ -91,7 +91,7 @@ for k, r in enumerate([30, 58, 86, 114]):
 disc(scr, tx, ty, 16, c['wine'])
 rr(scr, 600, 150, 850, 214, 14, c['paper'])                                     # the download card
 rr(scr, 620, 192, 830, 202, 5, c['clay']); rr(scr, 620, 192, 752, 202, 5, c['teal'])
-lib.text(scr, (620, 182), '2 min left', lib.font('Figtree', 22, wght=700), c['ink'], anchor='ls')
+rr(scr, 620, 164, 736, 178, 7, c['ink'])                                     # wireframe text block in place of a label
 im.paste(scr, (0, 0), m)
 poly(im, [(230, 440), (970, 440), (1030, 482), (170, 482)], c['prussian'])
 rr(im, 520, 440, 680, 452, 5, c['indigo'])

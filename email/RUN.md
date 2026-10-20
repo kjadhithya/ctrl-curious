@@ -20,14 +20,14 @@ Issue numbering: issue 001 was Thursday 15 October 2026. Count weekdays (Mon–F
 
 ## Hero image
 
-Each weekday has its own rotating set of hero images. Get today's URL with:
+Each weekday has its own rotating set of 10 hero images (assets/email/days2/<day>/). Get today's image with:
 
 ```
 curl -sSL https://raw.githubusercontent.com/kjadhithya/ctrl-curious/main/email/pick_hero.py -o pick_hero.py
-python3 pick_hero.py
+python3 pick_hero.py --alt
 ```
 
-Use the URL it prints for `{{HERO_URL}}`. If it prints nothing (that weekday has no set yet), use
+It prints two lines: the URL (use it for `{{HERO_URL}}` and the issue's `hero`) and the alt text (use it as `hero_alt`). Never pick or invent a different image. If it prints nothing, use
 `https://ctrl-curious.vercel.app/assets/email/wave_hero.jpg`.
 
 ## Sending

@@ -185,7 +185,7 @@ ${signupForm('email-hero')}
 <div class="strip" aria-hidden="true"></div>
 ${latestHtml}
 <section class="week wrap" id="week" aria-labelledby="week-h">
-<div class="week-head"><h2 class="h" id="week-h">The week, by day</h2><p>Every weekday is its own edition</p></div>
+<div class="week-head"><h2 class="h" id="week-h">The week, by day</h2></div>
 <div class="days">${days}</div><span class="grain"></span>
 </section>
 <section class="recent wrap" aria-labelledby="recent-h">

@@ -68,9 +68,9 @@ pts = [(60, 470), (190, 380), (300, 420), (420, 260), (530, 330), (650, 170), (7
 poly(im, pts + [(1140, 600), (60, 600)], c['plum'])
 pts2 = [(x, y + 90 + 20 * math.sin(x / 90)) for x, y in pts]
 poly(im, pts2 + [(1140, 600), (60, 600)], c['deep'])
+poly(im, [(650, 170), (690, 205), (668, 215), (650, 200), (632, 215), (610, 205)], c['paper'])   # snow first, under the line
 line(im, pts, c['wine'], 5)
 for x, y in pts: disc(im, x, y, 9, c['paper']); ring(im, x, y, 9, c['wine'], 3)
-poly(im, [(650, 170), (690, 205), (668, 215), (650, 200), (632, 215), (610, 205)], c['paper'])
 disc(im, 650, 80, 40, c['ochre'])
 rr(im, 700, 58, 820, 100, 10, c['ink']); text(im, 716, 64, '4,810 m', 22, c['paper'], 700)
 finish(im, OUT + 'nature2_04_line_chart.jpg', seed=54)

@@ -76,9 +76,12 @@ arcband(im, 600, 250, 190, 18, 0, 360, c['mauve'])
 arcband(im, 600, 250, 190, 18, -90, 160, c['plum'])
 disc(im, 600 + 190 * math.cos(math.radians(160)), 250 + 190 * math.sin(math.radians(160)), 9, c['plum'])
 text(im, 545, 215, '72%', 56, c['paper'], 800)
-rr(im, 120, 500, 1080, 524, 12, c['mauve'])
-rr(im, 120, 500, 812, 524, 12, c['teal'])
-for k in range(3): line(im, [(x, 545 + k * 16 + math.sin(x / 40 + k) * 3) for x in range(0, 1201, 5)], c['mauve'], 2)
+sea(im, 500, c['teal'], c['foamb'], gap=16, amp=3, freq=30)            # real sea below the horizon
+for k in range(6):                                                         # the sun's reflection
+    w_ = 150 - k * 22
+    rr(im, 600 - w_/2, 528 + k * 12, 600 + w_/2, 533 + k * 12, 2, c['wine'])
+rr(im, 120, 482, 1080, 500, 9, c['mauve'])                               # progress bar on the horizon
+rr(im, 120, 482, 812, 500, 9, c['plum'])
 finish(im, OUT + 'tech_05_loading.jpg', seed=45)
 
 # 6 Signal: wifi arcs rising off a little router like a sunrise over the sea

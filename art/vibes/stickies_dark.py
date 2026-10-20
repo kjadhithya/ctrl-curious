@@ -5,11 +5,13 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from vhelp import *
 
 # Dark FigJam: stickies, a wavy connector, and a stamp, on a dotted board
+MIX = lambda a, b, t: tuple(int(x*(1-t) + y*t) for x, y in zip(a, b))
+TOP, BOT = MIX(c['teal'], c['foamb'], 0.30), MIX(c['teal'], c['foamb'], 0.18)
 im = canvas(c['teal'], c['pine'], 1)
 d = ImageDraw.Draw(im)
 for x in range(20, 1200, 28):
     for y in range(20, 600, 28):
-        d.ellipse([(x-2)*S, (y-2)*S, (x+2)*S, (y+2)*S], fill=tuple(int(a*0.55 + b*0.45) for a, b in zip(c['teal'], c['foamb'])))
+        d.ellipse([(x-2)*S, (y-2)*S, (x+2)*S, (y+2)*S], fill=MIX(c['teal'], c['foamb'], 0.78))
 def sticky(x, y, s, col, ang, lines_col):
     st = Image.new('RGBA', (int(s*S*1.6), int(s*S*1.6)), (0, 0, 0, 0)); sd = ImageDraw.Draw(st)
     o = s*S*0.3

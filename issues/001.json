@@ -5,6 +5,8 @@
   "dek": "Specs for design languages, why design still wins, accessibility for the agent era, and what makes an AI assistant actually useful.",
   "hero": "https://ctrl-curious.vercel.app/assets/email/days/thu/thu_01.jpg",
   "hero_alt": "A wine sun over teal and green hills",
+  "site_hero": "assets/blog/issues/issue_001.jpg",
+  "site_hero_alt": "An open rulebook of ticked rules and colour swatches, stickies pinned to its pages and an agent cursor reading along",
   "summary": "Figma brought Config to Bengaluru this week, and its biggest launch is [a new Specs editor](https://techcrunch.com/2026/10/14/figma-announces-new-features-to-define-how-agents-work-on-its-platform/) lets teams document their design language in Markdown so people and AI agents work from the same rules, while code layers move into public beta. On stage, Dylan Field [argued that design is still how products win](https://t2online.in/tech/tech-news/-design-is-how-you-win----figma-ceo-dylan-field-on-why-ai-can-t-replace-designers/2008651), naming India as Figma's second-largest market by daily use. That agent-heavy future raises the bar on inclusion too, with Deque making the case that [accessibility has to be a foundation](https://www.deque.com/blog/for-your-business-to-thrive-in-the-agentic-ai-era-treat-accessibility-as-foundational-to-your-ai-strategy/) of any AI strategy rather than an afterthought. If you already work with agents, NN/g's guide to [keeping a context library in shape](https://www.nngroup.com/articles/context-libraries/) is a practical next step, and NN/g's hands-on look at the new Siri shows [why access to context beats raw intelligence](https://www.nngroup.com/articles/ai-assistant-context/) when designing assistants.",
   "reads": [
     {

@@ -6,6 +6,8 @@
   "preheader": "Synthetic users reach the same answer as people, with far less range. Plus Figma Specs and the iPhone Duo week.",
   "hero": "https://ctrl-curious.vercel.app/assets/email/days/mon/mon_02.jpg",
   "hero_alt": "Grainy illustration of two curling blue waves under a pale moon over a green sea",
+  "site_hero": "assets/blog/issues/issue_003.jpg",
+  "site_hero_alt": "Two lines charted over a mountain range: a jagged human line along the peaks and a smooth, flattened synthetic line across them",
   "summary": "Nielsen Norman Group put 120 synthetic respondents against 604 real professionals and found they [reach the same headline answer but collapse into a dozen labels where humans gave fifty](https://www.nngroup.com/articles/synthetic-users-vs-human-respondents/), a sharp warning for anyone using AI personas in discovery. Paul Boag argues in Smashing that most teams are [rolling out AI like a software licence instead of a culture change](https://www.smashingmagazine.com/2026/10/is-your-organization-messing-up-ai-adoption/), and Jakob Nielsen adds that [AI now generates faster than people can review](https://jakobnielsenphd.substack.com/p/ux-roundup-20261016), so interfaces should offer a few distinct directions first. From Bengaluru, Dylan Field used Config India to [launch Figma Specs and code layers and tell builders not to hand their thinking to AI](https://dqindia.com/news/igma-ai-building-teams-config-india-2026-12680992). And Google is rolling out a [rebuilt Translate app on Android](https://www.androidheadlines.com/2026/10/google-translate-android-app-redesign.html) with bottom navigation and a much bigger input card.",
   "reads": [
     {

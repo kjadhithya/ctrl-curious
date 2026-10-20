@@ -57,7 +57,8 @@ const issues = fs
       long: longDate(p),
       short: `${p.d} ${MONTHS[p.m - 1]} ${p.y}`,
       href: `/issues/${pad(j.issue)}`,
-      heroSrc: img(j.hero),
+      heroSrc: img(j.site_hero || j.hero),   // site_hero: optional website-only artwork; the sent email keeps 'hero'
+      hero_alt: j.site_hero ? (j.site_hero_alt || j.hero_alt) : j.hero_alt,
       reads: j.reads || [],
       watch: j.watch || [],
       meetups: j.meetups || [],
@@ -512,6 +513,7 @@ if (fs.existsSync(path.join(ROOT, 'email/issues'))) {
 }
 copy('assets/blog/hero');
 copy('assets/blog/days');
+copy('assets/blog/issues');
 for (const f of ['assets/blog/seigaiha_tile.jpg', 'assets/blog/about_ochre_dawn.jpg', 'assets/email/wave_hero.jpg', 'assets/blog/banner_swell_wave_mountain_sun_tall.jpg', 'assets/blog/signup_moon_shore.jpg', 'assets/blog/signup_moon_shore_bg.jpg', 'assets/blog/signup_moon_shore_waves.png']) copy(f);
 
 write('index.html', home());

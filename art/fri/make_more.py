@@ -91,4 +91,34 @@ for x in range(8,GW,16):
     pdisc(im,x,56,4,c['indigo']); R(im,x-7,60,15,15,c['indigo'])
 pdisc(im,72,55,4,c['plum']); R(im,65,59,15,16,c['plum'])
 finish(im,'fri_11.jpg',seed=11)
+# 12 Sleeping in: a wave-pattern blanket, late-morning sun in the window, the clock at 10:30
+DIG={'1':['010','110','010','010','111'],'0':['111','101','101','101','111'],'3':['111','001','111','001','111'],':':['0','1','0','1','0']}
+def ptext(im,x,y,s,col):
+    for ch in s:
+        g=DIG[ch]
+        for r,row in enumerate(g):
+            for q,v in enumerate(row):
+                if v=='1': R(im,x+q,y+r,1,1,col)
+        x+=len(g[0])+1
+ZZ=['11111','00010','00100','01000','11111']
+def zz(im,x,y,col,sc=1):
+    for r,row in enumerate(ZZ):
+        for q,v in enumerate(row):
+            if v=='1': R(im,x+q*sc,y+r*sc,sc,sc,col)
+im=grid(c['mauve'])
+R(im,0,50,GW,25,c['plum'])
+R(im,90,6,44,32,c['dark']); R(im,93,9,38,26,c['foamb']); pdisc(im,118,18,6,c['ochre'])
+R(im,111,9,2,26,c['dark']); R(im,93,21,38,2,c['dark'])
+R(im,10,30,8,32,c['dark'])                                # headboard
+R(im,18,46,96,14,c['paper'])                              # mattress
+R(im,22,40,20,8,c['foamb'])                               # pillow
+for y in range(44,58):
+    for x in range(40,112):
+        k=(y-44+2*round(np.sin(2*np.pi*x/12)))//3
+        im.putpixel((x,y),[c['teal'],c['prussian'],c['skyb']][k%3])
+R(im,18,60,96,3,c['dark']); R(im,20,63,3,6,c['dark']); R(im,109,63,3,6,c['dark'])
+R(im,118,51,22,11,c['wine']); R(im,120,53,18,7,c['ink'])  # bedside clock
+ptext(im,121,54,'10:30',c['ochre'])
+zz(im,46,32,c['dark']); zz(im,54,24,c['dark'],2)
+finish(im,'fri_12.jpg',seed=12)
 print('done')

@@ -11,7 +11,7 @@ im = canvas(c['teal'], c['pine'], 1)
 d = ImageDraw.Draw(im)
 for x in range(20, 1200, 28):
     for y in range(20, 600, 28):
-        d.ellipse([(x-2)*S, (y-2)*S, (x+2)*S, (y+2)*S], fill=MIX(c['teal'], c['foamb'], 0.78))
+        d.ellipse([(x-1.8)*S, (y-1.8)*S, (x+1.8)*S, (y+1.8)*S], fill=MIX(c['teal'], c['foamb'], 0.6))
 def sticky(x, y, s, col, ang, lines_col):
     st = Image.new('RGBA', (int(s*S*1.6), int(s*S*1.6)), (0, 0, 0, 0)); sd = ImageDraw.Draw(st)
     o = s*S*0.3

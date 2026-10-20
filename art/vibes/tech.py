@@ -74,7 +74,8 @@ im = canvas(c['paper'], c['clay'], 1.2)
 disc(im, 600, 250, 150, c['wine'])
 arcband(im, 600, 250, 190, 18, 0, 360, c['mauve'])
 arcband(im, 600, 250, 190, 18, -90, 160, c['plum'])
-disc(im, 600 + 190 * math.cos(math.radians(160)), 250 + 190 * math.sin(math.radians(160)), 9, c['plum'])
+rc = 190 - 9                                   # the arc is drawn inward from r, so its centre line is r - width/2
+disc(im, 600 + rc * math.cos(math.radians(160)), 250 + rc * math.sin(math.radians(160)), 9, c['plum'])
 text(im, 545, 215, '72%', 56, c['paper'], 800)
 sea(im, 500, c['teal'], c['foamb'], gap=16, amp=3, freq=30)            # real sea below the horizon
 for k in range(6):                                                         # the sun's reflection

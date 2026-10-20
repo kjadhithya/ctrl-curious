@@ -1,0 +1,114 @@
+{
+  "issue": 4,
+  "date": "2026-10-20",
+  "title": "Apple sets a 28 October event for a touchscreen MacBook Pro; Google Play swaps download percentages for time left",
+  "dek": "A touchscreen Mac on the way, a small Play Store progress change, lessons from Config India, judgment over taste, and how to pitch design to a CFO.",
+  "preheader": "A touchscreen MacBook Pro is expected on 28 October. Plus Payload in Figma Make and a deeper Figma Motion workflow.",
+  "hero": "https://ctrl-curious.vercel.app/assets/email/days/tue/tue_07.jpg",
+  "hero_alt": "Grainy illustration of green northern lights rippling over two snow-capped blue mountains under a starry sky",
+  "summary": "Apple's Pro and tell event on 28 October is expected to bring [a redesigned MacBook Pro with an OLED touchscreen and Dynamic Island](https://9to5mac.com/2026/10/19/apple-is-launching-major-new-products-next-week-heres-whats-coming/), which would make touch a real input for Mac interfaces. Smaller but just as instructive, Google's Play Store now [shows time or size remaining on downloads instead of a percentage](https://9to5google.com/2026/10/19/october-2026-google-system-updates/). Two pieces sharpen the craft: Patrick Neeman argues [critiques should run on cited principles and evidence, not taste](https://uxdesign.cc/taste-is-not-a-design-methodology-e02b37aea148), and SAP's Arin Bhowmick shows [how to answer a CFO in payback and conversion terms](https://uxdesign.cc/what-i-told-the-cfo-when-he-asked-why-design-matters-ceadb07c929e). And a week after Config India, Nil Thyrion asks designers to [own the experience people actually receive, not stop at handoff](https://uxdesign.cc/beyond-the-canvas-03fce0bcbf7b).",
+  "reads": [
+    {
+      "title": "Apple's 28 October event is expected to bring a touchscreen OLED MacBook Pro",
+      "source": "9to5Mac",
+      "url": "https://9to5mac.com/2026/10/19/apple-is-launching-major-new-products-next-week-heres-whats-coming/",
+      "note": "Ryan Christoffel's preview: a lighter redesigned MacBook Pro with OLED, touch and a hole-punch Dynamic Island sold as a new top tier, plus iPad mini and iMac updates; if touch lands, hit areas in Mac apps and web dashboards are worth an audit."
+    },
+    {
+      "title": "Play Store downloads now show time or size remaining instead of a percentage",
+      "source": "9to5Google",
+      "url": "https://9to5google.com/2026/10/19/october-2026-google-system-updates/",
+      "note": "A small progress-indicator decision in Google's October system updates, alongside OEM design tokens for Google apps in cars and AI labels on generated images in India; a good prompt to ask what your own progress bars actually tell people."
+    },
+    {
+      "title": "Taste is not a design methodology",
+      "source": "UX Collective",
+      "url": "https://uxdesign.cc/taste-is-not-a-design-methodology-e02b37aea148",
+      "note": "Patrick Neeman of Workday on running critiques on judgment: make each big decision cite a principle, study or behaviour, label the rest as opinion to test, score aesthetics and task success separately, and log predictions before launch."
+    },
+    {
+      "title": "What I told the CFO when he asked why design matters",
+      "source": "UX Collective",
+      "url": "https://uxdesign.cc/what-i-told-the-cfo-when-he-asked-why-design-matters-ceadb07c929e",
+      "note": "SAP's chief design officer Arin Bhowmick gives five answers finance understands, from payback and conversion to research as capital protection and design-system hours saved, and says to start with conversion if you have never tied design to revenue."
+    },
+    {
+      "title": "Beyond the canvas: what Config India 2026 revealed",
+      "source": "UX Collective",
+      "url": "https://uxdesign.cc/beyond-the-canvas-03fce0bcbf7b",
+      "note": "TAMM design director Nil Thyrion's read of Figma's Bengaluru event: as agents and code tools blur roles, designers should own what ships, distrust speed for its own sake, and push AI to work across India's languages."
+    }
+  ],
+  "watch": [
+    {
+      "title": "Figma Config India 2026: 4 big updates explained",
+      "channel": "Design Xstream",
+      "id": "98q5XDtixxU",
+      "note": "A short walk through the keynote demos for code layers, centralised design systems, Specs and Payload in Make, with what is live now and what is still preview, handy context for today's tool."
+    },
+    {
+      "title": "Making beautiful animations with Claude, Figma and agent skills",
+      "channel": "Code With Joel",
+      "id": "mPg5AcJYmOc",
+      "note": "A live session with design engineer Meeday turning Figma assets and SVGs into motion with Claude and agent skills, including what broke; a practical companion to the Figma Motion workflow below."
+    },
+    {
+      "title": "How to design with Claude and Figma",
+      "channel": "AI Design Professor",
+      "id": "YPKAjTDz7Jc",
+      "note": "Design leader Nehmat Gereige runs one concept from research brief to Figma agent wireframes to an MCP-built prototype on a design system, keeping a human check at each step."
+    }
+  ],
+  "meetups": [
+    {
+      "name": "STHLM Xperience Conference 2026",
+      "date": "2026-11-12",
+      "place": "Online",
+      "details": "Thursday · Streamed from Stockholm · Designing a sustainable future with ethical AI",
+      "url": "https://www.sxc.se/"
+    },
+    {
+      "name": "Design Matters 26",
+      "date": "2026-11-14",
+      "place": "Online",
+      "details": "Livestream from Tokyo · Speakers from Duolingo, Figma and Medium",
+      "url": "https://designmatters.io/"
+    },
+    {
+      "name": "The Messy UX Conference 2026",
+      "date": "2026-11-28",
+      "place": "Bengaluru",
+      "details": "Saturday · IxDF Bengaluru · Stories of failures, pivots and trade-offs",
+      "url": "https://ixdf.org/meetups/the-messy-ux-conference-nov-28th-2026"
+    }
+  ],
+  "edition": {
+    "tool": {
+      "name": "Payload in Figma Make",
+      "url": "https://www.figma.com/blog/websites-with-payload-in-figma/",
+      "what": "When you prompt a site in Figma Make, it now scaffolds a Payload backend with a database, file storage, login, role-based access and an admin panel, hosted by Figma. It is best at getting a marketing or content site into the hands of editors who can change copy, swap images and review form submissions without a designer in the loop.",
+      "meta": "All plans, rolling out over the coming weeks · Hosting free during beta"
+    },
+    "learn": [
+      {
+        "kind": "tool",
+        "title": "Figma Motion: styles, bulk edits and handoff",
+        "url": "https://help.figma.com/hc/en-us/articles/41274629073303",
+        "intro": "Motion has picked up custom animation styles, audio, per-character text animation and Lottie export. These moves turn it from a one-off animation canvas into a shared motion system that scales across files.",
+        "steps": [
+          "Save your easing, duration and other variable-backed values as an animation style, combine styles into a richer pattern, and publish them to a library so every file pulls the same motion.",
+          "For bulk changes, select all the frames and ask the agent to match the first frame's animation, or to switch every keyframe to a custom spring with 0.35 bounce while keeping values and timing.",
+          "To review a set together, select the frames, right-click and choose Frame selection, then press play on the parent frame.",
+          "Animate text by character, word or line and the layer stays editable, so copy changes don't mean rebuilding the motion.",
+          "Hand off from Dev Mode, where engineers copy the timeline as CSS, JSON or motion.dev, or export Lottie, dotLottie, or MP4 and WebM with audio."
+        ],
+        "take": "Motion is in open beta on any plan for anyone with edit access, so details may change. The agent steps use AI credits, which Figma started charging for when the agent became generally available on 6 October.",
+        "links": [
+          {"title": "Motion adds custom styles, audio, text animations and Lottie export", "url": "https://forum.figma.com/product-updates-3/motion-adds-custom-styles-audio-text-animations-and-lottie-export-58554", "source": "Figma Forum", "anchor": "publish them to a library"},
+          {"title": "AI workflows collection: bring designs to life with motion", "url": "https://help.figma.com/hc/en-us/articles/41159708615319", "source": "Figma Help Center", "anchor": "custom spring with 0.35 bounce"},
+          {"title": "AI credits FAQ", "url": "https://help.figma.com/hc/en-us/articles/42614902212887", "source": "Figma Help Center", "anchor": "use AI credits"}
+        ]
+      }
+    ]
+  }
+}

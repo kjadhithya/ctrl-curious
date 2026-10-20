@@ -1,0 +1,32 @@
+Ctrl+Curious · Tuesday, 20 October 2026 · Issue 004
+View online: https://ctrl-curious.vercel.app/issues/004
+
+Today, in brief
+Apple's Pro and tell event on 28 October is expected to bring a redesigned MacBook Pro with an OLED touchscreen and Dynamic Island (https://9to5mac.com/2026/10/19/apple-is-launching-major-new-products-next-week-heres-whats-coming/), which would make touch a real input for Mac interfaces. Smaller but just as instructive, Google's Play Store now shows time or size remaining on downloads instead of a percentage (https://9to5google.com/2026/10/19/october-2026-google-system-updates/). Two pieces sharpen the craft: Patrick Neeman argues critiques should run on cited principles and evidence, not taste (https://uxdesign.cc/taste-is-not-a-design-methodology-e02b37aea148), and SAP's Arin Bhowmick shows how to answer a CFO in payback and conversion terms (https://uxdesign.cc/what-i-told-the-cfo-when-he-asked-why-design-matters-ceadb07c929e). And a week after Config India, Nil Thyrion asks designers to own the experience people actually receive, not stop at handoff (https://uxdesign.cc/beyond-the-canvas-03fce0bcbf7b).
+
+Tool of the day
+Payload in Figma Make: https://www.figma.com/blog/websites-with-payload-in-figma/
+
+Read
+Apple's 28 October event is expected to bring a touchscreen OLED MacBook Pro: https://9to5mac.com/2026/10/19/apple-is-launching-major-new-products-next-week-heres-whats-coming/
+Play Store downloads now show time or size remaining instead of a percentage: https://9to5google.com/2026/10/19/october-2026-google-system-updates/
+Taste is not a design methodology: https://uxdesign.cc/taste-is-not-a-design-methodology-e02b37aea148
+What I told the CFO when he asked why design matters: https://uxdesign.cc/what-i-told-the-cfo-when-he-asked-why-design-matters-ceadb07c929e
+Beyond the canvas: what Config India 2026 revealed: https://uxdesign.cc/beyond-the-canvas-03fce0bcbf7b
+
+Tool to master
+Figma Motion: styles, bulk edits and handoff: https://help.figma.com/hc/en-us/articles/41274629073303
+
+Watch
+Figma Config India 2026: 4 big updates explained: https://www.youtube.com/watch?v=98q5XDtixxU
+Making beautiful animations with Claude, Figma and agent skills: https://www.youtube.com/watch?v=mPg5AcJYmOc
+How to design with Claude and Figma: https://www.youtube.com/watch?v=YPKAjTDz7Jc
+
+Meet up
+STHLM Xperience Conference 2026 (2026-11-12): https://www.sxc.se/
+Design Matters 26 (2026-11-14): https://designmatters.io/
+The Messy UX Conference 2026 (2026-11-28): https://ixdf.org/meetups/the-messy-ux-conference-nov-28th-2026
+
+That's all for today. Stay curious.
+
+Unsubscribe: https://ctrl-curious.vercel.app/unsubscribe

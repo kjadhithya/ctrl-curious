@@ -4,7 +4,7 @@ import sys, os
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from lib import *
 from PIL import ImageFont
-OUT = '/home/claude/ctrl-curious/assets/explore/vibes_humans/'
+OUT = '/home/claude/ctrl-curious/assets/explore/' + os.environ.get('VIBES_SET', 'vibes_humans') + '/'
 os.makedirs(OUT, exist_ok=True)
 c = C
 FONT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'fonts', 'Figtree.ttf')

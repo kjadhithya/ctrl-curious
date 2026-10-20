@@ -155,7 +155,10 @@ for k, (col, name) in enumerate(layers):
     if name == 'hills': poly(lay, [(cx_ - 200, cy_ + 6), (cx_ - 60, cy_ - 30), (cx_ + 80, cy_ - 8), (cx_ + 200, cy_ + 6), (cx_, cy_ + 50)], col)
     im.paste(lay, (0, 0), m)
     lx = 150
-    rr(im, lx, cy_ - 16, lx + 130, cy_ + 16, 8, c['wine'] if name == 'sun' else c['ink']); text(im, lx + 14, cy_ - 12, name, 20, c['paper'], 700)
+    pill = c['wine'] if name == 'sun' else c['ink']                    # wireframe label: a pill with text-like bars
+    rr(im, lx, cy_ - 16, lx + 130, cy_ + 16, 8, pill)
+    bw = [58, 40, 86, 34, 44][k]
+    rr(im, lx + 14, cy_ - 4, lx + 14 + bw, cy_ + 4, 4, c['paper'] if name == 'sun' else c['mauve'])
     line(im, [(lx + 138, cy_), (ox - 12, cy_)], c['skyb'], 1.5); disc(im, ox - 12, cy_, 3, c['skyb'])
 finish(im, OUT + 'nature2_08_layers.jpg', seed=58)
 print('done')

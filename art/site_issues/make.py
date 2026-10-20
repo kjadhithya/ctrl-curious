@@ -81,7 +81,6 @@ finish(im, OUT + 'issue_003.jpg', seed=73)
 # and a download that shows time left instead of a percentage
 im = canvas(c['navy'], c['indigo'], 1)
 stars(im, 40, 260, c['mist'], seed=74)
-disc(im, 1060, 100, 46, c['clay'])
 rr(im, 300, 90, 900, 440, 22, c['ink'])
 m = Image.new('L', (W, H), 0); ImageDraw.Draw(m).rounded_rectangle([322*S, 112*S, 878*S, 418*S], radius=8*S, fill=255)
 scr = canvas(c['skyb'], c['mist'], 1); sea(scr, 330, c['teal'], c['foamb'], gap=14, amp=3, freq=24)

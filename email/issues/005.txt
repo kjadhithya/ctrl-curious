@@ -1,0 +1,34 @@
+Ctrl+Curious · Wednesday, 21 October 2026 · Issue 005
+View online: https://ctrl-curious.vercel.app/issues/005
+
+Today, in brief
+Google is putting a checkpoint into AI generation: Gemini Notebook now lets you review and edit the outline (https://blog.google/innovation-and-ai/products/gemini-notebook/co-create-slides-videos/) before it builds slides or a video, a pattern worth borrowing for any generative feature you design. On the craft side, CSS random() has shipped in Safari and is rolling out in Chrome (https://www.smashingmagazine.com/2026/10/embracing-playful-imperfection-css-random-function/), so controlled imperfection no longer needs JavaScript. Redaction, the serif MCKL drew from the type of American court papers (https://fonts.google.com/specimen/Redaction), is now free on Google Fonts with its six degraded cuts. And Apple's Designers of Tomorrow showcase opened in Paris (https://9to5mac.com/2026/10/20/apples-designers-of-tomorrow-highlights-creative-projects-from-emerging-designers) with a jury that included its VP of industrial design.
+
+Read
+Gemini Notebook adds a review step before it generates slides and videos: https://blog.google/innovation-and-ai/products/gemini-notebook/co-create-slides-videos/
+Embracing playful imperfection with the CSS random() function: https://www.smashingmagazine.com/2026/10/embracing-playful-imperfection-css-random-function/
+Improving design critiques: https://uxdesign.cc/improving-design-critiques-0e4d075ead2f
+How Meta lets designers prototype with AI in Forum: https://ux-news.com/meta-forum-ai-prototyping-designers/
+Apple's Designers of Tomorrow highlights projects from emerging designers: https://9to5mac.com/2026/10/20/apples-designers-of-tomorrow-highlights-creative-projects-from-emerging-designers
+
+Steal this
+A safe starter for CSS random(): https://www.smashingmagazine.com/2026/10/embracing-playful-imperfection-css-random-function/
+
+10-minute brief
+Controlled randomness in interfaces: https://www.smashingmagazine.com/2026/10/embracing-playful-imperfection-css-random-function/
+
+Typeface spotlight
+Redaction: https://fonts.google.com/specimen/Redaction
+
+Watch
+Config India 2026: Figma product launch keynote: https://www.youtube.com/watch?v=CXAvPycESVY
+Myles Palmer: building custom AI tools at Metalab: https://www.youtube.com/watch?v=eWTXkbZxAQo
+
+Meet up
+STHLM Xperience Conference 2026 (2026-11-12): https://www.sxc.se/
+Design Matters 26 (2026-11-14): https://designmatters.io/
+The Messy UX Conference 2026 (2026-11-28): https://ixdf.org/meetups/the-messy-ux-conference-nov-28th-2026
+
+That's all for today. Stay curious.
+
+Unsubscribe: https://ctrl-curious.vercel.app/unsubscribe

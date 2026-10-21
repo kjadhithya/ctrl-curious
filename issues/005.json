@@ -1,0 +1,153 @@
+{
+ "issue": 5,
+ "date": "2026-10-21",
+ "title": "Google Fonts adds Redaction for free; Gemini Notebook now shows its outline before it generates slides",
+ "dek": "A legal-document serif goes free, AI tools add a review step, CSS gets a random() function, and two Config-week videos.",
+ "preheader": "Redaction lands on Google Fonts, Gemini lets you edit the plan first, and CSS random() arrives in Chrome.",
+ "hero": "https://ctrl-curious.vercel.app/assets/email/days2/wed/wed_06.jpg",
+ "hero_alt": "Rr, Gg and Qq in three typefaces with wave rules between",
+ "summary": "Google is putting a checkpoint into AI generation: [Gemini Notebook now lets you review and edit the outline](https://blog.google/innovation-and-ai/products/gemini-notebook/co-create-slides-videos/) before it builds slides or a video, a pattern worth borrowing for any generative feature you design. On the craft side, [CSS random() has shipped in Safari and is rolling out in Chrome](https://www.smashingmagazine.com/2026/10/embracing-playful-imperfection-css-random-function/), so controlled imperfection no longer needs JavaScript. [Redaction, the serif MCKL drew from the type of American court papers](https://fonts.google.com/specimen/Redaction), is now free on Google Fonts with its six degraded cuts. And Apple's [Designers of Tomorrow showcase opened in Paris](https://9to5mac.com/2026/10/20/apples-designers-of-tomorrow-highlights-creative-projects-from-emerging-designers) with a jury that included its VP of industrial design.",
+ "reads": [
+  {
+   "title": "Gemini Notebook adds a review step before it generates slides and videos",
+   "source": "Google",
+   "url": "https://blog.google/innovation-and-ai/products/gemini-notebook/co-create-slides-videos/",
+   "note": "You can now open the outline or producer notes, ask for changes and only then generate; a clear model for putting users in charge of costly AI output."
+  },
+  {
+   "title": "Embracing playful imperfection with the CSS random() function",
+   "source": "Smashing Magazine",
+   "url": "https://www.smashingmagazine.com/2026/10/embracing-playful-imperfection-css-random-function/",
+   "note": "Brecht De Ruyte shows stepped values, shared keys and reduced-motion fallbacks for random() now that Safari ships it and Chrome 156 is rolling it out."
+  },
+  {
+   "title": "Improving design critiques",
+   "source": "UX Collective",
+   "url": "https://uxdesign.cc/improving-design-critiques-0e4d075ead2f",
+   "note": "Jeremy Bird's new piece on making critique sessions more useful, picked by Smashing's editors this week; worth a read before your next crit."
+  },
+  {
+   "title": "How Meta lets designers prototype with AI in Forum",
+   "source": "UX News",
+   "url": "https://ux-news.com/meta-forum-ai-prototyping-designers/",
+   "note": "A look at how a large in-house team is giving designers AI prototyping inside its own internal tool, a sign of where team workflows are heading."
+  },
+  {
+   "title": "Apple's Designers of Tomorrow highlights projects from emerging designers",
+   "source": "9to5Mac",
+   "url": "https://9to5mac.com/2026/10/20/apples-designers-of-tomorrow-highlights-creative-projects-from-emerging-designers",
+   "note": "Apple and Design Miami's second showcase, themed on presence and judged by a panel including Molly Anderson, opened in Paris on Tuesday."
+  }
+ ],
+ "watch": [
+  {
+   "title": "Config India 2026: Figma product launch keynote",
+   "channel": "Figma",
+   "id": "CXAvPycESVY",
+   "note": "Dylan Field's full 74-minute keynote from last week, the primary source for code layers, Specs and Payload in Make if you only read the recaps."
+  },
+  {
+   "title": "Myles Palmer: building custom AI tools at Metalab",
+   "channel": "Dive Club",
+   "id": "eWTXkbZxAQo",
+   "note": "Metalab's design director walks through the internal tooling system he built, a concrete look at designers making their own AI tools."
+  }
+ ],
+ "meetups": [
+  {
+   "name": "STHLM Xperience Conference 2026",
+   "date": "2026-11-12",
+   "place": "Online",
+   "details": "Thursday · Streamed from Stockholm · Designing a sustainable future with ethical AI",
+   "url": "https://www.sxc.se/"
+  },
+  {
+   "name": "Design Matters 26",
+   "date": "2026-11-14",
+   "place": "Online",
+   "details": "Livestream from Tokyo · Speakers from Duolingo, Figma and Medium",
+   "url": "https://designmatters.io/"
+  },
+  {
+   "name": "The Messy UX Conference 2026",
+   "date": "2026-11-28",
+   "place": "Bengaluru",
+   "details": "Saturday · IxDF Bengaluru · Stories of failures, pivots and trade-offs",
+   "url": "https://ixdf.org/meetups/the-messy-ux-conference-nov-28th-2026"
+  }
+ ],
+ "edition": {
+  "typeface": {
+   "name": "Redaction",
+   "url": "https://fonts.google.com/specimen/Redaction",
+   "by": "Jeremy Mickel, MCKL, with creative direction by Forest Young",
+   "get": "Google Fonts (free)",
+   "pair": "Set headlines in Redaction and keep UI and body text in a plain grotesque such as Inter, so the legal-document voice reads as intentional.",
+   "good_for": "Editorial headlines, pull quotes, civic and justice-themed products",
+   "note": "Commissioned for The Redaction, Titus Kaphar and Reginald Dwayne Betts's 2019 work at MoMA PS1, it heightens the Times New Roman and Century Schoolbook of court papers with soft round terminals and razor-thin strokes. Google Fonts added it this month along with Redaction 10 to 100, cuts that get progressively rougher, like a document photocopied too many times.",
+   "image": "https://ctrl-curious.vercel.app/assets/email/specimens/redaction.jpg"
+  },
+  "learn": [
+   {
+    "kind": "steal",
+    "title": "A safe starter for CSS random()",
+    "url": "https://www.smashingmagazine.com/2026/10/embracing-playful-imperfection-css-random-function/",
+    "intro": "Drop this into a prototype to give cards or tags a hand-placed wobble that only appears where the browser supports it and stays flat for people who ask for less motion.",
+    "file": "random-wobble.css",
+    "code": "/* Flat by default */\n.card { rotate: 0deg; }\n\n/* Only where random() exists */\n@supports (rotate: random(-2deg, 2deg)) {\n  @media (prefers-reduced-motion: no-preference) {\n    .card {\n      rotate: random(-2deg, 2deg);\n      /* step of 2px keeps offsets on your grid */\n      translate: 0 random(-4px, 4px, by 2px);\n    }\n  }\n}\n\n/* Shared key: width and height get the same value */\n.tile {\n  width: random(--tile-size, 48px, 96px, by 8px);\n  height: random(--tile-size, 48px, 96px, by 8px);\n}",
+    "code_note": "Keep the ranges tiny for anything people read or click. A by step snaps values to your spacing scale, and a shared key keeps squares square.",
+    "meta": "Free · from Smashing Magazine",
+    "take": "The reduced-motion wrapper around rotation is our own caution; the article recommends flattening angles for those users.",
+    "links": [
+     {
+      "title": "Embracing playful imperfection with the CSS random() function",
+      "url": "https://www.smashingmagazine.com/2026/10/embracing-playful-imperfection-css-random-function/",
+      "source": "Smashing Magazine",
+      "anchor": "hand-placed wobble"
+     }
+    ]
+   },
+   {
+    "kind": "brief",
+    "title": "Controlled randomness in interfaces",
+    "url": "https://www.smashingmagazine.com/2026/10/embracing-playful-imperfection-css-random-function/",
+    "intro": "CSS can now pick a value at random inside a range you set, so layouts can feel handmade without a script deciding every angle.",
+    "define": "random(min, max) returns a value between two bounds of the same unit, optionally snapped to a step with the by keyword, and a named key lets several properties share one result.",
+    "examples_label": "Where support stands",
+    "examples": [
+     {
+      "name": "Safari",
+      "text": "WebKit shipped random() first.",
+      "url": "https://www.smashingmagazine.com/2026/10/embracing-playful-imperfection-css-random-function/"
+     },
+     {
+      "name": "Chrome and Edge",
+      "text": "Rolling out with Chrome 156.",
+      "url": "https://www.smashingmagazine.com/2026/10/embracing-playful-imperfection-css-random-function/"
+     },
+     {
+      "name": "Firefox",
+      "text": "Not shipped yet, so plan a fallback.",
+      "url": "https://www.smashingmagazine.com/2026/10/embracing-playful-imperfection-css-random-function/"
+     }
+    ],
+    "tips": [
+     "Randomise decoration, never structure: tilt a sticker or a card shadow, but keep body text, grids and tap targets fixed.",
+     "Use a by step to snap random values to your spacing or rotation scale, so the mess still belongs to the system.",
+     "Pair random() with sibling-index() for a fan or stack that is ordered first and only lightly jittered second.",
+     "Wrap it in @supports with a static fallback, and flatten angles for people who prefer reduced motion.",
+     "Hide per-letter spans from screen readers if you jitter individual characters."
+    ],
+    "why": "Brand teams keep asking for warmth and imperfection; this gives you a way to spec it in tokens and ranges that engineers can ship without custom scripts.",
+    "links": [
+     {
+      "title": "Embracing playful imperfection with the CSS random() function",
+      "url": "https://www.smashingmagazine.com/2026/10/embracing-playful-imperfection-css-random-function/",
+      "source": "Smashing Magazine",
+      "anchor": "Randomise decoration, never structure"
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,33 @@
+Ctrl+Curious · Thursday, 22 October 2026 · Issue 006
+View online: https://ctrl-curious.vercel.app/issues/006
+
+Today, in brief
+Anthropic opened a research preview of Claude Duet (https://9to5mac.com/2026/10/21/anthropic-takes-on-chatgpt-dots-and-meta-muse-with-claude-duet/), a proactive agent that sends a morning brief, keeps working in the background and asks before it sends, pays, signs or deletes anything. Early testers like Claire Vo find it polished but too quiet (https://www.lennysnewsletter.com/p/claude-duet-is-beautiful-i-still) to become a habit, and Jakob Nielsen's latest roundup (https://jakobnielsenphd.substack.com/p/ux-roundup-20261019) adds a rule every agent needs: a reliable way to stop a run without losing finished work. Apple Music unveiled a new identity with a logo shaped by sound (https://9to5mac.com/2026/10/21/apple-music-unveils-new-design-rebrand-with-logo-made-by-sound/), arriving with iOS 27.2 next week. And today's case study is the VS Code team's modern UI rollout (https://code.visualstudio.com/blogs/2026/10/15/modern-ui), a lesson in refreshing a tool people use all day without breaking their muscle memory.
+
+Read
+Anthropic takes on ChatGPT Dots and Meta Muse with Claude Duet: https://9to5mac.com/2026/10/21/anthropic-takes-on-chatgpt-dots-and-meta-muse-with-claude-duet/
+Claude Duet is beautiful. I still forgot to use it: https://www.lennysnewsletter.com/p/claude-duet-is-beautiful-i-still
+UX roundup: AI by design phase: https://jakobnielsenphd.substack.com/p/ux-roundup-20261019
+Apple Music unveils a new identity, with a logo made by sound: https://9to5mac.com/2026/10/21/apple-music-unveils-new-design-rebrand-with-logo-made-by-sound/
+iOS 27.2 hints Messages may stop counting muted chats in its badge: https://9to5mac.com/2026/10/21/ios-27-2-reveals-apples-messages-app-could-soon-get-highly-requested-change/
+
+How they work
+Randy Hunt keeps design teams small on purpose: https://designbetterpodcast.com/p/randy-hunt
+
+Decision toolkit
+Should the agent ask first, or just act?: https://9to5mac.com/2026/10/21/anthropic-takes-on-chatgpt-dots-and-meta-muse-with-claude-duet/
+
+Case study
+Modernizing the VS Code UI: https://code.visualstudio.com/blogs/2026/10/15/modern-ui
+
+Watch
+Claude Duet is beautiful. I still forgot to use it: https://www.youtube.com/watch?v=HYb5w4PfPZM
+Apple Music. Made by Sound: behind the new brand identity: https://www.youtube.com/watch?v=1XxNXkOHKZw
+
+Meet up
+Adobe MAX Online 2026 (2026-11-10): https://max.adobe.com/max-online/
+The Messy UX Conference 2026 (2026-11-28): https://designshots.org/conference
+
+That's all for today. Stay curious.
+
+Unsubscribe: https://ctrl-curious.vercel.app/unsubscribe

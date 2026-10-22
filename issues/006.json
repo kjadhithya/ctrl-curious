@@ -1,0 +1,71 @@
+{
+  "issue": 6,
+  "date": "2026-10-22",
+  "title": "Anthropic opens Claude Duet, an agent that asks before it acts; Apple Music unveils a logo shaped by sound",
+  "dek": "Claude Duet and the ask-or-act question, Apple Music's new identity, VS Code's redesign as a case study, how Randy Hunt runs small teams, and two events.",
+  "preheader": "Claude Duet asks before it acts, Apple Music's logo is shaped by sound, and how VS Code refreshed its UI.",
+  "hero": "https://ctrl-curious.vercel.app/assets/email/days2/thu/thu_08.jpg",
+  "hero_alt": "Basic shapes stacked into a balancing tower under a circle sun",
+  "summary": "Anthropic [opened a research preview of Claude Duet](https://9to5mac.com/2026/10/21/anthropic-takes-on-chatgpt-dots-and-meta-muse-with-claude-duet/), a proactive agent that sends a morning brief, keeps working in the background and asks before it sends, pays, signs or deletes anything. Early testers like [Claire Vo find it polished but too quiet](https://www.lennysnewsletter.com/p/claude-duet-is-beautiful-i-still) to become a habit, and Jakob Nielsen's [latest roundup](https://jakobnielsenphd.substack.com/p/ux-roundup-20261019) adds a rule every agent needs: a reliable way to stop a run without losing finished work. Apple Music [unveiled a new identity with a logo shaped by sound](https://9to5mac.com/2026/10/21/apple-music-unveils-new-design-rebrand-with-logo-made-by-sound/), arriving with iOS 27.2 next week. And today's case study is the [VS Code team's modern UI rollout](https://code.visualstudio.com/blogs/2026/10/15/modern-ui), a lesson in refreshing a tool people use all day without breaking their muscle memory.",
+  "reads": [
+    {"title": "Anthropic takes on ChatGPT Dots and Meta Muse with Claude Duet", "source": "9to5Mac", "url": "https://9to5mac.com/2026/10/21/anthropic-takes-on-chatgpt-dots-and-meta-muse-with-claude-duet/", "note": "A morning brief, a Tasks tab only you can close, and a firm rule to ask before sending, paying, signing or deleting: a useful reference model for designing agent permissions."},
+    {"title": "Claude Duet is beautiful. I still forgot to use it", "source": "Lenny's Newsletter", "url": "https://www.lennysnewsletter.com/p/claude-duet-is-beautiful-i-still", "note": "Claire Vo praises the onboarding, task lists and first-class artifacts, then argues that an agent which rarely nudges you never becomes a habit, and that latency kills back-and-forth work."},
+    {"title": "UX roundup: AI by design phase", "source": "Jakob Nielsen", "url": "https://jakobnielsenphd.substack.com/p/ux-roundup-20261019", "note": "A survey of 443 designers finds AI use peaks in discovery (72%) and falls in delivery (41%); a randomised Figma Make study saw AI cut product managers' task time twice as much as designers'."},
+    {"title": "Apple Music unveils a new identity, with a logo made by sound", "source": "9to5Mac", "url": "https://9to5mac.com/2026/10/21/apple-music-unveils-new-design-rebrand-with-logo-made-by-sound/", "note": "The logo was physically shaped by a Fred again.. composition with NEST Acoustics and captured in camera; users see the new look in iOS 27.2 next week."},
+    {"title": "iOS 27.2 hints Messages may stop counting muted chats in its badge", "source": "9to5Mac", "url": "https://9to5mac.com/2026/10/21/ios-27-2-reveals-apples-messages-app-could-soon-get-highly-requested-change/", "note": "Code in the release candidate suggests muted conversations will no longer inflate the unread badge, a small fix worth checking against your own app's badge logic."}
+  ],
+  "watch": [
+    {"title": "Claude Duet is beautiful. I still forgot to use it", "channel": "How I AI", "id": "HYb5w4PfPZM", "note": "Claire Vo puts Anthropic's new agent through real work the day it launched; the chapters on design polish and latency show where agent UX still breaks."},
+    {"title": "Apple Music. Made by Sound: behind the new brand identity", "channel": "Apple Music", "id": "1XxNXkOHKZw", "note": "Posted yesterday: how sound was used to shape the new logo, filmed in camera rather than built in software, ahead of the iOS 27.2 rollout."}
+  ],
+  "meetups": [
+    {"name": "Adobe MAX Online 2026", "date": "2026-11-10", "place": "Online", "details": "Tuesday · Adobe · free to stream; opening keynote 9am EST, APAC replay 11 Nov at 9am IST", "url": "https://max.adobe.com/max-online/"},
+    {"name": "The Messy UX Conference 2026", "date": "2026-11-28", "place": "Bengaluru", "details": "Saturday · practitioner talks on design failures, pivots and trade-offs", "url": "https://designshots.org/conference"}
+  ],
+  "edition": {
+    "case": {
+      "title": "Modernizing the VS Code UI",
+      "url": "https://code.visualstudio.com/blogs/2026/10/15/modern-ui",
+      "studio": "VS Code team, Microsoft",
+      "note": "A decade of one-at-a-time features had left the workbench inconsistent, so the team built shared tokens for spacing, size and colour, tried them first in the new Agents window, then rolled out through Insiders and a controlled Stable experiment. The decision that made it work: when users said a roomier layout meant less code on screen, the team added a Compact density instead of reverting, and kept the classic UI one setting away."
+    },
+    "learn": [
+      {
+        "kind": "people",
+        "title": "Randy Hunt keeps design teams small on purpose",
+        "url": "https://designbetterpodcast.com/p/randy-hunt",
+        "person": {"name": "Randy Hunt", "role": "Design leader at Notion and Etsy", "initials": "RH"},
+        "intro": "Randy Hunt has led design at Notion and Etsy, and on Design Better he explains why his teams stay smaller and flatter than people expect, and why he shields good people from busywork.",
+        "steps": [
+          "Keep the team deliberately small, so limited bandwidth forces you to choose what matters instead of doing everything.",
+          "Have designers ship code to production, as he set up at Etsy in 2010, long before design engineer was a common title.",
+          "Give small touchpoints like push notifications the same care as the main dashboard, an approach he calls whole design."
+        ],
+        "source_line": "From Design Better, episode 194 · our takeaways from the episode page",
+        "take": "These habits come from the episode's published summary; the full conversation is for paid subscribers.",
+        "links": [
+          {"title": "Randy Hunt: Notion and Etsy design leader on why the best design teams stay small", "url": "https://designbetterpodcast.com/p/randy-hunt", "source": "Design Better", "anchor": "on Design Better"}
+        ]
+      },
+      {
+        "kind": "decision",
+        "title": "Should the agent ask first, or just act?",
+        "url": "https://9to5mac.com/2026/10/21/anthropic-takes-on-chatgpt-dots-and-meta-muse-with-claude-duet/",
+        "intro": "Proactive agents from Anthropic, Meta and OpenAI are arriving fast, and each one forces the same call: which actions run on their own, and which wait for a yes.",
+        "columns": [
+          {"label": "Let it act when", "items": ["The result is a draft the person reviews, like a reply waiting to be sent", "It only reads and summarises, like a morning brief of email and calendar", "The step is easy to undo and lands where the person will look"]},
+          {"label": "Make it ask when", "items": ["It speaks for the person to someone else, like sending a message", "It moves money, signs something or deletes data", "It would mark work as done; let only the person close a task"]}
+        ],
+        "examples": [
+          {"name": "Claude Duet", "text": "Drafts replies for review, asks before it sends, pays, signs or deletes, and leaves finishing a task to you.", "url": "https://9to5mac.com/2026/10/21/anthropic-takes-on-chatgpt-dots-and-meta-muse-with-claude-duet/"}
+        ],
+        "rule": "If it can't be undone or speaks for the person, ask first, and always offer a stop that keeps finished work.",
+        "take": "The columns are our framing, built from Duet's published rules and Jakob Nielsen's guidance on stopping AI agents.",
+        "links": [
+          {"title": "Anthropic takes on ChatGPT Dots and Meta Muse with Claude Duet", "url": "https://9to5mac.com/2026/10/21/anthropic-takes-on-chatgpt-dots-and-meta-muse-with-claude-duet/", "source": "9to5Mac", "anchor": "Proactive agents from Anthropic, Meta and OpenAI"},
+          {"title": "UX roundup: AI by design phase", "url": "https://jakobnielsenphd.substack.com/p/ux-roundup-20261019", "source": "Jakob Nielsen", "anchor": "guidance on stopping AI agents"}
+        ]
+      }
+    ]
+  }
+}

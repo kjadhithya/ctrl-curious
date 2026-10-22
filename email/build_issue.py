@@ -199,11 +199,25 @@ def night_shift(page):
 
 if datetime.date.fromisoformat(issue['date']).weekday() == 1:   # Tuesday
     page = night_shift(page)
+
+# Edition tag: a small pill in the day's colour above the date in the header (edition name only, no weekday).
+# Added after the Tuesday colour swap so its colours stay as set here. Issues before 23 October 2026 went out without it.
+EDITION_TAGS = {0: ('Week ahead edition', '#2B4C6F', '#F4EEE8'), 1: ('Tools edition', '#C9A7B5', '#1C3050'),
+                2: ('Type edition', '#7E4B6B', '#F4EEE8'), 3: ('Case study edition', '#24585C', '#F4EEE8'),
+                4: ('Weekend edition', '#8A2E3B', '#F4EEE8')}
+edition_name = ''
+if d >= datetime.date(2026, 10, 23) and d.weekday() in EDITION_TAGS:
+    edition_name, tag_bg, tag_fg = EDITION_TAGS[d.weekday()]
+    pill = (f'<span style="display:inline-block;background-color:{tag_bg};color:{tag_fg};font-size:13px;line-height:18px;'
+            f'font-weight:600;padding:3px 10px;margin-bottom:8px;">{edition_name}</span><br>')
+    page, n = re.subn(r'(<td valign="bottom" align="right" style="font-size:14px;line-height:21px;color:#[0-9A-Fa-f]{6};">)',
+                      lambda m: m.group(1) + pill, page, count=1)
+    assert n == 1, 'edition tag: header date cell not found'
 out.write_text(page)
 print('wrote', out)
 
 # Plain-text version next to it (same name, .txt)
-txt = [f"Ctrl+Curious · {date_long} · Issue {issue['issue']:03d}", f"View online: {SITE}/issues/{issue['issue']:03d}", '',
+txt = [f"Ctrl+Curious · {edition_name + ' · ' if edition_name else ''}{date_long} · Issue {issue['issue']:03d}", f"View online: {SITE}/issues/{issue['issue']:03d}", '',
        'Today, in brief', re.sub(r'\[([^\]]+)\]\((https?://[^)\s]+)\)', r'\1 (\2)', issue['summary']), '']
 if ed.get('tool'): txt += ['Tool of the day', f"{ed['tool']['name']}: {ed['tool']['url']}", '']
 txt += ['Read'] + [f"{r['title']}: {r['url']}" for r in issue['reads']] + ['']

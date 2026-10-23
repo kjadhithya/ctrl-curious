@@ -1,0 +1,59 @@
+{
+  "issue": 7,
+  "date": "2026-10-23",
+  "title": "iPhone Duo goes on sale with many apps still letterboxed; Framer lets outside AI agents edit its canvas",
+  "dek": "What the first iPhone Duo reviews say about app layouts, the patterns Apple's own apps use, iOS 27.2's design tweaks, Framer MCP as this week's power-up, a weekend watchlist and two events.",
+  "preheader": "The iPhone Duo is out and many apps aren't ready for it. Plus Framer MCP, and four videos for the weekend.",
+  "hero": "https://ctrl-curious.vercel.app/assets/email/days2/fri/fri_05.jpg",
+  "hero_alt": "A beige pixel computer showing a wave, with keyboard and mouse",
+  "summary": "Apple's first foldable goes on sale today, and reviewers agree the weak spot is software from other people: Engadget's review [praises the multitasking](https://www.engadget.com/2292333/apple-iphone-duo-review/) but finds Telegram and Gmail floating in dead space on the inner screen. The apps that work, like Slack, Netflix and Spotify, [lean on two panes, tabletop splits and side controls](https://www.tomsguide.com/phones/iphones/ive-been-testing-dozens-of-iphone-duo-apps-heres-my-top-15-picks-so-far), much as [Apple's own apps do](https://macrumors.com/2026/10/20/apple-apps-iphone-duo) with sidebars, dual panes and a dock on the right. Even Apple Books is [moving to standard Liquid Glass controls](https://9to5mac.com/2026/10/22/ios-27-2-introduces-design-changes-for-these-apple-apps/) in iOS 27.2, likely so they reposition on the Duo. And Framer [opened its canvas to outside agents](https://www.framer.com/updates/framer-mcp), so Claude, Codex or Cursor can now build and edit your Framer site directly.",
+  "reads": [
+    {"title": "Apple iPhone Duo review: a first-class foldable", "source": "Engadget", "url": "https://www.engadget.com/2292333/apple-iphone-duo-review/", "note": "Apple's dual-pane apps and split view make the Duo feel more capable than any iPhone before it, but unadapted apps like Telegram open in portrait with dead space on both sides: the gap your own app may fall into."},
+    {"title": "I've been testing dozens of iPhone Duo apps: my top 15 so far", "source": "Tom's Guide", "url": "https://www.tomsguide.com/phones/iphones/ive-been-testing-dozens-of-iphone-duo-apps-heres-my-top-15-picks-so-far", "note": "A field guide to what works on the fold: Slack's two panes with controls on the right edge, Netflix's content-above-controls tabletop mode, and apps that use the cover screen when closed."},
+    {"title": "Here's what Apple's apps look like on the iPhone Duo", "source": "MacRumors", "url": "https://macrumors.com/2026/10/20/apple-apps-iphone-duo", "note": "Screenshots of Apple's reference patterns: sidebar plus content in Health and Reminders, dual panes in Contacts, full width for Calendar, and navigation that moves from the right edge to the bottom when the phone turns."},
+    {"title": "iOS 27.2 introduces design changes for these Apple apps", "source": "9to5Mac", "url": "https://9to5mac.com/2026/10/22/ios-27-2-introduces-design-changes-for-these-apple-apps/", "note": "Apple Books swaps its custom controls for a standard Liquid Glass menu and moves close, back and bookmark buttons, a hint that custom chrome is a liability on new form factors."},
+    {"title": "Framer launches an official MCP server for outside AI agents", "source": "The Agile Brand Guide", "url": "https://agilebrandguide.com/framer-launches-official-mcp-server-letting-outside-ai-agents-build-and-edit-websites/", "note": "Agents in ChatGPT, Claude, Cursor and others can now build pages, manage the CMS and audit SEO inside Framer projects, with review branches before anything is published."}
+  ],
+  "watch": [
+    {"title": "iPhone Duo review: first generation fun", "channel": "Marques Brownlee", "id": "ESABTN4VtrA", "note": "Posted this week ahead of today's launch: the multitasking modes are the highlight, while Spotify, Google Maps and Discord show what unoptimised apps look like on the inner screen."},
+    {"title": "Figma agents are finally good (real test)", "channel": "02ui", "id": "JNQbxzzkkgM", "note": "A practical run now the agent is out of beta: it ranks pain points from five interview transcripts, then redesigns a booking flow with the designer's own components, at a logged cost of 232 credits."},
+    {"title": "5 design principles in context: Stripe", "channel": "NN/g", "id": "0-FnuYGAZ-w", "note": "Rachel Krause takes four minutes to show how Stripe's site applies five visual design principles, a quick lens to bring to your next critique."},
+    {"title": "All our announcements from Config India", "channel": "Figma", "id": "Sdh_I7PSuew", "note": "A 50-second recap of last week's Bengaluru launches, from code layers to Specs, for anyone who missed the keynote."}
+  ],
+  "meetups": [
+    {"name": "Adobe MAX Online 2026", "date": "2026-11-10", "place": "Online", "details": "Tuesday · Adobe · free to stream; APAC replay 11 Nov at 9am IST", "url": "https://max.adobe.com/max-online/"},
+    {"name": "The Messy UX Conference 2026", "date": "2026-11-28", "place": "Bengaluru", "details": "Saturday · practitioner talks on design failures, pivots and trade-offs", "url": "https://designshots.org/conference"}
+  ],
+  "edition": {
+    "shelf": [
+      {"title": "Dictionary of the Illegible, a book about what happens when type stops making sense", "credit": "Source Type, Laurenz Brunner", "url": "https://www.itsnicethat.com/features/sourcetype-laurenz-brunner-dictionary-of-the-illegible-graphic-design-publication-spotlight-191026"},
+      {"title": "Duo-Man, a virtual Walkman that uses both screens of the iPhone Duo", "credit": "Vidit Bhargava", "url": "https://techcrunch.com/2026/09/28/the-iphone-duo-may-already-have-its-first-killer-app-a-virtual-walkman/"},
+      {"title": "Pohoda Festival's 30th anniversary identity, with 3D babies and a futuristic typeface", "credit": "Andrej & Andrej", "url": "https://www.itsnicethat.com/articles/andrej-and-andrej-pohoda-festival-30th-anniversary-graphic-design-project-141026"}
+    ],
+    "learn": [
+      {
+        "kind": "install",
+        "title": "Framer MCP lets your AI assistant work inside Framer",
+        "url": "https://www.framer.com/updates/framer-mcp",
+        "intro": "Released on 22 October, Framer's official MCP server connects the assistant you already use to your Framer projects, so it can build and edit there instead of handing you code to paste. Changes stay editable on the canvas, and Framer doesn't need to be open.",
+        "skill": {"name": "Framer MCP", "by": "Framer", "cost": "Free to connect · AI usage billed by your assistant"},
+        "changes": [
+          "Your assistant can create pages and change layouts across desktop, tablet and phone breakpoints, reusing the project's own styles and components.",
+          "It can create CMS collections and items, and import content from anything else it can reach.",
+          "It can audit metadata, headings, alt text and page structure before you ship.",
+          "Work can happen on a review branch, and nothing goes live until someone publishes."
+        ],
+        "install": [
+          {"where": "In the Claude app", "how": "Open the Framer listing in the Claude Directory, choose Connect to Claude, sign in to Framer and approve access, then ask Claude to connect to your project."},
+          {"where": "In Cursor or another client, add the server manually", "how": "Add a remote server named framer, type Streamable HTTP, with this URL, then connect and approve in the browser. In Codex, the command is below.", "code": "codex mcp add framer --url https://mcp.framer.com/mcp"}
+        ],
+        "try": "Connect to [project link]. On a new branch, build a pricing page from our existing components and text styles, then list any missing alt text or heading issues across the site.",
+        "take": "Ask for a branch every time: unlike the older CLI setup, MCP doesn't create one automatically. The agent acts with your account's permissions on every project you can access, and localisation isn't supported yet.",
+        "links": [
+          {"title": "Getting started with Framer MCP", "url": "https://www.framer.com/help/articles/getting-started-with-framer-mcp/", "source": "Framer", "anchor": "official MCP server"},
+          {"title": "Framer launches official MCP server", "url": "https://agilebrandguide.com/framer-launches-official-mcp-server-letting-outside-ai-agents-build-and-edit-websites/", "source": "The Agile Brand Guide", "anchor": "Ask for a branch every time"}
+        ]
+      }
+    ]
+  }
+}

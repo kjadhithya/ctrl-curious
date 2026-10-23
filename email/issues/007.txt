@@ -1,0 +1,34 @@
+Ctrl+Curious · Weekend edition · Friday, 23 October 2026 · Issue 007
+View online: https://ctrl-curious.vercel.app/issues/007
+
+Today, in brief
+Apple's first foldable goes on sale today, and reviewers agree the weak spot is software from other people: Engadget's review praises the multitasking (https://www.engadget.com/2292333/apple-iphone-duo-review/) but finds Telegram and Gmail floating in dead space on the inner screen. The apps that work, like Slack, Netflix and Spotify, lean on two panes, tabletop splits and side controls (https://www.tomsguide.com/phones/iphones/ive-been-testing-dozens-of-iphone-duo-apps-heres-my-top-15-picks-so-far), much as Apple's own apps do (https://macrumors.com/2026/10/20/apple-apps-iphone-duo) with sidebars, dual panes and a dock on the right. Even Apple Books is moving to standard Liquid Glass controls (https://9to5mac.com/2026/10/22/ios-27-2-introduces-design-changes-for-these-apple-apps/) in iOS 27.2, likely so they reposition on the Duo. And Framer opened its canvas to outside agents (https://www.framer.com/updates/framer-mcp), so Claude, Codex or Cursor can now build and edit your Framer site directly.
+
+Read
+Apple iPhone Duo review: a first-class foldable: https://www.engadget.com/2292333/apple-iphone-duo-review/
+I've been testing dozens of iPhone Duo apps: my top 15 so far: https://www.tomsguide.com/phones/iphones/ive-been-testing-dozens-of-iphone-duo-apps-heres-my-top-15-picks-so-far
+Here's what Apple's apps look like on the iPhone Duo: https://macrumors.com/2026/10/20/apple-apps-iphone-duo
+iOS 27.2 introduces design changes for these Apple apps: https://9to5mac.com/2026/10/22/ios-27-2-introduces-design-changes-for-these-apple-apps/
+Framer launches an official MCP server for outside AI agents: https://agilebrandguide.com/framer-launches-official-mcp-server-letting-outside-ai-agents-build-and-edit-websites/
+
+Power-up
+Framer MCP lets your AI assistant work inside Framer: https://www.framer.com/updates/framer-mcp
+
+Inspiration shelf
+Dictionary of the Illegible, a book about what happens when type stops making sense (Source Type, Laurenz Brunner): https://www.itsnicethat.com/features/sourcetype-laurenz-brunner-dictionary-of-the-illegible-graphic-design-publication-spotlight-191026
+Duo-Man, a virtual Walkman that uses both screens of the iPhone Duo (Vidit Bhargava): https://techcrunch.com/2026/09/28/the-iphone-duo-may-already-have-its-first-killer-app-a-virtual-walkman/
+Pohoda Festival's 30th anniversary identity, with 3D babies and a futuristic typeface (Andrej & Andrej): https://www.itsnicethat.com/articles/andrej-and-andrej-pohoda-festival-30th-anniversary-graphic-design-project-141026
+
+Weekend watchlist
+iPhone Duo review: first generation fun: https://www.youtube.com/watch?v=ESABTN4VtrA
+Figma agents are finally good (real test): https://www.youtube.com/watch?v=JNQbxzzkkgM
+5 design principles in context: Stripe: https://www.youtube.com/watch?v=0-FnuYGAZ-w
+All our announcements from Config India: https://www.youtube.com/watch?v=Sdh_I7PSuew
+
+Meet up
+Adobe MAX Online 2026 (2026-11-10): https://max.adobe.com/max-online/
+The Messy UX Conference 2026 (2026-11-28): https://designshots.org/conference
+
+That's all for today. Stay curious.
+
+Unsubscribe: https://ctrl-curious.vercel.app/unsubscribe

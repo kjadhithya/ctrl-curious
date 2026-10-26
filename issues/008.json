@@ -1,0 +1,70 @@
+{
+  "issue": 8,
+  "date": "2026-10-26",
+  "title": "Apple's touchscreen Mac is due Wednesday; NN/g finds AI speeds UX work but not research with users",
+  "dek": "A touch-aware macOS, Safari's squeeze on the iPhone Duo, NN/g's AI survey, a way to measure what AI really saves, an accordion audit prompt, three dates this week and three events.",
+  "preheader": "macOS is reportedly learning to switch between touch and trackpad. Plus NN/g's new survey on AI in UX.",
+  "hero": "https://ctrl-curious.vercel.app/assets/email/days2/mon/mon_01.jpg",
+  "hero_alt": "A giant toggle on the horizon, the sun as its knob and the sea as its track",
+  "summary": "Apple's Wednesday event should bring the first touchscreen Mac, and Mark Gurman reports that macOS will [switch its controls depending on whether you last touched the screen or the trackpad](https://www.macrumors.com/2026/10/25/macbook-pro-with-touchscreen-on-wednesday/), with menus opening around your finger. On the iPhone Duo, Apple is [weighing letting websites draw under Safari's side controls](https://www.macrumors.com/2026/10/25/apple-wants-to-fix-safari-on-iphone-duo/) because too many sites mishandle the screen's edges, while Flipboard went the other way and [turned stories into book pages](https://ppc.land/flipboard-redesigns-its-news-app-as-a-two-page-book-for-iphone-duo/) on the inner screen. NN/g's survey of 521 practitioners finds AI [speeds up most UX tasks but helps least with work involving users](https://www.nngroup.com/articles/ai-in-ux-survey-26/), and checking its output is the top complaint. And for something to fix today, Vitaly Friedman's [roundup of accordion icon research](https://www.smashingmagazine.com/2026/10/accordion-icons-which-work-best/) makes the case for a plain caret.",
+  "reads": [
+    {"title": "AI in UX: work is faster, but practitioners have mixed feelings", "source": "Nielsen Norman Group", "url": "https://www.nngroup.com/articles/ai-in-ux-survey-26/", "note": "A survey of 521 designers and researchers finds AI shortens most tasks but helps least with interviews and testing, and 69% of comments were partly negative, mostly about the cost of checking output. Read it for the recommendations on measuring at the system level."},
+    {"title": "Accordion icons: which work best?", "source": "Smashing Magazine", "url": "https://www.smashingmagazine.com/2026/10/accordion-icons-which-work-best/", "note": "Vitaly Friedman's research roundup: no icon reads as a link, custom icons confuse, plus signs clash with add and zoom, and a caret pointing down when closed is the safest default. Also: never split one row into a link and a toggle."},
+    {"title": "Apple reportedly announcing a MacBook Pro with an OLED touchscreen on Wednesday", "source": "MacRumors", "url": "https://www.macrumors.com/2026/10/25/macbook-pro-with-touchscreen-on-wednesday/", "note": "Gurman reports macOS Golden Gate will show controls based on whether you last used touch or the trackpad, open menus around your finger and rework the Dock and menu bar, with touch pitched as an extra input rather than a replacement."},
+    {"title": "Apple wants to fix Safari's cramped layout on iPhone Duo", "source": "MacRumors", "url": "https://www.macrumors.com/2026/10/25/apple-wants-to-fix-safari-on-iphone-duo/", "note": "Safari's side controls on the outer screen squeeze pages into a strip; Apple is weighing letting sites draw beneath them, after its research found many sites using viewport-fit cover don't leave room at every edge. Worth a check of your own safe-area padding."},
+    {"title": "Flipboard redesigns its news app as a two-page book for iPhone Duo", "source": "PPC Land", "url": "https://ppc.land/flipboard-redesigns-its-news-app-as-a-two-page-book-for-iphone-duo/", "note": "Opened, stories become book pages whose layout changes with every turn; closed, the cover screen keeps the flip feed, and an optional slideshow starts in tent pose. A useful reference for designing each posture on purpose."}
+  ],
+  "watch": [
+    {"title": "Apple confirms new Macs next week: everything to expect", "channel": "MacRumors", "id": "PlrgtGtDzG4", "note": "Ahead of Wednesday's event: what the touchscreen OLED MacBook Pro, the Dynamic Island replacing the notch and the OLED iPad mini mean, so you know which layouts may need a touch pass."},
+    {"title": "I try first apps made for Duo: here's what's coming next", "channel": "CNET", "id": "47PI0Eu2dzA", "note": "Bridget Carey talks to the teams behind early iPhone Duo apps, from NYT Cooking and MLB to Netflix, about how they split work across the two displays, a week after launch."},
+    {"title": "Why would a designer need code layers in Figma?", "channel": "Design Xstream", "id": "K-0X97i1MN8", "note": "A six-minute practical case, posted this week: a laptop configurator with 18 combinations shows where static frames break, and how code layers, the agent and Extract designs test behaviour before handoff."}
+  ],
+  "meetups": [
+    {"name": "The invisible work of UX: bringing clarity to AI chaos", "date": "2026-10-28", "place": "Online", "details": "Wednesday · UXPA International · free · 9:30pm IST · Adobe's Shrut Kirti Saksena and Gina Ranalli", "url": "https://uxpa.org/upcoming-webinars/"},
+    {"name": "Adobe MAX Online 2026", "date": "2026-11-10", "place": "Online", "details": "Tuesday · Adobe · free to stream; APAC replay 11 Nov at 9am IST", "url": "https://max.adobe.com/max-online/"},
+    {"name": "The Messy UX Conference 2026", "date": "2026-11-28", "place": "Bengaluru", "details": "Saturday · practitioner talks on design failures, pivots and trade-offs", "url": "https://designshots.org/conference"}
+  ],
+  "edition": {
+    "week": [
+      {"when": "Wednesday · Launch", "title": "Apple's Pro and tell event, where the first touchscreen OLED MacBook Pro is expected", "url": "https://macworld.com/article/3264015/apple-teases-pro-and-tell-event-on-october-28.html"},
+      {"when": "Wednesday · Webinar", "title": "Adobe's enterprise AI researcher and designer on the invisible UX work behind AI products, free from UXPA", "url": "https://uxpa.org/upcoming-webinars/"},
+      {"when": "Friday · Deadline", "title": "Early entry deadline for the 31st Webby Awards, which cover websites, apps and digital experiences", "url": "https://www.webbyawards.com/"}
+    ],
+    "learn": [
+      {
+        "kind": "skill",
+        "title": "Measure what AI really saves your team",
+        "url": "https://www.nngroup.com/articles/ai-in-ux-survey-26/",
+        "intro": "NN/g's survey of 521 UX practitioners found AI makes tasks feel much shorter, yet sentiment is only mildly positive, largely because checking unreliable output eats the gains. Its recommendations add up to an audit you can start this week.",
+        "steps": [
+          "List the tasks your team now uses AI for and split them into work with users (interviews, testing designs) and internal work (synthesis drafts, copy, specs). The savings were smallest for work with users.",
+          "For two weeks, log the full time per task: prompting, checking and fixing the output, plus the time teammates spend cleaning it up downstream.",
+          "Judge the result by what reaches users, sooner or better, not by how many people use AI.",
+          "Decide where saved time goes. Respondents who reinvested it in the work, like more exploration or testing, saw quality gains; those who turned it into more output did not.",
+          "Bring the numbers and the open concerns, such as mandates and ethics, to a retro, and treat them as data rather than resistance."
+        ],
+        "take": "The two-week log and the retro are our suggestion; the split by task type, the system-level view and the advice on reinvesting saved time come from NN/g. Keep the sample in mind: it is a convenience sample of NN/g's own audience.",
+        "links": [
+          {"title": "AI in UX: work is faster, but practitioners have mixed feelings", "url": "https://www.nngroup.com/articles/ai-in-ux-survey-26/", "source": "Nielsen Norman Group", "anchor": "NN/g's survey of 521 UX practitioners"}
+        ]
+      },
+      {
+        "kind": "prompt",
+        "title": "Audit the expand and collapse controls in your UI",
+        "url": "https://www.smashingmagazine.com/2026/10/accordion-icons-which-work-best/",
+        "intro": "Vitaly Friedman's roundup of accordion icon research found that missing or custom icons make people expect a new page, while a caret pointing down when closed is the safest choice. This prompt turns those findings into a quick audit of your own screens.",
+        "tool": "Any AI assistant that reads images",
+        "code": "You are a senior interaction designer auditing expand and collapse controls.\nScreens: [attach screenshots of accordions, FAQs, filters and menus, closed and open]\nPlatform and audience: [web or app, who uses it]\n\nCheck every collapsible item against these rules:\n1. It has an indicator. With no icon, people expect a link to a new page.\n2. The indicator is a caret pointing down when closed and up or sideways when open, or a plus and minus. Flag custom icons and right-pointing arrows.\n3. One control does one thing. Flag rows where the label opens a page and the icon expands the section.\n4. Items that go to a page are underlined links, with no arrow.\n5. A plus sign isn't also used nearby for add, save or zoom.\n\nReturn a table: item, screen, rule broken, why it confuses people, suggested fix. Then list the three fixes with the biggest impact. Don't redesign anything else.",
+        "code_note": "Attach both the closed and open state of each item. Treat the output as a list of hypotheses and check the top three with a quick test on real users before changing the design system.",
+        "columns": [
+          {"label": "Use it for", "items": ["FAQ, filter and menu audits before a release", "Settling an icon debate in design system review"]},
+          {"label": "Not for", "items": ["Deciding whether content should be collapsed at all", "Replacing a usability test of complex navigation"]}
+        ],
+        "take": "For a category that also has its own page, follow the DHL pattern the article cites: the row only expands, and an overview link sits inside.",
+        "links": [
+          {"title": "Accordion icons: which work best?", "url": "https://www.smashingmagazine.com/2026/10/accordion-icons-which-work-best/", "source": "Smashing Magazine", "anchor": "roundup of accordion icon research"}
+        ]
+      }
+    ]
+  }
+}

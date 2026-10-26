@@ -1,0 +1,37 @@
+Ctrl+Curious · Week ahead edition · Monday, 26 October 2026 · Issue 008
+View online: https://ctrl-curious.vercel.app/issues/008
+
+Today, in brief
+Apple's Wednesday event should bring the first touchscreen Mac, and Mark Gurman reports that macOS will switch its controls depending on whether you last touched the screen or the trackpad (https://www.macrumors.com/2026/10/25/macbook-pro-with-touchscreen-on-wednesday/), with menus opening around your finger. On the iPhone Duo, Apple is weighing letting websites draw under Safari's side controls (https://www.macrumors.com/2026/10/25/apple-wants-to-fix-safari-on-iphone-duo/) because too many sites mishandle the screen's edges, while Flipboard went the other way and turned stories into book pages (https://ppc.land/flipboard-redesigns-its-news-app-as-a-two-page-book-for-iphone-duo/) on the inner screen. NN/g's survey of 521 practitioners finds AI speeds up most UX tasks but helps least with work involving users (https://www.nngroup.com/articles/ai-in-ux-survey-26/), and checking its output is the top complaint. And for something to fix today, Vitaly Friedman's roundup of accordion icon research (https://www.smashingmagazine.com/2026/10/accordion-icons-which-work-best/) makes the case for a plain caret.
+
+Read
+AI in UX: work is faster, but practitioners have mixed feelings: https://www.nngroup.com/articles/ai-in-ux-survey-26/
+Accordion icons: which work best?: https://www.smashingmagazine.com/2026/10/accordion-icons-which-work-best/
+Apple reportedly announcing a MacBook Pro with an OLED touchscreen on Wednesday: https://www.macrumors.com/2026/10/25/macbook-pro-with-touchscreen-on-wednesday/
+Apple wants to fix Safari's cramped layout on iPhone Duo: https://www.macrumors.com/2026/10/25/apple-wants-to-fix-safari-on-iphone-duo/
+Flipboard redesigns its news app as a two-page book for iPhone Duo: https://ppc.land/flipboard-redesigns-its-news-app-as-a-two-page-book-for-iphone-duo/
+
+Skill of the week
+Measure what AI really saves your team: https://www.nngroup.com/articles/ai-in-ux-survey-26/
+
+Prompt of the week
+Audit the expand and collapse controls in your UI: https://www.smashingmagazine.com/2026/10/accordion-icons-which-work-best/
+
+This week in design
+Wednesday · Launch · Apple's Pro and tell event, where the first touchscreen OLED MacBook Pro is expected: https://macworld.com/article/3264015/apple-teases-pro-and-tell-event-on-october-28.html
+Wednesday · Webinar · Adobe's enterprise AI researcher and designer on the invisible UX work behind AI products, free from UXPA: https://uxpa.org/upcoming-webinars/
+Friday · Deadline · Early entry deadline for the 31st Webby Awards, which cover websites, apps and digital experiences: https://www.webbyawards.com/
+
+Watch
+Apple confirms new Macs next week: everything to expect: https://www.youtube.com/watch?v=PlrgtGtDzG4
+I try first apps made for Duo: here's what's coming next: https://www.youtube.com/watch?v=47PI0Eu2dzA
+Why would a designer need code layers in Figma?: https://www.youtube.com/watch?v=K-0X97i1MN8
+
+Meet up
+The invisible work of UX: bringing clarity to AI chaos (2026-10-28): https://uxpa.org/upcoming-webinars/
+Adobe MAX Online 2026 (2026-11-10): https://max.adobe.com/max-online/
+The Messy UX Conference 2026 (2026-11-28): https://designshots.org/conference
+
+That's all for today. Stay curious.
+
+Unsubscribe: https://ctrl-curious.vercel.app/unsubscribe

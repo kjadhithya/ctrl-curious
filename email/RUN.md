@@ -100,7 +100,10 @@ The readers are senior product designers, UX/UI designers, design leads and expe
 
 Before including anything, ask: would a product designer be better at their job, or better informed about their field, after this? If not, drop it.
 
-**Not gadget news.** This is not a tech or consumer-electronics digest. Leave out device and hardware launches (phones, tablets, laptops, watches, headphones), launch events and their rumours, prices, specs, release dates, sales figures, and roundups of which company released what. Readers who want that will find it elsewhere. A device story qualifies only when the story itself is about design for designers: a new interaction model or platform guideline they will have to design for (a new input method, screen class, OS design language or Human Interface Guidelines change), told through what changes for interface work, not through the product, price or specs. If the only design angle is "it looks nicer", drop it. The same applies to the summary, the headline, the Watch videos and This week in design.
+**The usefulness test (and no gadget news).** For every launch or "who released what" story, ask: will a product designer find this useful or relevant, learn something from it, and be able to use it in their work? If yes, it belongs. If no, it doesn't, however big the news.
+- Keep: new or updated tools and features designers can use (Figma, Framer, Adobe, Canva, Webflow, AI design and prototyping tools, plugins, design-system tooling, research tools), and launches that change how interfaces are designed (a new interaction model, platform design language or Human Interface Guidelines change). Say who released it, what it does and what a designer can do with it.
+- Leave out: consumer device and hardware news (phones, tablets, laptops, watches), launch events and rumours, prices, specs, release dates, sales figures, and roundups that only list which company launched which product. A device story gets in only when it changes interface work, and then it is told through that change, not the product or its price.
+The same test applies to the summary, the headline, the Watch videos and This week in design.
 
 ## Choosing the Read stories
 
@@ -108,7 +111,7 @@ Before including anything, ask: would a product designer be better at their job,
 - Credibility matters: prefer recognised publications, established researchers, design leaders and the teams that actually built the product. Skip personal concept redesigns of other companies' products by people with no connection to them, however polished.
 - Best sources: UX Collective (uxdesign.cc), Smashing Magazine, Nielsen Norman Group, Figma blog and Config talks, Bootcamp, UX Planet, Built for Mars, Lenny's Newsletter design posts, Intercom and Linear and Stripe design blogs, Sidebar.io picks, company design blogs (Airbnb, Uber, Spotify, Atlassian, Shopify Polaris, Google Material), and Indian design teams (Swiggy, Zomato, Razorpay, CRED, Flipkart).
 - Gallery sites (It's Nice That, Dezeen, Creative Bloq) only when the piece is about digital product or interface design. No festival identities, posters, packaging or rebrands of companies the reader has no connection to.
-- Stay-current picks are about design and the tools and teams of the craft (design tools, AI design workflows, shipped product and interface redesigns explained by the team or by credible critics, research findings, design systems, accessibility rules), never device or product launches for their own sake.
+- Stay-current picks are about design and the tools and teams of the craft (design tools, AI design workflows, shipped product and interface redesigns explained by the team or by credible critics, research findings, design systems, accessibility rules), including new tools and features designers can use; never consumer device launches, prices or specs.
 - Each note says what the reader gets: the technique to try, or what changed and why it matters for their work.
 
 ## Choosing the Watch videos (be picky)

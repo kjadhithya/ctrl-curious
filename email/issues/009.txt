@@ -1,0 +1,32 @@
+Ctrl+Curious · Tools edition · Tuesday, 27 October 2026 · Issue 009
+View online: https://ctrl-curious.vercel.app/issues/009
+
+Today, in brief
+Apple opened its launch week with an OLED iPad mini that is thinner, IP67-rated and now starts at $699 (https://www.macrumors.com/2026/10/26/apple-announces-ipad-mini-with-oled-display/), and teased more to come (https://www.macrumors.com/2026/10/26/apple-teases-exciting-week-ahead/) before Wednesday, when touchscreen MacBook Pros are expected. Google, meanwhile, gave Gemini Live a redesigned plus button that makes it easier to add photos and files (https://9to5google.com/2026/10/26/gemini-live-plus-redesign/). For the craft, Jakob Nielsen's latest roundup sets out rules for proactive AI that respect a user's train of thought (https://www.uxtigers.com/post/ux-roundup-20261026), and this week's UX Collective argues the race that matters is winning stakeholder alignment, not shipping faster (https://newsletter.uxdesign.cc/p/why-your-team-is-telling-the-wrong). And Stéphanie Walter's weekly picks make a sharp case for fixing everyday accessibility before chasing gadgets (https://stephaniewalter.design/blog/pixels-of-the-week-october-25-2026/).
+
+Tool of the day
+Canva Craft: https://www.canva.com/newsroom/news/canva-craft/
+
+Read
+Apple announces a new iPad mini with an 8.5-inch OLED display: https://www.macrumors.com/2026/10/26/apple-announces-ipad-mini-with-oled-display/
+Gemini Live gets a plus button for adding photos and files: https://9to5google.com/2026/10/26/gemini-live-plus-redesign/
+UX Roundup: flow, proactive AI and joint cognitive systems: https://www.uxtigers.com/post/ux-roundup-20261026
+Why your team is telling the wrong story: https://newsletter.uxdesign.cc/p/why-your-team-is-telling-the-wrong
+Pixels of the week: accessibility, decorative images and vibe prototyping: https://stephaniewalter.design/blog/pixels-of-the-week-october-25-2026/
+
+Tool to master
+Figma code layers: from frames to a working prototype: https://help.figma.com/hc/en-us/articles/44193259600535-Code-layers-in-Figma-Design
+
+Watch
+Why Reddit built its own AI prototyping tool: https://www.youtube.com/watch?v=zF-J3rMbzZw
+Introducing the new iPad mini with OLED display: https://www.youtube.com/watch?v=x5h1JykMcFU
+Code layers: collaborate with code on the canvas: https://www.youtube.com/watch?v=UMDUAHmhkT8
+
+Meet up
+The invisible work of UX: bringing clarity to AI chaos (2026-10-28): https://uxpa.org/upcoming-webinars/
+Adobe MAX Online 2026 (2026-11-10): https://max.adobe.com/max-online/
+The Messy UX Conference 2026 (2026-11-28): https://designshots.org/conference
+
+That's all for today. Stay curious.
+
+Unsubscribe: https://ctrl-curious.vercel.app/unsubscribe

@@ -1,0 +1,114 @@
+{
+  "issue": 9,
+  "date": "2026-10-27",
+  "title": "Apple unveils an OLED iPad mini ahead of Wednesday's Macs; Canva ships Craft, an image model that plans layouts first",
+  "dek": "A thinner OLED iPad mini, a small Gemini Live redesign, Jakob Nielsen on proactive AI, why stakeholder alignment beats speed, Canva Craft, a code layers workflow before the free period ends, and three events.",
+  "preheader": "Apple's OLED iPad mini lands before Wednesday's Macs. Plus Canva Craft and how to use Figma code layers.",
+  "hero": "https://ctrl-curious.vercel.app/assets/email/days2/tue/tue_08.jpg",
+  "hero_alt": "Server towers under the moon, their status lights like a city at night",
+  "summary": "Apple opened its launch week with [an OLED iPad mini that is thinner, IP67-rated and now starts at $699](https://www.macrumors.com/2026/10/26/apple-announces-ipad-mini-with-oled-display/), and [teased more to come](https://www.macrumors.com/2026/10/26/apple-teases-exciting-week-ahead/) before Wednesday, when touchscreen MacBook Pros are expected. Google, meanwhile, gave Gemini Live [a redesigned plus button that makes it easier to add photos and files](https://9to5google.com/2026/10/26/gemini-live-plus-redesign/). For the craft, Jakob Nielsen's latest roundup sets out [rules for proactive AI that respect a user's train of thought](https://www.uxtigers.com/post/ux-roundup-20261026), and this week's UX Collective argues the race that matters is [winning stakeholder alignment, not shipping faster](https://newsletter.uxdesign.cc/p/why-your-team-is-telling-the-wrong). And Stéphanie Walter's weekly picks make [a sharp case for fixing everyday accessibility before chasing gadgets](https://stephaniewalter.design/blog/pixels-of-the-week-october-25-2026/).",
+  "reads": [
+    {
+      "title": "Apple announces a new iPad mini with an 8.5-inch OLED display",
+      "source": "MacRumors",
+      "url": "https://www.macrumors.com/2026/10/26/apple-announces-ipad-mini-with-oled-display/",
+      "note": "About 15% thinner, IP67-rated, brighter at 1,200 nits for HDR, with sound coming through the display and an optional nano-texture screen, but still 60Hz and now $699; pre-orders open Wednesday, the same day as Apple's Mac event."
+    },
+    {
+      "title": "Gemini Live gets a plus button for adding photos and files",
+      "source": "9to5Google",
+      "url": "https://9to5google.com/2026/10/26/gemini-live-plus-redesign/",
+      "note": "A small redesign of Google's voice mode on Android makes it easier to hand the assistant photos and files; a useful pattern to study if your product mixes live voice with attachments."
+    },
+    {
+      "title": "UX Roundup: flow, proactive AI and joint cognitive systems",
+      "source": "Jakob Nielsen, UX Tigers",
+      "url": "https://www.uxtigers.com/post/ux-roundup-20261026",
+      "note": "Dense and practical: judge the human and the AI as one system, keep proactive suggestions unobtrusive and easy to dismiss, count the copy-paste tax between tools, and lead with three to five options plus a recommended default."
+    },
+    {
+      "title": "Why your team is telling the wrong story",
+      "source": "UX Collective",
+      "url": "https://newsletter.uxdesign.cc/p/why-your-team-is-telling-the-wrong",
+      "note": "This week's lead essay argues designers are cutting process to ship faster while losing the race that counts, getting stakeholders aligned early, which designers are well placed to win; plus picks on designing in code and treating performance as design."
+    },
+    {
+      "title": "Pixels of the week: accessibility, decorative images and vibe prototyping",
+      "source": "Stéphanie Walter",
+      "url": "https://stephaniewalter.design/blog/pixels-of-the-week-october-25-2026/",
+      "note": "The UX researcher's weekly picks: Robert Kingett on fixing alt text and headings before building assistive gadgets, Adrian Roselli on why most decorative images are really redundant, an ecommerce accessibility checklist, and the Pour.dev audit tools."
+    }
+  ],
+  "watch": [
+    {
+      "title": "Why Reddit built its own AI prototyping tool",
+      "channel": "How I AI",
+      "id": "zF-J3rMbzZw",
+      "note": "Posted this week: Reddit's Blair Metcalf shows Proto, which lets designers build prototypes on real data without touching Git, using a design-system MCP and Figma-to-PRD capsules; about 700 prototypes and full adoption across UX and product."
+    },
+    {
+      "title": "Introducing the new iPad mini with OLED display",
+      "channel": "Apple",
+      "id": "x5h1JykMcFU",
+      "note": "Apple's launch film from Monday, a quick look at the thinner body, nano-texture option and Apple Pencil Pro support that today's lead story covers, ahead of Wednesday's Mac launch."
+    },
+    {
+      "title": "Code layers: collaborate with code on the canvas",
+      "channel": "Figma",
+      "id": "UMDUAHmhkT8",
+      "note": "Figma's own walkthrough of the five ways to start a code layer, from converting frames to cloning a GitHub repo; watch it alongside today's Tool to master while code layer tasks are still free."
+    }
+  ],
+  "meetups": [
+    {
+      "name": "The invisible work of UX: bringing clarity to AI chaos",
+      "date": "2026-10-28",
+      "place": "Online",
+      "details": "Wednesday · UXPA International · free · 9:30pm IST · Adobe's Shrut Kirti Saksena and Gina Ranalli",
+      "url": "https://uxpa.org/upcoming-webinars/"
+    },
+    {
+      "name": "Adobe MAX Online 2026",
+      "date": "2026-11-10",
+      "place": "Online",
+      "details": "Tuesday · Adobe · free to stream; APAC replay 11 Nov at 9am IST",
+      "url": "https://max.adobe.com/max-online/"
+    },
+    {
+      "name": "The Messy UX Conference 2026",
+      "date": "2026-11-28",
+      "place": "Bengaluru",
+      "details": "Saturday · practitioner talks on design failures, pivots and trade-offs",
+      "url": "https://designshots.org/conference"
+    }
+  ],
+  "edition": {
+    "tool": {
+      "name": "Canva Craft",
+      "url": "https://www.canva.com/newsroom/news/canva-craft/",
+      "what": "Canva's first in-house image model works in two stages: one model plans the composition, elements and text, and a second renders it at up to 2K, with text in 55 languages and over 30 aspect ratios. It is best at layout-heavy graphics such as posters and social assets, where its structured output can be split into editable layers with Magic Layers.",
+      "meta": "In Canva's Dream Lab, worldwide · uses your AI allowance · API in preview"
+    },
+    "learn": [
+      {
+        "kind": "tool",
+        "title": "Figma code layers: from frames to a working prototype",
+        "url": "https://help.figma.com/hc/en-us/articles/44193259600535-Code-layers-in-Figma-Design",
+        "intro": "Code layers put running code on the Figma canvas, in open beta on all plans. Creating and editing them costs no AI credits on paid plans until 4 November, so this is the week to build a real workflow around them.",
+        "steps": [
+          "Pick your starting point: press B for an empty code layer and prompt the agent, or select one or more frames, choose Code and click Build selection to turn existing designs into a working prototype.",
+          "Bring in what already exists: paste a live page captured with the Figma Chrome extension, upload a local folder, or connect GitHub and clone a repo, working on a branch and opening a pull request to merge back.",
+          "Make precise tweaks without prompting: open the code editor, click Edit in the Browser tab, Shift-click elements in the preview, adjust colour, padding and type in the properties panel, then click Apply.",
+          "Press Play on several layers at once to compare versions side by side, and capture the empty, loading and error states that static frames tend to skip.",
+          "Use Extract designs to bring results back as editable frames: the current state, a single element, or Record a flow to turn a sequence of screens into frames, then push edits back to the code layer."
+        ],
+        "take": "After 4 November, code layer tasks use AI credits like other agent features, and other agent work in the same prompt is already charged. Imports can take ten minutes or more and not every repo will run, so test with a small project first. Creating code layers through MCP needs a Full seat.",
+        "links": [
+          {"title": "What's new from Config India 2026", "url": "https://help.figma.com/hc/en-us/articles/43663368947863-What-s-new-from-Config-India-2026", "source": "Figma Help Center", "anchor": "until 4 November"},
+          {"title": "Figma Chrome extension", "url": "https://www.figma.com/downloads/chrome-extension/", "source": "Figma", "anchor": "captured with the Figma Chrome extension"},
+          {"title": "How Figma AI credits work", "url": "https://help.figma.com/hc/en-us/articles/33459875669015-How-Figma-AI-credits-work", "source": "Figma Help Center", "anchor": "use AI credits like other agent features"}
+        ]
+      }
+    ]
+  }
+}

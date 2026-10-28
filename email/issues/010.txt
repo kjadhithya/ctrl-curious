@@ -1,0 +1,29 @@
+Ctrl+Curious · Type edition · Wednesday, 28 October 2026 · Issue 010
+View online: https://ctrl-curious.vercel.app/issues/010
+
+Today, in brief
+Design tools spent the week opening up to agents: Figma now lets Claude, Cursor or Codex call Weave's image and video models through its MCP server (https://www.figma.com/release-notes/?title=access-video-and-image-models-from-figma-weave-via-the-figma-mcp), and Code Connect 2.1 drops its setup wizard in favour of an agent skill (https://github.com/figma/code-connect/releases/tag/v2.1.0) for mapping components to code. Framer followed its MCP launch with an Assets panel that its own agents can organise (https://www.framer.com/updates/asset-panel). The catch, as the Design Systems Collective argues, is that cheap automated audits make every deliberate exception look like a bug (https://designsystemscollective.substack.com/p/some-mistakes-are-on-purpose), so systems need a way to record them. And with Apple's event tonight, the bigger interface question is what touch does to a desktop built for a cursor (https://www.forbes.com/sites/ewanspence/2026/10/25/why-apples-macbook-pro-touch-will-not-change-laptops-forever/), which today's brief takes on.
+
+Read
+Some mistakes are on purpose: https://designsystemscollective.substack.com/p/some-mistakes-are-on-purpose
+Why a touchscreen MacBook Pro won't turn the Mac into an iPad: https://www.forbes.com/sites/ewanspence/2026/10/25/why-apples-macbook-pro-touch-will-not-change-laptops-forever/
+Figma Weave's image and video models now work through Figma MCP: https://www.figma.com/release-notes/?title=access-video-and-image-models-from-figma-weave-via-the-figma-mcp
+Code Connect 2.1 replaces its setup wizard with an agent skill: https://github.com/figma/code-connect/releases/tag/v2.1.0
+Framer adds custom asset folders that its agents can organise: https://www.framer.com/updates/asset-panel
+
+Steal this
+A gated design review checklist that keeps AI concepts out of the spec: https://pixso.net/articles/ai-design-review-checklist/
+
+10-minute brief
+Designing for a desktop that gets touched: https://www.macrumors.com/2026/10/25/macbook-pro-with-touchscreen-on-wednesday/
+
+Watch
+Get started with the Framer MCP: https://www.youtube.com/watch?v=ITFOYba8g0U
+
+Meet up
+Adobe MAX Online 2026 (2026-11-10): https://max.adobe.com/max-online/
+The Messy UX Conference 2026 (2026-11-28): https://designshots.org/conference
+
+That's all for today. Stay curious.
+
+Unsubscribe: https://ctrl-curious.vercel.app/unsubscribe

@@ -1,0 +1,111 @@
+{
+  "issue": 10,
+  "date": "2026-10-28",
+  "title": "Figma opens Weave's image and video models to outside AI agents; Framer lets its agents sort your assets",
+  "dek": "Weave models through Figma MCP, a Code Connect release that hands setup to an agent skill, Framer's asset folders and CMS cursors, why design systems need room for deliberate exceptions, how a touchscreen Mac changes desktop UI, a design review checklist and two events.",
+  "preheader": "Figma and Framer hand more of the canvas to agents. Plus how to design for a Mac you can touch.",
+  "hero": "https://ctrl-curious.vercel.app/assets/email/days2/wed/wed_08.jpg",
+  "hero_alt": "Hamburgefonstiv in Bricolage Grotesque across three weights",
+  "summary": "Design tools spent the week opening up to agents: Figma now lets Claude, Cursor or Codex [call Weave's image and video models through its MCP server](https://www.figma.com/release-notes/?title=access-video-and-image-models-from-figma-weave-via-the-figma-mcp), and [Code Connect 2.1 drops its setup wizard in favour of an agent skill](https://github.com/figma/code-connect/releases/tag/v2.1.0) for mapping components to code. Framer followed its MCP launch with [an Assets panel that its own agents can organise](https://www.framer.com/updates/asset-panel). The catch, as the Design Systems Collective argues, is that cheap automated audits make [every deliberate exception look like a bug](https://designsystemscollective.substack.com/p/some-mistakes-are-on-purpose), so systems need a way to record them. And with Apple's event tonight, the bigger interface question is [what touch does to a desktop built for a cursor](https://www.forbes.com/sites/ewanspence/2026/10/25/why-apples-macbook-pro-touch-will-not-change-laptops-forever/), which today's brief takes on.",
+  "reads": [
+    {
+      "title": "Some mistakes are on purpose",
+      "source": "Design Systems Collective",
+      "url": "https://designsystemscollective.substack.com/p/some-mistakes-are-on-purpose",
+      "note": "Agents make consistency checks nearly free, so intentional exceptions start to read as errors; practitioner write-ups cover an exceptions register agents can read, a mapped token layer between intent and brand, and lessons from machine-readable systems."
+    },
+    {
+      "title": "Why a touchscreen MacBook Pro won't turn the Mac into an iPad",
+      "source": "Forbes",
+      "url": "https://www.forbes.com/sites/ewanspence/2026/10/25/why-apples-macbook-pro-touch-will-not-change-laptops-forever/",
+      "note": "Ahead of tonight's event, a useful framing for interface work: touch is reported to arrive as an extra input on a windowed macOS rather than a touch-first mode, which means one UI has to serve fingers and a cursor at once."
+    },
+    {
+      "title": "Figma Weave's image and video models now work through Figma MCP",
+      "source": "Figma release notes",
+      "url": "https://www.figma.com/release-notes/?title=access-video-and-image-models-from-figma-weave-via-the-figma-mcp",
+      "note": "With a Weave account connected, outside agents such as Claude, Cursor and Codex can generate with Weave's models, including Seedance, Kling and Nano Banana, on Weave credits, so media generation can sit inside an agent workflow instead of a separate canvas."
+    },
+    {
+      "title": "Code Connect 2.1 replaces its setup wizard with an agent skill",
+      "source": "Figma on GitHub",
+      "url": "https://github.com/figma/code-connect/releases/tag/v2.1.0",
+      "note": "Figma now points teams to the figma-code-connect skill for mapping design-system components to code; a clear sign it expects agents to do the wiring, and a reason for system owners to check how their components are named and documented."
+    },
+    {
+      "title": "Framer adds custom asset folders that its agents can organise",
+      "source": "Framer",
+      "url": "https://www.framer.com/updates/asset-panel",
+      "note": "Components, colours, text styles, code overrides and vectors can now live in your own folders, and Framer Agents can tidy them; a day later Framer added live multiplayer cursors to CMS text editing, so content and design can co-edit in place."
+    }
+  ],
+  "watch": [
+    {
+      "title": "Get started with the Framer MCP",
+      "channel": "Framer",
+      "id": "ITFOYba8g0U",
+      "note": "Framer's own walkthrough from last week shows how to connect Claude Code, Codex or Cursor to a live Framer project; watch it with today's asset panel story to see how far agents can now reach into a site."
+    }
+  ],
+  "meetups": [
+    {
+      "name": "Adobe MAX Online 2026",
+      "date": "2026-11-10",
+      "place": "Online",
+      "details": "Tuesday · Adobe · free to stream; APAC replay 11 Nov at 9am IST",
+      "url": "https://max.adobe.com/max-online/"
+    },
+    {
+      "name": "The Messy UX Conference 2026",
+      "date": "2026-11-28",
+      "place": "Bengaluru",
+      "details": "Saturday · practitioner talks on design failures, pivots and trade-offs",
+      "url": "https://designshots.org/conference"
+    }
+  ],
+  "edition": {
+    "learn": [
+      {
+        "kind": "steal",
+        "title": "A gated design review checklist that keeps AI concepts out of the spec",
+        "url": "https://pixso.net/articles/ai-design-review-checklist/",
+        "intro": "Pixso's free AI design review checklist runs a crit as a series of short passes, each with a pass or fail gate and a severity scale. Its most useful rule for AI-assisted teams: generated concepts are labelled and kept apart from approved requirements.",
+        "file": "design-review-gates.md",
+        "code": "# Design review gates (condensed from Pixso)\nSeverity: S1 blocker · S2 major · S3 minor (owner + milestone)\n\n1. Intent      user, one-sentence task, decision data noted\n2. Hierarchy   purpose and primary task clear in 5 seconds\n3. Layout      desktop + mobile rules for wrap, truncate, overflow\n4. Components  shared patterns reused; exceptions written down\n5. States      loading, empty, failed, retrying, permission-limited, success\n6. Content     long, missing and localised values tested; errors give a next step\n7. Access      names, focus order, contrast and target size set\n8. Issues      every S1/S2 closed or formally accepted\n9. Handoff     AI-generated concepts labelled, unverified behaviour listed\n10. Release    not claimed until the built product passes testing\n\nTag taste comments as 'preference', not user impact.",
+        "code_note": "Paste it into the crit doc or PR template and do one pass per gate instead of collecting free-form comments. For gate 7, use the WCAG target size minimum so 'big enough' is a number, not a debate.",
+        "meta": "Free · from Pixso",
+        "take": "Tagging taste comments as preference and pinning gate 7 to WCAG are our additions; the gates and severity scale come from Pixso.",
+        "links": [
+          {"title": "AI design review checklist", "url": "https://pixso.net/articles/ai-design-review-checklist/", "source": "Pixso", "anchor": "free AI design review checklist"},
+          {"title": "Understanding target size (minimum)", "url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html", "source": "W3C", "anchor": "WCAG target size minimum"}
+        ]
+      },
+      {
+        "kind": "brief",
+        "title": "Designing for a desktop that gets touched",
+        "url": "https://www.macrumors.com/2026/10/25/macbook-pro-with-touchscreen-on-wednesday/",
+        "intro": "Apple's event tonight is widely expected to bring the first Mac with a touchscreen. According to Bloomberg's reporting, macOS will adapt its controls to whichever input you used last, so desktop UIs tuned for a precise cursor will start getting tapped.",
+        "define": "An input-adaptive interface keeps the same layout but changes target size, spacing and menu behaviour depending on whether the latest input was a finger or a pointer.",
+        "examples_label": "What has been reported so far",
+        "examples": [
+          {"name": "A macOS that adapts to input", "text": "MacRumors, citing Bloomberg: controls change with the most recent input, and the Dock and menu bar are tuned for touch, alongside the keyboard and trackpad.", "url": "https://www.macrumors.com/2026/10/25/macbook-pro-with-touchscreen-on-wednesday/"},
+          {"name": "Menus that open around the finger", "text": "Earlier Bloomberg-based reporting described a tap bringing up a context menu around the touch point, and tapped menu bar items enlarging their controls.", "url": "https://www.cultofmac.com/news/macos-27-touchscreen-macbook-pro-modifications"},
+          {"name": "Tonight's event", "text": "Apple's Pro and tell event is on 28 October at 10am Pacific, 10:30pm in India; treat every detail above as reported until Apple confirms it.", "url": "https://macworld.com/article/3264015/apple-teases-pro-and-tell-event-on-october-28.html"}
+        ],
+        "tips": [
+          "Size for the input, not the screen: on the web, use any-pointer: coarse to enlarge hit areas whenever touch is present, since viewport width tells you nothing here.",
+          "Keep dense pointer layouts but pad the hit area: grow the clickable zone with padding or a pseudo-element towards 44pt for touch without moving the visual grid; 24 by 24 CSS pixels is the WCAG 2.2 AA floor, not the goal.",
+          "Audit hover-only UI: tooltips, row actions that appear on hover and hover-to-open menus each need a tap or long-press route.",
+          "Check where popovers land: a hand covers the screen below and beside the finger, so keep the likeliest action away from the palm.",
+          "Test the switch itself: tap, use the trackpad, tap again, and make sure density changes don't reflow a list mid-task."
+        ],
+        "why": "The Mac was the last major platform where you could count on a precise cursor, and pro tools, dashboards and design apps lean on small targets and hover. If touch arrives as an extra input rather than a separate mode, one interface has to handle both.",
+        "take": "The tips are our own advice, drawn from the reports and WCAG rather than from Apple, which has not published guidance yet.",
+        "links": [
+          {"title": "any-pointer", "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/@media/any-pointer", "source": "MDN", "anchor": "any-pointer: coarse"},
+          {"title": "Apple's touchscreen MacBook Pro is reportedly coming Wednesday", "url": "https://www.macrumors.com/2026/10/25/macbook-pro-with-touchscreen-on-wednesday/", "source": "MacRumors", "anchor": "Bloomberg's reporting"}
+        ]
+      }
+    ]
+  }
+}

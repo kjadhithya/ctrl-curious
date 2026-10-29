@@ -1,0 +1,132 @@
+{
+  "issue": 11,
+  "date": "2026-10-29",
+  "title": "Apple brings touch to the Mac and publishes its first design guidance for touch on macOS",
+  "dek": "What changes when a Mac gets tapped, Apple's touch design talk, building a Figma library from code, how Microsoft gave Copilot's icon a voice, and two events.",
+  "preheader": "The Mac is now a touchscreen. Here's what Apple says that means for your interface.",
+  "hero": "https://ctrl-curious.vercel.app/assets/email/days2/thu/thu_04.jpg",
+  "hero_alt": "A labelled section of basic shapes, a teammate dragging a star out",
+  "summary": "Apple's new MacBook Pro [turns touches into clicks](https://www.apple.com/newsroom/2026/10/apple-unveils-groundbreaking-macbook-pro-with-proled-xdr-display/) so most apps work on day one, and early hands-ons show a desktop that stays a desktop, with [menu bar items that grow when tapped](https://gizmodo.com/macos-touchscreen-macbook-pro-2000831715). The real homework is Apple's [Touch on Mac guidance](https://developer.apple.com/touch-on-mac/): hit targets, hover and controls that expand under a finger. Elsewhere, Christine Vallaure makes the case for [building your Figma library from code](https://uxdesign.cc/building-an-ai-ready-design-system-library-code-figma-with-mcp-ec5d9e8c90d2), not the other way round.",
+  "reads": [
+    {
+      "title": "Apple unveils its first MacBook Pro with a touchscreen",
+      "source": "Apple Newsroom",
+      "url": "https://www.apple.com/newsroom/2026/10/apple-unveils-groundbreaking-macbook-pro-with-proled-xdr-display/",
+      "note": "Skip the specs: the gestures list, auto-translated clicks and a Dynamic Island for Spotlight and Live Activities are what change your UI."
+    },
+    {
+      "title": "Touchscreen macOS isn't remotely close to Windows 8",
+      "source": "Gizmodo",
+      "url": "https://gizmodo.com/macos-touchscreen-macbook-pro-2000831715",
+      "note": "A hands-on that shows the approach: keep the desktop, space out the menu bar and resize items for a finger."
+    },
+    {
+      "title": "Get ready for Touch on Mac",
+      "source": "Apple Developer",
+      "url": "https://developer.apple.com/touch-on-mac/",
+      "note": "Apple's new hub: three talks, upcoming touch UI patterns and two live labs with its designers in November."
+    },
+    {
+      "title": "Smaller teams want design leaders who make, again",
+      "source": "UX Collective",
+      "url": "https://uxdesign.cc/smaller-teams-want-design-leaders-who-make-again-heres-how-b8939221bd7b",
+      "note": "Patrick Neeman on the player-coach lead, with four moves to try, from shipping something monthly to rewriting one career ladder."
+    },
+    {
+      "title": "Going nowhere fast",
+      "source": "UX Collective",
+      "url": "https://uxdesign.cc/going-nowhere-fast-7436dd29c54f",
+      "note": "Why AI speed hides weak inputs, and what to measure instead of how many personas a team produced."
+    }
+  ],
+  "watch": [
+    {
+      "title": "Design for touch on Mac",
+      "channel": "Apple Developer",
+      "id": "2cq3ytwLrLk",
+      "note": "Out yesterday: Apple's own session on touch targets, hover actions and expanding controls on macOS."
+    },
+    {
+      "title": "James McDonald: building beautiful websites with Claude",
+      "channel": "Dive Club",
+      "id": "IStiszvY5h8",
+      "note": "New this week: a visual designer screen-shares how he picks Figma or Claude, builds his own tools and animates."
+    },
+    {
+      "title": "Ship data-backed websites with Payload",
+      "channel": "Figma",
+      "id": "PoTTuJ39gwA",
+      "note": "Payload is still rolling out in Figma Make; this shows content, workflows and an admin tied to your design system."
+    }
+  ],
+  "meetups": [
+    {
+      "name": "Agentic AI in practice: building, evaluating and earning trust",
+      "date": "2026-11-14",
+      "place": "Bengaluru",
+      "details": "Saturday · ProductTank Bengaluru · Atlassian, Domlur · RSVP only",
+      "url": "https://www.meetup.com/producttank-bangalore/events/317100600/"
+    },
+    {
+      "name": "Touch on Mac group labs",
+      "date": "2026-11-18",
+      "place": "Online",
+      "details": "Wednesday · Apple designers and engineers · 18 and 19 Nov, sign-up on the page",
+      "url": "https://developer.apple.com/touch-on-mac/"
+    }
+  ],
+  "edition": {
+    "case": {
+      "title": "More than a mark: how Copilot's icon joined the conversation",
+      "url": "https://microsoft.design/articles/more-than-a-mark/",
+      "studio": "Microsoft Design, with COLLINS and Koto",
+      "client": "Microsoft Copilot",
+      "note": "Copilot's icon looked different everywhere and sat still while the AI worked. The team rebuilt it as two simple forms that can move apart and back together, giving it thinking, planning and retrieval states. The deciding rule: a shape in motion has to stay readable in every frame."
+    },
+    "learn": [
+      {
+        "kind": "people",
+        "title": "Christine Vallaure builds the Figma library from code",
+        "url": "https://uxdesign.cc/building-an-ai-ready-design-system-library-code-figma-with-mcp-ec5d9e8c90d2",
+        "person": {"name": "Christine Vallaure", "role": "Designer and educator, moonlearning", "initials": "CV"},
+        "intro": "In the first part of a new series, Christine Vallaure treats code as the source of truth and Figma as its mirror, generated through MCP.",
+        "steps": [
+          "Create tokens and text styles first, with the same names the code uses.",
+          "Make the agent write a GAPS.md of everything it couldn't translate, so gaps get reviewed.",
+          "Run a parity check: compare a Storybook manifest with a Figma one, component by component."
+        ],
+        "source_line": "From UX Collective · our takeaways from her article",
+        "links": [
+          {"title": "Building an AI-ready design system library: Code → Figma with MCP", "url": "https://uxdesign.cc/building-an-ai-ready-design-system-library-code-figma-with-mcp-ec5d9e8c90d2", "source": "UX Collective", "anchor": "first part of a new series"}
+        ]
+      },
+      {
+        "kind": "decision",
+        "title": "Let the Mac translate touch, or design for it?",
+        "url": "https://developer.apple.com/touch-on-mac/",
+        "intro": "macOS now turns taps into clicks, so most apps work untouched. The call is where that's enough.",
+        "columns": [
+          {"label": "Let it translate when", "items": [
+            "The screen is mostly standard system controls",
+            "Precise work stays on the trackpad anyway",
+            "Every action already has a click route"
+          ]},
+          {"label": "Design for touch when", "items": [
+            "People drag, draw or scrub on a canvas",
+            "Actions only appear on hover",
+            "Custom controls are smaller than a fingertip"
+          ]}
+        ],
+        "examples": [
+          {"name": "Pixelmator Pro", "text": "Apple rebuilt it so you draw, paint and select straight on the canvas.", "url": "https://www.apple.com/newsroom/2026/10/apple-unveils-groundbreaking-macbook-pro-with-proled-xdr-display/"}
+        ],
+        "rule": "If a finger has to do something a click can't, design it; otherwise let macOS translate.",
+        "take": "The columns are our framing, built from Apple's announcement and its design for touch session.",
+        "links": [
+          {"title": "Get ready for Touch on Mac", "url": "https://developer.apple.com/touch-on-mac/", "source": "Apple Developer", "anchor": "turns taps into clicks"},
+          {"title": "Design for touch on Mac", "url": "https://www.youtube.com/watch?v=2cq3ytwLrLk", "source": "Apple Developer", "anchor": "design for touch session"}
+        ]
+      }
+    ]
+  }
+}

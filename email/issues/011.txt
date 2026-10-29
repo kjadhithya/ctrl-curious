@@ -1,0 +1,34 @@
+Ctrl+Curious · Case study edition · Thursday, 29 October 2026 · Issue 011
+View online: https://ctrl-curious.vercel.app/issues/011
+
+Today, in brief
+Apple's new MacBook Pro turns touches into clicks (https://www.apple.com/newsroom/2026/10/apple-unveils-groundbreaking-macbook-pro-with-proled-xdr-display/) so most apps work on day one, and early hands-ons show a desktop that stays a desktop, with menu bar items that grow when tapped (https://gizmodo.com/macos-touchscreen-macbook-pro-2000831715). The real homework is Apple's Touch on Mac guidance (https://developer.apple.com/touch-on-mac/): hit targets, hover and controls that expand under a finger. Elsewhere, Christine Vallaure makes the case for building your Figma library from code (https://uxdesign.cc/building-an-ai-ready-design-system-library-code-figma-with-mcp-ec5d9e8c90d2), not the other way round.
+
+Read
+Apple unveils its first MacBook Pro with a touchscreen: https://www.apple.com/newsroom/2026/10/apple-unveils-groundbreaking-macbook-pro-with-proled-xdr-display/
+Touchscreen macOS isn't remotely close to Windows 8: https://gizmodo.com/macos-touchscreen-macbook-pro-2000831715
+Get ready for Touch on Mac: https://developer.apple.com/touch-on-mac/
+Smaller teams want design leaders who make, again: https://uxdesign.cc/smaller-teams-want-design-leaders-who-make-again-heres-how-b8939221bd7b
+Going nowhere fast: https://uxdesign.cc/going-nowhere-fast-7436dd29c54f
+
+How they work
+Christine Vallaure builds the Figma library from code: https://uxdesign.cc/building-an-ai-ready-design-system-library-code-figma-with-mcp-ec5d9e8c90d2
+
+Decision toolkit
+Let the Mac translate touch, or design for it?: https://developer.apple.com/touch-on-mac/
+
+Case study
+More than a mark: how Copilot's icon joined the conversation: https://microsoft.design/articles/more-than-a-mark/
+
+Watch
+Design for touch on Mac: https://www.youtube.com/watch?v=2cq3ytwLrLk
+James McDonald: building beautiful websites with Claude: https://www.youtube.com/watch?v=IStiszvY5h8
+Ship data-backed websites with Payload: https://www.youtube.com/watch?v=PoTTuJ39gwA
+
+Meet up
+Agentic AI in practice: building, evaluating and earning trust (2026-11-14): https://www.meetup.com/producttank-bangalore/events/317100600/
+Touch on Mac group labs (2026-11-18): https://developer.apple.com/touch-on-mac/
+
+That's all for today. Stay curious.
+
+Unsubscribe: https://ctrl-curious.vercel.app/unsubscribe

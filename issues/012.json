@@ -1,0 +1,168 @@
+{
+  "issue": 12,
+  "date": "2026-10-30",
+  "title": "GitHub open-sources Replica, an AI prototyping tool that builds from your own design system",
+  "dek": "GitHub's Replica and how to set it up, what the first touch Mac hands-ons show about the interface, Baymard on where shoppers want AI, Gemini's settings redesign, a weekend watchlist and three events.",
+  "preheader": "GitHub's new prototyping tool builds from your components. Plus what touch changes on the Mac, and a weekend watchlist.",
+  "hero": "https://ctrl-curious.vercel.app/assets/email/days2/fri/fri_04.jpg",
+  "hero_alt": "A pixel tent and campfire under a moon between pine trees",
+  "summary": "GitHub Design has [open-sourced Replica](https://github.blog/changelog/2026-10-28-introducing-replica-an-open-source-ai-prototyping-tool/), a prototyping tool that works from your team's own components and approved guidance, so a teammate's prompt produces something that looks like your product instead of a generic template. The first hands-on reviews of Apple's touch Mac show how lightly the interface adapts: macOS [spaces out menu items when it senses a finger](https://www.macstories.net/stories/macbook-pro-with-touch-a-mac-for-the-ipad-generation/), and the [window buttons grow slightly under a fingertip](https://www.engadget.com/2300023/apples-first-touchscreen-macbook-pro-feels-both-familiar-and-radically-improved/), while most controls stay as they were. Baymard's survey of 2,273 shoppers draws a clear line for AI features: [chatbots for comparing and researching, people for problems with orders](https://baymard.com/research-articles/ai-engagement-quantitative-ux-insights-2026). And Google's Gemini app now [puts every setting on one page](https://www.androidheadlines.com/2026/10/gemini-android-app-redesign-update.html), a pattern worth weighing for any AI product whose settings have sprawled.",
+  "reads": [
+    {
+      "title": "GitHub open-sources Replica, an AI prototyping tool guided by your design system",
+      "source": "GitHub Changelog",
+      "url": "https://github.blog/changelog/2026-10-28-introducing-replica-an-open-source-ai-prototyping-tool/",
+      "note": "Designers set and approve the guidance, then anyone on the team describes a change in the Copilot app and gets an interactive prototype built from your real components, with an optional self-hosted hub for review and comments."
+    },
+    {
+      "title": "MacBook Pro with Touch: a Mac for the iPad generation",
+      "source": "MacStories",
+      "url": "https://www.macstories.net/stories/macbook-pro-with-touch-a-mac-for-the-ipad-generation/",
+      "note": "Federico Viticci's hands-on shows touch as a second input: menus space out when a finger is detected, the Dock hides at the bottom edge, and apps get basic touch for free, with deeper controls left to developers."
+    },
+    {
+      "title": "Apple's first touchscreen MacBook Pro feels both familiar and radically improved",
+      "source": "Engadget",
+      "url": "https://www.engadget.com/2300023/apples-first-touchscreen-macbook-pro-feels-both-familiar-and-radically-improved/",
+      "note": "Read it for the interface details: window controls enlarge when touched, apps can be flicked to either side of the screen, and sliders in Photos and drawing in Pixelmator already work, while the rest of macOS looks unchanged."
+    },
+    {
+      "title": "AI engagement: quantitative UX insights 2026",
+      "source": "Baymard Institute",
+      "url": "https://baymard.com/research-articles/ai-engagement-quantitative-ux-insights-2026",
+      "note": "A survey of 2,273 US shoppers: most want AI for comparing features and checking stock, most want a person for damaged or late orders, and 60% trust a purchase less when they know the product image is AI-generated."
+    },
+    {
+      "title": "Gemini's Android app gets a cleaner side panel and a single settings page",
+      "source": "Android Headlines",
+      "url": "https://www.androidheadlines.com/2026/10/gemini-android-app-redesign-update.html",
+      "note": "Google moved every toggle onto one settings page, cut the profile menu to account switching and support, and trimmed the drawer to five recent chats, a useful reference if your AI product's settings are scattered."
+    }
+  ],
+  "watch": [
+    {
+      "title": "Grok vs. Dot vs. Muse vs. Claude Duet: which one crushes the competition?",
+      "channel": "How I AI",
+      "id": "hnCoQ5wB-GU",
+      "note": "Posted on Wednesday: Claire Vo runs four personal agents through nine real jobs, from a Slack reply to a thumbnail built in Figma, and scores which she would trust with work. A half-hour field test of the agent experiences your users are now comparing yours against."
+    },
+    {
+      "title": "Replica introduction",
+      "channel": "GitHub",
+      "id": "J2Z28CwIfsA",
+      "note": "GitHub's own introduction to Replica, linked from the project's README at this week's launch: see how a prompt in the Copilot app becomes a prototype built from a team's own components before you set anything up."
+    },
+    {
+      "title": "Charlie Sutton on why design is the differentiator in AI",
+      "channel": "The Ravit Show",
+      "id": "9xFpEpjm6A0",
+      "note": "Recorded at Team '26 Europe and shared by Atlassian Design on 23 October: Atlassian's chief design officer on what makes software stand out when every team has the same models, and how his team designs AI into teamwork."
+    },
+    {
+      "title": "Inside the black box of AI: how AI models actually think",
+      "channel": "Lenny's Podcast",
+      "id": "JHo-aiePjoM",
+      "note": "Anthropic interpretability researcher Emmanuel Ameisen explains how models plan ahead and why sudden capability jumps come from smooth scaling, a sturdier mental model for deciding when to trust, constrain or explain AI behaviour in your product."
+    },
+    {
+      "title": "Why your research findings aren't landing",
+      "channel": "NN/g",
+      "id": "ZPiKuJGv244",
+      "note": "Three minutes from Rachel Krause on structuring a research readout so stakeholders act on it rather than nod along, worth a look before your next share-out."
+    }
+  ],
+  "meetups": [
+    {
+      "name": "UX prototyping with Claude",
+      "date": "2026-10-31",
+      "place": "Bengaluru",
+      "details": "Saturday · 5 to 7pm · Self-Learning UI/UX Designers group · LITBOX, DivyaSree Republic of Whitefield",
+      "url": "https://www.meetup.com/uxtroupe/events/317175217/"
+    },
+    {
+      "name": "Adobe MAX Online 2026",
+      "date": "2026-11-10",
+      "place": "Online",
+      "details": "Tuesday · Adobe · free to stream",
+      "url": "https://max.adobe.com/max-online/"
+    },
+    {
+      "name": "Agentic AI in practice: building, evaluating and earning trust",
+      "date": "2026-11-14",
+      "place": "Bengaluru",
+      "details": "Saturday · 10am to 4pm · ProductTank Bengaluru · Atlassian India, Domlur",
+      "url": "https://www.meetup.com/producttank-bangalore/events/317100600/"
+    }
+  ],
+  "edition": {
+    "shelf": [
+      {
+        "title": "A bilingual identity and posters for Design Doha Biennial 2026 that give Arabic and English equal billing",
+        "credit": "Pentagram, led by Samar Maakaroun",
+        "url": "https://www.creativeboom.com/news/pentagrams-festival-identity-finds-a-clever-way-to-give-arabic-and-english-equal-billing/"
+      },
+      {
+        "title": "A website for To Be Formed where movie mementos are the navigation",
+        "credit": "Day Job",
+        "url": "https://www.itsnicethat.com/articles/tbf-day-job-graphic-design-project-211026"
+      },
+      {
+        "title": "Raycast 2.10: usage meters that turn orange, then red, as you near your limit",
+        "credit": "Raycast",
+        "url": "https://www.raycast.com/changelog/macos/2-10"
+      }
+    ],
+    "learn": [
+      {
+        "kind": "install",
+        "title": "Replica turns the Copilot app into a prototyping tool that knows your design system",
+        "url": "https://github.com/github/replica",
+        "intro": "Released as open source on 28 October by GitHub Design and Microsoft CoreAI Design, Replica adds a canvas plugin to the GitHub Copilot app. Your team keeps its components, patterns and approved guidance in one prototyping repository, and every prototype is built from them, so what people generate looks like your product and not like a generic template.",
+        "skill": {
+          "name": "Replica (replica-prototype plugin)",
+          "by": "GitHub Design and Microsoft CoreAI Design",
+          "cost": "Free, MIT licence · models through a Copilot plan or your own provider"
+        },
+        "changes": [
+          "Prototypes are generated from your team's components and documentation, with designers approving the guidance the agent follows.",
+          "The prototype opens in a canvas beside the Copilot conversation, so you describe a change, try it and refine it in one place.",
+          "Finished prototypes can be published to a Replica Hub your organisation hosts, where teammates try them and leave comments, without needing a Copilot subscription.",
+          "Because the starter, guidance and hub are open source, you can adapt them to your own product and review process."
+        ],
+        "install": [
+          {
+            "where": "In a terminal with Copilot CLI (or ask the agent to run it)",
+            "how": "Sign in with gh auth login if you aren't already, add your team's prototyping repository to the Copilot app, then install the plugin. Afterwards, open Customize, then Installed, and enable the replica-prototype plugin and canvas.",
+            "code": "copilot plugin marketplace add github/replica\ncopilot plugin install replica-prototype@replica"
+          },
+          {
+            "where": "Once per team",
+            "how": "Someone creates the shared prototyping repository, adds the design system and guidance, and optionally deploys the hub, following the environment setup guide in the repository."
+          }
+        ],
+        "try": "Using our approved design-system guidance and sample data, prototype a project list with search, an empty-results message and a way to clear the search. Keep it separate from the live product.",
+        "take": "The canvas preview runs on macOS and Linux only, bring-your-own model is still in preview, and a self-hosted hub doesn't mean no data leaves your organisation. Treat what it makes as a way to test assumptions, not as the spec engineers build from.",
+        "links": [
+          {
+            "title": "Introducing Replica",
+            "url": "https://github.blog/changelog/2026-10-28-introducing-replica-an-open-source-ai-prototyping-tool/",
+            "source": "GitHub Changelog",
+            "anchor": "Released as open source on 28 October"
+          },
+          {
+            "title": "Get started with Replica",
+            "url": "https://github.com/github/replica/blob/main/docs/getting-started.md",
+            "source": "GitHub",
+            "anchor": "adds a canvas plugin to the GitHub Copilot app"
+          },
+          {
+            "title": "Prototype environment setup",
+            "url": "https://github.com/github/replica/blob/main/docs/prototype-environment.md",
+            "source": "GitHub",
+            "anchor": "one prototyping repository"
+          }
+        ]
+      }
+    ]
+  }
+}

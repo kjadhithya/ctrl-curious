@@ -1,0 +1,36 @@
+Ctrl+Curious · Weekend edition · Friday, 30 October 2026 · Issue 012
+View online: https://ctrl-curious.vercel.app/issues/012
+
+Today, in brief
+GitHub Design has open-sourced Replica (https://github.blog/changelog/2026-10-28-introducing-replica-an-open-source-ai-prototyping-tool/), a prototyping tool that works from your team's own components and approved guidance, so a teammate's prompt produces something that looks like your product instead of a generic template. The first hands-on reviews of Apple's touch Mac show how lightly the interface adapts: macOS spaces out menu items when it senses a finger (https://www.macstories.net/stories/macbook-pro-with-touch-a-mac-for-the-ipad-generation/), and the window buttons grow slightly under a fingertip (https://www.engadget.com/2300023/apples-first-touchscreen-macbook-pro-feels-both-familiar-and-radically-improved/), while most controls stay as they were. Baymard's survey of 2,273 shoppers draws a clear line for AI features: chatbots for comparing and researching, people for problems with orders (https://baymard.com/research-articles/ai-engagement-quantitative-ux-insights-2026). And Google's Gemini app now puts every setting on one page (https://www.androidheadlines.com/2026/10/gemini-android-app-redesign-update.html), a pattern worth weighing for any AI product whose settings have sprawled.
+
+Read
+GitHub open-sources Replica, an AI prototyping tool guided by your design system: https://github.blog/changelog/2026-10-28-introducing-replica-an-open-source-ai-prototyping-tool/
+MacBook Pro with Touch: a Mac for the iPad generation: https://www.macstories.net/stories/macbook-pro-with-touch-a-mac-for-the-ipad-generation/
+Apple's first touchscreen MacBook Pro feels both familiar and radically improved: https://www.engadget.com/2300023/apples-first-touchscreen-macbook-pro-feels-both-familiar-and-radically-improved/
+AI engagement: quantitative UX insights 2026: https://baymard.com/research-articles/ai-engagement-quantitative-ux-insights-2026
+Gemini's Android app gets a cleaner side panel and a single settings page: https://www.androidheadlines.com/2026/10/gemini-android-app-redesign-update.html
+
+Power-up
+Replica turns the Copilot app into a prototyping tool that knows your design system: https://github.com/github/replica
+
+Inspiration shelf
+A bilingual identity and posters for Design Doha Biennial 2026 that give Arabic and English equal billing (Pentagram, led by Samar Maakaroun): https://www.creativeboom.com/news/pentagrams-festival-identity-finds-a-clever-way-to-give-arabic-and-english-equal-billing/
+A website for To Be Formed where movie mementos are the navigation (Day Job): https://www.itsnicethat.com/articles/tbf-day-job-graphic-design-project-211026
+Raycast 2.10: usage meters that turn orange, then red, as you near your limit (Raycast): https://www.raycast.com/changelog/macos/2-10
+
+Weekend watchlist
+Grok vs. Dot vs. Muse vs. Claude Duet: which one crushes the competition?: https://www.youtube.com/watch?v=hnCoQ5wB-GU
+Replica introduction: https://www.youtube.com/watch?v=J2Z28CwIfsA
+Charlie Sutton on why design is the differentiator in AI: https://www.youtube.com/watch?v=9xFpEpjm6A0
+Inside the black box of AI: how AI models actually think: https://www.youtube.com/watch?v=JHo-aiePjoM
+Why your research findings aren't landing: https://www.youtube.com/watch?v=ZPiKuJGv244
+
+Meet up
+UX prototyping with Claude (2026-10-31): https://www.meetup.com/uxtroupe/events/317175217/
+Adobe MAX Online 2026 (2026-11-10): https://max.adobe.com/max-online/
+Agentic AI in practice: building, evaluating and earning trust (2026-11-14): https://www.meetup.com/producttank-bangalore/events/317100600/
+
+That's all for today. Stay curious.
+
+Unsubscribe: https://ctrl-curious.vercel.app/unsubscribe

@@ -1,0 +1,168 @@
+{
+  "issue": 13,
+  "date": "2026-11-02",
+  "title": "NN/g says AI software factories leave out user research and calls on designers to own UX context",
+  "dek": "NN/g on where UX fits when agents build the software, designing undo for AI edits, how fast ten design systems really are, Miro's new owner, three dates this week and three events.",
+  "preheader": "NN/g maps where UX drops out when agents build the software. Plus undo for AI edits and a design system speed test.",
+  "hero": "https://ctrl-curious.vercel.app/assets/email/days2/mon/mon_03.jpg",
+  "hero_alt": "A cloud-shaped chat bubble raining onto green hills",
+  "summary": "NN/g's Tanner Kohler read the AI-native development playbooks from the big labs and found they keep UX only as background context, so he [lays out where user research drops out](https://www.nngroup.com/articles/ux-agentic-software-factories/) and how designers can win it back, from review triggers to owning the context files. His colleague Raluca Budiu argues the field now covers [agents acting for people as well as the people themselves](https://www.nngroup.com/articles/ux-vs-experience-design/), with handoffs between the two as the place things break. On the craft side, Karl Koch shows what a [trustworthy undo for AI edits](https://karlkoch.me/writing/on-giving-people-an-undo-button-in-ai-products) needs, and Den Odell's speed test finds Ionic took over a second to open a [249-item country picker](https://denodell.com/blog/design-systems-should-be-fast-by-default). Before Wednesday, note that Figma's [code layers stop being free on paid plans after 4 November](https://forum.figma.com/product-updates-3/here-s-everything-from-config-india-2026-59008).",
+  "reads": [
+    {
+      "title": "The role of UX in agentic software factories",
+      "source": "Nielsen Norman Group",
+      "url": "https://www.nngroup.com/articles/ux-agentic-software-factories/",
+      "note": "Tanner Kohler walks through the AI-native development playbooks from Anthropic, Google and OpenAI, shows where they skip discovery and evaluation, and gives six moves: put user needs in the intent template, set triggers for UX review, add task abandonment to monitoring and claim ownership of the UX context."
+    },
+    {
+      "title": "Experience design: dropping the user from user experience",
+      "source": "Nielsen Norman Group",
+      "url": "https://www.nngroup.com/articles/ux-vs-experience-design/",
+      "note": "Raluca Budiu argues that UX now has to design for agents acting on people's behalf, while still judging success by whether the person reached their goal. Read it for the checklist: when agents act or ask, what they remember, how handoffs work and how to test the whole human and agent system."
+    },
+    {
+      "title": "On giving people an undo button in AI products",
+      "source": "Karl Koch",
+      "url": "https://karlkoch.me/writing/on-giving-people-an-undo-button-in-ai-products",
+      "note": "A design engineer's short, concrete guide to AI edits people can recover from: show the proposal beside the original, keep the old version after accepting, decide exactly what undo restores, and match friction to how hard the change is to take back."
+    },
+    {
+      "title": "Design systems should be fast by default",
+      "source": "Den Odell",
+      "url": "https://denodell.com/blog/design-systems-should-be-fast-by-default",
+      "note": "Ten design systems timed on two common jobs, a long dropdown and select-all: Ionic took 1.3 seconds to open 249 countries, Ant Design's checkbox animations tripled select-all time, and only one team benchmarks components on every change. Worth reading before you approve the next list or animation spec."
+    },
+    {
+      "title": "Bending Spoons completes its $1.355bn Miro acquisition",
+      "source": "The Next Web",
+      "url": "https://thenextweb.com/news/bending-spoons-completes-miro-deal",
+      "note": "The whiteboard many teams keep their research and workshops in now belongs to the owner of Evernote, Vimeo, WeTransfer and, since a few weeks ago, Airtable. Its chief executive says it will use its own technology to make Miro more useful; if your team relies on Miro, watch for changes to plans and features."
+    }
+  ],
+  "watch": [
+    {
+      "title": "The new full-stack designer",
+      "channel": "Y Combinator",
+      "id": "eojywvxqoLc",
+      "note": "Posted 26 October: Marvin Schwaibold, who leads product design at Shopify, on using Figma as a scratchpad and coding agents for interactive demos, why a carousel took 91 prompts, and six website critiques. A working answer to the question NN/g raises this week about who keeps the bar when agents build."
+    },
+    {
+      "title": "Design and engineering are the same thing",
+      "channel": "UsefulMBA by John Maeda",
+      "id": "AK8zLQeRI2M",
+      "note": "John Maeda's opening lecture for the Dyson School of Engineering, posted 20 October: why design and engineering meet in the act of making, and how to work alongside AI without treating it as alive. Forty minutes of perspective for anyone redrawing the line between designer and builder."
+    },
+    {
+      "title": "Figma's new design system guidelines: crash course",
+      "channel": "UI Collective",
+      "id": "fDro1a89PzM",
+      "note": "A 15-minute walkthrough of Guidelines, launched at Config India: writing rules into a published library for components, variables, type, radii and spacing so Figma's agent stays on your system. The practical side of owning your UX context."
+    }
+  ],
+  "meetups": [
+    {
+      "name": "Your job title is lying: what it should say in the AI age",
+      "date": "2026-11-11",
+      "place": "Online",
+      "details": "Wednesday · UXPA International webinar · 10:30pm IST · Kathryn Iklé, Third Entity",
+      "url": "https://uxpa.org/upcoming-webinars/"
+    },
+    {
+      "name": "Agentic AI in practice: building, evaluating and earning trust",
+      "date": "2026-11-14",
+      "place": "Bengaluru",
+      "details": "Saturday · 10am to 4pm · ProductTank Bengaluru · Atlassian India, Domlur",
+      "url": "https://www.meetup.com/producttank-bangalore/events/317100600/"
+    },
+    {
+      "name": "Smashing AI 2027",
+      "date": "2026-12-01",
+      "place": "Online",
+      "details": "Tuesday · SmashingConf · 9:30pm IST · AI-ready design systems, AI with Figma, agentic UX patterns · EUR 50",
+      "url": "https://smashingconf.com/ai-2027-conference/"
+    }
+  ],
+  "edition": {
+    "week": [
+      {
+        "when": "Wednesday · Tool change",
+        "title": "Last day Figma's code layers are free to create and edit on paid plans",
+        "url": "https://forum.figma.com/product-updates-3/here-s-everything-from-config-india-2026-59008"
+      },
+      {
+        "when": "Wednesday · Deadline",
+        "title": "Final entry deadline for the iF Design Award 2027, which has separate UX and UI disciplines",
+        "url": "https://graphiccompetitions.com/multiple-disciplines/if-design-award-2027/"
+      },
+      {
+        "when": "Wednesday · Talk",
+        "title": "Ash Dzick on communicating the business impact of design decisions, online from Designlab (Thursday 5:30am IST)",
+        "url": "https://app.livestorm.co/designlab/communicating-the-business-impact-of-your-design-decisions"
+      }
+    ],
+    "learn": [
+      {
+        "kind": "skill",
+        "title": "Write the rules for when AI-built work needs a designer",
+        "url": "https://www.nngroup.com/articles/ux-agentic-software-factories/",
+        "intro": "NN/g's review of AI-native development playbooks found that agents check their output only against the team's own documents, never against how people behave. Its fix is borrowed from engineering: the way risky code changes go to an architect, risky experience changes should go to a designer. Here is how to set that up.",
+        "steps": [
+          "List the changes that should never ship without a UX look. NN/g's examples are changes to navigation, information architecture and flows that break a convention; add your own, such as anything touching payments or consent.",
+          "Agree with your product owner what a feature request must show before it is approved: evidence the problem is real, that solving it helps users, and that the team understands the cause.",
+          "Ask engineering to watch experience signals next to server errors: task abandonment, conversion drops and spikes in support tickets. A flag means research first, then a new build.",
+          "Write your team's UX standards as context the agents read, and put your name on them, even if the first version is rough.",
+          "Make research findings and the design system machine-readable, so an agent can surface evidence for or against a request while it is still being written."
+        ],
+        "take": "Start with step one: a one-page list of review triggers is easy to agree on and stops the riskiest changes first. Keep it short, or every ticket will end up in your queue.",
+        "links": [
+          {
+            "title": "The role of UX in agentic software factories",
+            "url": "https://www.nngroup.com/articles/ux-agentic-software-factories/",
+            "source": "Nielsen Norman Group",
+            "anchor": "review of AI-native development playbooks"
+          },
+          {
+            "title": "Experience design: dropping the user from user experience",
+            "url": "https://www.nngroup.com/articles/ux-vs-experience-design/",
+            "source": "Nielsen Norman Group",
+            "anchor": "task abandonment, conversion drops and spikes in support tickets"
+          }
+        ]
+      },
+      {
+        "kind": "prompt",
+        "title": "Check that people can take back an AI edit",
+        "url": "https://karlkoch.me/writing/on-giving-people-an-undo-button-in-ai-products",
+        "intro": "Karl Koch's test for any AI feature that changes someone's work is three questions: can they see what changed, keep a useful phrase without taking everything, and go back to their own wording without losing later edits? This prompt runs that test on your flows before users do.",
+        "tool": "Any AI assistant that reads images",
+        "code": "You are a senior interaction designer reviewing an AI feature that edits people's work.\nFeature: [what the AI changes, e.g. rewrites a note, fills a form, edits a design]\nScreens: [attach the flow: before, the suggestion, after accepting, and any undo or history screen]\nWho else can see the result: [only the author, teammates, customers]\n\nCheck the flow against these questions:\n1. Can the person see the proposal next to the original, not just the new version?\n2. Are there clear, separate actions to accept, keep the original or edit the suggestion?\n3. Can they keep part of the suggestion without accepting all of it?\n4. After accepting, is the previous version still there and clearly labelled?\n5. Is it clear what undo restores, and will it wipe edits made after the AI change?\n6. Does recovery depend on a toast that disappears?\n7. If others may already have seen the result, does the wording say what restoring will and won't change?\n8. Does the friction match the commitment: light for small reversible changes, a preview or confirmation for hard-to-reverse ones?\n\nReturn a table: question, pass or fail, what you saw, suggested fix. Then name the single change that would most increase people's willingness to try the feature again.",
+        "code_note": "Include the screen after accepting and the history view, since most failures show up there. Treat the result as a checklist for your next design review, and try the three-question test yourself with a deliberately poor suggestion.",
+        "columns": [
+          {
+            "label": "Use it for",
+            "items": [
+              "Reviewing rewrite, autofill and agent-edit flows before release",
+              "Making the case for version history in an AI feature spec"
+            ]
+          },
+          {
+            "label": "Not for",
+            "items": [
+              "Judging whether the AI's output is good",
+              "Actions that can't be undone, such as sent payments, which need a different pattern"
+            ]
+          }
+        ],
+        "take": "Koch's sharpest example is a rewrite that reads neatly but turns an open question into a promise, which only shows up when the original sits beside it.",
+        "links": [
+          {
+            "title": "On giving people an undo button in AI products",
+            "url": "https://karlkoch.me/writing/on-giving-people-an-undo-button-in-ai-products",
+            "source": "Karl Koch",
+            "anchor": "Karl Koch's test"
+          }
+        ]
+      }
+    ]
+  }
+}

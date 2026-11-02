@@ -1,0 +1,37 @@
+Ctrl+Curious · Week ahead edition · Monday, 2 November 2026 · Issue 013
+View online: https://ctrl-curious.vercel.app/issues/013
+
+Today, in brief
+NN/g's Tanner Kohler read the AI-native development playbooks from the big labs and found they keep UX only as background context, so he lays out where user research drops out (https://www.nngroup.com/articles/ux-agentic-software-factories/) and how designers can win it back, from review triggers to owning the context files. His colleague Raluca Budiu argues the field now covers agents acting for people as well as the people themselves (https://www.nngroup.com/articles/ux-vs-experience-design/), with handoffs between the two as the place things break. On the craft side, Karl Koch shows what a trustworthy undo for AI edits (https://karlkoch.me/writing/on-giving-people-an-undo-button-in-ai-products) needs, and Den Odell's speed test finds Ionic took over a second to open a 249-item country picker (https://denodell.com/blog/design-systems-should-be-fast-by-default). Before Wednesday, note that Figma's code layers stop being free on paid plans after 4 November (https://forum.figma.com/product-updates-3/here-s-everything-from-config-india-2026-59008).
+
+Read
+The role of UX in agentic software factories: https://www.nngroup.com/articles/ux-agentic-software-factories/
+Experience design: dropping the user from user experience: https://www.nngroup.com/articles/ux-vs-experience-design/
+On giving people an undo button in AI products: https://karlkoch.me/writing/on-giving-people-an-undo-button-in-ai-products
+Design systems should be fast by default: https://denodell.com/blog/design-systems-should-be-fast-by-default
+Bending Spoons completes its $1.355bn Miro acquisition: https://thenextweb.com/news/bending-spoons-completes-miro-deal
+
+Skill of the week
+Write the rules for when AI-built work needs a designer: https://www.nngroup.com/articles/ux-agentic-software-factories/
+
+Prompt of the week
+Check that people can take back an AI edit: https://karlkoch.me/writing/on-giving-people-an-undo-button-in-ai-products
+
+This week in design
+Wednesday · Tool change · Last day Figma's code layers are free to create and edit on paid plans: https://forum.figma.com/product-updates-3/here-s-everything-from-config-india-2026-59008
+Wednesday · Deadline · Final entry deadline for the iF Design Award 2027, which has separate UX and UI disciplines: https://graphiccompetitions.com/multiple-disciplines/if-design-award-2027/
+Wednesday · Talk · Ash Dzick on communicating the business impact of design decisions, online from Designlab (Thursday 5:30am IST): https://app.livestorm.co/designlab/communicating-the-business-impact-of-your-design-decisions
+
+Watch
+The new full-stack designer: https://www.youtube.com/watch?v=eojywvxqoLc
+Design and engineering are the same thing: https://www.youtube.com/watch?v=AK8zLQeRI2M
+Figma's new design system guidelines: crash course: https://www.youtube.com/watch?v=fDro1a89PzM
+
+Meet up
+Your job title is lying: what it should say in the AI age (2026-11-11): https://uxpa.org/upcoming-webinars/
+Agentic AI in practice: building, evaluating and earning trust (2026-11-14): https://www.meetup.com/producttank-bangalore/events/317100600/
+Smashing AI 2027 (2026-12-01): https://smashingconf.com/ai-2027-conference/
+
+That's all for today. Stay curious.
+
+Unsubscribe: https://ctrl-curious.vercel.app/unsubscribe

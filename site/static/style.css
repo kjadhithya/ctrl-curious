@@ -501,3 +501,16 @@ section.band{container-type:inline-size}
   body:not(:has(.hero)) .logo .a,body:not(:has(.hero)) .logo .b{font-size:23px}
   .field select{padding:12px 30px 12px 12px;background-position:right 10px center;font-size:16px}
 }
+
+/* Tall, narrow screens wider than 860px (a phone in "Desktop site" mode, a tablet held upright):
+   stack the hero like on phones instead of pinning the art to the bottom of a very tall box */
+@media (min-width:861px) and (max-aspect-ratio:4/5){
+  .hero{height:auto;min-height:0;display:flex;flex-direction:column;background:var(--paper)}
+  .art-ext{display:none!important}
+  .art{position:relative;order:1;bottom:auto;left:-18%;width:118%;flex-shrink:0}
+  .hero .nav{position:relative;order:0;background:var(--paper)}
+  .hero-copy{position:relative;left:auto;top:auto;width:auto;min-width:0;max-width:760px;order:2;padding:56px var(--gut) 64px;gap:22px;background:var(--paper)}
+  .hero .lede{max-width:none;font-size:22px}
+  .hero .signup{max-width:600px}
+  .hero h1{font-size:64px}
+}

@@ -1,0 +1,121 @@
+{
+  "issue": 14,
+  "date": "2026-11-03",
+  "title": "Canva releases Affinity for iPad free, and Framer rebuilds its agent to run whole workflows",
+  "dek": "A free pro design app built for touch, an agent that edits Canva layouts, Framer's faster agent, why AI review screens make people forget, designing one product for four roles, and Stageshow, a skill for better product demos.",
+  "preheader": "Affinity lands free on iPad, Framer's agent gets faster, and why approving AI output makes people forget it.",
+  "hero": "https://ctrl-curious.vercel.app/assets/email/days2/tue/tue_01.jpg",
+  "hero_alt": "A phone on a desk, its notifications rising like bubbles toward the sun",
+  "summary": "Canva has [released Affinity for iPad free for individuals](https://www.creativeboom.com/tools/behold-affinity-for-ipad-the-app-that-wants-to-retire-your-four-other-apps/), with sketch, vector, photo and layout work in one touch-first file, days after shipping [Brush, a model that edits existing layouts](https://thenewstack.io/canva-brush-design-editing) instead of generating flat images. Framer's [rebuilt agent harness](https://www.framer.com/updates/harness-2) now edits components, CMS, forms and branches in one pass, and gives outside agents the same reach through MCP. The craft lesson of the day comes from Victor Yocco, who shows why [approving AI summaries leaves people unable to explain them](https://www.uxmatters.com/mt/archives/2026/11/the-generation-effect-in-ai-workflows-why-reviewing-causes-forgetting.php) and how to design friction that makes oversight stick. And X's head of design Benji Taylor has open-sourced [Stageshow](https://benji.org/stageshow), a skill that teaches coding agents to make animated product demos that don't look fake.",
+  "reads": [
+    {
+      "title": "The generation effect in AI workflows: why reviewing causes forgetting",
+      "source": "UXmatters",
+      "url": "https://www.uxmatters.com/mt/archives/2026/11/the-generation-effect-in-ai-workflows-why-reviewing-causes-forgetting.php",
+      "note": "ServiceNow researcher Victor Yocco applies a classic memory study to AI review flows: people who approve a polished AI report remember little of it, and read timers, citations and attestation boxes don't help. He offers four fixes worth stealing, from AI outlines with the conclusion left blank to a recall question before a high-stakes summary can be shared."
+    },
+    {
+      "title": "Canva launches Brush, a model that edits designs instead of generating them",
+      "source": "The New Stack",
+      "url": "https://thenewstack.io/canva-brush-design-editing",
+      "note": "Brush reads a design's structure, writes small pieces of code to change it and checks its own result, so everything stays editable. It is in Canva Pro now, with brand kits and attachments promised next; the useful test, as one expert notes, is whether an edit leaves prices, disclaimers and layout alone."
+    },
+    {
+      "title": "Affinity for iPad is here, and it's free for individuals",
+      "source": "Creative Boom",
+      "url": "https://www.creativeboom.com/tools/behold-affinity-for-ipad-the-app-that-wants-to-retire-your-four-other-apps/",
+      "note": "Canva's iPad version of Affinity puts sketching, vectors, photo editing and layout in one .af file that also opens on desktop, with Sketch to Shapes turning Pencil strokes into editable vectors. Core tools are free; the AI features need a Canva premium plan, and some desktop features are missing at launch."
+    },
+    {
+      "title": "Harness 2: Framer's agent takes on whole workflows",
+      "source": "Framer",
+      "url": "https://www.framer.com/updates/harness-2",
+      "note": "Framer rebuilt how its agent works so it applies changes while still planning, with half the tool steps. It can now edit component fields and animation settings, sort the CMS, set form destinations, manage branches and add SVGs, and outside agents get the same abilities through Framer's MCP server."
+    },
+    {
+      "title": "User interfaces for multiple roles: when four users share one product",
+      "source": "UXmatters",
+      "url": "https://www.uxmatters.com/mt/archives/2026/11/user-interfaces-for-multiple-roles-when-four-users-share-one-product.php",
+      "note": "Anna Nazarevska of Volta Health on a regulated student-health platform used by admins, clinicians, brokers and students: one interface per role built around its decisions, friction that scales with the cost of an error, audit trails for risky changes and an AI assistant whose autonomy shrinks as the stakes rise."
+    }
+  ],
+  "watch": [
+    {
+      "title": "Logo and badge design in Affinity for iPad: sketch to vector",
+      "channel": "Affinity",
+      "id": "lLqNJ7Tx-ZI",
+      "note": "Posted 2 November, launch day: the official lesson on tracing a Pencil sketch into vector paths, adding sticker outlines with FX, setting text on a curve and filling shapes with Vector Flood Fill. The quickest way to judge whether the free iPad app can handle real identity work."
+    },
+    {
+      "title": "Tabs used right",
+      "channel": "NNgroup",
+      "id": "7ntSojFW5Jg",
+      "note": "Posted 26 October: Evan Sunwall on the difference between in-page and navigation tabs and when tabs are the wrong choice. Five minutes that pair well with NN/g's refreshed guidelines: two selection indicators, one row only, and no links dressed up as tabs."
+    },
+    {
+      "title": "Claude Design has changed, but is it ready for designers?",
+      "channel": "AI Design Professor | Nehmat Gereige",
+      "id": "1JAQEgEVCKo",
+      "note": "Posted 26 October: Claude Design now lives inside the Claude desktop app, and the standalone site closes on 14 December. A hands-on test with a real design system, scored on creativity, control and system adherence, plus where Figma still fits. Useful if your team is deciding where AI concepting should happen."
+    }
+  ],
+  "meetups": [
+    {
+      "name": "Designing AI experiences that keep people in control",
+      "date": "2026-11-26",
+      "place": "Online",
+      "details": "Thursday · Hike One interactive webinar · 8pm to 9pm IST · Jiebo Qiu, senior UX designer",
+      "url": "https://www.eventbrite.nl/e/interactive-webinar-designing-ai-experiences-that-keep-people-in-control-tickets-2003295819724"
+    },
+    {
+      "name": "The Messy UX Conference 2026",
+      "date": "2026-11-28",
+      "place": "Bengaluru",
+      "details": "Saturday · In-person UX and design conference · 13 practitioner speakers · Free registration",
+      "url": "https://designshots.org/conference"
+    }
+  ],
+  "edition": {
+    "tool": {
+      "name": "Stageshow",
+      "url": "https://benji.org/stageshow",
+      "what": "Benji Taylor, head of design at X, released this agent skill on 31 October to make coding agents better at faux UI: animated or static product illustrations for marketing pages and docs, built as editable React components with a scripted cursor, camera moves and themes that can map to your design tokens. It is best at the launch-page demo you would otherwise hand-animate, and it films its own output so the agent can check the motion, not just the final frame.",
+      "meta": "Free · open-source skill for Claude Code, Codex, Gemini and other agents"
+    },
+    "learn": [
+      {
+        "kind": "tool",
+        "title": "Figma agent: turn your crit checklist into a skill that reads your docs",
+        "url": "https://help.figma.com/hc/en-us/articles/40283639496599-Custom-skills-for-the-Figma-agent-and-Figma-Make",
+        "intro": "Two pieces of the Figma agent now fit together: custom skills, which save a set of instructions as a slash command, and connectors, which let the agent read other tools. With Google Drive now connectable on every plan, you can build a review that checks frames against the real PRD instead of your memory of it.",
+        "steps": [
+          "Write the skill once. In an agent chat, click the prompt box, choose Skills, then Add skill and Start from scratch, or ask the agent to turn a good conversation into a skill. The name becomes the command, such as /design-crit, and the help page advises phrasing when it should run as a requirement, not a restriction.",
+          "Connect your sources. Open Add context, choose Connectors, pick Google Drive (or Notion, Linear, Slack and others) and sign in. Set each tool to Ask to run while you test; tools that write to other apps stay off until you turn them on.",
+          "Combine both in one prompt. Type /design-crit, add the Drive connector with @ so it appears as a pill, and ask the agent to check the selected frames against the spec. When the doc changes, run the connector again so the agent sees the new version.",
+          "Share it with the team. In Manage skills, open More actions and choose Publish, then Private and your team or organization; later edits need Publish changes. Export saves the skill as a file you can also give your own coding agents."
+        ],
+        "take": "Skills must be a single Markdown file, with no scripts or reference folders, and if a prompt names several skills only the first runs. Full seats can use the agent in Design files, while View, Dev and Collab seats only get it in Drafts, and Google Drive isn't available with the Governance+ add-on. Start with the checklist your team already argues about in crits: it is the one most worth making consistent.",
+        "links": [
+          {
+            "title": "Create and manage custom skills in Figma",
+            "url": "https://help.figma.com/hc/en-us/articles/40283639496599-Custom-skills-for-the-Figma-agent-and-Figma-Make",
+            "source": "Figma Help Center",
+            "anchor": "custom skills, which save a set of instructions as a slash command"
+          },
+          {
+            "title": "Use verified partner MCP connectors with the Figma agent and Figma Make",
+            "url": "https://help.figma.com/hc/en-us/articles/35440096186007-Use-verified-partner-MCP-connectors-with-the-Figma-agent-and-Figma-Make",
+            "source": "Figma Help Center",
+            "anchor": "Set each tool to Ask to run while you test"
+          },
+          {
+            "title": "Figma release notes: Google Drive connects to the Figma agent on all plans (30 October)",
+            "url": "https://releases.sh/figma",
+            "source": "Releases.sh",
+            "anchor": "Google Drive now connectable on every plan"
+          }
+        ]
+      }
+    ]
+  }
+}

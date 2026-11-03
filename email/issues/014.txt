@@ -1,0 +1,31 @@
+Ctrl+Curious · Tools edition · Tuesday, 3 November 2026 · Issue 014
+View online: https://ctrl-curious.vercel.app/issues/014
+
+Today, in brief
+Canva has released Affinity for iPad free for individuals (https://www.creativeboom.com/tools/behold-affinity-for-ipad-the-app-that-wants-to-retire-your-four-other-apps/), with sketch, vector, photo and layout work in one touch-first file, days after shipping Brush, a model that edits existing layouts (https://thenewstack.io/canva-brush-design-editing) instead of generating flat images. Framer's rebuilt agent harness (https://www.framer.com/updates/harness-2) now edits components, CMS, forms and branches in one pass, and gives outside agents the same reach through MCP. The craft lesson of the day comes from Victor Yocco, who shows why approving AI summaries leaves people unable to explain them (https://www.uxmatters.com/mt/archives/2026/11/the-generation-effect-in-ai-workflows-why-reviewing-causes-forgetting.php) and how to design friction that makes oversight stick. And X's head of design Benji Taylor has open-sourced Stageshow (https://benji.org/stageshow), a skill that teaches coding agents to make animated product demos that don't look fake.
+
+Tool of the day
+Stageshow: https://benji.org/stageshow
+
+Read
+The generation effect in AI workflows: why reviewing causes forgetting: https://www.uxmatters.com/mt/archives/2026/11/the-generation-effect-in-ai-workflows-why-reviewing-causes-forgetting.php
+Canva launches Brush, a model that edits designs instead of generating them: https://thenewstack.io/canva-brush-design-editing
+Affinity for iPad is here, and it's free for individuals: https://www.creativeboom.com/tools/behold-affinity-for-ipad-the-app-that-wants-to-retire-your-four-other-apps/
+Harness 2: Framer's agent takes on whole workflows: https://www.framer.com/updates/harness-2
+User interfaces for multiple roles: when four users share one product: https://www.uxmatters.com/mt/archives/2026/11/user-interfaces-for-multiple-roles-when-four-users-share-one-product.php
+
+Tool to master
+Figma agent: turn your crit checklist into a skill that reads your docs: https://help.figma.com/hc/en-us/articles/40283639496599-Custom-skills-for-the-Figma-agent-and-Figma-Make
+
+Watch
+Logo and badge design in Affinity for iPad: sketch to vector: https://www.youtube.com/watch?v=lLqNJ7Tx-ZI
+Tabs used right: https://www.youtube.com/watch?v=7ntSojFW5Jg
+Claude Design has changed, but is it ready for designers?: https://www.youtube.com/watch?v=1JAQEgEVCKo
+
+Meet up
+Designing AI experiences that keep people in control (2026-11-26): https://www.eventbrite.nl/e/interactive-webinar-designing-ai-experiences-that-keep-people-in-control-tickets-2003295819724
+The Messy UX Conference 2026 (2026-11-28): https://designshots.org/conference
+
+That's all for today. Stay curious.
+
+Unsubscribe: https://ctrl-curious.vercel.app/unsubscribe

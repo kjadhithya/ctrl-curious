@@ -1,0 +1,34 @@
+Ctrl+Curious · Type edition · Wednesday, 4 November 2026 · Issue 015
+View online: https://ctrl-curious.vercel.app/issues/015
+
+Today, in brief
+Safari 27.3 beta can now paint a dark version of any light website (https://webkit.org/blog/18541/introducing-adaptive-dark-mode/) for people who use dark mode, and the site is never told, so teams that never shipped a dark theme should look at what Safari makes of theirs; today's brief covers how. The same Apple beta brings back the redesigned Health app (https://www.apple.com/in/newsroom/2026/11/redesigned-health-app-expands-language-support/), rebuilt around daily insights and a single Health Age comparison. Canva says it will cut or change about 1,270 roles (https://www.abc.net.au/news/2026-11-04/canva-restructure-job-losses/107344304) and return to smaller product teams as growth slows for the first time in a decade. Closer to your own work, the Design Systems Collective argues for testing AI on a few hundred cases from your own system (https://designsystemscollective.substack.com/p/fast-and-wrong-is-still-wrong), and Shopify's Derek Briggs explains on Dive Club how he raises the bar for craft (https://www.youtube.com/watch?v=r4IW73e6tE4) across a big team.
+
+Read
+Introducing adaptive dark mode in Safari: https://webkit.org/blog/18541/introducing-adaptive-dark-mode/
+Apple's redesigned Health app returns in the iOS 27.3 beta: https://www.apple.com/in/newsroom/2026/11/redesigned-health-app-expands-language-support/
+Canva will cut or change about 1,270 roles as growth slows: https://www.abc.net.au/news/2026-11-04/canva-restructure-job-losses/107344304
+Fast and wrong is still wrong: https://designsystemscollective.substack.com/p/fast-and-wrong-is-still-wrong
+Design's favorite lie about how good ideas win: https://www.uxmatters.com/mt/archives/2026/11/designs-favorite-lie-about-how-good-ideas-win.php
+
+Steal this
+A six-question review for component changes that use modern CSS: https://www.smashingmagazine.com/2026/11/modern-css-might-make-your-front-end-more-complex/
+
+10-minute brief
+Designing for a browser that makes its own dark mode: https://webkit.org/blog/18541/introducing-adaptive-dark-mode/
+
+Typeface spotlight
+Madhuban: https://www.magictype.in/portfolio/madhuban-typeface/
+
+Watch
+Derek Briggs: scaling craft at Shopify: https://www.youtube.com/watch?v=r4IW73e6tE4
+Make your Figma design system agent-ready: https://www.youtube.com/watch?v=yj90StgN70w
+How Figma's PMs actually use AI every day: https://www.youtube.com/watch?v=Y0dPvKqke_o
+
+Meet up
+Adobe MAX Online 2026 (2026-11-10): https://max.adobe.com/max-online/
+The Messy UX Conference 2026 (2026-11-28): https://designshots.org/conference
+
+That's all for today. Stay curious.
+
+Unsubscribe: https://ctrl-curious.vercel.app/unsubscribe

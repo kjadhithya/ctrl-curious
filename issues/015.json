@@ -1,0 +1,159 @@
+{
+  "issue": 15,
+  "date": "2026-11-04",
+  "title": "Safari's new beta darkens light websites by itself, and Canva cuts or changes 22% of its roles",
+  "dek": "Safari's adaptive dark mode, Apple's Health app redesign, Canva's restructure, testing AI against your own design system, why good ideas need backers, Madhuban for Devanagari and Latin, a CSS review checklist and two events.",
+  "preheader": "Safari will now darken your light website for you. Here is how to design for it.",
+  "hero": "https://ctrl-curious.vercel.app/assets/email/days2/wed/wed_09.jpg",
+  "hero_alt": "The pair AV in Syne tucked together, with a kerning bracket marking -70",
+  "summary": "Safari 27.3 beta can now [paint a dark version of any light website](https://webkit.org/blog/18541/introducing-adaptive-dark-mode/) for people who use dark mode, and the site is never told, so teams that never shipped a dark theme should look at what Safari makes of theirs; today's brief covers how. The same Apple beta brings back the [redesigned Health app](https://www.apple.com/in/newsroom/2026/11/redesigned-health-app-expands-language-support/), rebuilt around daily insights and a single Health Age comparison. Canva says it will [cut or change about 1,270 roles](https://www.abc.net.au/news/2026-11-04/canva-restructure-job-losses/107344304) and return to smaller product teams as growth slows for the first time in a decade. Closer to your own work, the Design Systems Collective argues for [testing AI on a few hundred cases from your own system](https://designsystemscollective.substack.com/p/fast-and-wrong-is-still-wrong), and Shopify's Derek Briggs explains on Dive Club [how he raises the bar for craft](https://www.youtube.com/watch?v=r4IW73e6tE4) across a big team.",
+  "reads": [
+    {
+      "title": "Introducing adaptive dark mode in Safari",
+      "source": "WebKit",
+      "url": "https://webkit.org/blog/18541/introducing-adaptive-dark-mode/",
+      "note": "Safari 27.3 beta inverts a light page's luminosity while keeping its hues and nudges text towards 4.5:1 contrast; sites that declare color-scheme: light dark are left alone, and the light only opt-out does not work in beta 1 yet."
+    },
+    {
+      "title": "Apple's redesigned Health app returns in the iOS 27.3 beta",
+      "source": "Apple Newsroom",
+      "url": "https://www.apple.com/in/newsroom/2026/11/redesigned-health-app-expands-language-support/",
+      "note": "The app is reorganised around an Insights tab of daily summaries, a For You section of suggestions and a Longevity tab whose Health Age folds many metrics into one comparison; a useful reference if you design dashboards that summarise rather than list."
+    },
+    {
+      "title": "Canva will cut or change about 1,270 roles as growth slows",
+      "source": "ABC News",
+      "url": "https://www.abc.net.au/news/2026-11-04/canva-restructure-job-losses/107344304",
+      "note": "About 22% of the workforce is affected; Melanie Perkins says growth slowed for the first time in a decade and wants smaller teams with more freedom to decide, with Sydney becoming the main home for product teams."
+    },
+    {
+      "title": "Fast and wrong is still wrong",
+      "source": "Design Systems Collective",
+      "url": "https://designsystemscollective.substack.com/p/fast-and-wrong-is-still-wrong",
+      "note": "Build a test set of a few hundred hard cases from your own system, with answers your designers agree on, and use it to tell whether a model or prompt change made AI output better or just different; script the mechanical jobs and keep AI for judgment calls."
+    },
+    {
+      "title": "Design's favorite lie about how good ideas win",
+      "source": "UXmatters",
+      "url": "https://www.uxmatters.com/mt/archives/2026/11/designs-favorite-lie-about-how-good-ideas-win.php",
+      "note": "Ideas get built when someone with influence backs them; the authors suggest researching stakeholders the way you research users, framing each case in the decision-maker's own terms and paying attention to where design reports."
+    }
+  ],
+  "watch": [
+    {
+      "title": "Derek Briggs: scaling craft at Shopify",
+      "channel": "Dive Club",
+      "id": "r4IW73e6tE4",
+      "note": "Out yesterday: Shopify's principal designer on the custom easing system he built, polishing the shop.com carousel, using data pipelines to find where craft pays off, and why he sees design engineering as the key role right now."
+    },
+    {
+      "title": "Make your Figma design system agent-ready",
+      "channel": "Figma",
+      "id": "yj90StgN70w",
+      "note": "Figma's own guide from last week on preparing a library for agents; watch it alongside today's Design Systems Collective read, which explains how to check whether those agents are actually getting it right."
+    },
+    {
+      "title": "How Figma's PMs actually use AI every day",
+      "channel": "How I AI",
+      "id": "Y0dPvKqke_o",
+      "note": "Ezra Mechaber shows a shared repo of about 31 AI skills, a browser agent that works through FigJam test plans in bug bashes, and a writing prototype; most of it transfers straight to design ops."
+    }
+  ],
+  "meetups": [
+    {
+      "name": "Adobe MAX Online 2026",
+      "date": "2026-11-10",
+      "place": "Online",
+      "details": "Tuesday · Adobe · free to stream; APAC keynote replay 11 Nov at 9am IST",
+      "url": "https://max.adobe.com/max-online/"
+    },
+    {
+      "name": "The Messy UX Conference 2026",
+      "date": "2026-11-28",
+      "place": "Bengaluru",
+      "details": "Saturday · 13 practitioners on design failures, pivots and trade-offs",
+      "url": "https://designshots.org/conference"
+    }
+  ],
+  "edition": {
+    "typeface": {
+      "name": "Madhuban",
+      "url": "https://www.magictype.in/portfolio/madhuban-typeface/",
+      "by": "Jaikishan Patel, MagicType",
+      "get": "Free, open source (OFL)",
+      "pair": "Let it carry both Hindi and English across the interface on its own, and bring in Tiro Devanagari Hindi only for editorial headlines that need more contrast.",
+      "good_for": "Bilingual Hindi and English UI, dashboards, signage",
+      "note": "A mono-linear sans from a Mumbai designer that draws Devanagari and Latin on one geometric humanist structure, so the two scripts sit together without one looking borrowed. It is a variable font from light to bold with more than 1,200 glyphs, Akhand and linear conjuncts and tabular figures, and version 1.003 was merged into the Google Fonts repository on 29 October.",
+      "image": "https://ctrl-curious.vercel.app/assets/email/specimens/madhuban.jpg"
+    },
+    "learn": [
+      {
+        "kind": "steal",
+        "title": "A six-question review for component changes that use modern CSS",
+        "url": "https://www.smashingmagazine.com/2026/11/modern-css-might-make-your-front-end-more-complex/",
+        "intro": "Gabriel Shoyombo's new Smashing piece shows how container queries, :has() and cascade layers can make one file simpler while making the system harder to change. His closing checklist works as a design system review: it catches the leftover breakpoints and side effects that make a component behave differently from its spec.",
+        "file": "component-css-review.md",
+        "code": "# Component CSS review (condensed from Smashing)\n\n1. Ownership\n   CSS for size and structure, JS for app state.\n   Only one controls each behaviour.\n2. Scope\n   Where does the container's width come from?\n   Tested in every real layout that hosts it?\n3. Cascade\n   Which layer does each rule land in?\n   Selectors bounded with > or :where()?\n4. Migration\n   Old observer, classes and media queries gone?\n   Every state retested?\n5. Performance\n   Measured with production-sized data?\n6. Maintenance\n   A one-line note on what this pattern touches\n   and where its effects end?",
+        "code_note": "Paste it into the pull request template for your component library and ask designers to sign off on question 2 with screenshots of each real host layout, not just the isolated component in Storybook.",
+        "meta": "Free · from Smashing Magazine",
+        "take": "The six areas come from the article; the screenshot sign-off for designers is our own suggestion.",
+        "links": [
+          {
+            "title": "Modern CSS might make your front-end more complex",
+            "url": "https://www.smashingmagazine.com/2026/11/modern-css-might-make-your-front-end-more-complex/",
+            "source": "Smashing Magazine",
+            "anchor": "new Smashing piece"
+          }
+        ]
+      },
+      {
+        "kind": "brief",
+        "title": "Designing for a browser that makes its own dark mode",
+        "url": "https://webkit.org/blog/18541/introducing-adaptive-dark-mode/",
+        "intro": "Safari 27.3 beta, released on 3 November, can generate a dark version of any light website for people who use dark mode. The site is never told, so the dark page your users see may be one nobody on your team designed.",
+        "define": "Adaptive dark mode is a browser-made dark theme: Safari inverts a light page's luminosity while keeping its hues, then adjusts text towards a 4.5:1 contrast ratio.",
+        "examples_label": "What we know so far",
+        "examples": [
+          {
+            "name": "WebKit's own explainer",
+            "text": "Sites that declare light dark support are untouched, canvas is left alone, simple black and white bitmap logos may be inverted, and masks and blend modes can be switched off.",
+            "url": "https://webkit.org/blog/18541/introducing-adaptive-dark-mode/"
+          },
+          {
+            "name": "How people turn it on",
+            "text": "Safari offers a Try prompt on bright sites when the system is in dark mode, and it can be enabled for all sites or just some; the release is expected in December.",
+            "url": "https://www.macrumors.com/2026/11/03/ios-27-3-safari/"
+          },
+          {
+            "name": "Why you cannot measure it",
+            "text": "Scripts that read colours get the authored values and canvas reads return the original, so analytics and brand checks only ever see the light design.",
+            "url": "https://ppc.land/safaris-new-dark-mode-repaints-light-websites-without-the-sites-knowing/"
+          }
+        ],
+        "tips": [
+          "If you already have a dark theme, declare it with color-scheme: light dark in the head or on :root, never later from JavaScript, so Safari leaves your design alone.",
+          "If you want to stay light, plan for color-scheme: light only, but test the adapted version now, because beta 1 ignores the only keyword.",
+          "Swap bitmap logos and icons for SVG and give content images transparent backgrounds; a baked-in white box stays bright on a darkened page.",
+          "Find every effect built on mix-blend-mode or masks and make sure it still reads with the effect switched off.",
+          "Check your brand colour on buttons and links in the adapted page: hue survives but lightness changes, and if it fails, ship your own dark palette with light-dark()."
+        ],
+        "why": "Plenty of marketing sites, docs and dashboards never got a dark theme because it was optional. Once this ships, Safari users in dark mode can see a version of your product you did not design and cannot track, so a deliberate choice now beats an accidental one later.",
+        "take": "The tips are our advice built on WebKit's guidance; the transparent images, SVG logos and early color-scheme declaration come straight from Apple's post.",
+        "links": [
+          {
+            "title": "Introducing adaptive dark mode",
+            "url": "https://webkit.org/blog/18541/introducing-adaptive-dark-mode/",
+            "source": "WebKit",
+            "anchor": "Safari 27.3 beta, released on 3 November"
+          },
+          {
+            "title": "iOS 27.3 adds vertical tabs and adaptive dark mode to Safari",
+            "url": "https://www.macrumors.com/2026/11/03/ios-27-3-safari/",
+            "source": "MacRumors",
+            "anchor": "the release is expected in December"
+          }
+        ]
+      }
+    ]
+  }
+}

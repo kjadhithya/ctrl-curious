@@ -1,0 +1,35 @@
+Ctrl+Curious · Case study edition · Thursday, 5 November 2026 · Issue 016
+View online: https://ctrl-curious.vercel.app/issues/016
+
+Today, in brief
+Apple has opened Siri AI to every developer (https://developer.apple.com/news/?id=gdk2umrf) in the 27.3 betas, so an app's content and actions can now be reached by voice and personal context through App Intents, which turns your intents into an interface of their own. Figma now lets the agent and Make read and create files in Google Drive (https://forum.figma.com/product-updates-3/connect-google-drive-to-the-figma-agent-and-make-59533) on every plan, and Framer's agent can now build and analyse A/B tests in Convert (https://www.framer.com/updates/convert-update). Two teams show what building your own AI tools looks like: Zalando made a prototyping environment on its design system (https://www.intodesignsystems.com/blog/zalando-design-system-ai-prototyping-tool) after Figma Make came out off-brand, and GOV.UK built a test runner for content no one can read before it is generated (https://designnotes.blog.gov.uk/2026/11/03/creating-tools-for-scaling-generated-content/), today's case study.
+
+Read
+Siri AI is now open to all developers: https://developer.apple.com/news/?id=gdk2umrf
+Connect Google Drive to the Figma agent and Make: https://forum.figma.com/product-updates-3/connect-google-drive-to-the-figma-agent-and-make-59533
+Convert update: agent support and country triggers: https://www.framer.com/updates/convert-update
+How Zalando built its own AI prototyping environment on top of its design system: https://www.intodesignsystems.com/blog/zalando-design-system-ai-prototyping-tool
+How to run a local LLM on your Mac: the designer's setup guide: https://www.intodesignsystems.com/blog/how-to-run-local-llm-mac-designers
+
+How they work
+Blair Metcalf's team at Reddit prototypes on real data: https://www.chatprd.ai/how-i-ai/blair-metcalf-reddit-proto
+
+Decision toolkit
+Let the model build the interface, or answer in text?: https://thegradient.com/thinking/generative-ui-design-system
+
+Case study
+Creating tools for scaling generated content: https://designnotes.blog.gov.uk/2026/11/03/creating-tools-for-scaling-generated-content/
+
+Watch
+Complex vs. complicated: https://www.youtube.com/watch?v=utnOhRSXkyw
+Affinity on iPad: the complete guide: https://www.youtube.com/watch?v=Yj6FhJlIDR8
+Google Stitch CLI and Loop, tried in Antigravity: https://www.youtube.com/watch?v=_IHQ-LoGl9I
+
+Meet up
+Utilizing AI to improve DesignOps (2026-11-10): https://designlab.com/ui-ux-design-events-and-workshops
+World Usability Day 2026 networking (2026-11-12): https://uxpa.org/world-usability-day/
+The Messy UX Conference 2026 (2026-11-28): https://designshots.org/conference
+
+That's all for today. Stay curious.
+
+Unsubscribe: https://ctrl-curious.vercel.app/unsubscribe

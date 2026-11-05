@@ -1,0 +1,163 @@
+{
+  "issue": 16,
+  "date": "2026-11-05",
+  "title": "Apple opens Siri AI to every app through App Intents, and GOV.UK shows how it tests AI-written content",
+  "dek": "Siri AI for all developers, Figma's Google Drive connector, Framer Convert's agent, Zalando's own AI prototyping tool, a local LLM setup for designers, GOV.UK's content test runner, how Reddit prototypes on real data, when to let AI generate the interface and three events.",
+  "preheader": "Any app can now plug into Siri AI. Plus how GOV.UK tests content nobody can review in advance.",
+  "hero": "https://ctrl-curious.vercel.app/assets/email/days2/thu/thu_07.jpg",
+  "hero_alt": "A row of sticky notes with vote dots, one clearly winning",
+  "summary": "Apple has [opened Siri AI to every developer](https://developer.apple.com/news/?id=gdk2umrf) in the 27.3 betas, so an app's content and actions can now be reached by voice and personal context through App Intents, which turns your intents into an interface of their own. Figma now lets the agent and Make [read and create files in Google Drive](https://forum.figma.com/product-updates-3/connect-google-drive-to-the-figma-agent-and-make-59533) on every plan, and Framer's agent can now [build and analyse A/B tests in Convert](https://www.framer.com/updates/convert-update). Two teams show what building your own AI tools looks like: Zalando made a [prototyping environment on its design system](https://www.intodesignsystems.com/blog/zalando-design-system-ai-prototyping-tool) after Figma Make came out off-brand, and GOV.UK built a [test runner for content no one can read before it is generated](https://designnotes.blog.gov.uk/2026/11/03/creating-tools-for-scaling-generated-content/), today's case study.",
+  "reads": [
+    {
+      "title": "Siri AI is now open to all developers",
+      "source": "Apple Developer",
+      "url": "https://developer.apple.com/news/?id=gdk2umrf",
+      "note": "With the 27.3 betas, any app can bring its content and actions into Siri AI through App Intents, skills chain several actions into one request, and any entity in the Spotlight semantic index can surface; customers get it in a few months, so now is the time to decide which actions deserve to exist outside your screens."
+    },
+    {
+      "title": "Connect Google Drive to the Figma agent and Make",
+      "source": "Figma",
+      "url": "https://forum.figma.com/product-updates-3/connect-google-drive-to-the-figma-agent-and-make-59533",
+      "note": "Add the connector from the plus menu in the prompt box and the agent can summarise research docs, pull real data or assets onto the canvas and create new Drive files; connectors are now on every plan, Starter included."
+    },
+    {
+      "title": "Convert update: agent support and country triggers",
+      "source": "Framer",
+      "url": "https://www.framer.com/updates/convert-update",
+      "note": "Framer's agent can now create, edit and analyse funnels and A/B tests and set up triggers, and overlays can target a visitor's country or region, so site designers can run experiments without a separate tool."
+    },
+    {
+      "title": "How Zalando built its own AI prototyping environment on top of its design system",
+      "source": "Into Design Systems",
+      "url": "https://www.intodesignsystems.com/blog/zalando-design-system-ai-prototyping-tool",
+      "note": "The ZDS team built the Capsule with Claude Code, a parallel-agent build-prototype skill and the Figma MCP; 20 plus designers have pushed pull requests and 98 were merged, and the hardest part was access, VPN and Git setup before the workshops, fixed with small-group support slots."
+    },
+    {
+      "title": "How to run a local LLM on your Mac: the designer's setup guide",
+      "source": "Into Design Systems",
+      "url": "https://www.intodesignsystems.com/blog/how-to-run-local-llm-mac-designers",
+      "note": "A model for each memory size, from Gemma 3 4B on 8 GB to Qwen 3.6 35B on 32 GB, 4-bit MLX builds with a third of memory left free and a 32K context, for confidential research and offline drafting; it is honest about weaker reasoning and comes with a Claude Code setup prompt."
+    }
+  ],
+  "watch": [
+    {
+      "title": "Complex vs. complicated",
+      "channel": "NNgroup",
+      "id": "utnOhRSXkyw",
+      "note": "Out on Monday: why complexity is not a design failure but complication is, and how to tell looking simple from being simple to operate when you design for expert users."
+    },
+    {
+      "title": "Affinity on iPad: the complete guide",
+      "channel": "Will Paterson",
+      "id": "Yj6FhJlIDR8",
+      "note": "Affinity for iPad went live this week, and this fast walkthrough from the logo designer covers Sketch and Vector Studio, gestures, the pen tool, Shape Builder, the command wheel and export, and whether an iPad alone can carry real brand work."
+    },
+    {
+      "title": "Google Stitch CLI and Loop, tried in Antigravity",
+      "channel": "AI with Surya",
+      "id": "_IHQ-LoGl9I",
+      "note": "A six-minute test of two new Stitch features: the CLI lets a coding agent send a running app to Stitch for new designs, and Loop takes one product goal, diagnoses the app and ranks fixes; a useful companion to today's Zalando and Reddit stories about designing on real code."
+    }
+  ],
+  "meetups": [
+    {
+      "name": "Utilizing AI to improve DesignOps",
+      "date": "2026-11-10",
+      "place": "Online",
+      "details": "Tuesday · Designlab talk · 11:30pm IST · free",
+      "url": "https://designlab.com/ui-ux-design-events-and-workshops"
+    },
+    {
+      "name": "World Usability Day 2026 networking",
+      "date": "2026-11-12",
+      "place": "Online",
+      "details": "Thursday · UXPA International · 10:30pm IST · free for members, theme: designing a sustainable future with ethical AI",
+      "url": "https://uxpa.org/world-usability-day/"
+    },
+    {
+      "name": "The Messy UX Conference 2026",
+      "date": "2026-11-28",
+      "place": "Bengaluru",
+      "details": "Saturday · 13 practitioners on design failures, pivots and trade-offs",
+      "url": "https://designshots.org/conference"
+    }
+  ],
+  "edition": {
+    "case": {
+      "title": "Creating tools for scaling generated content",
+      "url": "https://designnotes.blog.gov.uk/2026/11/03/creating-tools-for-scaling-generated-content/",
+      "studio": "GOV.UK AI team, Government Digital Service",
+      "client": "GOV.UK",
+      "note": "Personalised plans for life events like having a baby are generated only when someone asks, so there could be thousands of versions and no single page to sign off. Pete Kowalczyk and Dave Russell built a test runner instead: a bank of scenarios, versioned prompts split by plan, step and task, and a rubric of 21 code checks and 19 model-judged criteria, with a score such as 54 out of 56 per plan. The decision that made it work was keeping every criterion pass or fail, adding one only when it catches a failure they have actually seen, and reading pass rates per criterion rather than one overall score."
+    },
+    "learn": [
+      {
+        "kind": "people",
+        "title": "Blair Metcalf's team at Reddit prototypes on real data",
+        "url": "https://www.chatprd.ai/how-i-ai/blair-metcalf-reddit-proto",
+        "person": {
+          "name": "Blair Metcalf",
+          "role": "Principal UX engineer, Reddit",
+          "initials": "BM"
+        },
+        "intro": "On How I AI, Blair Metcalf explains Reddit Proto, the internal tool behind about 700 prototypes, which the team says everyone in UX and product now uses.",
+        "steps": [
+          "Start every prototype from a scaffold that already holds the design system, components and patterns, with toggles for device, theme, user states like moderator, and mocked or signed-in real data.",
+          "Give feedback as structured annotations that carry the code location, the element, the change and the wider intent, then apply them all to the code in one go.",
+          "Hand off through a Figma MCP that maps frames to production components and drafts a short PRD a person approves before a draft pull request is written."
+        ],
+        "source_line": "From How I AI · our takeaways from the episode write-up",
+        "take": "The adoption figure is Reddit's own; the habit worth copying first is blocking navigation in a prototype so reviewers stay on the one decision you need from them.",
+        "links": [
+          {
+            "title": "Inside Reddit Proto: real data, constrained prototypes, and a better handoff",
+            "url": "https://www.chatprd.ai/how-i-ai/blair-metcalf-reddit-proto",
+            "source": "How I AI",
+            "anchor": "Reddit Proto"
+          }
+        ]
+      },
+      {
+        "kind": "decision",
+        "title": "Let the model build the interface, or answer in text?",
+        "url": "https://thegradient.com/thinking/generative-ui-design-system",
+        "intro": "As assistants start answering with charts, forms and controls, someone has to decide when a generated interface helps and when plain text is clearer. Andrii Ladanskyi argues the answer lives in your design system.",
+        "columns": [
+          {
+            "label": "Compose from your components when",
+            "items": [
+              "The needs and scenarios are well understood",
+              "A local control, like a slider, can recalculate without a new model call",
+              "The product has rules the model must never break"
+            ]
+          },
+          {
+            "label": "Fall back to text or a question when",
+            "items": [
+              "The request is broad or poorly defined",
+              "No component in the catalogue fits the job",
+              "A half-built or streaming state would confuse more than help"
+            ]
+          }
+        ],
+        "examples": [
+          {
+            "name": "ChatGPT Intelligent UI",
+            "text": "Rolled out on 7 October; a reconstruction found about 70 native components in the client, with plain text still the default when it is clearest.",
+            "url": "https://thegradient.com/thinking/generative-ui-design-system"
+          }
+        ],
+        "rule": "If a model can't tell from the component's description when not to use it, it shouldn't be generating with it.",
+        "take": "The columns are our grouping of the article's examples; its four starting steps are to audit the system for a machine reader, list what the model must never build, design the in-between states and decide the fallback early.",
+        "links": [
+          {
+            "title": "Generative UI runs on your design system",
+            "url": "https://thegradient.com/thinking/generative-ui-design-system",
+            "source": "The Gradient",
+            "anchor": "the answer lives in your design system"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "issue": 17,
+  "date": "2026-11-06",
+  "title": "YouTube removes its Subscriptions tab, and Figma says most big customers now use its agent weekly",
+  "dek": "YouTube's new navigation, Figma's AI usage numbers, Apple's cancellation-flow messages, lessons from Lovable and Discord, a weekend watchlist, an inspiration shelf, a design power-up and three events.",
+  "preheader": "YouTube moves Subscriptions out of the tab bar. Plus Figma's agent numbers and a weekend watchlist.",
+  "hero": "https://ctrl-curious.vercel.app/assets/email/days2/fri/fri_07.jpg",
+  "hero_alt": "A pixel bicycle on a seaside path at sunset",
+  "summary": "YouTube's biggest navigation change in about a decade is reaching phones: the [Subscriptions tab is gone from the bottom bar](https://9to5google.com/2026/11/05/youtube-app-redesign-subscriptions-tab/), now a swipe away inside Home, and early reaction is harsh, a reminder of what it costs to move a habit people rely on. Figma's third-quarter results put numbers on AI in design work: [65% of customers paying over $10K a year use the Figma agent weekly](https://www.stocktitan.net/news/FIG/figma-announces-third-quarter-2026-financial-xwr5ldww6g5v.html), and MCP use tripled in a quarter. Apple now lets apps [show a retention message inside the App Store cancellation flow](https://developer.apple.com/news/?id=fk9ps3gv), which puts a new screen, and a new ethical line, in front of subscription designers. And two teams share what they learned building: Lovable on [why it pulled autonomy back from its agent](https://lovable.dev/blog/how-we-built-lovable-and-why-we-keep-rebuilding-it), Discord on the [small craft rules behind its new video player](https://discord.com/blog/modernizing-the-video-playback-experience-at-discord).",
+  "reads": [
+    {
+      "title": "YouTube's app redesign drops the Subscriptions tab",
+      "source": "9to5Google",
+      "url": "https://9to5google.com/2026/11/05/youtube-app-redesign-subscriptions-tab/",
+      "note": "The five-button bar gives way to one built around Shorts and creating, with Subscriptions moved to a swipe inside Home next to a custom feed; read it with the user reaction as a live case of platform goals overriding a well-worn habit."
+    },
+    {
+      "title": "Figma's third quarter: two in three big customers use its agent every week",
+      "source": "Figma, via StockTitan",
+      "url": "https://www.stocktitan.net/news/FIG/figma-announces-third-quarter-2026-financial-xwr5ldww6g5v.html",
+      "note": "Revenue rose 43% to $391.4M, over 80% of customers paying $10K or more used AI credits, MCP use tripled and writing back into files grew fourfold, and Dylan Field argues value is moving up the stack to design."
+    },
+    {
+      "title": "Apple adds retention messages to the subscription cancellation flow",
+      "source": "Apple Developer",
+      "url": "https://developer.apple.com/news/?id=fk9ps3gv",
+      "note": "Apps can now show text, images or a special offer when someone cancels, set who sees it and how often in App Store Connect, and pick a message per subscriber through a new API; worth deciding now where persuasion ends and obstruction starts."
+    },
+    {
+      "title": "How we built Lovable, and why we keep rebuilding it",
+      "source": "Lovable",
+      "url": "https://lovable.dev/blog/how-we-built-lovable-and-why-we-keep-rebuilding-it",
+      "note": "Co-founder Anton Osika explains why fully autonomous agents wandered off, why they went back to a step-by-step flow people can review, and why short notes on recurring mistakes beat fine-tuning, lessons that apply to any AI feature you design."
+    },
+    {
+      "title": "Modernizing the video playback experience at Discord",
+      "source": "Discord",
+      "url": "https://discord.com/blog/modernizing-the-video-playback-experience-at-discord",
+      "note": "One player replaced four, with craft rules worth copying: no tap target under 24px from a small tile to fullscreen, tabular figures so the time doesn't jitter, its own clock for a smooth playhead, and tests written before the refactor."
+    }
+  ],
+  "watch": [
+    {
+      "title": "How to stand out in a world of AI designs",
+      "channel": "Y Combinator",
+      "id": "2tZT2-pS_pI",
+      "note": "A 48-minute YC session on how designers and products stand apart once anyone can generate a polished interface, the question sitting under this week's Figma agent numbers. The long watch for the weekend."
+    },
+    {
+      "title": "Kyle Barber: designing Inflight (the raw behind-the-scenes)",
+      "channel": "Dive Club",
+      "id": "0FQC0mu5Z00",
+      "note": "An hour behind the scenes with Kyle Barber on how Inflight was designed, the kind of process walkthrough that shows the decisions a finished case study usually leaves out."
+    },
+    {
+      "title": "Explore shaders and motion with the Figma agent",
+      "channel": "Figma",
+      "id": "BS-N-AM5ql4",
+      "note": "A five-minute official walkthrough of asking the Figma agent for shaders and motion, timely now that Figma says two in three of its biggest customers use the agent every week."
+    },
+    {
+      "title": "An 86-minute guide to finding product-market fit",
+      "channel": "Lenny's Podcast",
+      "id": "19qrLchbQEc",
+      "note": "Rob Snyder, author of The Power of Pull, on how teams find product-market fit, useful context for designers whose work now often starts before a product is proven."
+    },
+    {
+      "title": "Config India 2026: the work has to leave the file",
+      "channel": "Figma",
+      "id": "9xP_EZlWdbc",
+      "note": "Ashish Kashyap and Saptarshi Prakash at Config India on getting design work out of the file and into the product, a 20-minute talk from the Indian design community that went up last week."
+    }
+  ],
+  "meetups": [
+    {
+      "name": "How is product management different in 2026, and should you consider joining in",
+      "date": "2026-11-08",
+      "place": "Online",
+      "details": "Sunday · IxDF Hamburg with speaker Deepak Nautiyal · free, no membership needed",
+      "url": "https://ixdf.org/meetups/how-is-product-management-different-in-2026-and-should-you-consider-joining-in-online-event-nov-8th-2026"
+    },
+    {
+      "name": "The Messy UX Conference 2026",
+      "date": "2026-11-28",
+      "place": "Bengaluru",
+      "details": "Saturday · 13 practitioner talks · Design Shots",
+      "url": "https://designshots.org/conference"
+    },
+    {
+      "name": "December Live Online UX Training",
+      "date": "2026-12-02",
+      "place": "Online",
+      "details": "2 to 15 December · Nielsen Norman Group · courses on UX strategy, roadmaps, design systems and influence · from $1,220 per course until 13 November",
+      "url": "https://www.nngroup.com/training/december/"
+    }
+  ],
+  "edition": {
+    "shelf": [
+      {
+        "title": "This year's INTL International Poster Competition: 190 posters picked from 2,670 entries",
+        "credit": "INTL, with designers from 78 countries",
+        "url": "https://www.itsnicethat.com/features/intl-poster-competition-graphic-design-spotlight-021126"
+      },
+      {
+        "title": "A new identity and website built to be read by AI search as well as people",
+        "credit": "HOW+HOW",
+        "url": "https://www.creativeboom.com/news/london-and-la-studio-howhow-launches-a-new-name-visual-identity-and-website/"
+      },
+      {
+        "title": "QR codes drawn as text in a code block now render as scannable images, with a toggle back to text",
+        "credit": "Linear",
+        "url": "https://linear.app/changelog/2026-10-22-slack-and-github-loops"
+      }
+    ],
+    "learn": [
+      {
+        "kind": "install",
+        "title": "Impeccable gives your coding agent a design vocabulary and a check for AI-looking UI",
+        "url": "https://github.com/pbakaus/impeccable",
+        "intro": "Paul Bakaus's open-source skill, which grew out of Anthropic's frontend-design skill, adds 24 design commands to coding agents such as Claude Code, Cursor, Codex and Copilot. Version 4.8.0 arrived on 26 October, a week after 4.7.0 added two new typography checks, so it is a good moment to try it on a real screen.",
+        "skill": {
+          "name": "Impeccable",
+          "by": "Paul Bakaus",
+          "cost": "Free, Apache 2.0 licence"
+        },
+        "changes": [
+          "You steer with design words instead of long prompts: bolder, quieter, distill, typeset, layout, animate and more, plus polish, harden and adapt for the finishing pass.",
+          "Critique gives a scored UX review and audit ranks accessibility, performance, theming and responsive issues from P0 to P3.",
+          "Init writes a PRODUCT.md and document writes a DESIGN.md, so the agent keeps to your product and brand across sessions.",
+          "A detector with 62 fixed rules, no AI or API key needed, flags tells such as Inter everywhere, purple-to-blue gradients, cards inside cards and grey text on colour."
+        ],
+        "install": [
+          {
+            "where": "Any supported agent, in your project's terminal",
+            "how": "Run the installer; it finds the AI tools you use and asks whether to install for this project or globally. Run update later to get new versions.",
+            "code": "npx impeccable install"
+          },
+          {
+            "where": "In Claude Code",
+            "how": "Add the marketplace, then open /plugin and install Impeccable from there.",
+            "code": "/plugin marketplace add pbakaus/impeccable"
+          }
+        ],
+        "try": "Run /impeccable init once for the project, then ask: /impeccable critique the pricing cards.",
+        "take": "The commands are most useful once init has written PRODUCT.md, so spend five minutes on that first. Treat the detector's list as a review prompt rather than a verdict; some rules, like contrast, only run when it scans a live URL.",
+        "links": [
+          {
+            "title": "Impeccable",
+            "url": "https://impeccable.style",
+            "source": "impeccable.style",
+            "anchor": "Paul Bakaus's open-source skill"
+          },
+          {
+            "title": "Impeccable changelog",
+            "url": "https://impeccable.style/changelog",
+            "source": "impeccable.style",
+            "anchor": "Version 4.8.0 arrived on 26 October"
+          },
+          {
+            "title": "Impeccable on GitHub",
+            "url": "https://github.com/pbakaus/impeccable",
+            "source": "GitHub",
+            "anchor": "A detector with 62 fixed rules"
+          }
+        ]
+      }
+    ]
+  }
+}

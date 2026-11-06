@@ -1,0 +1,36 @@
+Ctrl+Curious · Weekend edition · Friday, 6 November 2026 · Issue 017
+View online: https://ctrl-curious.vercel.app/issues/017
+
+Today, in brief
+YouTube's biggest navigation change in about a decade is reaching phones: the Subscriptions tab is gone from the bottom bar (https://9to5google.com/2026/11/05/youtube-app-redesign-subscriptions-tab/), now a swipe away inside Home, and early reaction is harsh, a reminder of what it costs to move a habit people rely on. Figma's third-quarter results put numbers on AI in design work: 65% of customers paying over $10K a year use the Figma agent weekly (https://www.stocktitan.net/news/FIG/figma-announces-third-quarter-2026-financial-xwr5ldww6g5v.html), and MCP use tripled in a quarter. Apple now lets apps show a retention message inside the App Store cancellation flow (https://developer.apple.com/news/?id=fk9ps3gv), which puts a new screen, and a new ethical line, in front of subscription designers. And two teams share what they learned building: Lovable on why it pulled autonomy back from its agent (https://lovable.dev/blog/how-we-built-lovable-and-why-we-keep-rebuilding-it), Discord on the small craft rules behind its new video player (https://discord.com/blog/modernizing-the-video-playback-experience-at-discord).
+
+Read
+YouTube's app redesign drops the Subscriptions tab: https://9to5google.com/2026/11/05/youtube-app-redesign-subscriptions-tab/
+Figma's third quarter: two in three big customers use its agent every week: https://www.stocktitan.net/news/FIG/figma-announces-third-quarter-2026-financial-xwr5ldww6g5v.html
+Apple adds retention messages to the subscription cancellation flow: https://developer.apple.com/news/?id=fk9ps3gv
+How we built Lovable, and why we keep rebuilding it: https://lovable.dev/blog/how-we-built-lovable-and-why-we-keep-rebuilding-it
+Modernizing the video playback experience at Discord: https://discord.com/blog/modernizing-the-video-playback-experience-at-discord
+
+Power-up
+Impeccable gives your coding agent a design vocabulary and a check for AI-looking UI: https://github.com/pbakaus/impeccable
+
+Inspiration shelf
+This year's INTL International Poster Competition: 190 posters picked from 2,670 entries (INTL, with designers from 78 countries): https://www.itsnicethat.com/features/intl-poster-competition-graphic-design-spotlight-021126
+A new identity and website built to be read by AI search as well as people (HOW+HOW): https://www.creativeboom.com/news/london-and-la-studio-howhow-launches-a-new-name-visual-identity-and-website/
+QR codes drawn as text in a code block now render as scannable images, with a toggle back to text (Linear): https://linear.app/changelog/2026-10-22-slack-and-github-loops
+
+Weekend watchlist
+How to stand out in a world of AI designs: https://www.youtube.com/watch?v=2tZT2-pS_pI
+Kyle Barber: designing Inflight (the raw behind-the-scenes): https://www.youtube.com/watch?v=0FQC0mu5Z00
+Explore shaders and motion with the Figma agent: https://www.youtube.com/watch?v=BS-N-AM5ql4
+An 86-minute guide to finding product-market fit: https://www.youtube.com/watch?v=19qrLchbQEc
+Config India 2026: the work has to leave the file: https://www.youtube.com/watch?v=9xP_EZlWdbc
+
+Meet up
+How is product management different in 2026, and should you consider joining in (2026-11-08): https://ixdf.org/meetups/how-is-product-management-different-in-2026-and-should-you-consider-joining-in-online-event-nov-8th-2026
+The Messy UX Conference 2026 (2026-11-28): https://designshots.org/conference
+December Live Online UX Training (2026-12-02): https://www.nngroup.com/training/december/
+
+That's all for today. Stay curious.
+
+Unsubscribe: https://ctrl-curious.vercel.app/unsubscribe

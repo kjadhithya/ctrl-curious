@@ -1,0 +1,121 @@
+{
+  "issue": 19,
+  "date": "2026-11-10",
+  "title": "Adobe opens MAX pitching creative direction over prompting, and Chrome for Android tests a reorganised Settings",
+  "dek": "Adobe's agent strategy going into MAX, a study where one plain AI prompt beat professional creatives, Chrome's settings rethink, Google Messages' new home screen, design systems as editing, Zalando's prototyping talk, Relume Studio, Figma's one-click image selection and two events.",
+  "preheader": "Adobe heads into MAX with an agent pitch, and a study where one AI prompt beat professional creatives.",
+  "hero": "https://ctrl-curious.vercel.app/assets/email/days2/tue/tue_05.jpg",
+  "hero_alt": "A progress ring around the sun at 72%, a progress bar on the horizon of a teal sea",
+  "summary": "Adobe MAX opens today in Miami Beach, and Adobe's pitch going in is that the skill that matters next is [creative direction rather than better prompting](https://www.theneuron.ai/news/adobe-says-the-next-ai-skill-isnt-better-prompting-its-creative-direction/), with its Firefly assistant working across the Creative Cloud apps and reaching into ChatGPT, Claude and Slack. Jakob Nielsen reads a new study in which [one standard AI prompt beat both amateurs and professional creatives](https://www.uxtigers.com/post/ux-roundup-20261109), and buyers couldn't tell whose work was whose, a hard prompt for anyone whose value rests on taste. On the interface side, Google is testing a [Chrome for Android settings page with no Basics and Advanced labels](https://www.androidheadlines.com/2026/11/google-is-giving-chrome-for-android-a-fresh-set-of-colorful-icons.html), and [Google Messages moves search to the bottom of the screen](https://9to5google.com/2026/11/07/google-messages-pinned-chats-redesign/) for one-handed use. And the Design Systems Collective argues that [most of a system team's job is now deciding what stays out](https://designsystemscollective.substack.com/p/most-of-the-job-is-deciding-what) of the memory agents share.",
+  "reads": [
+    {
+      "title": "Adobe says the next AI skill isn't better prompting, it's creative direction",
+      "source": "The Neuron",
+      "url": "https://www.theneuron.ai/news/adobe-says-the-next-ai-skill-isnt-better-prompting-its-creative-direction/",
+      "note": "A briefing on the strategy Adobe takes into MAX: its Firefly AI Assistant, in public beta since April, works across Photoshop, Illustrator, Lightroom and Premiere with partner models from Google, OpenAI and others, and Adobe's connectors reach into ChatGPT, Claude, Gemini and Slack; useful context before today's keynote news lands."
+    },
+    {
+      "title": "UX roundup: the taste barrier falls, and reviewing the decisions you never made",
+      "source": "UX Tigers",
+      "url": "https://www.uxtigers.com/post/ux-roundup-20261109",
+      "note": "Nielsen on two studies: games improved by one plain AI prompt outsold those improved by amateurs and by professionals, with buyers unable to tell them apart, and a Google DeepMind and Toronto prototype that cut tab-switching during agent waits from 35% to 13% while helping people catch unwanted agent decisions mid-run."
+    },
+    {
+      "title": "Google is testing a reorganised Settings page in Chrome for Android",
+      "source": "Android Headlines",
+      "url": "https://www.androidheadlines.com/2026/11/google-is-giving-chrome-for-android-a-fresh-set-of-colorful-icons.html",
+      "note": "Chrome Canary drops the Basics and Advanced subheads, separates groups with spacing and a coloured icon per option, and folds address bar and homepage settings into Appearance; a live example of reworking a long settings page's information architecture without adding screens."
+    },
+    {
+      "title": "Google Messages redesigns its home screen with pinned avatars and bottom search",
+      "source": "9to5Google",
+      "url": "https://9to5google.com/2026/11/07/google-messages-pinned-chats-redesign/",
+      "note": "Pinned chats become large avatars above the list, search moves to a floating bottom button that shifts between pill and circle as you scroll, and the Gemini button joins the profile picture in the top corner; worth studying for how it trades message previews for reach."
+    },
+    {
+      "title": "Most of the job is deciding what stays out",
+      "source": "Design Systems Collective",
+      "url": "https://designsystemscollective.substack.com/p/most-of-the-job-is-deciding-what",
+      "note": "Issue 92 argues that design system teams now do an editor's work, choosing what goes into the memory agents share because every saved rule shapes every later run, and collects pieces on splitting agent and human memory, governing tokens in three layers and building a 146-screen app with Claude."
+    }
+  ],
+  "watch": [
+    {
+      "title": "How Zalando built its own AI prototyping tool with Claude Code",
+      "channel": "Into Design Systems",
+      "id": "e6RJWpAOhxc",
+      "note": "Posted 4 November: Zalando's design system team on why Figma Make didn't give them on-brand prototypes, and the tool they built instead, which turns a frame or prompt into a prototype with real product data. The practical companion to today's piece on deciding what goes into agent memory, down to small guideline files with an index."
+    },
+    {
+      "title": "Canva Craft and Magic Layers: turn images into editable designs",
+      "channel": "MBD Studio Design",
+      "id": "PV79nhergKA",
+      "note": "A four-minute test from 1 November of Canva's design image model and where it falls short, with no image attachments or brand kit yet, then Magic Layers splitting the result into editable text and elements for a poster and a social post; a quick way to judge whether generated layouts can survive real edits."
+    },
+    {
+      "title": "Canva Craft, Canva's design-focused image generation model",
+      "channel": "OnEBoard",
+      "id": "mlHLL-XLoMo",
+      "note": "An explainer from 27 October on how Craft plans layout and type before it renders, outputs at 2K with text in 55 languages, and hands off to Magic Layers; useful background on why design-aware models behave differently from general image generators."
+    }
+  ],
+  "meetups": [
+    {
+      "name": "Design patterns for AI interfaces, a Smashing online workshop with Vitaly Friedman",
+      "date": "2026-11-16",
+      "place": "Online",
+      "details": "Five live sessions from Monday 16 to Tuesday 24 November · 10:30pm to 1am IST · Recordings included · Paid",
+      "url": "https://smashingconf.com/online-workshops/workshops/ai-interfaces-vitaly-friedman/"
+    },
+    {
+      "name": "Product (Un)Conference '26",
+      "date": "2026-11-21",
+      "place": "Bengaluru",
+      "details": "Saturday and Sunday · The Product Folks · For product, tech, design and growth leaders · Apply for an invite",
+      "url": "https://luma.com/yihqxcwo"
+    }
+  ],
+  "edition": {
+    "tool": {
+      "name": "Relume Studio",
+      "url": "https://www.relume.ai/whats-new/introducing-relume-studio",
+      "what": "Relume released Studio on 3 November to make on-brand images that stay consistent: Styles lock the look, Characters lock the people from a few uploaded photos, Scenes lock a place from one photo, and BrandKits set up all three from a single URL. It is best at keeping the same people, places and style across every page of a marketing site, with images going straight into a Relume site without exporting or renaming files.",
+      "meta": "Beta · Relume Pro plans · Web"
+    },
+    "learn": [
+      {
+        "kind": "tool",
+        "title": "Figma's AI image tools: erase, isolate and expand without leaving the file",
+        "url": "https://help.figma.com/hc/en-us/articles/24004542669463-Generate-and-edit-images-with-Figma-AI",
+        "intro": "Since 6 November, clicking an object in an image makes Figma select it for you, so there is no more tracing around it by hand. That makes the image tools inside Figma quick enough to replace a round trip to a photo editor for most interface and slide work.",
+        "steps": [
+          "Pull out or remove one thing. Select the image and choose Select area in the secondary toolbar (in FigJam it sits under AI tools). Click the object on the macOS desktop app, or drag the lasso anywhere else, then choose Erase to remove it or Isolate to lift it onto its own layer.",
+          "Fit an image to a new frame. Choose More, then Expand, drag the blue handles or pick an aspect ratio from the dropdown, and click the blue check: useful when a hero shot has to work at desktop, mobile and social sizes.",
+          "Clean up a batch at once. Select several images and use Remove background, or More then Boost resolution for low-res screenshots and stock; image jobs run side by side and you can keep working, even in another frame.",
+          "Change a detail with words. Choose Edit with prompt, pick a model, add a reference image with the plus button if you have one, and send with Command and Enter."
+        ],
+        "take": "You need edit access to the file, and the one-click selection is on the macOS desktop app only. Each action spends AI credits: removing a background costs 1 to 5 per image and erase, isolate, expand or boost cost 5 to 10, against a monthly allowance of 3,000 for a Professional full seat and 500 for Starter, Dev, Collab and View seats. Our advice: use Isolate on product shots before handoff, so engineers get a clean layer instead of a flattened photo.",
+        "links": [
+          {
+            "title": "Generate and edit images with Figma AI",
+            "url": "https://help.figma.com/hc/en-us/articles/24004542669463-Generate-and-edit-images-with-Figma-AI",
+            "source": "Figma Help Center",
+            "anchor": "choose Select area in the secondary toolbar"
+          },
+          {
+            "title": "Select objects even faster with AI image editing tools",
+            "url": "https://forum.figma.com/product-updates-3/select-objects-even-faster-with-ai-image-editing-tools-59844",
+            "source": "Figma Forum",
+            "anchor": "clicking an object in an image makes Figma select it for you"
+          },
+          {
+            "title": "How Figma AI credits work",
+            "url": "https://help.figma.com/hc/en-us/articles/33459875669015",
+            "source": "Figma Help Center",
+            "anchor": "Each action spends AI credits"
+          }
+        ]
+      }
+    ]
+  }
+}

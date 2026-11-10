@@ -1,0 +1,31 @@
+Ctrl+Curious · Tools edition · Tuesday, 10 November 2026 · Issue 019
+View online: https://ctrl-curious.vercel.app/issues/019
+
+Today, in brief
+Adobe MAX opens today in Miami Beach, and Adobe's pitch going in is that the skill that matters next is creative direction rather than better prompting (https://www.theneuron.ai/news/adobe-says-the-next-ai-skill-isnt-better-prompting-its-creative-direction/), with its Firefly assistant working across the Creative Cloud apps and reaching into ChatGPT, Claude and Slack. Jakob Nielsen reads a new study in which one standard AI prompt beat both amateurs and professional creatives (https://www.uxtigers.com/post/ux-roundup-20261109), and buyers couldn't tell whose work was whose, a hard prompt for anyone whose value rests on taste. On the interface side, Google is testing a Chrome for Android settings page with no Basics and Advanced labels (https://www.androidheadlines.com/2026/11/google-is-giving-chrome-for-android-a-fresh-set-of-colorful-icons.html), and Google Messages moves search to the bottom of the screen (https://9to5google.com/2026/11/07/google-messages-pinned-chats-redesign/) for one-handed use. And the Design Systems Collective argues that most of a system team's job is now deciding what stays out (https://designsystemscollective.substack.com/p/most-of-the-job-is-deciding-what) of the memory agents share.
+
+Tool of the day
+Relume Studio: https://www.relume.ai/whats-new/introducing-relume-studio
+
+Read
+Adobe says the next AI skill isn't better prompting, it's creative direction: https://www.theneuron.ai/news/adobe-says-the-next-ai-skill-isnt-better-prompting-its-creative-direction/
+UX roundup: the taste barrier falls, and reviewing the decisions you never made: https://www.uxtigers.com/post/ux-roundup-20261109
+Google is testing a reorganised Settings page in Chrome for Android: https://www.androidheadlines.com/2026/11/google-is-giving-chrome-for-android-a-fresh-set-of-colorful-icons.html
+Google Messages redesigns its home screen with pinned avatars and bottom search: https://9to5google.com/2026/11/07/google-messages-pinned-chats-redesign/
+Most of the job is deciding what stays out: https://designsystemscollective.substack.com/p/most-of-the-job-is-deciding-what
+
+Tool to master
+Figma's AI image tools: erase, isolate and expand without leaving the file: https://help.figma.com/hc/en-us/articles/24004542669463-Generate-and-edit-images-with-Figma-AI
+
+Watch
+How Zalando built its own AI prototyping tool with Claude Code: https://www.youtube.com/watch?v=e6RJWpAOhxc
+Canva Craft and Magic Layers: turn images into editable designs: https://www.youtube.com/watch?v=PV79nhergKA
+Canva Craft, Canva's design-focused image generation model: https://www.youtube.com/watch?v=mlHLL-XLoMo
+
+Meet up
+Design patterns for AI interfaces, a Smashing online workshop with Vitaly Friedman (2026-11-16): https://smashingconf.com/online-workshops/workshops/ai-interfaces-vitaly-friedman/
+Product (Un)Conference '26 (2026-11-21): https://luma.com/yihqxcwo
+
+That's all for today. Stay curious.
+
+Unsubscribe: https://ctrl-curious.vercel.app/unsubscribe

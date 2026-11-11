@@ -1,0 +1,159 @@
+{
+  "issue": 20,
+  "date": "2026-11-11",
+  "title": "Adobe lets outside AI agents work inside its apps and previews Firefly Builder for on-brand prototypes",
+  "dek": "Adobe's agent and prototyping news from MAX, springs in Figma Motion, how design system job ads now ask for AI, accessible AI chat, Geist Serif, a local AI setup prompt, a brief on agent harnesses and two events.",
+  "preheader": "Adobe opens its apps to your AI agent. Here is what the harness around an agent means for your designs.",
+  "hero": "https://ctrl-curious.vercel.app/assets/email/days2/wed/wed_01.jpg",
+  "hero_alt": "Aa set in Fraunces on plum with specimen guide lines",
+  "summary": "At Adobe MAX yesterday, Adobe said outside AI agents will be able to [work on native Photoshop, Illustrator, Premiere and After Effects files](https://www.creativeboom.com/news/adobe-max-2026-all-the-big-announcements/) with layers left editable, and showed [Firefly Builder, which turns a prompt into a clickable, on-brand prototype](https://www.creativebloq.com/news/adobes-firefly-is-now-a-creative-studio-and-it-means-ai-is-everything-everywhere-all-at-once); it is in private beta, so its design system claims are still to be tested. Figma Motion now has [physics-based springs you can save to your design system](https://www.figma.com/release-notes/?title=new-figma-motion-updates-physics-based-springs-style-and-lottie-export-previews), and Framer has [rebuilt the harness around its own agent](https://www.framer.com/updates/harness-2) so changes appear while the model is still working; today's brief explains why that layer shapes what your users can do. If you work on a design system, a count of 451 job ads shows [AI now appears in about two thirds of senior and lead roles](https://www.intodesignsystems.com/blog/ai-skills-design-system-jobs). And Eric Bailey shows how to make [AI chat usable with a screen reader](https://www.smashingmagazine.com/2026/11/making-immersive-llm-chat-experiences-more-accessible/), from one live region to a five-second loading rhythm.",
+  "reads": [
+    {
+      "title": "Bring your own agent: Adobe opens Creative Cloud to outside AI",
+      "source": "Creative Boom",
+      "url": "https://www.creativeboom.com/news/adobe-max-2026-all-the-big-announcements/",
+      "note": "Adobe previewed MCP support so the agent you already use can work on native Photoshop, Illustrator, Premiere and After Effects files with layers kept editable; private beta is due in early 2027, alongside the existing Adobe connector for Claude, ChatGPT and Gemini."
+    },
+    {
+      "title": "Adobe Firefly is now a creative studio, and it comes with its own agent",
+      "source": "Creative Bloq",
+      "url": "https://www.creativebloq.com/news/adobes-firefly-is-now-a-creative-studio-and-it-means-ai-is-everything-everywhere-all-at-once",
+      "note": "Ian Dean on Firefly's new agent, which shows its plan for review before it runs, the one-canvas Firefly Design beta, and Firefly Builder, a private-beta tool that turns a prompt into a clickable site or app prototype; he flags its promise to stay inside your design system as the claim to test."
+    },
+    {
+      "title": "New Figma Motion updates: physics-based springs, style and Lottie export previews",
+      "source": "Figma",
+      "url": "https://www.figma.com/release-notes/?title=new-figma-motion-updates-physics-based-springs-style-and-lottie-export-previews",
+      "note": "Out yesterday: springs set by mass, stiffness and damping, matching how iOS and Android define them, with duration updating to fit and the spring savable in your design system; you can also preview each animation style on canvas and see how a Lottie export will play before you export it."
+    },
+    {
+      "title": "2 out of 3 senior and lead design system roles now mention AI",
+      "source": "Into Design Systems",
+      "url": "https://www.intodesignsystems.com/blog/ai-skills-design-system-jobs",
+      "note": "A count of 451 design system job ads finds AI in 69% of senior and 67% of lead roles, with Claude, Cursor and MCP the most named tools; lead roles also ask far more often for governance and adoption metrics. The sample is one job board, but it is a useful skills checklist."
+    },
+    {
+      "title": "Making immersive LLM chat experiences more accessible",
+      "source": "Smashing Magazine",
+      "url": "https://www.smashingmagazine.com/2026/11/making-immersive-llm-chat-experiences-more-accessible/",
+      "note": "Eric Bailey's detailed guide for AI chat interfaces: one live region for finished replies instead of announcing every streamed word, a loading cue at five seconds, a hidden heading on each message saying who spoke, landmarks, a skip link and settings to quiet secondary announcements."
+    }
+  ],
+  "watch": [
+    {
+      "title": "Adobe's new design tool changes everything (Firefly Design)",
+      "channel": "Kaleb Gonyea",
+      "id": "0pzV4bHe2Kc",
+      "note": "Posted yesterday: a graphic designer takes the new Firefly Design beta through a real project, from vector and type to print, motion and 3D on one infinite canvas, so you can judge whether a single canvas for every format holds up beyond the keynote demo."
+    },
+    {
+      "title": "Photoshop 2027: what's new? All the big features",
+      "channel": "photoshopCAFE",
+      "id": "NmgOcJXcHt8",
+      "note": "Colin Smith's same-day tour of the MAX release, including the new Spectrum interface and how to customise it, the new colour picker, prompt to edit, Quick Compare and Relight; worth 15 minutes if your team still mocks up or retouches in Photoshop."
+    },
+    {
+      "title": "William Imoh built a Norwegian tutor that refuses to speak English",
+      "channel": "How I AI",
+      "id": "zBROTIiHusc",
+      "note": "Out on Monday: a founder builds a native voice app with Codex, and the useful part for designers is how he rescued a wrong first AI design by naming concrete visual changes in a detailed kickoff brief, a habit worth copying when you hand work to an agent."
+    }
+  ],
+  "meetups": [
+    {
+      "name": "The Messy UX Conference 2026",
+      "date": "2026-11-28",
+      "place": "Bengaluru",
+      "details": "Saturday · talks and workshops on real design trade-offs · free",
+      "url": "https://designshots.org/conference"
+    },
+    {
+      "name": "December Live Online UX Training 2026",
+      "date": "2026-12-02",
+      "place": "Online",
+      "details": "2 to 15 December · NN/g · two-day courses incl. AI for design workflows and context engineering · paid",
+      "url": "https://www.nngroup.com/training/december/"
+    }
+  ],
+  "edition": {
+    "typeface": {
+      "name": "Geist Serif",
+      "url": "https://vercel.com/blog/introducing-geist-serif",
+      "by": "Evil Rabbit, Andrés Briganti and Mark Davis, Vercel",
+      "get": "Google Fonts and vercel.com/font (free, OFL)",
+      "pair": "Use it for headlines over Geist Sans body text; both share a 710 cap height and 530 x-height, so they sit on the same lines without adjustment.",
+      "good_for": "Headlines, landing pages, editorial moments in product UI",
+      "note": "A high-contrast display serif with saw-toothed serifs and sharp hairlines, drawn after fashion and magazine titles and built on the same metrics as Geist Sans and Mono. An Element Shape axis swaps the dots on i, j and punctuation between round, square, triangle and heart; it shipped on 30 October with 894 glyphs covering 352 languages and was added to Google Fonts on 3 November.",
+      "image": "https://ctrl-curious.vercel.app/assets/email/specimens/geistserif.jpg"
+    },
+    "learn": [
+      {
+        "kind": "steal",
+        "title": "A prompt that sets up a private AI model on your Mac",
+        "url": "https://www.intodesignsystems.com/blog/how-to-run-local-llm-mac-designers",
+        "intro": "Sil Bormüller's designer's setup guide shows how to run a capable model on an Apple Silicon Mac, so you can summarise interview notes or test UX copy without sending anything to the cloud. It ends with a prompt that has Claude Code do the whole setup for you; this is our condensed version of its seven steps.",
+        "file": "local-llm-setup.md",
+        "code": "Set up a local LLM on this Mac for design work.\n\n1. Check memory, chip and macOS version.\n   Stop if it is not Apple Silicon on macOS 14+.\n2. Pick a model by memory, 4-bit MLX build only,\n   leaving about a third of memory free:\n   8 GB  Gemma 3 4B   | 16 GB Gemma 4 12B\n   24 GB Qwen 3.6 27B | 32 GB+ Qwen 3.6 35B\n3. Install LM Studio and its CLI if missing.\n4. Tell me the download size, then download it.\n5. Load it with a 32K context, start the server.\n6. Ask one test question; report the answer\n   and tokens per second.\n7. Finish with three lines: which model,\n   how to restart it, how to stop it.\n\nExplain each step in plain language.\nIf a step fails, tell me; do not retry silently.",
+        "code_note": "Paste it into Claude Code in an empty folder and approve each step as it asks. If you would rather click than type, follow the manual LM Studio steps in the guide and choose the model with the green full GPU offload badge.",
+        "meta": "Free · from Into Design Systems",
+        "take": "The memory tiers and steps come from the guide; we shortened the wording, so read the original prompt before running it. A local model is a good fit for research notes you are not allowed to upload.",
+        "links": [
+          {
+            "title": "How to run a local LLM on your Mac: the designer's setup guide",
+            "url": "https://www.intodesignsystems.com/blog/how-to-run-local-llm-mac-designers",
+            "source": "Into Design Systems",
+            "anchor": "designer's setup guide"
+          }
+        ]
+      },
+      {
+        "kind": "brief",
+        "title": "The agent harness: the part of an AI feature you actually design",
+        "url": "https://www.framer.com/updates/harness-2",
+        "intro": "Adobe, Framer and Figma all shipped agent news in the last fortnight, and the model was rarely the story. What changed was the harness around it: what the agent can see, what it may touch, and what people see while it works.",
+        "define": "An agent harness is the software around an AI model that runs its loop: it decides which tools and context the model gets, what it is allowed to change, and how its steps and results reach the person using it.",
+        "examples_label": "Where it showed up this week",
+        "examples": [
+          {
+            "name": "Framer Harness 2",
+            "text": "Framer rebuilt its harness so the agent applies changes while it is still writing, and tied what it may do to each person's role.",
+            "url": "https://www.framer.com/updates/harness-2"
+          },
+          {
+            "name": "Adobe's Plan Mode",
+            "text": "Firefly's Creative Agent now shows a plan to review and approve before it runs, with a model picker that can be left on auto.",
+            "url": "https://news.adobe.com/news/2026/11/adobe-firefly-expands"
+          },
+          {
+            "name": "Adobe's MCP preview",
+            "text": "Outside agents will edit native Photoshop and Illustrator files with layers intact, so the harness, not the model, decides what stays editable.",
+            "url": "https://www.creativeboom.com/news/adobe-max-2026-all-the-big-announcements/"
+          }
+        ],
+        "tips": [
+          "Show the plan before the run for anything that changes many items, and let people edit or drop a step, not just approve the whole thing.",
+          "Map agent permissions to the roles you already have: someone who can only view should be able to ask questions but not trigger edits.",
+          "Replace the long spinner with visible progress, so people can stop a run that is heading the wrong way before it finishes.",
+          "Keep the agent's output in native, editable form, such as layers, components or CMS fields, so a person can fix one detail without rerunning everything.",
+          "Give every agent change one clear undo, and say which model and which context it used when results look off."
+        ],
+        "why": "As agents spread through design tools and the products you design, most of what users feel, such as speed, trust and control, comes from the harness, and those are interface decisions, not model choices.",
+        "take": "The definition and tips are our own reading of how these products work; the examples come from Framer's and Adobe's own announcements.",
+        "links": [
+          {
+            "title": "Harness 2",
+            "url": "https://www.framer.com/updates/harness-2",
+            "source": "Framer",
+            "anchor": "the harness around it"
+          },
+          {
+            "title": "Adobe Firefly expands as the AI creative studio",
+            "url": "https://news.adobe.com/news/2026/11/adobe-firefly-expands",
+            "source": "Adobe",
+            "anchor": "Show the plan before the run"
+          }
+        ]
+      }
+    ]
+  }
+}

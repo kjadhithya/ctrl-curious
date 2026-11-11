@@ -1,0 +1,34 @@
+Ctrl+Curious · Type edition · Wednesday, 11 November 2026 · Issue 020
+View online: https://ctrl-curious.vercel.app/issues/020
+
+Today, in brief
+At Adobe MAX yesterday, Adobe said outside AI agents will be able to work on native Photoshop, Illustrator, Premiere and After Effects files (https://www.creativeboom.com/news/adobe-max-2026-all-the-big-announcements/) with layers left editable, and showed Firefly Builder, which turns a prompt into a clickable, on-brand prototype (https://www.creativebloq.com/news/adobes-firefly-is-now-a-creative-studio-and-it-means-ai-is-everything-everywhere-all-at-once); it is in private beta, so its design system claims are still to be tested. Figma Motion now has physics-based springs you can save to your design system (https://www.figma.com/release-notes/?title=new-figma-motion-updates-physics-based-springs-style-and-lottie-export-previews), and Framer has rebuilt the harness around its own agent (https://www.framer.com/updates/harness-2) so changes appear while the model is still working; today's brief explains why that layer shapes what your users can do. If you work on a design system, a count of 451 job ads shows AI now appears in about two thirds of senior and lead roles (https://www.intodesignsystems.com/blog/ai-skills-design-system-jobs). And Eric Bailey shows how to make AI chat usable with a screen reader (https://www.smashingmagazine.com/2026/11/making-immersive-llm-chat-experiences-more-accessible/), from one live region to a five-second loading rhythm.
+
+Read
+Bring your own agent: Adobe opens Creative Cloud to outside AI: https://www.creativeboom.com/news/adobe-max-2026-all-the-big-announcements/
+Adobe Firefly is now a creative studio, and it comes with its own agent: https://www.creativebloq.com/news/adobes-firefly-is-now-a-creative-studio-and-it-means-ai-is-everything-everywhere-all-at-once
+New Figma Motion updates: physics-based springs, style and Lottie export previews: https://www.figma.com/release-notes/?title=new-figma-motion-updates-physics-based-springs-style-and-lottie-export-previews
+2 out of 3 senior and lead design system roles now mention AI: https://www.intodesignsystems.com/blog/ai-skills-design-system-jobs
+Making immersive LLM chat experiences more accessible: https://www.smashingmagazine.com/2026/11/making-immersive-llm-chat-experiences-more-accessible/
+
+Steal this
+A prompt that sets up a private AI model on your Mac: https://www.intodesignsystems.com/blog/how-to-run-local-llm-mac-designers
+
+10-minute brief
+The agent harness: the part of an AI feature you actually design: https://www.framer.com/updates/harness-2
+
+Typeface spotlight
+Geist Serif: https://vercel.com/blog/introducing-geist-serif
+
+Watch
+Adobe's new design tool changes everything (Firefly Design): https://www.youtube.com/watch?v=0pzV4bHe2Kc
+Photoshop 2027: what's new? All the big features: https://www.youtube.com/watch?v=NmgOcJXcHt8
+William Imoh built a Norwegian tutor that refuses to speak English: https://www.youtube.com/watch?v=zBROTIiHusc
+
+Meet up
+The Messy UX Conference 2026 (2026-11-28): https://designshots.org/conference
+December Live Online UX Training 2026 (2026-12-02): https://www.nngroup.com/training/december/
+
+That's all for today. Stay curious.
+
+Unsubscribe: https://ctrl-curious.vercel.app/unsubscribe

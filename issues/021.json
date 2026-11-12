@@ -1,0 +1,162 @@
+{
+  "issue": 21,
+  "date": "2026-11-12",
+  "title": "Apps like Webflow and Canva now open inside Claude, and Adobe previews scene-aware vector art",
+  "dek": "Apps inside Claude, Adobe's Project Link Up, Webflow's native popovers, why teams build their own prototyping tools, an agent-readiness audit for your design system, Illustrator's Concept to Vector, how Buzz Usborne works, picking a design skill for your agent and two Bengaluru events.",
+  "preheader": "Your product's interface can now open inside Claude. Plus how Adobe made the prompt optional.",
+  "hero": "https://ctrl-curious.vercel.app/assets/email/days2/thu/thu_02.jpg",
+  "hero_alt": "Idea, test and ship as basic shapes joined by wavy connectors ending at the sun",
+  "summary": "Anthropic now lets [partner apps open inside Claude](https://claude.com/resources/articles/interactive-connectors-full-tool), full screen or beside the chat, with Canva, Webflow and Adobe in the first set and Figma building one, so a product's own interface can now live inside someone else's AI app. At Adobe MAX, [Project Link Up](https://www.creativebloq.com/features/adobe-max-2026-sneaks-project-link-up-is-making-design-playful-again) showed vector art that re-fits its perspective, scale and style to whatever scene you drop it into, and Webflow added [native modals and popovers](https://webflow.com/updates/new-modal-and-popover-elements). Underneath runs a shift [Case Study Club tracks this week](https://www.casestudy.club/issues/022/): teams such as Help Scout building their own prototyping tools on their design systems, which only works once [the library is legible to an agent](https://modeinspect.com/blog/design-system-audit). Today's case study shows Adobe's team [making the prompt optional](https://adobe.design/ideas/behind-the-design-concept-to-vector-in-adobe-illustrator) in Illustrator's Concept to Vector.",
+  "reads": [
+    {
+      "title": "Your apps can now open in Claude, and Claude can work in them",
+      "source": "Anthropic",
+      "url": "https://claude.com/resources/articles/interactive-connectors-full-tool",
+      "note": "Since 10 November, connectors can open a partner's full tool beside the chat or full screen on web and desktop, with Asana, Canva, Webflow, Vercel and Adobe among the first and Figma building one; they run on the open MCP Apps extension, so now is the time to decide which parts of your product people should reach from inside an assistant."
+    },
+    {
+      "title": "Adobe MAX 2026 Sneaks: Project Link Up is making design playful again",
+      "source": "Creative Bloq",
+      "url": "https://www.creativebloq.com/features/adobe-max-2026-sneaks-project-link-up-is-making-design-playful-again",
+      "note": "Drag a vector object into a scene and it adapts its perspective, scale and style, with a slider for how far it may change and paths that stay editable; still a research prototype from Hailin Jin's team, but worth watching if you redraw illustration assets for every layout."
+    },
+    {
+      "title": "New modal and popover elements",
+      "source": "Webflow",
+      "url": "https://webflow.com/updates/new-modal-and-popover-elements",
+      "note": "Released on 10 November: native modal and popover elements for menus, dropdowns, tooltips, dialogs and sign-up prompts, so these everyday patterns no longer need hand-built interactions or third-party code."
+    },
+    {
+      "title": "The new design tool trend",
+      "source": "Case Study Club",
+      "url": "https://www.casestudy.club/issues/022/",
+      "note": "Jan Haaland on why Help Scout, Reddit, Stripe and Ramp built their own prototyping tools on top of their design systems, and Help Scout's claim that idea to working prototype went from days to 30 seconds; read it before your team settles on a generic generator."
+    },
+    {
+      "title": "Design system audit: is your library ready for AI agents?",
+      "source": "Modeinspect",
+      "url": "https://modeinspect.com/blog/design-system-audit",
+      "note": "Seven searches and fixes for what a coding agent actually reads: duplicate components, variants typed as plain strings, missing when-not-to-use lines, decoy folders and raw dark-mode colours, fixed duplicates first and docs last; vendor content, but the checks work on any Tailwind and TypeScript codebase."
+    }
+  ],
+  "watch": [
+    {
+      "title": "Adobe MAX 2026 Sneaks",
+      "channel": "Adobe",
+      "id": "a1Y0CyVpyoI",
+      "note": "Streamed this week with Terry Crews co-hosting: Adobe Labs shows the research projects behind today's Link Up story, a useful look at where vector, photo and video tools are heading before any of it ships."
+    },
+    {
+      "title": "How to document your design system with Figma's agent",
+      "channel": "Figma",
+      "id": "DkLg3FtrQe4",
+      "note": "Out on 6 November: a three-minute walkthrough of having the agent document foundations and components, then turning your documentation format into a custom skill; a quick companion to today's agent-readiness audit."
+    },
+    {
+      "title": "Your apps have moved into Claude",
+      "channel": "Claude",
+      "id": "Gy1jSeSzAhk",
+      "note": "The launch demo for this week's interactive connectors: a summary added to a Confluence launch plan, a dither effect applied in Adobe and a Box floor plan checked against a standard, all without leaving the conversation."
+    }
+  ],
+  "meetups": [
+    {
+      "name": "Product (Un)Conference '26",
+      "date": "2026-11-21",
+      "place": "Bengaluru",
+      "details": "Saturday · The Product Folks · apply to attend, passes from ₹4,499",
+      "url": "https://luma.com/yihqxcwo"
+    },
+    {
+      "name": "The Messy UX Conference 2026",
+      "date": "2026-11-28",
+      "place": "Bengaluru",
+      "details": "Saturday · 13 practitioners on design failures, pivots and trade-offs",
+      "url": "https://designshots.org/conference"
+    }
+  ],
+  "edition": {
+    "case": {
+      "title": "Behind the design: Concept to Vector in Adobe Illustrator",
+      "url": "https://adobe.design/ideas/behind-the-design-concept-to-vector-in-adobe-illustrator",
+      "studio": "Adobe Design: Bhavya Minocha, Arunatpal Chanda and Srishti Gupta",
+      "client": "Adobe Illustrator",
+      "note": "Illustrator's trace tools need a clean, high-resolution source and return far more anchor points than a person would draw, yet most work starts as a rough sketch. The team built Concept to Vector, which turns sketches and low-fi images into editable paths, testing the interaction with a vibe-coded demo called Project Lightbox while engineering proved feasibility. The decision that made it work was making the prompt optional, after research showed most designers don't want to write one: people can start from a prompt, presets or adjustment controls, and Adobe says it is now Illustrator's most used generative feature."
+    },
+    "learn": [
+      {
+        "kind": "people",
+        "title": "Buzz Usborne writes his judgement down before asking AI for speed",
+        "url": "https://www.casestudy.club/issues/021/",
+        "person": {
+          "name": "Buzz Usborne",
+          "role": "Principal designer, Help Scout",
+          "initials": "BU"
+        },
+        "intro": "In a Case Study Club interview and his own write-up, Help Scout's principal designer explains how he rebuilt a design system from 2018 so AI could read it, and why the accumulated decisions are what will set products apart.",
+        "steps": [
+          "Write the principles by hand, distil them into a design.md, then test it: ask for a simple screen with no context, judge the result, add one piece of guidance and run it again.",
+          "Make the system legible before asking for speed: he spent two weeks restructuring more than 200 primitives, standardising tokens and bringing Figma and React to parity with Code Connect.",
+          "Move fastest where a decision is cheap to undo, and spend the time saved on discovery; he still sketches on paper before opening a tool."
+        ],
+        "source_line": "From Case Study Club and his own case study · our takeaways",
+        "take": "The evaluation loop is the habit to copy this week: it needs nothing but an afternoon and a blank prompt, and it shows you exactly what your system never wrote down.",
+        "links": [
+          {
+            "title": "Peel the mushroom",
+            "url": "https://www.casestudy.club/issues/021/",
+            "source": "Case Study Club",
+            "anchor": "Case Study Club interview"
+          },
+          {
+            "title": "Designing with AI",
+            "url": "https://buzzusborne.com/work/designing-with-ai/",
+            "source": "Buzz Usborne",
+            "anchor": "his own write-up"
+          }
+        ]
+      },
+      {
+        "kind": "decision",
+        "title": "Which design skill should your coding agent get?",
+        "url": "https://www.setproduct.com/blog/design-skills-for-ai-agents-compared",
+        "intro": "Dozens of repos now call themselves design skills for coding agents. Roman Kamushken compared 13 of them by the job they do and, more usefully, by how each one checks its own output.",
+        "columns": [
+          {
+            "label": "A build-from-scratch skill when",
+            "items": [
+              "There is no interface yet and you need a first full page",
+              "You want a direction quickly and will judge it, not ship it as is",
+              "It runs real checks, such as rendering at several widths before a review"
+            ]
+          },
+          {
+            "label": "A polish skill when",
+            "items": [
+              "The code already sits on a design system you trust",
+              "The job is motion, transitions and small details",
+              "You need small changes a reviewer can read, not a rebuild"
+            ]
+          }
+        ],
+        "examples": [
+          {
+            "name": "Hallmark",
+            "text": "Renders a page at eight widths, then has a fresh-context review read it, which the comparison counts as a real check; some popular skills offer only a checklist, and one offers none.",
+            "url": "https://www.setproduct.com/blog/design-skills-for-ai-agents-compared"
+          }
+        ],
+        "rule": "If a skill can't tell you how it checks its own output, treat it as a style suggestion, and install only the one for this week's job.",
+        "take": "The two columns are our grouping of the article's five lanes; it also covers skills for exploring directions, adjacent artifacts like diagrams, and fake product UI.",
+        "links": [
+          {
+            "title": "13 design skills for AI agents compared, and how to pick one",
+            "url": "https://www.setproduct.com/blog/design-skills-for-ai-agents-compared",
+            "source": "Setproduct",
+            "anchor": "compared 13 of them"
+          }
+        ]
+      }
+    ]
+  }
+}

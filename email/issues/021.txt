@@ -1,0 +1,34 @@
+Ctrl+Curious · Case study edition · Thursday, 12 November 2026 · Issue 021
+View online: https://ctrl-curious.vercel.app/issues/021
+
+Today, in brief
+Anthropic now lets partner apps open inside Claude (https://claude.com/resources/articles/interactive-connectors-full-tool), full screen or beside the chat, with Canva, Webflow and Adobe in the first set and Figma building one, so a product's own interface can now live inside someone else's AI app. At Adobe MAX, Project Link Up (https://www.creativebloq.com/features/adobe-max-2026-sneaks-project-link-up-is-making-design-playful-again) showed vector art that re-fits its perspective, scale and style to whatever scene you drop it into, and Webflow added native modals and popovers (https://webflow.com/updates/new-modal-and-popover-elements). Underneath runs a shift Case Study Club tracks this week (https://www.casestudy.club/issues/022/): teams such as Help Scout building their own prototyping tools on their design systems, which only works once the library is legible to an agent (https://modeinspect.com/blog/design-system-audit). Today's case study shows Adobe's team making the prompt optional (https://adobe.design/ideas/behind-the-design-concept-to-vector-in-adobe-illustrator) in Illustrator's Concept to Vector.
+
+Read
+Your apps can now open in Claude, and Claude can work in them: https://claude.com/resources/articles/interactive-connectors-full-tool
+Adobe MAX 2026 Sneaks: Project Link Up is making design playful again: https://www.creativebloq.com/features/adobe-max-2026-sneaks-project-link-up-is-making-design-playful-again
+New modal and popover elements: https://webflow.com/updates/new-modal-and-popover-elements
+The new design tool trend: https://www.casestudy.club/issues/022/
+Design system audit: is your library ready for AI agents?: https://modeinspect.com/blog/design-system-audit
+
+How they work
+Buzz Usborne writes his judgement down before asking AI for speed: https://www.casestudy.club/issues/021/
+
+Decision toolkit
+Which design skill should your coding agent get?: https://www.setproduct.com/blog/design-skills-for-ai-agents-compared
+
+Case study
+Behind the design: Concept to Vector in Adobe Illustrator: https://adobe.design/ideas/behind-the-design-concept-to-vector-in-adobe-illustrator
+
+Watch
+Adobe MAX 2026 Sneaks: https://www.youtube.com/watch?v=a1Y0CyVpyoI
+How to document your design system with Figma's agent: https://www.youtube.com/watch?v=DkLg3FtrQe4
+Your apps have moved into Claude: https://www.youtube.com/watch?v=Gy1jSeSzAhk
+
+Meet up
+Product (Un)Conference '26 (2026-11-21): https://luma.com/yihqxcwo
+The Messy UX Conference 2026 (2026-11-28): https://designshots.org/conference
+
+That's all for today. Stay curious.
+
+Unsubscribe: https://ctrl-curious.vercel.app/unsubscribe

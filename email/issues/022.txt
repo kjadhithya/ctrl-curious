@@ -1,0 +1,36 @@
+Ctrl+Curious · Weekend edition · Friday, 13 November 2026 · Issue 022
+View online: https://ctrl-curious.vercel.app/issues/022
+
+Today, in brief
+Figma now lets you rotate, tilt and add depth to layers natively (https://help.figma.com/hc/en-us/articles/44568893374999-Create-3D-effects-in-Figma-Design), keyframe it in Motion and copy the result as CSS in Dev Mode, so card flips and perspective effects no longer need a plugin or a hand-made spec. Smashing gives teams a way to argue about AI with evidence: a four-question audit (https://www.smashingmagazine.com/2026/11/should-you-add-ai-audit-product-teams/) that asks whether a feature saves more effort than it costs people to check it, and whether they can still spot its mistakes after a year. Two shipped redesigns are worth studying: Microsoft's Xbox PC app puts friends in the main navigation and merges search (https://mixed-news.com/en/xbox-pc-app-faster-preview-insiders-library/), and Apple TV treats sign language as a setting, like captions (https://techcrunch.com/2026/11/10/apple-tv-makes-sign-language-interpretation-a-built-in-accessibility-feature/), rather than a separate version of the film. For the weekend, Linear's Karri Saarinen makes the case for quality as strategy, and a new open-source skill called unslop (https://github.com/heydamir/unslop) teaches coding agents to fix AI-looking screens in a designer's order.
+
+Read
+Figma adds native 3D transforms, from rotation and depth to CSS in Dev Mode: https://help.figma.com/hc/en-us/articles/44568893374999-Create-3D-effects-in-Figma-Design
+Should you actually add AI to that? A four-question audit for product teams: https://www.smashingmagazine.com/2026/11/should-you-add-ai-audit-product-teams/
+Stop making people describe what they can point at: https://aiuxplayground.substack.com/p/stop-making-people-describe-what
+Xbox PC app redesign reaches Insiders with new navigation, library and search: https://mixed-news.com/en/xbox-pc-app-faster-preview-insiders-library/
+Apple TV makes sign language interpretation a built-in accessibility feature: https://techcrunch.com/2026/11/10/apple-tv-makes-sign-language-interpretation-a-built-in-accessibility-feature/
+
+Power-up
+unslop teaches your coding agent to fix AI-looking screens in a designer's order: https://github.com/heydamir/unslop
+
+Inspiration shelf
+Posters for a Brooklyn concept store built from stacked shapes, warped type and happy accidents (Julien Gobled with Sometimes Always, for Million Goods): https://www.creativeboom.com/inspiration/with-freaky-faces-warped-type-and-happy-accidents-julien-gobled-is-tearing-up-the-graphic-design-rulebook/
+An arrow-led rebrand that points people to prices and offers across Giffgaff's site, app and email (Koto, for Giffgaff): https://www.creativeboom.com/news/koto-points-giffgaff-towards-its-next-chapter-with-an-arrow-led-rebrand/
+A dial that makes a profile's colour theme subtler or bolder without changing its palette (Dia, from The Browser Company): https://www.diabrowser.com/changelog/mac/1-56-0
+
+Weekend watchlist
+Karri Saarinen: how we win: https://www.youtube.com/watch?v=4Qci4i133-o
+Tom Johnson: the most insane portfolio of 2026: https://www.youtube.com/watch?v=6j0S1-Qg6g0
+Illegible design systems, experts who follow AI, and guest Nicole Donnelly: https://www.youtube.com/watch?v=y3uxyrqr438
+Big risks, global scale and the failures in between with Rapha Abreu: https://www.youtube.com/watch?v=eoQI87f8jV8
+6 tips for better tabs: https://www.youtube.com/watch?v=hPxrudx1iXg
+
+Meet up
+Beyond the portfolio: what recruiters expect from experience designers in the AI era (2026-11-15): https://ixdf.org/meetups/ixdf-bengaluru-beyond-the-portfolio-what-recruiters-expect-from-experience-design-professionals-in-the-ai-era-nov-15th-2026
+How to design production ready UX (2026-11-19): https://www.qt.io/events/how-to-design-production-ready-ux
+The Messy UX Conference 2026 (2026-11-28): https://designshots.org/conference
+
+That's all for today. Stay curious.
+
+Unsubscribe: https://ctrl-curious.vercel.app/unsubscribe

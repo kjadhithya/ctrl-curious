@@ -1,0 +1,163 @@
+{
+  "issue": 22,
+  "date": "2026-11-13",
+  "title": "Figma adds native 3D transforms that export to CSS, and Smashing publishes a four-question audit for AI features",
+  "dek": "Figma's 3D effect, a test for whether a feature needs AI, selection-first AI editing, Xbox's new PC app, Apple TV's sign language setting, a weekend watchlist, an inspiration shelf, a design power-up and three events.",
+  "preheader": "Figma ships native 3D with CSS handoff. Plus an AI feature audit and five videos for the weekend.",
+  "hero": "https://ctrl-curious.vercel.app/assets/email/days2/fri/fri_09.jpg",
+  "hero_alt": "A pixel cinema screen showing the sea, a row of heads watching",
+  "summary": "Figma now lets you [rotate, tilt and add depth to layers natively](https://help.figma.com/hc/en-us/articles/44568893374999-Create-3D-effects-in-Figma-Design), keyframe it in Motion and copy the result as CSS in Dev Mode, so card flips and perspective effects no longer need a plugin or a hand-made spec. Smashing gives teams a way to argue about AI with evidence: a [four-question audit](https://www.smashingmagazine.com/2026/11/should-you-add-ai-audit-product-teams/) that asks whether a feature saves more effort than it costs people to check it, and whether they can still spot its mistakes after a year. Two shipped redesigns are worth studying: Microsoft's [Xbox PC app puts friends in the main navigation and merges search](https://mixed-news.com/en/xbox-pc-app-faster-preview-insiders-library/), and Apple TV treats [sign language as a setting, like captions](https://techcrunch.com/2026/11/10/apple-tv-makes-sign-language-interpretation-a-built-in-accessibility-feature/), rather than a separate version of the film. For the weekend, Linear's Karri Saarinen makes the case for quality as strategy, and a new open-source skill called [unslop](https://github.com/heydamir/unslop) teaches coding agents to fix AI-looking screens in a designer's order.",
+  "reads": [
+    {
+      "title": "Figma adds native 3D transforms, from rotation and depth to CSS in Dev Mode",
+      "source": "Figma Learn",
+      "url": "https://help.figma.com/hc/en-us/articles/44568893374999-Create-3D-effects-in-Figma-Design",
+      "note": "Released on 12 November for every plan with a Full seat: rotate on three axes, set depth, perspective, pivot and backface, keep nested layers in one 3D space for cubes and stacks, animate it in Motion, and hand off translateZ and perspective values straight from Dev Mode."
+    },
+    {
+      "title": "Should you actually add AI to that? A four-question audit for product teams",
+      "source": "Smashing Magazine",
+      "url": "https://www.smashingmagazine.com/2026/11/should-you-add-ai-audit-product-teams/",
+      "note": "Victor Yocco's test for any proposed AI feature: does it cut total effort, beat what people do now, make its errors catchable, and keep users sharp enough to notice when it's wrong; he includes a 60-minute workshop format to run it with your team."
+    },
+    {
+      "title": "Stop making people describe what they can point at",
+      "source": "AI UX Playground",
+      "url": "https://aiuxplayground.substack.com/p/stop-making-people-describe-what",
+      "note": "An interaction-pattern piece that splits an AI request into target, operation and constraints, and argues selection should carry the target and named verbs the operation, with patterns for text, code and images and a checklist for diffs, scope and local undo."
+    },
+    {
+      "title": "Xbox PC app redesign reaches Insiders with new navigation, library and search",
+      "source": "Mixed News",
+      "url": "https://mixed-news.com/en/xbox-pc-app-faster-preview-insiders-library/",
+      "note": "Microsoft moves friends and social into the main navigation, reworks library filters, puts games, add-ons and people in one search, and claims big speed gains; a useful look at how a large app reorganises its information architecture."
+    },
+    {
+      "title": "Apple TV makes sign language interpretation a built-in accessibility feature",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/10/apple-tv-makes-sign-language-interpretation-a-built-in-accessibility-feature/",
+      "note": "Instead of a separate film, a human interpreter is a setting on the main title, marked with an icon beside captions and audio description and findable through search; a clear model for treating access as a layer, not a variant."
+    }
+  ],
+  "watch": [
+    {
+      "title": "Karri Saarinen: how we win",
+      "channel": "First of Kind",
+      "id": "4Qci4i133-o",
+      "note": "A 46-minute conversation between Soleio and Linear's co-founder on winning by being better rather than faster, why he still designs in Figma, and why the interface stays the shared source of truth as agents spread. The long watch for the weekend."
+    },
+    {
+      "title": "Tom Johnson: the most insane portfolio of 2026",
+      "channel": "Dive Club",
+      "id": "6j0S1-Qg6g0",
+      "note": "Vercel staff designer Tom Johnson shows how his portfolio became a simulated world, and the skill he wrote to show his prompts inside case studies; out this week, and a sharp look at what a portfolio can be when the designer builds it."
+    },
+    {
+      "title": "Illegible design systems, experts who follow AI, and guest Nicole Donnelly",
+      "channel": "The AI and Design Podcast",
+      "id": "y3uxyrqr438",
+      "note": "Dan Saffer and Nik Martelaro of Carnegie Mellon on whether design systems stay readable to people, and on research showing experts going along with AI judgments, the same risk Smashing's audit asks teams to test for."
+    },
+    {
+      "title": "Big risks, global scale and the failures in between with Rapha Abreu",
+      "channel": "Craft",
+      "id": "eoQI87f8jV8",
+      "note": "Coca-Cola's global VP of design on running one identity system across more than 200 markets and choosing agencies by business problem rather than pitch, a rare in-house view of design leadership at scale."
+    },
+    {
+      "title": "6 tips for better tabs",
+      "channel": "NN/g",
+      "id": "hPxrudx1iXg",
+      "note": "Five minutes from Evan Sunwall on active states, labels, how many tabs is too many and tying each tab to its content, worth a check now that generated UIs often get basic components wrong."
+    }
+  ],
+  "meetups": [
+    {
+      "name": "Beyond the portfolio: what recruiters expect from experience designers in the AI era",
+      "date": "2026-11-15",
+      "place": "Bengaluru",
+      "details": "Sunday · IxDF Bengaluru with Krishna Chandhar J · RT Nagar · free, no membership needed",
+      "url": "https://ixdf.org/meetups/ixdf-bengaluru-beyond-the-portfolio-what-recruiters-expect-from-experience-design-professionals-in-the-ai-era-nov-15th-2026"
+    },
+    {
+      "name": "How to design production ready UX",
+      "date": "2026-11-19",
+      "place": "Online",
+      "details": "Thursday · 7:30 pm IST · Qt Group webinar with Brook Cronin, Veera Iliev and Thomas Hartmann · free",
+      "url": "https://www.qt.io/events/how-to-design-production-ready-ux"
+    },
+    {
+      "name": "The Messy UX Conference 2026",
+      "date": "2026-11-28",
+      "place": "Bengaluru",
+      "details": "Saturday · 13 practitioner talks · Design Shots",
+      "url": "https://designshots.org/conference"
+    }
+  ],
+  "edition": {
+    "shelf": [
+      {
+        "title": "Posters for a Brooklyn concept store built from stacked shapes, warped type and happy accidents",
+        "credit": "Julien Gobled with Sometimes Always, for Million Goods",
+        "url": "https://www.creativeboom.com/inspiration/with-freaky-faces-warped-type-and-happy-accidents-julien-gobled-is-tearing-up-the-graphic-design-rulebook/"
+      },
+      {
+        "title": "An arrow-led rebrand that points people to prices and offers across Giffgaff's site, app and email",
+        "credit": "Koto, for Giffgaff",
+        "url": "https://www.creativeboom.com/news/koto-points-giffgaff-towards-its-next-chapter-with-an-arrow-led-rebrand/"
+      },
+      {
+        "title": "A dial that makes a profile's colour theme subtler or bolder without changing its palette",
+        "credit": "Dia, from The Browser Company",
+        "url": "https://www.diabrowser.com/changelog/mac/1-56-0"
+      }
+    ],
+    "learn": [
+      {
+        "kind": "install",
+        "title": "unslop teaches your coding agent to fix AI-looking screens in a designer's order",
+        "url": "https://github.com/heydamir/unslop",
+        "intro": "Damir Sokolovsky's free skill for Claude Code, Codex and Antigravity turns vibecoded, AI-looking UI into a designed interface. It appeared on GitHub at the end of October and has been one of the fastest-climbing design skills since, so it is a good moment to point it at a screen you shipped in a hurry.",
+        "skill": {
+          "name": "unslop",
+          "by": "Damir Sokolovsky",
+          "cost": "Free, CC BY 4.0 licence"
+        },
+        "changes": [
+          "It audits first, listing the tells of AI-made UI, such as purple gradients, glows, emoji labels, shouty copy and uneven spacing, and where each one appears.",
+          "It proposes a direction before touching pixels: a character, a world, accent moments and one signature detail drawn from your product.",
+          "It fixes the screen in ordered passes, spacing, colour, icons, copy, type, layout, details, visuals and motion, rather than all at once.",
+          "It works on Next.js, React, Vue, Svelte, Tailwind or plain HTML and CSS, and can start from a live site URL."
+        ],
+        "install": [
+          {
+            "where": "Claude Code, in your terminal",
+            "how": "Clone the repo and copy the skill into your skills folder; for one project only, copy it into that project's .claude/skills folder instead.",
+            "code": "git clone https://github.com/heydamir/unslop\nmkdir -p ~/.claude/skills && cp -r unslop/skills/unslop ~/.claude/skills/"
+          },
+          {
+            "where": "Codex",
+            "how": "Install it with the skill installer.",
+            "code": "$skill-installer install https://github.com/heydamir/unslop/tree/main/skills/unslop"
+          }
+        ],
+        "try": "Open a project and ask: /unslop this dashboard.",
+        "take": "Where Impeccable gives you a vocabulary and a detector, unslop is a single critique-then-fix pass with a point of view, so read its proposed direction before letting it run the passes. Image generation for hero visuals uses a paid service, and it asks before each one.",
+        "links": [
+          {
+            "title": "unslop on GitHub",
+            "url": "https://github.com/heydamir/unslop",
+            "source": "GitHub",
+            "anchor": "Damir Sokolovsky's free skill"
+          },
+          {
+            "title": "unslop: fix vibecoded UI",
+            "url": "https://explainx.ai/blog/unslop-claude-skill-fix-vibecoded-ui-heydamir-github-trending-guide-2026",
+            "source": "explainx",
+            "anchor": "one of the fastest-climbing design skills"
+          }
+        ]
+      }
+    ]
+  }
+}

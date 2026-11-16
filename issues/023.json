@@ -1,0 +1,162 @@
+{
+  "issue": 23,
+  "date": "2026-11-16",
+  "title": "NN/g puts a research plan inside every AI-built spec, and Adobe details Photoshop's Spectrum move",
+  "dek": "NN/g on research at agent speed, how Adobe is modernising Photoshop, the fine print on Firefly's partner models, Framer's new image and shader agent, Gmail's regrouped settings, three dates this week and three events.",
+  "preheader": "NN/g's fix for shipping before you learn: a research section in every spec. Plus Photoshop's quiet redesign.",
+  "hero": "https://ctrl-curious.vercel.app/assets/email/days2/mon/mon_02.jpg",
+  "hero_alt": "A tree whose branches split like a node diagram, leaves clustered at the tips",
+  "summary": "When coding agents make shipping cheap, teams release first and learn later, so NN/g's Tony Alicea proposes [a research section written into every feature spec](https://www.nngroup.com/articles/research-in-the-loop/), with signs of success, signs of harm and a trigger for talking to people. Adobe's designers explain how they are [moving Photoshop onto Spectrum without disrupting people's habits](https://adobe.design/ideas/behind-the-design-adobe-photoshop-modernization), including mapping Spectrum's three themes onto Photoshop's four. Before your team generates anything client-facing in Firefly, read why Adobe's [commercial-use assurances stop at its own models](https://www.creativebloq.com/news/i-trusted-adobe-firefly-because-it-was-the-safe-ai-option-now-im-not-so-sure). And if you have a talk in you, Figma's [call for Config 2027 speakers closes today](https://config.figma.com/apply-to-speak-2027/).",
+  "reads": [
+    {
+      "title": "Research-in-the-loop: how UXR adapts to development at AI speed",
+      "source": "Nielsen Norman Group",
+      "url": "https://www.nngroup.com/articles/research-in-the-loop/",
+      "note": "Tony Alicea's answer to teams that ship before they learn: every spec carries its own research plan (expected outcome, signs it worked, signs it caused harm, what to log, when to talk to people), and questions are split into evaluation, investigation and discovery. Read it for the help-desk worked example and the honest list of what instrumentation can't tell you."
+    },
+    {
+      "title": "Behind the design: Adobe Photoshop modernization",
+      "source": "Adobe Design",
+      "url": "https://adobe.design/ideas/behind-the-design-adobe-photoshop-modernization",
+      "note": "Ryan Hicks and Prachi Chaudhari on moving a decades-old tool onto Spectrum under the rule refine without disruption: hover-revealed alternate tools, colour chips in Selective Color, a rebuilt Hue and Saturation, and a token map that bridges Spectrum's three themes and Photoshop's four. A rare inside look at modernising a product people use from muscle memory."
+    },
+    {
+      "title": "I trusted Adobe Firefly because it was the safe AI option, now I'm not so sure",
+      "source": "Creative Bloq",
+      "url": "https://www.creativebloq.com/news/i-trusted-adobe-firefly-because-it-was-the-safe-ai-option-now-im-not-so-sure",
+      "note": "Ian Dean points out that since MAX, Firefly hosts models from Google, OpenAI, ByteDance, Kling and ElevenLabs, but Adobe's commercial-use assurances cover only its own models. Useful before your team picks a model for client work, and a case study in labelling trust at the point of generation."
+    },
+    {
+      "title": "Framer's agent now generates images and shaders",
+      "source": "Framer",
+      "url": "https://www.framer.com/updates/image-shader-generation",
+      "note": "The Framer Agent can now make images, textures and illustrations, edit a selected image (swap the subject, remove the background, restyle it), and build or tweak shaders such as halftone, CRT and pencil, then chain the two. Try it for interactive hero effects you would otherwise hand to a developer."
+    },
+    {
+      "title": "Gmail's settings page is getting a Material 3 Expressive makeover",
+      "source": "Android Headlines",
+      "url": "https://www.androidheadlines.com/2026/11/gmails-settings-page-is-getting-a-colorful-material-3-expressive-makeover.html",
+      "note": "Gmail on Android swaps one long settings list for grouped card sections, gathers Smart Compose, Smart Reply and Proofread under writing assistance, and adds bigger touch targets. A useful reference if you are restructuring a settings page that has grown by accretion."
+    }
+  ],
+  "watch": [
+    {
+      "title": "3D transforms are now in Figma",
+      "channel": "Figma",
+      "id": "IqrOeK4gyWg",
+      "note": "Figma's launch film for 3D transforms, released with the open beta on 12 November and made by its Brand Studio with the feature itself, the Figma agent, generative plugins and shaders. Watch it to see what x, y and z rotation and perspective can do before you try them, since the settings carry over to CSS in Dev Mode."
+    },
+    {
+      "title": "Inside Lovable's design team",
+      "channel": "Sneak Peek with Jayneil Dalal",
+      "id": "c7jmlRDMdxw",
+      "note": "Posted 5 November: Lovable designer Arthur Hilhorst on why every designer there ships their own pull requests, exploring roughly 90% with agents through Lovable and the Paper MCP before polishing by hand, and why taste is what's left to compete on."
+    },
+    {
+      "title": "How are designers actually feeling? Ioana Teleanu's Design Wellbeing Index",
+      "channel": "Wake Up Excited! with Brad Frost",
+      "id": "aKoc02deYV8",
+      "note": "Posted 3 November: Brad Frost and Ioana Teleanu on building an anonymous survey of how designers feel about AI with clinical scales and a PhD researcher, and the strange paralysis of being able to build anything. Worth it for anyone leading a team through this year's changes."
+    }
+  ],
+  "meetups": [
+    {
+      "name": "Product (Un)Conference '26",
+      "date": "2026-11-21",
+      "place": "Bengaluru",
+      "details": "Saturday · Invite-only, entry on approval · Community pass ₹4,499",
+      "url": "https://luma.com/yihqxcwo"
+    },
+    {
+      "name": "The Messy UX Conference 2026",
+      "date": "2026-11-28",
+      "place": "Bengaluru",
+      "details": "Saturday · Designshots · In person, 13 practitioners speaking",
+      "url": "https://designshots.org/conference"
+    },
+    {
+      "name": "AI-ready design systems for designers",
+      "date": "2026-11-30",
+      "place": "Online",
+      "details": "Starts Monday · Smashing workshop with Christine Vallaure · 3 sessions to 4 Dec · 10:30pm IST · $300",
+      "url": "https://smashingconf.com/online-workshops/workshops/ai-designsystems-figma-christine-vallaure/"
+    }
+  ],
+  "edition": {
+    "week": [
+      {
+        "when": "Monday · Call for entries",
+        "title": "Last day to submit a talk proposal for Figma's Config 2027",
+        "url": "https://config.figma.com/apply-to-speak-2027/"
+      },
+      {
+        "when": "Thursday · Talk",
+        "title": "Mafalda Barata on how OutSystems built an agentic design system hub, free online from IxDF Lisbon (11:30pm IST)",
+        "url": "https://ixdf.org/meetups/you-need-an-agentic-design-system-hub-if-with-mafalda-barata-nov-19th-2026"
+      },
+      {
+        "when": "Saturday · Talk",
+        "title": "Sunny Winyangoon of Allianz Technology on design leadership in the age of AI, free online from IxDF Bangkok (9:30am IST)",
+        "url": "https://ixdf.org/meetups/design-leadership-in-the-age-of-ai-nov-21st-2026"
+      }
+    ],
+    "learn": [
+      {
+        "kind": "skill",
+        "title": "Write a research section into your next feature spec",
+        "url": "https://www.nngroup.com/articles/research-in-the-loop/",
+        "intro": "NN/g's Tony Alicea argues that when agents can build a feature in a day, research has to travel inside the spec, so tracking ships with the feature and findings feed the next requirements. A release shows what people did, rarely why. Here is how to try it on one release this week.",
+        "steps": [
+          "Audit what you can see: list where user signals live (analytics, support tickets, feedback) and which of those you and your coding agents can actually reach.",
+          "Add a short research section to the spec, in plain language and in a file next to the requirements so people and agents can both read it: the expected outcome, signs it worked, signs it caused harm, what to log and when to talk to people.",
+          "Ask the agent to build the logging, dashboard or feedback prompt alongside the feature, then review the results after release and feed them into the next spec.",
+          "Sort each question by job: evaluation checks outcomes against predictions, investigation asks why something odd happened, and discovery looks for needs nobody anticipated, which still needs research not tied to releases.",
+          "Set triggers for qualitative work: a regular cadence, an anomaly in the data, and any hard-to-reverse decision such as pricing or data handling."
+        ],
+        "take": "NN/g's own caveats matter: a faster metric may come from staffing or season rather than your change, and heavy tracking can feel like surveillance. Group logs by team or cohort, not by person, as the article's help-desk example does.",
+        "links": [
+          {
+            "title": "Research-in-the-loop: how UXR adapts to development at AI speed",
+            "url": "https://www.nngroup.com/articles/research-in-the-loop/",
+            "source": "Nielsen Norman Group",
+            "anchor": "research has to travel inside the spec"
+          }
+        ]
+      },
+      {
+        "kind": "prompt",
+        "title": "Code open-ended survey answers without losing the quotes",
+        "url": "https://jakobnielsenphd.substack.com/p/open-closed-questions",
+        "intro": "Jakob Nielsen compared five human coders with an AI model on 903 open answers and found agreement good enough for AI to join the coding team, provided a person reviews the themes. His rules turn into a prompt: let categories emerge, allow an unclear label, count respondents not mentions, and keep every count tied to real words.",
+        "tool": "Any AI assistant with a long context window",
+        "code": "You are a senior UX researcher coding open-ended survey answers.\nQuestion asked: [the exact survey question]\nAnswers: [paste answers, one per line, each with a respondent ID]\n\nRules:\n1. Code inductively: let codes emerge from the text, then group codes into themes. Do not start from a preset list.\n2. If an answer is too short or ambiguous to code, label it unclear. Never force it into a theme.\n3. Count respondents, not mentions: each respondent counts once per theme.\n4. Attach two or three verbatim quotes, with respondent IDs, to every theme.\n5. Flag any theme that may merge distinct problems, and suggest how to split it.\n6. List rare answers that describe a serious or costly problem, even if only one person said it.\n\nReturn:\n- A codebook table: code, definition, theme.\n- A results table: theme, number and share of respondents, quotes.\n- The unclear answers, listed for me to read.\n- Rare but serious answers.\n- One line reminding me that mentions are not prevalence and frequency is not priority.",
+        "code_note": "Read the unclear and rare answers yourself, and decide theme merges by hand. Save the codebook with the results: if you change the model, the prompt or the categories later, recode earlier waves before comparing trends, as Nielsen advises.",
+        "columns": [
+          {
+            "label": "Use it for",
+            "items": [
+              "Open questions in surveys, NPS follow-ups and exit forms",
+              "Turning a pile of feedback into counts you can trace back to quotes"
+            ]
+          },
+          {
+            "label": "Not for",
+            "items": [
+              "Answers generated by simulated users instead of real respondents",
+              "Estimating how common a problem is across all users, which needs a targeted question or analytics"
+            ]
+          }
+        ],
+        "take": "Nielsen's warning is that a model can launder noise into clean-looking numbers. The unclear label and the quotes on every count are what keep you honest.",
+        "links": [
+          {
+            "title": "Closed vs. open questions in user research: AI makes free-form answers cheap to count",
+            "url": "https://jakobnielsenphd.substack.com/p/open-closed-questions",
+            "source": "Jakob Nielsen on UX",
+            "anchor": "compared five human coders with an AI model on 903 open answers"
+          }
+        ]
+      }
+    ]
+  }
+}

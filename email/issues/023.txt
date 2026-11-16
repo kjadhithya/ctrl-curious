@@ -1,0 +1,37 @@
+Ctrl+Curious · Week ahead edition · Monday, 16 November 2026 · Issue 023
+View online: https://ctrl-curious.vercel.app/issues/023
+
+Today, in brief
+When coding agents make shipping cheap, teams release first and learn later, so NN/g's Tony Alicea proposes a research section written into every feature spec (https://www.nngroup.com/articles/research-in-the-loop/), with signs of success, signs of harm and a trigger for talking to people. Adobe's designers explain how they are moving Photoshop onto Spectrum without disrupting people's habits (https://adobe.design/ideas/behind-the-design-adobe-photoshop-modernization), including mapping Spectrum's three themes onto Photoshop's four. Before your team generates anything client-facing in Firefly, read why Adobe's commercial-use assurances stop at its own models (https://www.creativebloq.com/news/i-trusted-adobe-firefly-because-it-was-the-safe-ai-option-now-im-not-so-sure). And if you have a talk in you, Figma's call for Config 2027 speakers closes today (https://config.figma.com/apply-to-speak-2027/).
+
+Read
+Research-in-the-loop: how UXR adapts to development at AI speed: https://www.nngroup.com/articles/research-in-the-loop/
+Behind the design: Adobe Photoshop modernization: https://adobe.design/ideas/behind-the-design-adobe-photoshop-modernization
+I trusted Adobe Firefly because it was the safe AI option, now I'm not so sure: https://www.creativebloq.com/news/i-trusted-adobe-firefly-because-it-was-the-safe-ai-option-now-im-not-so-sure
+Framer's agent now generates images and shaders: https://www.framer.com/updates/image-shader-generation
+Gmail's settings page is getting a Material 3 Expressive makeover: https://www.androidheadlines.com/2026/11/gmails-settings-page-is-getting-a-colorful-material-3-expressive-makeover.html
+
+Skill of the week
+Write a research section into your next feature spec: https://www.nngroup.com/articles/research-in-the-loop/
+
+Prompt of the week
+Code open-ended survey answers without losing the quotes: https://jakobnielsenphd.substack.com/p/open-closed-questions
+
+This week in design
+Monday · Call for entries · Last day to submit a talk proposal for Figma's Config 2027: https://config.figma.com/apply-to-speak-2027/
+Thursday · Talk · Mafalda Barata on how OutSystems built an agentic design system hub, free online from IxDF Lisbon (11:30pm IST): https://ixdf.org/meetups/you-need-an-agentic-design-system-hub-if-with-mafalda-barata-nov-19th-2026
+Saturday · Talk · Sunny Winyangoon of Allianz Technology on design leadership in the age of AI, free online from IxDF Bangkok (9:30am IST): https://ixdf.org/meetups/design-leadership-in-the-age-of-ai-nov-21st-2026
+
+Watch
+3D transforms are now in Figma: https://www.youtube.com/watch?v=IqrOeK4gyWg
+Inside Lovable's design team: https://www.youtube.com/watch?v=c7jmlRDMdxw
+How are designers actually feeling? Ioana Teleanu's Design Wellbeing Index: https://www.youtube.com/watch?v=aKoc02deYV8
+
+Meet up
+Product (Un)Conference '26 (2026-11-21): https://luma.com/yihqxcwo
+The Messy UX Conference 2026 (2026-11-28): https://designshots.org/conference
+AI-ready design systems for designers (2026-11-30): https://smashingconf.com/online-workshops/workshops/ai-designsystems-figma-christine-vallaure/
+
+That's all for today. Stay curious.
+
+Unsubscribe: https://ctrl-curious.vercel.app/unsubscribe

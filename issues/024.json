@@ -1,0 +1,128 @@
+{
+  "issue": 24,
+  "date": "2026-11-17",
+  "title": "A scan finds 24,664 Lovable apps leaking data, and a Figma plugin lets Claude Code design in your open file",
+  "dek": "The Lovable data exposure, Nielsen on a meta-analysis where human and AI teams lost, an edge-case checklist for agents, decision theatre, PlayStation's startup screen, Crossfade, Photoshop Relight, Notion's Randy Hunt and three events.",
+  "preheader": "A scan of 159,041 Lovable projects found thousands open to anyone, plus a plugin that puts Claude Code inside Figma.",
+  "hero": "https://ctrl-curious.vercel.app/assets/email/days2/tue/tue_02.jpg",
+  "hero_alt": "Rows of keycaps rolling like swell, one wine key pressed",
+  "summary": "If you ship prototypes with real data, today's warning is that a scan of 159,041 Lovable projects found [24,664 apps returning database records without a login](https://www.trendingtopics.eu/lovable-apps-sensitive-data-exposed/), mostly because nobody set access rules. Jakob Nielsen reads a meta-analysis in which [human and AI teams usually lost to whichever worked alone](https://www.uxtigers.com/post/ux-roundup-20261116), and a benchmark where models met almost every brief but produced designs that looked alike. Two UX Collective pieces give you something to act on: an [edge-case checklist to hand an agent before it writes UI](https://uxdesign.cc/ui-edge-cases-a-reference-guide-e778061588ef), and a case for [giving the human in the loop real authority](https://uxdesign.cc/decision-theatre-or-decision-design-f1604f178685) rather than an approve button. And a new plugin, [Crossfade, lets Claude Code build with your own components](https://crossfade.company/) in the Figma file you have open.",
+  "reads": [
+    {
+      "title": "UX roundup: AI–human synergy fades, and AI answers design briefs",
+      "source": "UX Tigers",
+      "url": "https://www.uxtigers.com/post/ux-roundup-20261116",
+      "note": "Nielsen on a Harvard and MIT meta-analysis of 420 papers where AI alone beat people in 68% of comparisons and mixed teams usually trailed the stronger solo side, and a Kombai benchmark where 15 models met over 90% of 160 design briefs but looked far more alike; his answer is to ask for many deliberately different directions, then merge the best."
+    },
+    {
+      "title": "UI edge cases: a reference guide",
+      "source": "UX Collective",
+      "url": "https://uxdesign.cc/ui-edge-cases-a-reference-guide-e778061588ef",
+      "note": "Adir SL groups the cases that break interfaces into content, state, input, layout and system, each with what breaks, how to test and how to fix, from about 40% text growth in translation and right-to-left mirroring to 200% zoom, forced colours and offline states; written to hand to an agent before it generates UI."
+    },
+    {
+      "title": "Decision theatre or decision design?",
+      "source": "UX Collective",
+      "url": "https://uxdesign.cc/decision-theatre-or-decision-design-f1604f178685",
+      "note": "Patrizia Bertini argues that most human-in-the-loop screens are theatre, an approve click with no real authority, and shows a benefits caseworker screen redesigned so cases are ordered by how uncertain the system is and every override goes back to the people who own it."
+    },
+    {
+      "title": "Apps built with Lovable left sensitive data exposed",
+      "source": "Trending Topics",
+      "url": "https://www.trendingtopics.eu/lovable-apps-sensitive-data-exposed/",
+      "note": "Security firm Crissy Field and Handelsblatt scanned 159,041 Lovable projects; of 34,545 on Supabase, 24,664 returned records with no login, including passport details, because row-level security was missing or loose. If you prototype with real user data in an AI builder, check its security scan and access rules before sharing a link."
+    },
+    {
+      "title": "How PlayStation nailed its iconic startup screen",
+      "source": "Creative Bloq",
+      "url": "https://www.creativebloq.com/news/how-playstation-nailed-its-iconic-startup-screen",
+      "note": "How Manabu Sakamoto's logo became a motion logo in 1994 and Takafumi Fujisawa's sound built anticipation while the sequence quietly confirmed the console and disc were working; a useful reminder to design launch, loading and payment-complete moments on purpose rather than leaving them to defaults."
+    }
+  ],
+  "watch": [
+    {
+      "title": "How Notion's design team makes great products quickly",
+      "channel": "Hatch Conference",
+      "id": "8odhmX32w2M",
+      "note": "Premiered today: Randy Hunt, Notion's head of design, on treating speed as a design constraint through shared principles, reusable patterns and early feedback, and on writing team practice down clearly enough for agents to do the repeatable work, the same idea behind today's edge-case checklist."
+    },
+    {
+      "title": "Meta's Muse: how we launched the most successful consumer product this year",
+      "channel": "Lenny's Podcast",
+      "id": "WY0cdD4gNoQ",
+      "note": "Posted 15 November: Mona Sarantakos of Meta Superintelligence Labs on the seven-month delay before launch, using agent swarms to gather user insight, how a placeholder avatar became the product's face, and the two levers that drive activation for an AI agent; worth it if you design onboarding for agents."
+    },
+    {
+      "title": "Adobe Firefly Design (beta): all-in-one design workspace",
+      "channel": "Adobe Firefly",
+      "id": "pZGf2fwhlck",
+      "note": "Adobe's own first look from 10 November at Firefly Design, one canvas for vector, raster, motion, 3D and print with shaders, an AI assistant and client review built in; the quickest way to judge how close it comes to the tools your team already uses, alongside today's Photoshop Relight walkthrough."
+    }
+  ],
+  "meetups": [
+    {
+      "name": "Product (Un)Conference '26",
+      "date": "2026-11-21",
+      "place": "Bengaluru",
+      "details": "Saturday and Sunday · The Product Folks · For product, tech, design and growth leaders · Apply for an invite",
+      "url": "https://luma.com/yihqxcwo"
+    },
+    {
+      "name": "Make your design system work, for humans and robots",
+      "date": "2026-12-01",
+      "place": "Online",
+      "details": "Smashing workshop with Javier Cuello · 1 and 3 December · About 10:30pm to 1am IST · Paid",
+      "url": "https://smashingconf.com/online-workshops/workshops/design-systems-legacy-ai-javier-cuello"
+    },
+    {
+      "name": "Design Operations Symposium 2026",
+      "date": "2026-12-03",
+      "place": "Online",
+      "details": "Thursday · Henry Stewart Events · Runs alongside the Festival of Creative Operations · Paid",
+      "url": "https://henrystewartconferences.com/creative-operations/design-ops-symposium-2026"
+    }
+  ],
+  "edition": {
+    "tool": {
+      "name": "Crossfade",
+      "url": "https://crossfade.company/",
+      "what": "Crossfade, a Figma plugin from product designer Sabarish Sanjay that launched on Product Hunt this week, connects Claude Code to the Design, FigJam or Slides file you have open over a local connection, so the agent builds real layers with your components, variables and auto layout, checks its own screenshots and leaves handoff notes on layers, with each run a single undo step. It is best at letting a coding agent work directly in your file without going through Figma's MCP server and its call limits; Codex and Cursor are listed as not tested yet.",
+      "meta": "$19 once · Figma desktop plugin on Mac"
+    },
+    "learn": [
+      {
+        "kind": "tool",
+        "title": "Photoshop Relight: restage the light in a product or hero shot",
+        "url": "https://helpx.adobe.com/photoshop/desktop/repair-retouch/clean-restore-images/relight-images-with-interactive-lighting-controls.html",
+        "intro": "Since 10 November Photoshop can add generated light sources to a photo on their own layer, reading the light already in the image and building on it. For interface work it means a product shot, a team photo or a hero image can be matched to the mood of a screen without a reshoot.",
+        "steps": [
+          "Start on the right layer. Select an unlocked Pixel, Rotate Object or Smart Object layer, then choose Layer, then New Relight Layer (it is also in the Layers panel menu and the layer's right-click menu). Relight only changes the active layer, so flatten or pick the subject layer first.",
+          "Place and shape the light. Drag the light control on or outside the canvas, then set colour, intensity and diffusion from the light icon in the Contextual Task Bar or the Relight Layer Properties panel; low diffusion gives a hard rim light, high diffusion a soft fill.",
+          "Build a three-light setup. Choose Add Light for up to three lights per Relight Layer, hide one with the eye icon to compare, and press N to hide the on-canvas widgets while you judge the result.",
+          "Preview cheaply, render once. You adjust on a low-resolution preview and only Done renders at full resolution, so settle the look first. To change it later, select the Relight Layer and choose Edit Lighting in its Properties panel."
+        ],
+        "take": "Each render or re-render costs 30 generative credits and needs an internet connection; Adobe's page does not say which plans include it, so check your credit balance before relighting a whole set. Our advice: save one light setup per product line and reuse its colour and direction across every shot, so cards and hero images on the same page look lit by the same sun.",
+        "links": [
+          {
+            "title": "Relight images with interactive lighting controls",
+            "url": "https://helpx.adobe.com/photoshop/desktop/repair-retouch/clean-restore-images/relight-images-with-interactive-lighting-controls.html",
+            "source": "Adobe Help Center",
+            "anchor": "choose Layer, then New Relight Layer"
+          },
+          {
+            "title": "Bad lighting? Photoshop Relight has your back",
+            "url": "https://community.adobe.com/announcements-710/bad-lighting-photoshop-relight-has-your-back-1652101",
+            "source": "Adobe Community",
+            "anchor": "reading the light already in the image and building on it"
+          },
+          {
+            "title": "Generative credits FAQ",
+            "url": "https://helpx.adobe.com/creative-cloud/apps/generative-ai/generative-credits-faq.html",
+            "source": "Adobe Help Center",
+            "anchor": "costs 30 generative credits"
+          }
+        ]
+      }
+    ]
+  }
+}

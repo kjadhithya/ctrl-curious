@@ -1,0 +1,32 @@
+Ctrl+Curious · Tools edition · Tuesday, 17 November 2026 · Issue 024
+View online: https://ctrl-curious.vercel.app/issues/024
+
+Today, in brief
+If you ship prototypes with real data, today's warning is that a scan of 159,041 Lovable projects found 24,664 apps returning database records without a login (https://www.trendingtopics.eu/lovable-apps-sensitive-data-exposed/), mostly because nobody set access rules. Jakob Nielsen reads a meta-analysis in which human and AI teams usually lost to whichever worked alone (https://www.uxtigers.com/post/ux-roundup-20261116), and a benchmark where models met almost every brief but produced designs that looked alike. Two UX Collective pieces give you something to act on: an edge-case checklist to hand an agent before it writes UI (https://uxdesign.cc/ui-edge-cases-a-reference-guide-e778061588ef), and a case for giving the human in the loop real authority (https://uxdesign.cc/decision-theatre-or-decision-design-f1604f178685) rather than an approve button. And a new plugin, Crossfade, lets Claude Code build with your own components (https://crossfade.company/) in the Figma file you have open.
+
+Tool of the day
+Crossfade: https://crossfade.company/
+
+Read
+UX roundup: AI–human synergy fades, and AI answers design briefs: https://www.uxtigers.com/post/ux-roundup-20261116
+UI edge cases: a reference guide: https://uxdesign.cc/ui-edge-cases-a-reference-guide-e778061588ef
+Decision theatre or decision design?: https://uxdesign.cc/decision-theatre-or-decision-design-f1604f178685
+Apps built with Lovable left sensitive data exposed: https://www.trendingtopics.eu/lovable-apps-sensitive-data-exposed/
+How PlayStation nailed its iconic startup screen: https://www.creativebloq.com/news/how-playstation-nailed-its-iconic-startup-screen
+
+Tool to master
+Photoshop Relight: restage the light in a product or hero shot: https://helpx.adobe.com/photoshop/desktop/repair-retouch/clean-restore-images/relight-images-with-interactive-lighting-controls.html
+
+Watch
+How Notion's design team makes great products quickly: https://www.youtube.com/watch?v=8odhmX32w2M
+Meta's Muse: how we launched the most successful consumer product this year: https://www.youtube.com/watch?v=WY0cdD4gNoQ
+Adobe Firefly Design (beta): all-in-one design workspace: https://www.youtube.com/watch?v=pZGf2fwhlck
+
+Meet up
+Product (Un)Conference '26 (2026-11-21): https://luma.com/yihqxcwo
+Make your design system work, for humans and robots (2026-12-01): https://smashingconf.com/online-workshops/workshops/design-systems-legacy-ai-javier-cuello
+Design Operations Symposium 2026 (2026-12-03): https://henrystewartconferences.com/creative-operations/design-ops-symposium-2026
+
+That's all for today. Stay curious.
+
+Unsubscribe: https://ctrl-curious.vercel.app/unsubscribe

@@ -1,0 +1,36 @@
+Ctrl+Curious · Weekend edition · Friday, 20 November 2026 · Issue 027
+View online: https://ctrl-curious.vercel.app/issues/027
+
+Today, in brief
+Canva now lets Free and Pro users hide its generative AI features with one setting (https://www.trendingtopics.eu/canva-ai-off-switch-layoffs/), a control only team admins had before, which is a useful precedent if your product is adding AI everywhere by default. Bitwarden's redesign is a lesson in naming: it swapped collections for shared folders (https://bitwarden.com/blog/2026-design-update/) after a month-long public beta, because people didn't understand the old words. Two pieces show where AI speed is leaving gaps: Level Access found that testing hasn't sped up the way design and build have (https://www.smashingmagazine.com/2026/11/ai-sped-up-build-how-can-accessibility-testing-keep-up/), and zeroheight lists what to fix so agents can read your design system docs (https://zeroheight.com/blog/fixing-a-low-machine-readability-score/). For the weekend, a new free skill called craft (https://github.com/diego3g/craft) makes coding agents write a brief and list every state before they draw a screen.
+
+Read
+Canva lets Free and Pro users switch off generative AI: https://www.trendingtopics.eu/canva-ai-off-switch-layoffs/
+Bitwarden's redesign renames collections to shared folders and keeps your filters as you browse: https://bitwarden.com/blog/2026-design-update/
+AI sped up the build: how can accessibility testing keep up?: https://www.smashingmagazine.com/2026/11/ai-sped-up-build-how-can-accessibility-testing-keep-up/
+Fixing a low machine-readability score on your design system documentation: https://zeroheight.com/blog/fixing-a-low-machine-readability-score/
+Service as a software: the new SaaS is ahead of schedule: https://www.uxtigers.com/post/service-as-software
+
+Power-up
+craft makes your coding agent write a brief and list every state before it draws a screen: https://github.com/diego3g/craft
+
+Inspiration shelf
+Letterpress posters built from Meccano parts, linocut shadows and hot-metal type (Dafi Kühne, for Constructing Posters at Ginza Graphic Gallery): https://fontsinuse.com/uses/78663/dafi-kuehne-constructing-posters
+A new Stripe Press site where you can read every page of every book and change the lighting (Stripe Press, with Devin Jacoviello): https://stripe.press/
+An agent brief, rewritten every night, that you can read and correct before opening it in Claude or ChatGPT (Granola): https://www.granola.ai/blog/introducing-your-agent-brief
+
+Weekend watchlist
+Paul Jun: the Michelin star brand vending machine: https://www.youtube.com/watch?v=P5yPMQXzXSE
+Sam Stephenson: eye of the swirl: https://www.youtube.com/watch?v=H5xsvQ7orXk
+Config India 2026: Figma Weave and what we refuse to automate: https://www.youtube.com/watch?v=znW1i7AQdPI
+How NY State uses AI with its design system: https://www.youtube.com/watch?v=r-ndKlKNRqk
+Variables as a system: https://www.youtube.com/watch?v=nR1Yi78jj9A
+
+Meet up
+The Messy UX Conference 2026 (2026-11-28): https://designshots.org/conference
+Asia Connect 2.0 (2026-11-29): https://ixdf.org/meetups/asia-connect-2-0-nov-29th-2026
+AI 2027 Conference (2026-12-01): https://smashingmagazine.com/2026/11/online-smashingconf-ai-2027/
+
+That's all for today. Stay curious.
+
+Unsubscribe: https://ctrl-curious.vercel.app/unsubscribe

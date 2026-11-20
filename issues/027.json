@@ -1,0 +1,163 @@
+{
+  "issue": 27,
+  "date": "2026-11-20",
+  "title": "Canva adds an off switch for generative AI, and Bitwarden renames its vault in plain words",
+  "dek": "Canva's AI toggle, Bitwarden's redesign, accessibility testing at AI speed, machine-readable design system docs, outcome-priced AI services, a weekend watchlist, an inspiration shelf, a design power-up and three events.",
+  "preheader": "Canva lets Free and Pro users turn generative AI off. Plus five videos and a new design skill for the weekend.",
+  "hero": "https://ctrl-curious.vercel.app/assets/email/days2/fri/fri_10.jpg",
+  "hero_alt": "A pixel bed with a wave blanket, morning sun and a clock at 10:30",
+  "summary": "Canva now lets Free and Pro users [hide its generative AI features with one setting](https://www.trendingtopics.eu/canva-ai-off-switch-layoffs/), a control only team admins had before, which is a useful precedent if your product is adding AI everywhere by default. Bitwarden's redesign is a lesson in naming: it [swapped collections for shared folders](https://bitwarden.com/blog/2026-design-update/) after a month-long public beta, because people didn't understand the old words. Two pieces show where AI speed is leaving gaps: Level Access found that [testing hasn't sped up the way design and build have](https://www.smashingmagazine.com/2026/11/ai-sped-up-build-how-can-accessibility-testing-keep-up/), and zeroheight lists [what to fix so agents can read your design system docs](https://zeroheight.com/blog/fixing-a-low-machine-readability-score/). For the weekend, a new free skill called [craft](https://github.com/diego3g/craft) makes coding agents write a brief and list every state before they draw a screen.",
+  "reads": [
+    {
+      "title": "Canva lets Free and Pro users switch off generative AI",
+      "source": "Trending Topics",
+      "url": "https://www.trendingtopics.eu/canva-ai-off-switch-layoffs/",
+      "note": "A new permission hides every feature that creates content with AI, and a second setting shows fewer AI-made templates and elements in search; Background Remover and Magic Grab stay on because they only edit existing images. Worth studying if you are deciding how much control to give people over AI in your own product."
+    },
+    {
+      "title": "Bitwarden's redesign renames collections to shared folders and keeps your filters as you browse",
+      "source": "Bitwarden",
+      "url": "https://bitwarden.com/blog/2026-design-update/",
+      "note": "Rolling out from 19 November on web, desktop and the browser extension: a sidebar that separates personal, shared and pinned items, one search across both vaults, and plain names in place of jargon, tested in a public beta where 98% of respondents found their way without help."
+    },
+    {
+      "title": "AI sped up the build: how can accessibility testing keep up?",
+      "source": "Smashing Magazine",
+      "url": "https://www.smashingmagazine.com/2026/11/ai-sped-up-build-how-can-accessibility-testing-keep-up/",
+      "note": "Level Access's Andrew Chung uses a survey of 2,500 practitioners to show AI sped up design and development far more than QA, then lays out where to put checks: at design handoff, at pull request gates and with a named owner for each fix."
+    },
+    {
+      "title": "Fixing a low machine-readability score on your design system documentation",
+      "source": "zeroheight",
+      "url": "https://zeroheight.com/blog/fixing-a-low-machine-readability-score/",
+      "note": "Luke Murphy's checklist for docs that agents can use: write out every variant and its allowed values, list keyboard behaviour key by key, publish tokens as a fetchable file, and on each look-alike component name the other one and when to pick it."
+    },
+    {
+      "title": "Service as a software: the new SaaS is ahead of schedule",
+      "source": "UX Tigers",
+      "url": "https://www.uxtigers.com/post/service-as-software",
+      "note": "Jakob Nielsen updates his 2024 forecast: AI vendors increasingly sell finished work priced per outcome, with examples from Intercom's Fin to Zendesk. He warns about counting a customer's silence as a success, which changes what designers need to show before and after an agent acts."
+    }
+  ],
+  "watch": [
+    {
+      "title": "Paul Jun: the Michelin star brand vending machine",
+      "channel": "Dive Club",
+      "id": "P5yPMQXzXSE",
+      "note": "An hour with Ramp's Paul Jun on the AI systems his team built for brand design and how much context a model needs before its output stops being merely good enough. Out on 17 November, and the best long watch this weekend for anyone building systems, not only brand designers."
+    },
+    {
+      "title": "Sam Stephenson: eye of the swirl",
+      "channel": "First of Kind",
+      "id": "H5xsvQ7orXk",
+      "note": "Granola's co-founder and design lead tells Soleio why the team dropped real-time AI notes because they pulled people's attention away from the meeting, and how they design for the small part of the mind that is not on the conversation."
+    },
+    {
+      "title": "Config India 2026: Figma Weave and what we refuse to automate",
+      "channel": "Figma",
+      "id": "znW1i7AQdPI",
+      "note": "A Config India talk from Bengaluru, newly posted, on where to draw the line with generative tools: hand over the labour and keep the thinking. A good companion to Canva's AI switch this week."
+    },
+    {
+      "title": "How NY State uses AI with its design system",
+      "channel": "Into Design Systems",
+      "id": "r-ndKlKNRqk",
+      "note": "A public-sector design system team on adopting AI under strict rules for accessibility and consistency, a useful pairing with zeroheight's checklist for docs that agents can read."
+    },
+    {
+      "title": "Variables as a system",
+      "channel": "Webflow",
+      "id": "nR1Yi78jj9A",
+      "note": "Eight minutes on setting up variables as linked tokens rather than one-off values, from Webflow's new run of design system tutorials; a quick watch if you keep tokens in step between Figma and the live site."
+    }
+  ],
+  "meetups": [
+    {
+      "name": "The Messy UX Conference 2026",
+      "date": "2026-11-28",
+      "place": "Bengaluru",
+      "details": "Saturday · 13 practitioner talks · Design Shots",
+      "url": "https://designshots.org/conference"
+    },
+    {
+      "name": "Asia Connect 2.0",
+      "date": "2026-11-29",
+      "place": "Online",
+      "details": "Sunday · 6:30 to 8:30 pm IST · IxDF Asia regional meetup on AI and the future of product design · free, no membership needed",
+      "url": "https://ixdf.org/meetups/asia-connect-2-0-nov-29th-2026"
+    },
+    {
+      "name": "AI 2027 Conference",
+      "date": "2026-12-01",
+      "place": "Online",
+      "details": "Tuesday · 9:30 pm IST · SmashingConf half-day with Vitaly Friedman, Brad Frost, Christine Vallaure and others on AI-ready design systems and agentic UX · paid",
+      "url": "https://smashingmagazine.com/2026/11/online-smashingconf-ai-2027/"
+    }
+  ],
+  "edition": {
+    "shelf": [
+      {
+        "title": "Letterpress posters built from Meccano parts, linocut shadows and hot-metal type",
+        "credit": "Dafi Kühne, for Constructing Posters at Ginza Graphic Gallery",
+        "url": "https://fontsinuse.com/uses/78663/dafi-kuehne-constructing-posters"
+      },
+      {
+        "title": "A new Stripe Press site where you can read every page of every book and change the lighting",
+        "credit": "Stripe Press, with Devin Jacoviello",
+        "url": "https://stripe.press/"
+      },
+      {
+        "title": "An agent brief, rewritten every night, that you can read and correct before opening it in Claude or ChatGPT",
+        "credit": "Granola",
+        "url": "https://www.granola.ai/blog/introducing-your-agent-brief"
+      }
+    ],
+    "learn": [
+      {
+        "kind": "install",
+        "title": "craft makes your coding agent write a brief and list every state before it draws a screen",
+        "url": "https://github.com/diego3g/craft",
+        "intro": "Diego Fernandes released craft on GitHub on 15 November, a free set of design skills for Claude Code, Codex, Cursor and other agents. Ask for a pricing page and, instead of jumping to pixels, the agent works like a careful designer: it agrees the scope with you, plans the states and keeps a record of decisions. It works with Paper, pen.dev or plain HTML, and has a Figma adapter that is still untested.",
+        "skill": {
+          "name": "craft",
+          "by": "Diego Fernandes",
+          "cost": "Free, MIT licence"
+        },
+        "changes": [
+          "A setup interview asks about product, audience, voice, mood and constraints one question at a time, then writes a DESIGN.md with a dated decisions log, tokens and base components, so choices made on Monday still hold on Thursday.",
+          "Before drawing, it lists every state the screen needs, including empty, loading, error, long content, permissions and offline, filled with realistic messy data, and stops for your approval.",
+          "When you ask for options, it draws three directions that differ in structure, interaction or density rather than colour, and recommends one.",
+          "It renders and critiques its own work for hierarchy, spacing, contrast and consistency, and shows which screens a token or component change will touch before it spreads."
+        ],
+        "install": [
+          {
+            "where": "Claude Code",
+            "how": "Inside a session, add the marketplace and install the plugin; in the Claude app, add the marketplace diego3g/craft from the plugins menu instead.",
+            "code": "/plugin marketplace add diego3g/craft\n/plugin install craft@craft"
+          },
+          {
+            "where": "other agents such as Cursor and Codex",
+            "how": "Install the skills with npx, naming your agent; add -g to install for every project, and paste the README's routing block into AGENTS.md.",
+            "code": "npx skills add diego3g/craft -a cursor"
+          }
+        ],
+        "try": "Run set up craft for this project, then ask for a settings page with billing and team, and see which states it lists before drawing.",
+        "take": "Unlike the anti-slop skills we have covered, craft doesn't push a style; it enforces a process, which makes it most useful on a real product with real edge cases. It is five days old, so expect rough edges, and use the tested HTML or Paper routes rather than Figma for now.",
+        "links": [
+          {
+            "title": "craft on GitHub",
+            "url": "https://github.com/diego3g/craft",
+            "source": "GitHub",
+            "anchor": "a free set of design skills"
+          },
+          {
+            "title": "craft on Claude Plugin Hub",
+            "url": "https://www.claudepluginhub.com/plugins/diego3g-craft",
+            "source": "Claude Plugin Hub",
+            "anchor": "five days old"
+          }
+        ]
+      }
+    ]
+  }
+}

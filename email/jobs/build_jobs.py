@@ -11,11 +11,15 @@ def key(url, label):
             f'font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;line-height:16px;font-weight:700;color:{INK};text-decoration:none;white-space:nowrap;">{e(label)} &#8250;</a>')
 from urllib.parse import quote
 TEAL = '#24585C'
+GREEN, GREEN_BG, GREEN_TXT = '#1F5A3D', '#E1EEE6', '#3F6B54'
 def mark(j):
     href = ('https://ctrl-curious.vercel.app/api/mark?c=' + quote(j['company']) + '&t=' + quote(j['title'])
             + '&u=' + quote(j['url'], safe='') + '&d=' + quote(d.get('iso', '')))
-    return (f'<a href="{e(href)}" target="_blank" style="display:inline-block;margin-top:12px;font-size:14px;line-height:20px;font-weight:700;color:{INK};text-decoration:none;">'
-            f'<span style="display:inline-block;width:14px;height:14px;border:2px solid {INK};border-radius:4px;vertical-align:-3px;margin-right:8px;background-color:#FFFFFF;"></span>Mark applied</a>')
+    return (f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:14px;"><tr>'
+            f'<td bgcolor="{GREEN_BG}" style="background-color:{GREEN_BG};border-radius:8px 0 0 8px;padding:10px 14px;font-size:14px;line-height:20px;">'
+            f'<a href="{e(href)}" target="_blank" style="color:{GREEN_TXT};text-decoration:none;"><span style="display:inline-block;width:14px;height:14px;border:2px solid {GREEN};border-radius:4px;vertical-align:-3px;margin-right:10px;background-color:#FFFFFF;"></span>Not applied yet</a></td>'
+            f'<td bgcolor="{GREEN_BG}" align="right" style="background-color:{GREEN_BG};border-radius:0 8px 8px 0;padding:10px 14px;font-size:14px;line-height:20px;font-weight:700;white-space:nowrap;">'
+            f'<a href="{e(href)}" target="_blank" style="color:{GREEN};text-decoration:none;">I applied &#10003;</a></td></tr></table>')
 def rows(jobs, card):
     r = ''
     for k, j in enumerate(jobs):
@@ -47,7 +51,7 @@ big = ''
 if n2:
     big = (f'<tr><td bgcolor="{PLUM}" style="background-color:{PLUM};padding:40px 36px 28px 36px;" class="pad">'
            f'{T}><tr><td style="font-size:28px;line-height:32px;font-weight:700;color:{PAPER};"><span style="color:{MAUVE};">&gt;</span>&nbsp; Big tech hiring</td>'
-           f'<td align="right" style="font-size:14px;color:#F1E3E9;">{n2} roles · {e(d.get('bigtech_window') or 'last 5 days')}</td></tr></table>'
+           f'<td align="right" style="font-size:14px;color:#F1E3E9;">{n2} role{'' if n2 == 1 else 's'} · {e(d.get('bigtech_window') or 'last 5 days')}</td></tr></table>'
            f'<div style="height:20px;line-height:20px;font-size:0;">&nbsp;</div>{T}>{rows(d["bigtech"], True)}</table></td></tr>')
 opps = d.get('opportunities') or []
 opp = ''
@@ -87,12 +91,11 @@ page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name
 <td valign="bottom" style="padding-left:10px;padding-bottom:6px;font-size:24px;line-height:30px;font-weight:700;color:{PAPER};">design roles worth a look<div style="font-size:15px;line-height:22px;font-weight:400;color:#D9C3B7;padding-top:6px;">{e(d["date"])}</div></td></tr></table>
 </td></tr>
 <tr><td><img src="{BASE}/assets/email/seigaiha_strip.jpg" width="600" height="16" alt="" style="display:block;border:0;width:100%;height:16px;"></td></tr>
-<tr><td class="pad" style="padding:40px 36px 6px 36px;">{T}><tr><td style="font-size:28px;line-height:32px;font-weight:700;"><span style="color:{WINE};">&gt;</span>&nbsp; New design roles</td><td align="right" style="font-size:14px;color:{MUTED};">{n1} roles</td></tr></table></td></tr>
+<tr><td class="pad" style="padding:40px 36px 6px 36px;">{T}><tr><td style="font-size:28px;line-height:32px;font-weight:700;"><span style="color:{WINE};">&gt;</span>&nbsp; New design roles</td><td align="right" style="font-size:14px;color:{MUTED};">{n1} role{"" if n1 == 1 else "s"}</td></tr></table></td></tr>
 <tr><td class="pad" style="padding:8px 36px 18px 36px;font-size:16px;line-height:25px;color:#4A3540;">{e(d["intro"])}</td></tr>
 <tr><td class="pad" style="padding:0 36px 34px 36px;">{T}>{rows(d["jobs"], False)}</table></td></tr>
 {big}
 {opp}
-{app}
 <tr><td class="pad" style="padding:30px 36px 36px 36px;font-size:14px;line-height:21px;color:{MUTED};">{T}><tr><td style="border-top:2px solid {INK};padding-top:20px;font-size:16px;font-weight:700;color:{INK};">Good work finds good people. Keep putting yours out there.</td></tr><tr><td style="padding-top:6px;font-size:13px;line-height:20px;color:{MUTED};">See you tomorrow with a fresh list.</td></tr></table></td></tr>
 </table></td></tr></table></body></html>'''
 txt = [f"Ctrl+Curious jobs · {d['date']}", '', d['intro'], '']
@@ -106,7 +109,7 @@ if opps:
     txt += ['Beyond the job hunt', '']
     for o in opps:
         txt += [f"- {o['org']} · {o['title']} ({o['kind']}{', ' + o['when'] if o.get('when') else ''})", f"    {o['note']}", f"    {o['url']}", '']
-if done:
+if False:
     txt += [f'Applied so far ({len(done)})'] + [f"  [x] {a['company']} · {a['title']} {a.get('date','')}" for a in done] + ['']
 txt += ["Good work finds good people. Keep putting yours out there.", "See you tomorrow with a fresh list."]
 open(out, 'w').write(page); open(out.rsplit('.', 1)[0] + '.txt', 'w').write('\n'.join(txt))

@@ -22,6 +22,12 @@ h1{font-size:26px;line-height:1.2;margin:0 0 16px;display:flex;align-items:cente
 .co{color:#8A2E3B;font-weight:700;font-size:14px}
 .ti{font-size:20px;font-weight:700;margin:4px 0 18px}
 p{font-size:15px;line-height:1.55;color:#4A3540;margin:0 0 14px}
+.strip{display:flex;justify-content:space-between;align-items:center;border-radius:8px;padding:14px 16px;font-size:16px;font-weight:700;margin:18px 0 18px}
+.strip.on{background:#1F5A3D;color:#FFFFFF}
+.strip.off{background:#E1EEE6;color:#3F6B54;font-weight:400}
+.strip .b{display:inline-grid;place-items:center;width:18px;height:18px;border-radius:4px;margin-right:10px;vertical-align:-3px;font-size:13px}
+.strip.on .b{background:#FFFFFF;color:#1F5A3D}
+.strip.off .b{background:#FFFFFF;border:2px solid #1F5A3D}
 a.k{display:inline-block;margin-top:6px;margin-right:10px;padding:8px 14px;border:1.5px solid #2E1F25;border-bottom-width:3px;border-radius:6px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;font-weight:700;color:#2E1F25;text-decoration:none}
 </style></head><body><main class="card"><div class="top">Ctrl+Curious <span>·</span> Jobs desk</div><div class="in">${body}</div></main></body></html>`;
 }
@@ -47,17 +53,19 @@ export async function GET(request) {
   const action = undo ? 'not applied' : 'applied';
   try {
     await note(`Jobs desk: ${action} · ${company} · ${title}`,
-      `${action}: ${company} · ${title}\nlink: ${url}\nfrom the jobs email of: ${sent}\nwhen: ${new Date().toISOString()}\nThe daily jobs run reads these notes for the "Applied so far" list. Keep them (archiving is fine).`);
+      `${action}: ${company} · ${title}\nlink: ${url}\nfrom the jobs email of: ${sent}\nwhen: ${new Date().toISOString()}\nThe daily jobs run reads these notes so it never suggests a role you've applied to. Keep them (archiving is fine).`);
   } catch (e) {
     console.error(e);
     return html(page('Jobs desk', '<h1>Couldn\'t save that</h1><p>Please try the link again in a minute.</p>'), 502);
   }
   const base = `/api/mark?c=${encodeURIComponent(company)}&t=${encodeURIComponent(title)}&u=${encodeURIComponent(url)}&d=${encodeURIComponent(sent)}`;
   const body = undo
-    ? `<h1><span class="box">&nbsp;</span>Unmarked</h1><div class="co">${esc(company)}</div><div class="ti">${esc(title)}</div>
-       <p>It won't show in your applied list.</p><a class="k" href="${esc(base)}">Mark applied again &#8250;</a>`
-    : `<h1><span class="box on">&#10003;</span>Marked as applied</h1><div class="co">${esc(company)}</div><div class="ti">${esc(title)}</div>
-       <p>It'll show in the "Applied so far" list in tomorrow's email. Good work finds good people.</p>
+    ? `<div class="co">${esc(company)}</div><div class="ti">${esc(title)}</div>
+       <div class="strip off"><span><span class="b"></span>Not applied yet</span></div>
+       <p>Unmarked. The daily search can suggest it again if it's still open.</p><a class="k" href="${esc(base)}">Mark applied again &#8250;</a>`
+    : `<div class="co">${esc(company)}</div><div class="ti">${esc(title)}</div>
+       <div class="strip on"><span><span class="b">&#10003;</span>Applied</span><span style="font-weight:400;font-size:14px;">Saved</span></div>
+       <p>Saved. The daily search won't suggest this role again. Good work finds good people.</p>
        ${url ? `<a class="k" href="${esc(url)}" target="_blank" rel="noopener">Open the listing &#8250;</a>` : ''}<a class="k" href="${esc(base)}&amp;undo=1">Undo</a>`;
   return html(page(undo ? 'Unmarked · Jobs desk' : 'Applied · Jobs desk', body));
 }

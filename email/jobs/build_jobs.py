@@ -99,6 +99,7 @@ page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name
 <div style="font-size:15px;line-height:20px;font-weight:700;color:#C8902F;">&gt;&nbsp; Signing off</div>
 <div class="sbig" style="padding-top:14px;font-size:30px;line-height:38px;font-weight:700;color:#F4EEE8;">Good work finds good people. Keep putting yours out there.</div>
 <div style="padding-top:12px;font-size:16px;line-height:24px;color:#D9C3B7;">See you tomorrow with a fresh list.</div>
+<div style="padding-top:22px;"><a href="https://docs.google.com/spreadsheets/d/19eTo6n1v2sfQNHmysYS4W20qSDQo5u_qj-IXorNSnuk/edit" target="_blank" style="display:inline-block;padding:8px 13px;background-color:#C8902F;border:1.5px solid #C8902F;border-bottom:3px solid #8C6420;border-radius:6px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;line-height:16px;font-weight:700;color:#2E1F25;text-decoration:none;white-space:nowrap;">Open your jobs tracker &#8250;</a></div>
 <div style="height:28px;line-height:28px;font-size:0;">&nbsp;</div>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-top:1px solid #5A4650;"><tr>
 <td valign="middle" style="padding-top:20px;"><img src="https://ctrl-curious.vercel.app/assets/email/logo_dark.png" width="104" alt="Ctrl+Curious" style="display:block;border:0;width:104px;height:auto;"></td>
@@ -119,6 +120,6 @@ if opps:
         txt += [f"- {o['org']} · {o['title']} ({o['kind']}{', ' + o['when'] if o.get('when') else ''})", f"    {o['note']}", f"    {o['url']}", '']
 if False:
     txt += [f'Applied so far ({len(done)})'] + [f"  [x] {a['company']} · {a['title']} {a.get('date','')}" for a in done] + ['']
-txt += ["Good work finds good people. Keep putting yours out there.", "See you tomorrow with a fresh list."]
+txt += ["Good work finds good people. Keep putting yours out there.", "See you tomorrow with a fresh list.", "", "Your jobs tracker: https://docs.google.com/spreadsheets/d/19eTo6n1v2sfQNHmysYS4W20qSDQo5u_qj-IXorNSnuk/edit"]
 open(out, 'w').write(page); open(out.rsplit('.', 1)[0] + '.txt', 'w').write('\n'.join(txt))
 print('ok', n1, '+', n2, 'jobs')

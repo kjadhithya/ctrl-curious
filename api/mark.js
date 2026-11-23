@@ -61,7 +61,7 @@ export async function GET(request) {
   const base = `/api/mark?c=${encodeURIComponent(company)}&t=${encodeURIComponent(title)}&u=${encodeURIComponent(url)}&d=${encodeURIComponent(sent)}`;
   const body = undo
     ? `<div class="co">${esc(company)}</div><div class="ti">${esc(title)}</div>
-       <div class="strip off"><span><span class="b"></span>Not applied yet</span></div>
+       <div class="strip off"><span><span class="b"></span>Mark applied</span></div>
        <p>Unmarked. The daily search can suggest it again if it's still open.</p><a class="k" href="${esc(base)}">Mark applied again &#8250;</a>`
     : `<div class="co">${esc(company)}</div><div class="ti">${esc(title)}</div>
        <div class="strip on"><span><span class="b">&#10003;</span>Applied</span><span style="font-weight:400;font-size:14px;">Saved</span></div>

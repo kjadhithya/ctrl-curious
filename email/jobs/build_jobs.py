@@ -73,10 +73,10 @@ if done:
                  f'<b>{e(a["company"])}</b> · {e(a["title"])}<span style="color:{MUTED};font-size:13px;">&nbsp;&nbsp;{e(a.get("date",""))}</span></td></tr>' for a in done)
     app = (f'<tr><td class="pad" style="padding:10px 36px 30px 36px;">{T} bgcolor="{BAND}" style="background-color:{BAND};border-radius:8px;"><tr><td style="padding:18px 20px;">'
            f'<div style="font-size:16px;line-height:22px;font-weight:700;color:{INK};padding-bottom:6px;">Applied so far · {len(done)}</div>{T}>{li}</table></td></tr></table></td></tr>')
-page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light only">
+page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="color-scheme" content="light only">
 <title>Ctrl+Curious jobs · {e(d["date"])}</title>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
-<style>@media (max-width:620px){{.wrap{{width:100% !important}}.pad{{padding-left:20px !important;padding-right:20px !important}}.big{{font-size:64px !important;line-height:60px !important}}.apc{{display:none !important;width:0 !important}}.sbig{{font-size:24px !important;line-height:31px !important}}.apm{{display:block !important;max-height:none !important;overflow:visible !important}}}}</style></head>
+</head>
 <body style="margin:0;padding:0;background-color:#E9E1D9;">
 <div style="display:none;max-height:0;overflow:hidden;opacity:0;">{e(d["preheader"])}</div>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#E9E1D9" background="{BASE}/assets/email/grain_page.jpg" style="background-color:#E9E1D9;background-image:url('{BASE}/assets/email/grain_page.jpg');"><tr><td align="center" style="padding:24px 10px;">

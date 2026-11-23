@@ -16,8 +16,8 @@ def mark(j):
     href = ('https://ctrl-curious.vercel.app/api/mark?c=' + quote(j['company']) + '&t=' + quote(j['title'])
             + '&u=' + quote(j['url'], safe='') + '&d=' + quote(d.get('iso', '')))
     return (f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:14px;"><tr>'
-            f'<td bgcolor="#FFFFFF" style="background-color:#FFFFFF;border:1px solid #D9C3B7;border-radius:8px;padding:10px 14px;font-size:14px;line-height:20px;font-weight:700;">'
-            f'<a href="{e(href)}" target="_blank" style="display:block;color:#2E1F25;text-decoration:none;"><span style="display:inline-block;width:14px;height:14px;border:2px solid #8C7A82;border-radius:4px;vertical-align:-3px;margin-right:10px;background-color:#FFFFFF;"></span>Mark applied</a></td></tr></table>')
+            f'<td bgcolor="#EDE4DD" style="background-color:#EDE4DD;border-radius:8px;padding:10px 14px;font-size:14px;line-height:20px;font-weight:400;">'
+            f'<a href="{e(href)}" target="_blank" style="display:block;color:#5E4B53;text-decoration:none;"><span style="display:inline-block;width:14px;height:14px;border:2px solid #5E4B53;border-radius:4px;vertical-align:-3px;margin-right:10px;background-color:#FFFFFF;"></span>Mark applied</a></td></tr></table>')
 def rows(jobs, card):
     r = ''
     for k, j in enumerate(jobs):
@@ -90,7 +90,7 @@ page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name
 </td></tr>
 <tr><td><img src="{BASE}/assets/email/seigaiha_strip.jpg" width="600" height="16" alt="" style="display:block;border:0;width:100%;height:16px;"></td></tr>
 <tr><td class="pad" style="padding:40px 36px 6px 36px;">{T}><tr><td style="font-size:28px;line-height:32px;font-weight:700;"><span style="color:{WINE};">&gt;</span>&nbsp; New design roles</td><td align="right" style="font-size:14px;color:{MUTED};">{n1} role{"" if n1 == 1 else "s"}</td></tr></table></td></tr>
-<tr><td class="pad" style="padding:8px 36px 18px 36px;font-size:16px;line-height:25px;color:#4A3540;">{e(d["intro"])}</td></tr>
+<tr><td style="height:14px;line-height:14px;font-size:0;">&nbsp;</td></tr>
 <tr><td class="pad" style="padding:0 36px 34px 36px;">{T}>{rows(d["jobs"], False)}</table></td></tr>
 {big}
 {opp}
@@ -106,7 +106,7 @@ page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name
 </tr></table>
 </td></tr>
 </table></td></tr></table></body></html>'''
-txt = [f"Ctrl+Curious jobs · {d['date']}", '', d['intro'], '']
+txt = [f"Ctrl+Curious jobs · {d['date']}", '']
 for label, jobs in (('New design roles', d['jobs']), ('Big tech hiring', d.get('bigtech') or [])):
     if not jobs: continue
     txt += [label, '']

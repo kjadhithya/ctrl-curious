@@ -25,10 +25,10 @@ p{font-size:15px;line-height:1.55;color:#4A3540;margin:0 0 14px}
 .strip{display:flex;justify-content:space-between;align-items:center;border-radius:8px;padding:14px 16px;font-size:16px;font-weight:700;margin:18px 0 18px}
 .strip>span:first-child{display:inline-flex;align-items:center}
 .strip.on{background:#E1EEE6;color:#1F5A3D;border:1px solid #B9D6C4}
-.strip.off{background:#FFFFFF;color:#2E1F25;border:1px solid #D9C3B7}
+.strip.off{background:#EDE4DD;color:#5E4B53;font-weight:400}
 .strip .b{display:inline-grid;place-items:center;width:18px;height:18px;border-radius:4px;margin-right:10px;font-size:13px;box-sizing:border-box}
 .strip.on .b{background:#1F5A3D;color:#FFFFFF;border:2px solid #1F5A3D}
-.strip.off .b{background:#FFFFFF;border:2px solid #8C7A82}
+.strip.off .b{background:#FFFFFF;border:2px solid #5E4B53}
 a.k{display:inline-block;margin-top:6px;margin-right:10px;padding:8px 14px;border:1.5px solid #2E1F25;border-bottom-width:3px;border-radius:6px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;font-weight:700;color:#2E1F25;text-decoration:none}
 </style></head><body><main class="card"><div class="top">Ctrl+Curious <span>·</span> Jobs desk</div><div class="in">${body}</div></main></body></html>`;
 }

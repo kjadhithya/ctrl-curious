@@ -36,7 +36,7 @@ def rows(jobs, card):
                  f'<a href="{e(j["url"])}" target="_blank" style="display:block;padding-top:4px;font-size:21px;line-height:27px;font-weight:700;color:{INK};text-decoration:none;">{e(j["title"])}</a>'
                  f'<div style="padding-top:10px;">{chips}</div>'
                  f'<div style="font-size:15px;line-height:23px;color:#4A3540;padding-top:4px;">{e(j["note"])}</div>'
-                 f'{mark(j)}'
+                 f''
                  f'<div class="apm" style="display:none;max-height:0;overflow:hidden;padding-top:12px;">{key(j["url"], "Apply")}</div>'
                  f'</td><td class="apc" valign="top" align="right" width="96" style="padding-left:14px;padding-top:2px;">{key(j["url"], "Apply")}</td></tr></table>')
         if card:

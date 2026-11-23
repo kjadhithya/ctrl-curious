@@ -47,7 +47,7 @@ big = ''
 if n2:
     big = (f'<tr><td bgcolor="{PLUM}" style="background-color:{PLUM};padding:40px 36px 28px 36px;" class="pad">'
            f'{T}><tr><td style="font-size:28px;line-height:32px;font-weight:700;color:{PAPER};"><span style="color:{MAUVE};">&gt;</span>&nbsp; Big tech hiring</td>'
-           f'<td align="right" style="font-size:14px;color:#F1E3E9;">{n2} roles · last 5 days</td></tr></table>'
+           f'<td align="right" style="font-size:14px;color:#F1E3E9;">{n2} roles · {e(d.get('bigtech_window') or 'last 5 days')}</td></tr></table>'
            f'<div style="height:20px;line-height:20px;font-size:0;">&nbsp;</div>{T}>{rows(d["bigtech"], True)}</table></td></tr>')
 opps = d.get('opportunities') or []
 opp = ''

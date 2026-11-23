@@ -76,7 +76,7 @@ if done:
 page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light only">
 <title>Ctrl+Curious jobs · {e(d["date"])}</title>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
-<style>@media (max-width:620px){{.wrap{{width:100% !important}}.pad{{padding-left:20px !important;padding-right:20px !important}}.big{{font-size:64px !important;line-height:60px !important}}.apc{{display:none !important;width:0 !important}}.apm{{display:block !important;max-height:none !important;overflow:visible !important}}}}</style></head>
+<style>@media (max-width:620px){{.wrap{{width:100% !important}}.pad{{padding-left:20px !important;padding-right:20px !important}}.big{{font-size:64px !important;line-height:60px !important}}.apc{{display:none !important;width:0 !important}}.sbig{{font-size:24px !important;line-height:31px !important}}.apm{{display:block !important;max-height:none !important;overflow:visible !important}}}}</style></head>
 <body style="margin:0;padding:0;background-color:#E9E1D9;">
 <div style="display:none;max-height:0;overflow:hidden;opacity:0;">{e(d["preheader"])}</div>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#E9E1D9" background="{BASE}/assets/email/grain_page.jpg" style="background-color:#E9E1D9;background-image:url('{BASE}/assets/email/grain_page.jpg');"><tr><td align="center" style="padding:24px 10px;">
@@ -94,7 +94,17 @@ page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name
 <tr><td class="pad" style="padding:0 36px 34px 36px;">{T}>{rows(d["jobs"], False)}</table></td></tr>
 {big}
 {opp}
-<tr><td class="pad" style="padding:30px 36px 36px 36px;font-size:14px;line-height:21px;color:{MUTED};">{T}><tr><td style="border-top:2px solid {INK};padding-top:20px;font-size:16px;font-weight:700;color:{INK};">Good work finds good people. Keep putting yours out there.</td></tr><tr><td style="padding-top:6px;font-size:13px;line-height:20px;color:{MUTED};">See you tomorrow with a fresh list.</td></tr></table></td></tr>
+<tr><td><img src="https://ctrl-curious.vercel.app/assets/email/seigaiha_strip.jpg" width="600" height="16" alt="" style="display:block;border:0;width:100%;height:16px;"></td></tr>
+<tr><td class="pad" bgcolor="#2E1F25" background="https://ctrl-curious.vercel.app/assets/email/grain_dark.jpg" style="background-color:#2E1F25;background-image:url('https://ctrl-curious.vercel.app/assets/email/grain_dark.jpg');padding:40px 36px 36px 36px;">
+<div style="font-size:15px;line-height:20px;font-weight:700;color:#C8902F;">&gt;&nbsp; Signing off</div>
+<div class="sbig" style="padding-top:14px;font-size:30px;line-height:38px;font-weight:700;color:#F4EEE8;">Good work finds good people. Keep putting yours out there.</div>
+<div style="padding-top:12px;font-size:16px;line-height:24px;color:#D9C3B7;">See you tomorrow with a fresh list.</div>
+<div style="height:28px;line-height:28px;font-size:0;">&nbsp;</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-top:1px solid #5A4650;"><tr>
+<td valign="middle" style="padding-top:20px;"><img src="https://ctrl-curious.vercel.app/assets/email/logo_dark.png" width="104" alt="Ctrl+Curious" style="display:block;border:0;width:104px;height:auto;"></td>
+<td valign="middle" align="right" style="padding-top:20px;"><span style="display:inline-block;padding:6px 11px;background-color:#3A2A31;border:1.5px solid #C8902F;border-bottom-width:3px;border-radius:6px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;line-height:14px;font-weight:700;color:#F4EEE8;white-space:nowrap;">Next list · 9:00</span></td>
+</tr></table>
+</td></tr>
 </table></td></tr></table></body></html>'''
 txt = [f"Ctrl+Curious jobs · {d['date']}", '', d['intro'], '']
 for label, jobs in (('New design roles', d['jobs']), ('Big tech hiring', d.get('bigtech') or [])):

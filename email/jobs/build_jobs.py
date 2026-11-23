@@ -16,10 +16,8 @@ def mark(j):
     href = ('https://ctrl-curious.vercel.app/api/mark?c=' + quote(j['company']) + '&t=' + quote(j['title'])
             + '&u=' + quote(j['url'], safe='') + '&d=' + quote(d.get('iso', '')))
     return (f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:14px;"><tr>'
-            f'<td bgcolor="{GREEN_BG}" style="background-color:{GREEN_BG};border-radius:8px 0 0 8px;padding:10px 14px;font-size:14px;line-height:20px;">'
-            f'<a href="{e(href)}" target="_blank" style="color:{GREEN_TXT};text-decoration:none;"><span style="display:inline-block;width:14px;height:14px;border:2px solid {GREEN};border-radius:4px;vertical-align:-3px;margin-right:10px;background-color:#FFFFFF;"></span>Not applied yet</a></td>'
-            f'<td bgcolor="{GREEN_BG}" align="right" style="background-color:{GREEN_BG};border-radius:0 8px 8px 0;padding:10px 14px;font-size:14px;line-height:20px;font-weight:700;white-space:nowrap;">'
-            f'<a href="{e(href)}" target="_blank" style="color:{GREEN};text-decoration:none;">I applied &#10003;</a></td></tr></table>')
+            f'<td bgcolor="{GREEN_BG}" style="background-color:{GREEN_BG};border-radius:8px;padding:10px 14px;font-size:14px;line-height:20px;font-weight:700;">'
+            f'<a href="{e(href)}" target="_blank" style="display:block;color:{GREEN};text-decoration:none;"><span style="display:inline-block;width:14px;height:14px;border:2px solid {GREEN};border-radius:4px;vertical-align:-3px;margin-right:10px;background-color:#FFFFFF;"></span>Mark applied</a></td></tr></table>')
 def rows(jobs, card):
     r = ''
     for k, j in enumerate(jobs):

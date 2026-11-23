@@ -1,0 +1,37 @@
+Ctrl+Curious · Week ahead edition · Monday, 23 November 2026 · Issue 028
+View online: https://ctrl-curious.vercel.app/issues/028
+
+Today, in brief
+If you paste user comments straight into an AI design tool, NN/g's new study says you are leaving quality on the table: designs built from a researcher's synthesized findings met more criteria than ones built from raw feedback (https://www.nngroup.com/articles/raw-data-vs-synthesized-data/), and only the synthesized ones remembered loyalty miles. Jakob Nielsen rounds up research showing developers wave through agent permission prompts (https://www.uxtigers.com/post/ux-roundup-20261120) and proposes which actions should be silent, asked or blocked. On the interface side, Google has swapped its homepage's search button for Gemini shortcuts and a chat-history sidebar (https://www.engadget.com/2322647/google-latest-home-page-redesign-makes-gemini-even-more-prominent/), a sign that even the simplest query box is turning into a resumable session. And this week's skill comes from UX Collective: a way to sort dashboards so the fires come first (https://uxdesign.cc/send-the-firefighters-to-the-fires-6cd7b1893ae7).
+
+Read
+Can AI generate good designs from raw user data?: https://www.nngroup.com/articles/raw-data-vs-synthesized-data/
+UX roundup: AI permission requests, recognition-primed decisions, directed editing and misleading defaults: https://www.uxtigers.com/post/ux-roundup-20261120
+The judge used to be the user: https://uxdesign.cc/the-judge-used-to-be-the-user-0a958f24bb32
+Google's latest home page redesign makes Gemini even more prominent: https://www.engadget.com/2322647/google-latest-home-page-redesign-makes-gemini-even-more-prominent/
+Gemini app rolls out a camera redesign on Android: https://9to5google.com/2026/11/21/gemini-camera-redesign/
+
+Skill of the week
+Run a fires-first audit on one list or dashboard: https://uxdesign.cc/send-the-firefighters-to-the-fires-6cd7b1893ae7
+
+Prompt of the week
+Turn raw feedback into context before you ask AI for a design: https://www.nngroup.com/articles/raw-data-vs-synthesized-data/
+
+This week in design
+Wednesday · Talk · The Gold-winning Wayix team on a three-layer approach to inclusive mobility design, free on Zoom from the UX Design Awards (9:30pm IST): https://ux-design-awards.com/events-media/deep-dive-award-winners-wayix
+Saturday · Conference · The Messy UX Conference in Bengaluru, with 13 practitioners talking about the untidy parts of real projects: https://designshots.org/conference
+Sunday · Call for entries · Last weekend to enter the UX Design Awards Spring 2027; the extended deadline closes Monday 30 November, 23:59 CET: https://ux-design-awards.com/enter/dates
+
+Watch
+How I design for parallel agents: https://www.youtube.com/watch?v=mc4SwLn4SDE
+Touch on Mac group lab, 18 November: https://www.youtube.com/watch?v=Jb5X9Auc5OU
+Firefly Builder: design an app, from prompt to publish: https://www.youtube.com/watch?v=EhfObx49agg
+
+Meet up
+SmashingConf AI 2027 (2026-12-01): https://smashingconf.com/ai-2027-conference
+Designing for complex UI masterclass (2026-12-02): https://smashingconf.com/online-workshops/workshops/complex-ui-vitaly-friedman
+What drives product decisions in Denmark? EDL presents the 2026 report (2026-12-10): https://ixdf.org/meetups/what-drives-product-decisions-in-denmark-edl-presents-the-2026-report-dec-10th-2026
+
+That's all for today. Stay curious.
+
+Unsubscribe: https://ctrl-curious.vercel.app/unsubscribe

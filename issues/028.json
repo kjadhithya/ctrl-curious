@@ -1,0 +1,162 @@
+{
+  "issue": 28,
+  "date": "2026-11-23",
+  "title": "NN/g finds AI designs better from synthesized research than raw comments, and Google moves Gemini onto its homepage",
+  "dek": "NN/g's test of what context AI design tools need, Jakob Nielsen on agent permission prompts, why users should judge your AI evals, Google's Gemini-first homepage, Gemini's inline camera, three dates this week and three events.",
+  "preheader": "NN/g ran the test: AI designs score higher on synthesized findings than on raw comments. Plus Google's new homepage.",
+  "hero": "https://ctrl-curious.vercel.app/assets/email/days2/mon/mon_08.jpg",
+  "hero_alt": "A landscape pulled apart into stacked layers, each with a wireframe label",
+  "summary": "If you paste user comments straight into an AI design tool, NN/g's new study says you are leaving quality on the table: [designs built from a researcher's synthesized findings met more criteria than ones built from raw feedback](https://www.nngroup.com/articles/raw-data-vs-synthesized-data/), and only the synthesized ones remembered loyalty miles. Jakob Nielsen rounds up research showing [developers wave through agent permission prompts](https://www.uxtigers.com/post/ux-roundup-20261120) and proposes which actions should be silent, asked or blocked. On the interface side, Google has [swapped its homepage's search button for Gemini shortcuts and a chat-history sidebar](https://www.engadget.com/2322647/google-latest-home-page-redesign-makes-gemini-even-more-prominent/), a sign that even the simplest query box is turning into a resumable session. And this week's skill comes from UX Collective: a way to [sort dashboards so the fires come first](https://uxdesign.cc/send-the-firefighters-to-the-fires-6cd7b1893ae7).",
+  "reads": [
+    {
+      "title": "Can AI generate good designs from raw user data?",
+      "source": "Nielsen Norman Group",
+      "url": "https://www.nngroup.com/articles/raw-data-vs-synthesized-data/",
+      "note": "Megan Chan and Rachel Banawa gave an AI tool the same prompt and design-system context with either about 100 raw comments or a researcher's synthesized findings and recommendations, across a flight-rebooking form and a multistep checkout. Synthesized input met 77.9% of criteria against 69.5%, and no raw-input flight design dealt with loyalty miles. Read it for the case for UX-context design: deciding what interpretation the tool needs before you prompt."
+    },
+    {
+      "title": "UX roundup: AI permission requests, recognition-primed decisions, directed editing and misleading defaults",
+      "source": "UX Tigers",
+      "url": "https://www.uxtigers.com/post/ux-roundup-20261120",
+      "note": "Jakob Nielsen pulls together a survey of 115 developers in which only 48% read agent permission requests carefully and 21% approve by default, then sketches tiers for what an agent should do silently, ask about with consequences shown, or block. Also inside: a slider-based editing study and guidelines for interfaces experts use at speed. Useful if you are designing any AI feature that asks before it acts."
+    },
+    {
+      "title": "The judge used to be the user",
+      "source": "UX Collective",
+      "url": "https://uxdesign.cc/the-judge-used-to-be-the-user-0a958f24bb32",
+      "note": "Wira Indra Kusuma argues that LLM judges have quietly replaced users as the people who define a correct answer, and recounts how walking support staff through a classifier's errors reshaped half of the next version. His fix is concrete: sit real users down for an hour to read eval failures with you. A good prompt for designers who own AI quality but never see the evals."
+    },
+    {
+      "title": "Google's latest home page redesign makes Gemini even more prominent",
+      "source": "Engadget",
+      "url": "https://www.engadget.com/2322647/google-latest-home-page-redesign-makes-gemini-even-more-prominent/",
+      "note": "The classic Google Search button gives way to Gemini shortcuts for images, files and brainstorming, and a sidebar now keeps chat history and tasks, rolling out globally. Steve Dent notes a recent-queries list would help ordinary search too. Worth studying as the most-copied homepage on the web shifts from one-off queries to sessions you return to."
+    },
+    {
+      "title": "Gemini app rolls out a camera redesign on Android",
+      "source": "9to5Google",
+      "url": "https://9to5google.com/2026/11/21/gemini-camera-redesign/",
+      "note": "Gemini's camera no longer takes over the screen: it opens from the plus menu as a draggable, nearly edge-to-edge bottom sheet inside the conversation, with flash and front camera tucked into an overflow by the shutter. A small, concrete pattern to borrow if your product mixes capture with chat, since the conversation stays in view."
+    }
+  ],
+  "watch": [
+    {
+      "title": "How I design for parallel agents",
+      "channel": "Sneak Peek with Jayneil Dalal",
+      "id": "mc4SwLn4SDE",
+      "note": "Posted 20 November: Alex Lee walks through MagicOS, an AI-native canvas for running several agents at once, including how the first version came together in a week. Timely if you are designing for agents that work side by side rather than one chat at a time."
+    },
+    {
+      "title": "Touch on Mac group lab, 18 November",
+      "channel": "Apple Developer",
+      "id": "Jb5X9Auc5OU",
+      "note": "Streamed 18 November: an hour of Meet with Apple Q&A on bringing touch to Mac apps, answering questions from the developer forums. Watch it if your desktop product now has to work under a finger as well as a pointer, since the answers go beyond treating taps as clicks."
+    },
+    {
+      "title": "Firefly Builder: design an app, from prompt to publish",
+      "channel": "MBD Studio Design",
+      "id": "EhfObx49agg",
+      "note": "Posted 19 November: a full build in Adobe's new prompt-to-app tool, still in private beta since MAX, covering the built-in assistant, switching between models, reusing a design system across apps, and exporting the code to deploy. The clearest look yet at what Firefly Builder can and can't do."
+    }
+  ],
+  "meetups": [
+    {
+      "name": "SmashingConf AI 2027",
+      "date": "2026-12-01",
+      "place": "Online",
+      "details": "Tuesday · 9:30 pm IST · half-day on AI-ready design systems and agentic UX with Vitaly Friedman, Brad Frost and others · paid",
+      "url": "https://smashingconf.com/ai-2027-conference"
+    },
+    {
+      "name": "Designing for complex UI masterclass",
+      "date": "2026-12-02",
+      "place": "Online",
+      "details": "Starts Wednesday · Smashing workshop with Vitaly Friedman · 5 sessions to 16 Dec · 10:30 pm IST · $500",
+      "url": "https://smashingconf.com/online-workshops/workshops/complex-ui-vitaly-friedman"
+    },
+    {
+      "name": "What drives product decisions in Denmark? EDL presents the 2026 report",
+      "date": "2026-12-10",
+      "place": "Online",
+      "details": "Thursday · 10 pm IST · IxDF Denmark with Frederick J. Andersen on how B2B SaaS teams make product decisions · free",
+      "url": "https://ixdf.org/meetups/what-drives-product-decisions-in-denmark-edl-presents-the-2026-report-dec-10th-2026"
+    }
+  ],
+  "edition": {
+    "week": [
+      {
+        "when": "Wednesday · Talk",
+        "title": "The Gold-winning Wayix team on a three-layer approach to inclusive mobility design, free on Zoom from the UX Design Awards (9:30pm IST)",
+        "url": "https://ux-design-awards.com/events-media/deep-dive-award-winners-wayix"
+      },
+      {
+        "when": "Saturday · Conference",
+        "title": "The Messy UX Conference in Bengaluru, with 13 practitioners talking about the untidy parts of real projects",
+        "url": "https://designshots.org/conference"
+      },
+      {
+        "when": "Sunday · Call for entries",
+        "title": "Last weekend to enter the UX Design Awards Spring 2027; the extended deadline closes Monday 30 November, 23:59 CET",
+        "url": "https://ux-design-awards.com/enter/dates"
+      }
+    ],
+    "learn": [
+      {
+        "kind": "skill",
+        "title": "Run a fires-first audit on one list or dashboard",
+        "url": "https://uxdesign.cc/send-the-firefighters-to-the-fires-6cd7b1893ae7",
+        "intro": "Francis Wu shows a 20-row service table sorted by last updated, where the two services that matter most sit in rows 16 and 19. His case, drawn from Taylor's exception principle and the ISA-101 standard for control rooms, is that operational screens should lead with what needs a person and let the healthy rest fade. Here is how to apply it to one screen this week.",
+        "steps": [
+          "Define severity as two separate things multiplied together: health says what broke, importance (tier, revenue, customers affected) says how much it matters. Sort by that, not by status or recency.",
+          "Keep urgency and importance on separate axes, so a degraded critical item can outrank a failing minor one.",
+          "Collapse everything healthy into a single line: a count, a last-checked timestamp and a way to dig in, so people can trust the quiet.",
+          "Move alerts to where people already work, with restraint and a snooze, so nobody has to keep the screen open to watch it.",
+          "Make resolution visible and lead each problem straight into investigation, while the full table stays one click away."
+        ],
+        "take": "Our suggestion: try it first on an internal admin or ops screen, where you can watch real users triage, before applying it to customer-facing dashboards.",
+        "links": [
+          {
+            "title": "Send the firefighters to the fires",
+            "url": "https://uxdesign.cc/send-the-firefighters-to-the-fires-6cd7b1893ae7",
+            "source": "UX Collective",
+            "anchor": "a 20-row service table sorted by last updated"
+          }
+        ]
+      },
+      {
+        "kind": "prompt",
+        "title": "Turn raw feedback into context before you ask AI for a design",
+        "url": "https://www.nngroup.com/articles/raw-data-vs-synthesized-data/",
+        "intro": "NN/g found that AI-generated designs met noticeably more criteria when the tool got a researcher's findings and recommendations instead of the raw comments they came from. This prompt does the synthesis as a separate first step, then gives you a brief and a scorecard to judge what the design tool produces.",
+        "tool": "Any AI assistant with a long context window",
+        "code": "You are a senior UX researcher preparing context for an AI design tool.\nProduct and task: [e.g. rebooking a cancelled flight]\nUsers: [who they are, in one line]\nRaw feedback: [paste comments, tickets or interview notes, one per line]\n\nStep 1. Synthesize: write 5 to 8 findings. For each, give the finding in one sentence, how many comments support it, and two short quotes.\nStep 2. Recommend: for each finding, write one design recommendation phrased as a requirement the screen must meet.\nStep 3. Flag what the raw comments imply but nobody says outright, such as consequences users will worry about after the main task (fees, points, data loss).\nStep 4. Write a pass or fail scorecard of 10 to 15 criteria a reviewer can check on a finished design.\nStep 5. Write a design brief of under 200 words for the design tool, using only the recommendations, not the raw comments.\n\nReturn the findings, recommendations, flags, scorecard and brief as separate sections. Mark anything you are unsure of.",
+        "code_note": "Check the findings against the raw comments yourself before using them; this is the interpretation step NN/g says a researcher should own. Then give the design tool only the brief, generate a few variants, and score each against the scorecard.",
+        "columns": [
+          {
+            "label": "Use it for",
+            "items": [
+              "Feeding research into AI prototyping tools such as Figma Make, Lovable or Firefly Builder",
+              "Agreeing on what a good screen must do before anyone generates one"
+            ]
+          },
+          {
+            "label": "Not for",
+            "items": [
+              "Replacing a researcher's synthesis on a high-stakes decision",
+              "Feedback from simulated users rather than real ones"
+            ]
+          }
+        ],
+        "take": "NN/g did not name the model or exact prompt it used, and could not separate the effect of findings from recommendations, so treat the scorecard as your real test.",
+        "links": [
+          {
+            "title": "Can AI generate good designs from raw user data?",
+            "url": "https://www.nngroup.com/articles/raw-data-vs-synthesized-data/",
+            "source": "Nielsen Norman Group",
+            "anchor": "met noticeably more criteria"
+          }
+        ]
+      }
+    ]
+  }
+}

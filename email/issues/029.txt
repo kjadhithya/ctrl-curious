@@ -1,0 +1,32 @@
+Ctrl+Curious · Tools edition · Tuesday, 24 November 2026 · Issue 029
+View online: https://ctrl-curious.vercel.app/issues/029
+
+Today, in brief
+Design work no longer has to stop at handoff: Google Labs' Stitch Loop watches a shipped product and opens pull requests (https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-loop/) to fix accessibility, speed and security, with nothing merged until a person reviews it. Two UX Collective essays tell you how to stay in charge of that kind of output: Patrick Neeman makes the case that the prototype should come before the requirements doc (https://uxdesign.cc/prototypes-have-always-been-the-most-effective-specification-10162107b2ee), and Tania Ostanina lays out guardrails for cleaning up AI-made screens (https://uxdesign.cc/the-attack-of-the-giant-ai-design-slop-monster-a-survivors-guide-55f5918f78f4) from PMs and developers. On the shipped side, Claude's Android app now follows Material 3 Expressive (https://9to5google.com/2026/11/23/claude-android-material-3-update/) while keeping its own colours, and Rockstar explains how the GTA 6 HUD kept its heritage and gained accessibility settings (https://www.creativebloq.com/news/how-gta-6s-interface-kept-the-classic-pricedown-font-but-still-managed-to-feel-modern). If your files still mix old and new auto layout, Figma's switch-back option ends in January 2027 (https://help.figma.com/hc/en-us/articles/42031586813719), so today's tool to master is upgrading them safely.
+
+Tool of the day
+Stitch Loop: https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-loop/
+
+Read
+Prototypes have always been the most effective specification, especially with AI: https://uxdesign.cc/prototypes-have-always-been-the-most-effective-specification-10162107b2ee
+The attack of the giant AI design slop monster: a survivor's guide: https://uxdesign.cc/the-attack-of-the-giant-ai-design-slop-monster-a-survivors-guide-55f5918f78f4
+How GTA 6's interface kept the classic Pricedown font but still feels modern: https://www.creativebloq.com/news/how-gta-6s-interface-kept-the-classic-pricedown-font-but-still-managed-to-feel-modern
+Claude rolls out an Android app redesigned around Material 3 Expressive: https://9to5google.com/2026/11/23/claude-android-material-3-update/
+UX roundup: what's UX?: https://www.uxtigers.com/post/ux-roundup-20261123
+
+Tool to master
+Figma's updated auto layout: upgrade old frames before January 2027: https://help.figma.com/hc/en-us/articles/42031586813719
+
+Watch
+Fable 5.2 review: creative enough to build a typewriter, still bad at web design: https://www.youtube.com/watch?v=1gYQc4CL_oo
+Learn 3D transform in Figma: https://www.youtube.com/watch?v=9u_DZRaPTV8
+Humanizing your brand voice: https://www.youtube.com/watch?v=VeTx7Sn7sbw
+
+Meet up
+UX for AI SDLC masterclass (2026-11-28): https://www.meetup.com/xperiencenowbangalore/events/317252831/
+Don't make me prompt! Designing AI experiences people understand, trust and want to use (2026-12-09): https://uxpa.org/upcoming-webinars/
+UX strategy masterclass (2026-12-11): https://smashingconf.com/online-workshops/workshops/vitaly-friedman-ux-strategy/
+
+That's all for today. Stay curious.
+
+Unsubscribe: https://ctrl-curious.vercel.app/unsubscribe

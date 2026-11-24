@@ -1,0 +1,129 @@
+{
+  "issue": 29,
+  "date": "2026-11-24",
+  "title": "Google launches Stitch Loop, an agent that keeps fixing live products, and Claude's Android app moves to Material 3",
+  "dek": "Prototypes as the spec, a survival guide for AI-made UI, the GTA 6 HUD, Claude on Material 3, Nielsen's roundup, Stitch Loop, Figma's updated auto layout, NN/g on brand voice and three events.",
+  "preheader": "Google's new agent keeps improving a product after launch, and Figma's old auto layout has a January deadline.",
+  "hero": "https://ctrl-curious.vercel.app/assets/email/days2/tue/tue_06.jpg",
+  "hero_alt": "Wifi arcs rising from a small router like a sunrise over the sea",
+  "summary": "Design work no longer has to stop at handoff: Google Labs' [Stitch Loop watches a shipped product and opens pull requests](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-loop/) to fix accessibility, speed and security, with nothing merged until a person reviews it. Two UX Collective essays tell you how to stay in charge of that kind of output: Patrick Neeman makes the case that [the prototype should come before the requirements doc](https://uxdesign.cc/prototypes-have-always-been-the-most-effective-specification-10162107b2ee), and Tania Ostanina lays out [guardrails for cleaning up AI-made screens](https://uxdesign.cc/the-attack-of-the-giant-ai-design-slop-monster-a-survivors-guide-55f5918f78f4) from PMs and developers. On the shipped side, [Claude's Android app now follows Material 3 Expressive](https://9to5google.com/2026/11/23/claude-android-material-3-update/) while keeping its own colours, and Rockstar explains how [the GTA 6 HUD kept its heritage and gained accessibility settings](https://www.creativebloq.com/news/how-gta-6s-interface-kept-the-classic-pricedown-font-but-still-managed-to-feel-modern). If your files still mix old and new auto layout, [Figma's switch-back option ends in January 2027](https://help.figma.com/hc/en-us/articles/42031586813719), so today's tool to master is upgrading them safely.",
+  "reads": [
+    {
+      "title": "Prototypes have always been the most effective specification, especially with AI",
+      "source": "UX Collective",
+      "url": "https://uxdesign.cc/prototypes-have-always-been-the-most-effective-specification-10162107b2ee",
+      "note": "Patrick Neeman argues that now building is cheap, the prototype should lead and the requirements doc should only record decisions already tested, drawing on survey data about designers building with AI and Microsoft's RITE method; a useful brief for changing how your team writes specs."
+    },
+    {
+      "title": "The attack of the giant AI design slop monster: a survivor's guide",
+      "source": "UX Collective",
+      "url": "https://uxdesign.cc/the-attack-of-the-giant-ai-design-slop-monster-a-survivors-guide-55f5918f78f4",
+      "note": "Tania Ostanina walks through three real cases, a PM vibe-coding a UI, a developer shipping generated frontend and the designer cleaning up both, and gives practical guardrails: feed research into the tools, tie prototypes to the design system through Figma's MCP and Code Connect, and fence agents into one folder."
+    },
+    {
+      "title": "How GTA 6's interface kept the classic Pricedown font but still feels modern",
+      "source": "Creative Bloq",
+      "url": "https://www.creativebloq.com/news/how-gta-6s-interface-kept-the-classic-pricedown-font-but-still-managed-to-feel-modern",
+      "note": "Rockstar's UI and UX leads explain how they kept the franchise's signature elements while letting the HUD change with each activity and moving the phone into the character's hand, with larger text, a minimal-screen mode and an adjustable minimap built in; a good model for modernising a heritage interface."
+    },
+    {
+      "title": "Claude rolls out an Android app redesigned around Material 3 Expressive",
+      "source": "9to5Google",
+      "url": "https://9to5google.com/2026/11/23/claude-android-material-3-update/",
+      "note": "A bottom bar now does the navigation, the hamburger menu is left mostly for chat history, and Material 3 parts appear in the model switcher and chat backgrounds, while Anthropic keeps its own colours instead of dynamic colour; a concrete case of following a platform system without losing the brand, with one predictive-back flaw worth avoiding."
+    },
+    {
+      "title": "UX roundup: what's UX?",
+      "source": "UX Tigers",
+      "url": "https://www.uxtigers.com/post/ux-roundup-20261123",
+      "note": "Jakob Nielsen's weekly roundup, worth it for eight guidelines on feature discoverability when users don't explore, Google's analysis of 2.1 million real Gemini image conversations showing people rarely refine results, and why tab hoarding means your product should remember state."
+    }
+  ],
+  "watch": [
+    {
+      "title": "Fable 5.2 review: creative enough to build a typewriter, still bad at web design",
+      "channel": "How I AI",
+      "id": "1gYQc4CL_oo",
+      "note": "Claire Vo puts a new model through real creative jobs: it handled animated brand characters and a 3D typewriter well but produced a weak homepage on its own, so she only uses it for design with a strong visual reference, which is exactly the slop problem in today's survival guide."
+    },
+    {
+      "title": "Learn 3D transform in Figma",
+      "channel": "Figma",
+      "id": "9u_DZRaPTV8",
+      "note": "Figma's own walkthrough of the 3D transform beta, posted with its 16 November update: rotate layers on three axes with on-canvas handles, animate flips in Figma Motion, then copy the CSS from Dev Mode or send the design to a coding agent through the MCP server."
+    },
+    {
+      "title": "Humanizing your brand voice",
+      "channel": "NN/g",
+      "id": "VeTx7Sn7sbw",
+      "note": "Posted yesterday: Rachel Krause, who runs NN/g's live training, on matching tone to context, dropping the repeated personality tricks users quickly tire of, and using specific copy to earn trust; timely now that more interface text is drafted by AI and tends to sound the same."
+    }
+  ],
+  "meetups": [
+    {
+      "name": "UX for AI SDLC masterclass",
+      "date": "2026-11-28",
+      "place": "Online",
+      "details": "Saturday · 3 pm IST · 90 minutes · UX for AI Bengaluru group with Nandhakumar V of Dreamworx · free",
+      "url": "https://www.meetup.com/xperiencenowbangalore/events/317252831/"
+    },
+    {
+      "name": "Don't make me prompt! Designing AI experiences people understand, trust and want to use",
+      "date": "2026-12-09",
+      "place": "Online",
+      "details": "Wednesday · 10:30 pm IST · UXPA International webinar on Zoom with Christian Kuhn, head of UX at HAX",
+      "url": "https://uxpa.org/upcoming-webinars/"
+    },
+    {
+      "name": "UX strategy masterclass",
+      "date": "2026-12-11",
+      "place": "Online",
+      "details": "Starts Friday · Smashing workshop with Vitaly Friedman · 3 sessions to 15 Dec · 10:30 pm IST · $400",
+      "url": "https://smashingconf.com/online-workshops/workshops/vitaly-friedman-ux-strategy/"
+    }
+  ],
+  "edition": {
+    "tool": {
+      "name": "Stitch Loop",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-loop/",
+      "what": "Google Labs opened the waitlist for Stitch Loop on 18 November: a long-running product agent that connects to your GitHub repo and live product signals (logs, behaviour, feedback, through 180+ integrations or your own MCP servers), suggests problems, proposes fixes with trade-offs and visual design options, builds them in a sandbox and opens a pull request with screenshots, then keeps watching the metric after the fix ships. It is best at running a standing accessibility or conversion loop on a product that is already live, so design quality keeps improving after handoff instead of decaying.",
+      "meta": "Waitlist, no price yet · web, Google Labs experiment"
+    },
+    "learn": [
+      {
+        "kind": "tool",
+        "title": "Figma's updated auto layout: upgrade old frames before January 2027",
+        "url": "https://help.figma.com/hc/en-us/articles/42031586813719",
+        "intro": "New frames in Figma have used an auto layout version that behaves like CSS flexbox since July, but existing frames stay on the legacy version until you upgrade them, and the option to switch back ends in January 2027. Most files now mix both, and a few rules have changed in ways that move things by a few pixels.",
+        "steps": [
+          "Upgrade in bulk, then check. Pick the new version from the layout version dropdown in a frame's auto layout settings, or open the Actions menu with Cmd/Ctrl+K and run Update layout version for selection or Update layout version for page; Figma previews any visual change before you confirm, and Cmd/Ctrl+Z undoes it.",
+          "Mind the padding floor. A frame can no longer shrink below its total padding, as in CSS border-box: with 30px padding on each side a 50px-wide frame renders at 60px and max width is ignored, so if something grows after upgrading, cut its padding.",
+          "Choose stroke position on purpose. Only inside strokes take up layout space now, like CSS borders; outside and centre strokes draw but don't push spacing, like outlines, and a parent's include strokes setting no longer passes to children, which is why a selected state with a thicker stroke can change size.",
+          "Use grid fr units for truly equal columns. Fill-container siblings now share space by their full box, so a child with more padding or a heavier stroke gets slightly more room; switch the parent to grid flow with fr units when columns must match exactly.",
+          "Expect two spacing changes. Auto gap never drops below zero, so children that don't fit stack from the start instead of overlapping (set a negative gap by hand if you want overlap), and a single child in a Between stack now sits at the start, while Around and Evenly keep it centred."
+        ],
+        "take": "The docs don't tie this to a plan. Instances can't be upgraded on their own, so update the main component and republish the library first. Our advice: before upgrading a big file, search it for single-child stacks with auto gap, mixed stroke positions and frames whose padding equals their size, since those are the ones that shift.",
+        "links": [
+          {
+            "title": "Use auto layout with CSS flexbox in mind",
+            "url": "https://help.figma.com/hc/en-us/articles/42031586813719",
+            "source": "Figma Help Center",
+            "anchor": "Update layout version for selection"
+          },
+          {
+            "title": "Design closer to CSS with the updated auto layout option",
+            "url": "https://forum.figma.com/product-updates-3/design-closer-to-css-with-the-updated-auto-layout-option-56357",
+            "source": "Figma Forum",
+            "anchor": "the option to switch back ends in January 2027"
+          },
+          {
+            "title": "Responsive spacing across design and CSS",
+            "url": "https://forum.figma.com/product-updates-3/responsive-spacing-across-design-and-css-57146",
+            "source": "Figma Forum",
+            "anchor": "Around and Evenly keep it centred"
+          }
+        ]
+      }
+    ]
+  }
+}

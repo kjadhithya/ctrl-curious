@@ -1,0 +1,35 @@
+Ctrl+Curious · Type edition · Wednesday, 25 November 2026 · Issue 030
+View online: https://ctrl-curious.vercel.app/issues/030
+
+Today, in brief
+Canva made its MCP server generally available yesterday and merged overlapping tools so even smaller AI models pick the right one (https://cxotoday.com/media-coverage/building-the-design-layer-of-the-internet-opening-canva-to-every-agent-and-developer/), while Figma's agent is now on every paid plan in FigJam and Slides (https://www.figma.com/blog/introducing-figma-agent-in-figjam-and-slides/), turning boards into specs and specs into on-brand decks; today's brief looks at what designing for an agent as a user actually involves. Going the other way, artist Stuart Semple launched NIVA, a free browser studio with no AI and no templates (https://www.techradar.com/pro/its-not-template-based-like-canva-it-has-no-ai-to-do-it-for-you-a-free-browser-studio-launches-without-subscriptions-or-automated-shortcuts). Tushar Deshmukh argues that one-box AI interfaces hide how much literacy they demand (https://uxmag.com/articles/the-new-illiteracy), with Indian data to back it, and Luke Wroblewski makes the case for throwaway design playgrounds built by coding agents (https://www.lukew.com/ff/2172/design-by-playground) instead of static mockups. And Cal.com's interface cut of its typeface, Cal Sans Text UI, was merged into the Google Fonts library (https://github.com/google/fonts/pull/11432) yesterday.
+
+Read
+Canva opens its design tools to every AI agent and developer: https://cxotoday.com/media-coverage/building-the-design-layer-of-the-internet-opening-canva-to-every-agent-and-developer/
+Figma's agent is now in FigJam and Figma Slides: https://www.figma.com/blog/introducing-figma-agent-in-figjam-and-slides/
+Stuart Semple launches NIVA, a free browser design studio with no AI: https://www.techradar.com/pro/its-not-template-based-like-canva-it-has-no-ai-to-do-it-for-you-a-free-browser-studio-launches-without-subscriptions-or-automated-shortcuts
+The new illiteracy: why simple AI interfaces hide a growing skills gap: https://uxmag.com/articles/the-new-illiteracy
+Design by playground: https://www.lukew.com/ff/2172/design-by-playground
+
+Steal this
+A DESIGN.md starter your coding agent can read: https://designmd.app/what-is-design-md/
+
+10-minute brief
+When an AI agent is the user: designing tools it can pick: https://cxotoday.com/media-coverage/building-the-design-layer-of-the-internet-opening-canva-to-every-agent-and-developer/
+
+Typeface spotlight
+Cal Sans Text UI: https://cal.com/font
+
+Watch
+Diego Zaks: infinite workforce: https://www.youtube.com/watch?v=ShqhPsJ3dLU
+Why "everyone becoming a builder" isn't working: https://www.youtube.com/watch?v=hRtmV1mCBSE
+Dive Radio: design canvas is changing: https://www.youtube.com/watch?v=iV4s7fT3Fzs
+
+Meet up
+The Messy UX Conference 2026 (2026-11-28): https://designshots.org/conference
+Lunchtime coffee and curiosity: who designs the designer? (2026-12-02): https://ixdf.org/meetups/lunchtime-coffee-curiosity-who-designs-the-designer-dec-2nd-2026
+Designing websites that convert, with Paul Boag (2026-12-07): https://smashingconf.com/online-workshops/workshops/converting-websites-paul-boag
+
+That's all for today. Stay curious.
+
+Unsubscribe: https://ctrl-curious.vercel.app/unsubscribe

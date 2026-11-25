@@ -1,0 +1,166 @@
+{
+  "issue": 30,
+  "date": "2026-11-25",
+  "title": "Canva opens its editor to every AI agent, and Figma's agent arrives in FigJam and Slides",
+  "dek": "Canva's agent tools and numbers, Figma's agent in FigJam and Slides, a free AI-free design studio, AI literacy in India, design playgrounds, Cal Sans Text UI, a DESIGN.md starter, a brief on designing tools agents can pick and three events.",
+  "preheader": "Canva rebuilt its tools so AI agents pick the right one. Here is what that means for the products you design.",
+  "hero": "https://ctrl-curious.vercel.app/assets/email/days2/wed/wed_04.jpg",
+  "hero_alt": "A specimen grid of coloured tiles, one Young Serif letter each",
+  "summary": "Canva made its MCP server generally available yesterday and [merged overlapping tools so even smaller AI models pick the right one](https://cxotoday.com/media-coverage/building-the-design-layer-of-the-internet-opening-canva-to-every-agent-and-developer/), while Figma's agent is now [on every paid plan in FigJam and Slides](https://www.figma.com/blog/introducing-figma-agent-in-figjam-and-slides/), turning boards into specs and specs into on-brand decks; today's brief looks at what designing for an agent as a user actually involves. Going the other way, artist Stuart Semple launched [NIVA, a free browser studio with no AI and no templates](https://www.techradar.com/pro/its-not-template-based-like-canva-it-has-no-ai-to-do-it-for-you-a-free-browser-studio-launches-without-subscriptions-or-automated-shortcuts). Tushar Deshmukh argues that [one-box AI interfaces hide how much literacy they demand](https://uxmag.com/articles/the-new-illiteracy), with Indian data to back it, and Luke Wroblewski makes the case for [throwaway design playgrounds built by coding agents](https://www.lukew.com/ff/2172/design-by-playground) instead of static mockups. And Cal.com's interface cut of its typeface, [Cal Sans Text UI, was merged into the Google Fonts library](https://github.com/google/fonts/pull/11432) yesterday.",
+  "reads": [
+    {
+      "title": "Canva opens its design tools to every AI agent and developer",
+      "source": "CXOToday (Canva announcement)",
+      "url": "https://cxotoday.com/media-coverage/building-the-design-layer-of-the-internet-opening-canva-to-every-agent-and-developer/",
+      "note": "Canva MCP is out of waitlist, with tools consolidated so agents choose reliably, plus Magic Layers, resize and the Craft image model over MCP and API; nearly 500,000 MCP sign-ups since October and 4 in 10 new to Canva tell you where design requests are starting to come from."
+    },
+    {
+      "title": "Figma's agent is now in FigJam and Figma Slides",
+      "source": "Figma",
+      "url": "https://www.figma.com/blog/introducing-figma-agent-in-figjam-and-slides/",
+      "note": "Generally available on paid plans from 23 November: the agent pulls material from other tools through connectors, turns a messy FigJam board into a structured Spec and builds a deck from that Spec and your brand template, using AI credits."
+    },
+    {
+      "title": "Stuart Semple launches NIVA, a free browser design studio with no AI",
+      "source": "TechRadar",
+      "url": "https://www.techradar.com/pro/its-not-template-based-like-canva-it-has-no-ai-to-do-it-for-you-a-free-browser-studio-launches-without-subscriptions-or-automated-shortcuts",
+      "note": "Photo editing, vectors and layout in one free tab with no subscription, templates or generative AI; nearly 30,000 people used it in its first 48 hours, and 56% made something within 40 seconds, a useful time-to-first-output benchmark for any creation tool."
+    },
+    {
+      "title": "The new illiteracy: why simple AI interfaces hide a growing skills gap",
+      "source": "UX Magazine · Tushar Deshmukh",
+      "url": "https://uxmag.com/articles/the-new-illiteracy",
+      "note": "With India's 24.7% computer literacy figure and enterprise survey data, it argues for deliberate friction where AI output has consequences and for measuring whether users leave with the right level of trust, not just how fast they finished."
+    },
+    {
+      "title": "Design by playground",
+      "source": "LukeW · Luke Wroblewski",
+      "url": "https://www.lukew.com/ff/2172/design-by-playground",
+      "note": "Coding agents make it cheap to build a one-off tool for a single design question, with real content, live states and timing as sliders, running on the target platform, and the settled values exported as tokens; a method worth trying on your next tricky component."
+    }
+  ],
+  "watch": [
+    {
+      "title": "Diego Zaks: infinite workforce",
+      "channel": "First of Kind",
+      "id": "ShqhPsJ3dLU",
+      "note": "Out yesterday: Ramp's VP of Design on moving his team from AI-built prototypes to AI doing the work, treating what you ship as a new colleague for the customer, and what senior craft means when you manage AI juniors."
+    },
+    {
+      "title": "Why \"everyone becoming a builder\" isn't working",
+      "channel": "Lenny's Podcast",
+      "id": "hRtmV1mCBSE",
+      "note": "Atlassian's Sherif Mansour on the experiment that turned a whole team, designers and PMs included, into AI builders and why it was dropped; useful evidence for anyone arguing that product judgement and shared context still need owners."
+    },
+    {
+      "title": "Dive Radio: design canvas is changing",
+      "channel": "Dive Club",
+      "id": "iV4s7fT3Fzs",
+      "note": "A live show where people building design tools respond to the claim that the canvas is dead; with Figma and Canva both handing more of the canvas to agents this week, skim the chapters for where tool makers are placing their bets."
+    }
+  ],
+  "meetups": [
+    {
+      "name": "The Messy UX Conference 2026",
+      "date": "2026-11-28",
+      "place": "Bengaluru",
+      "details": "Saturday · talks and workshops on real design trade-offs · free",
+      "url": "https://designshots.org/conference"
+    },
+    {
+      "name": "Lunchtime coffee and curiosity: who designs the designer?",
+      "date": "2026-12-02",
+      "place": "Online",
+      "details": "Wednesday · IxDF Brussels · 4:30 to 5:30pm IST on Google Meet · how tools and the people around you shape design thinking · free",
+      "url": "https://ixdf.org/meetups/lunchtime-coffee-curiosity-who-designs-the-designer-dec-2nd-2026"
+    },
+    {
+      "name": "Designing websites that convert, with Paul Boag",
+      "date": "2026-12-07",
+      "place": "Online",
+      "details": "Monday · Smashing online workshop · 10:30pm IST · one four-hour live session · paid",
+      "url": "https://smashingconf.com/online-workshops/workshops/converting-websites-paul-boag"
+    }
+  ],
+  "edition": {
+    "typeface": {
+      "name": "Cal Sans Text UI",
+      "url": "https://cal.com/font",
+      "by": "Mark Davis, WORDMARK, for Cal.com",
+      "get": "Free (OFL) from cal.com/font and npm; just added to Google Fonts",
+      "pair": "Use it for interface text under Cal Sans at display sizes; the two are cuts of one family, so labels and headlines share the same geometry.",
+      "good_for": "Buttons, labels, inputs, dense product UI",
+      "note": "The small-size interface cut of Cal Sans v2, drawn for 10 to 20px with wider spacing and a curved l to tell it apart from I. Its x-height sits at 71.5% of cap height, close to SF Pro and Inter, and its line box is cap-centred, so it can replace those fonts without re-tuning buttons; Google Fonts merged it on 24 November.",
+      "image": "https://ctrl-curious.vercel.app/assets/email/specimens/calsanstextui.jpg"
+    },
+    "learn": [
+      {
+        "kind": "steal",
+        "title": "A DESIGN.md starter your coding agent can read",
+        "url": "https://designmd.app/what-is-design-md/",
+        "intro": "DESIGN.md is Google Labs' open format for handing a design system to AI coding agents: tokens in YAML front matter, rules in plain prose, one file at the root of the repo. This skeleton follows the eight sections of the spec in their required order, so you can fill it in for one product this afternoon.",
+        "file": "DESIGN.md",
+        "code": "---\nname: [Product name]\ncolors:\n  primary: \"[#hex]\"\n  secondary: \"[#hex]\"\n  tertiary: \"[#hex]\"\n  neutral: \"[#hex]\"\ntypography:\n  h1: { fontFamily: [Family], fontSize: [px], fontWeight: [600] }\n  body-md: { fontFamily: [Family], fontSize: [px], lineHeight: [1.5] }\nrounded: { sm: [4px], md: [8px], lg: [16px] }\nspacing: { xs: [4px], sm: [8px], md: [16px], lg: [24px] }\n---\n\n## Overview\n[Two lines on the personality: what it should feel like.]\n\n## Colors\n- [Which colour drives interaction, and where it never appears]\n\n## Typography\n- [Which style for headings, body, labels, numbers]\n\n## Layout\n- [Grid, max widths, spacing rhythm]\n\n## Elevation & Depth\n- [When to use shadow vs. border vs. none]\n\n## Shapes\n- [Corner radius per component type]\n\n## Components\n- Primary button: background {colors.tertiary}, radius {rounded.md}\n\n## Do's and Don'ts\n- Do [one rule an agent keeps breaking]\n- Don't [one pattern you never want generated]",
+        "code_note": "Fill the brackets from your existing tokens, keep each prose rule to one line, and add a Do's and Don'ts line every time an agent gets something wrong. Sections you don't need can be skipped, but keep the order.",
+        "meta": "Free · from the open DESIGN.md spec by Google Labs",
+        "take": "The section order and token references come from the spec as explained on designmd.app; the bracketed prompts are ours. Start with Do's and Don'ts, which is where agents improve fastest.",
+        "links": [
+          {
+            "title": "What is DESIGN.md?",
+            "url": "https://designmd.app/what-is-design-md/",
+            "source": "designmd.app",
+            "anchor": "Google Labs' open format"
+          }
+        ]
+      },
+      {
+        "kind": "brief",
+        "title": "When an AI agent is the user: designing tools it can pick",
+        "url": "https://cxotoday.com/media-coverage/building-the-design-layer-of-the-internet-opening-canva-to-every-agent-and-developer/",
+        "intro": "More design requests now start in a chat with an assistant that calls a product's tools on someone's behalf. That makes the list of tools, their names and what they return an interface in its own right, and this week Canva showed it is worth redesigning.",
+        "define": "An agent-facing surface is the set of actions a product exposes to AI agents (through MCP, an API or a CLI), and it is designed like any interface: the agent has to understand each action, choose it confidently, give it the right inputs and get a predictable result.",
+        "examples_label": "Where it showed up this week",
+        "examples": [
+          {
+            "name": "Canva MCP",
+            "text": "Canva merged overlapping tools so agents, including smaller models, choose with less ambiguity and use less context, and added a tool that turns flat images into editable layers.",
+            "url": "https://cxotoday.com/media-coverage/building-the-design-layer-of-the-internet-opening-canva-to-every-agent-and-developer/"
+          },
+          {
+            "name": "Figma's agent in FigJam and Slides",
+            "text": "Connectors and attachments bring outside material onto the canvas, and the output is a structured Spec or an on-brand deck that people keep editing.",
+            "url": "https://www.figma.com/blog/introducing-figma-agent-in-figjam-and-slides/"
+          },
+          {
+            "name": "DESIGN.md",
+            "text": "Google Labs' open format gives agents a design system in one readable file, so the rules travel with the repo instead of living in someone's head.",
+            "url": "https://designmd.app/what-is-design-md/"
+          }
+        ],
+        "tips": [
+          "Name each tool after the job a person wants done, not after your internal feature name, and merge tools whose descriptions an agent could confuse.",
+          "Return results in an editable, native form with a link back to it, so a person can fix one detail in your product instead of rerunning the whole request.",
+          "Show progress for long jobs and report success only after your system confirms it, never when the request was merely accepted.",
+          "Keep the person's own permissions and plan limits in force for anything an agent does on their behalf, and say plainly when a limit blocked an action.",
+          "Test the surface the way you would test a screen: give a smaller model ten real requests and log which tool it picks and where it guesses."
+        ],
+        "why": "As more requests arrive through assistants, an agent may be the first thing to use your product, and a confusing tool list fails as quietly as a confusing menu; product designers are well placed to own those names, choices and outputs.",
+        "take": "The definition and the first and last tips are our own reading. The tool consolidation comes from Canva's announcement, and the progress, confirmation, edit-link and permission tips follow Canva's developer guidance.",
+        "links": [
+          {
+            "title": "Building the design layer of the internet",
+            "url": "https://cxotoday.com/media-coverage/building-the-design-layer-of-the-internet-opening-canva-to-every-agent-and-developer/",
+            "source": "Canva via CXOToday",
+            "anchor": "Canva showed it is worth redesigning"
+          },
+          {
+            "title": "How to use Canva MCP in your AI application",
+            "url": "https://www.canva.dev/blog/developers/canva-mcp-ga/",
+            "source": "Canva Developers",
+            "anchor": "report success only after your system confirms it"
+          }
+        ]
+      }
+    ]
+  }
+}

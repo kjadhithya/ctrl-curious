@@ -1,0 +1,35 @@
+Ctrl+Curious · Case study edition · Thursday, 26 November 2026 · Issue 031
+View online: https://ctrl-curious.vercel.app/issues/031
+
+Today, in brief
+Framer's agent can now run on a schedule or on every publish and act in Slack, Notion and Ahrefs (https://www.framer.com/updates/automations-connectors-slack), and Figma's agent is now available in Dev Mode (https://help.figma.com/hc/en-us/articles/37998629035799-Work-with-the-Figma-agent-in-design-files), where developers can ask for code snippets and version diffs without touching the file. Apple's iOS 27.3 moves Calendar's search and new-event buttons to the bottom of the screen (https://9to5mac.com/2026/11/25/ios-27-3-introduces-design-changes-for-these-apple-apps/) for one-handed reach, a small change worth copying. Jakob Nielsen argues that AI takes over UX tasks in the order their results can be checked (https://www.uxtigers.com/post/ai-ux-progress-rate), the idea behind today's decision toolkit. And Microsoft's AI studio explains why its Autopilot agent is drawn as a line, not a mascot (https://microsoft.design/articles/the-art-of-playing-a-supporting-role/).
+
+Read
+Framer adds Automations, Connectors and a Slack agent: https://www.framer.com/updates/automations-connectors-slack
+iOS 27.3 moves Calendar's main buttons to the bottom and rebuilds Health's tabs: https://9to5mac.com/2026/11/25/ios-27-3-introduces-design-changes-for-these-apple-apps/
+Figma's agent now works in Dev Mode: https://help.figma.com/hc/en-us/articles/37998629035799-Work-with-the-Figma-agent-in-design-files
+AI masters UX tasks by verifiability: https://www.uxtigers.com/post/ai-ux-progress-rate
+From golden maidens to agentic AI: https://sendfull.substack.com/p/from-golden-maidens-to-agentic-ai
+
+How they work
+Automattic's design writers make the agent ask before it writes: https://automattic.design/2026/11/16/design-writing-working-with-ai-agents/
+
+Decision toolkit
+Hand a design task to AI, or keep a person on it?: https://www.uxtigers.com/post/ai-ux-progress-rate
+
+Case study
+The art of playing a supporting role: https://microsoft.design/articles/the-art-of-playing-a-supporting-role/
+
+Watch
+Your website can do more: Framer Automations and Connectors: https://www.youtube.com/watch?v=05Os8Cqr7Ic
+Figma Weave office hours: build scalable ad campaigns with AI workflows: https://www.youtube.com/watch?v=n8BDO-NXUXs
+Introducing Stitch Loop: https://www.youtube.com/watch?v=9guiyLXtEzc
+
+Meet up
+The Messy UX Conference 2026 (2026-11-28): https://designshots.org/conference
+Asia Connect 2.0 (2026-11-29): https://ixdf.org/meetups/asia-connect-2-0-nov-29th-2026
+AI as a design thought partner: beyond prompting (2026-12-04): https://ixdf.org/meetups/ai-as-a-design-thought-partner-beyond-prompting-dec-3rd-2026
+
+That's all for today. Stay curious.
+
+Unsubscribe: https://ctrl-curious.vercel.app/unsubscribe

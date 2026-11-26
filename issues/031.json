@@ -1,0 +1,169 @@
+{
+  "issue": 31,
+  "date": "2026-11-26",
+  "title": "Framer's agent now runs on its own, and Figma's agent moves into Dev Mode",
+  "dek": "Framer Automations and Connectors, Figma's agent in Dev Mode, iOS 27.3's thumb-friendly Calendar, Nielsen's verification ladder, think-with AI, Microsoft's Autopilot characters, Automattic's AI writing skills, a decision toolkit and three events.",
+  "preheader": "Framer's agent now works on a schedule, Figma's reaches Dev Mode, and Microsoft draws its AI as a line.",
+  "hero": "https://ctrl-curious.vercel.app/assets/email/days2/thu/thu_10.jpg",
+  "hero_alt": "Triangle mountains, a circle sun and pill-shaped swell, a teammate’s cursor selecting them",
+  "summary": "Framer's agent can now [run on a schedule or on every publish and act in Slack, Notion and Ahrefs](https://www.framer.com/updates/automations-connectors-slack), and Figma's agent is now [available in Dev Mode](https://help.figma.com/hc/en-us/articles/37998629035799-Work-with-the-Figma-agent-in-design-files), where developers can ask for code snippets and version diffs without touching the file. Apple's iOS 27.3 [moves Calendar's search and new-event buttons to the bottom of the screen](https://9to5mac.com/2026/11/25/ios-27-3-introduces-design-changes-for-these-apple-apps/) for one-handed reach, a small change worth copying. Jakob Nielsen argues that [AI takes over UX tasks in the order their results can be checked](https://www.uxtigers.com/post/ai-ux-progress-rate), the idea behind today's decision toolkit. And Microsoft's AI studio explains why [its Autopilot agent is drawn as a line, not a mascot](https://microsoft.design/articles/the-art-of-playing-a-supporting-role/).",
+  "reads": [
+    {
+      "title": "Framer adds Automations, Connectors and a Slack agent",
+      "source": "Framer",
+      "url": "https://www.framer.com/updates/automations-connectors-slack",
+      "note": "Out 24 November: agent workflows that run on a schedule or on events like publishing or a form submission (an SEO audit on every publish, a daily analytics brief), connectors that let the agent read and act in Slack, Notion and Ahrefs, and an @Framer Slack app for quick edits; you choose which tools the agent may use and can review every past run."
+    },
+    {
+      "title": "iOS 27.3 moves Calendar's main buttons to the bottom and rebuilds Health's tabs",
+      "source": "9to5Mac",
+      "url": "https://9to5mac.com/2026/11/25/ios-27-3-introduces-design-changes-for-these-apple-apps/",
+      "note": "Search and new event drop from the top right to the bottom for one-handed reach, the Today button now shows the date, Health gets Insights, Longevity and Browse tabs, and Safari adds optional vertical tabs; a useful set of platform precedents if you are arguing for bottom-placed primary actions."
+    },
+    {
+      "title": "Figma's agent now works in Dev Mode",
+      "source": "Figma Help Center",
+      "url": "https://help.figma.com/hc/en-us/articles/37998629035799-Work-with-the-Figma-agent-in-design-files",
+      "note": "Rolled out last week: developers on Dev seats can ask which existing variables a layer should use, request a flexbox, grid or React snippet and compare component versions as a visual diff or a list of changes, all without editing the file; it is not on Starter or for View and Collab seats."
+    },
+    {
+      "title": "AI masters UX tasks by verifiability",
+      "source": "UX Tigers · Jakob Nielsen",
+      "url": "https://www.uxtigers.com/post/ai-ux-progress-rate",
+      "note": "Nielsen grades last year's forecasts against new studies (AI-moderated interviews at about a fifth of the cost, top models matching human designers on briefs but scoring far lower on distinctiveness) and ranks UX tasks by how quickly a result can be judged; a practical map of what to hand over first."
+    },
+    {
+      "title": "From golden maidens to agentic AI",
+      "source": "Sendfull · Stef Hutka",
+      "url": "https://sendfull.substack.com/p/from-golden-maidens-to-agentic-ai",
+      "note": "The opening of her new book on human-centred automation: the design question is whether an AI feature thinks with users or for them, and the gap between full-automation ambitions and what teams and customers are ready for is where most AI features go wrong."
+    }
+  ],
+  "watch": [
+    {
+      "title": "Your website can do more: Framer Automations and Connectors",
+      "channel": "Framer",
+      "id": "05Os8Cqr7Ic",
+      "note": "Published with Tuesday's launch: the agent pulls context from Notion, Ahrefs, Google Analytics, BigQuery and Slack and acts in them from inside Framer; watch it before you set up your first scheduled site audit."
+    },
+    {
+      "title": "Figma Weave office hours: build scalable ad campaigns with AI workflows",
+      "channel": "Figma Weave",
+      "id": "n8BDO-NXUXs",
+      "note": "Posted 20 November: a master prompt, product references and variables wired together on the Weave canvas, turned into a reusable tool and sent back to Figma; the practical one if you are asked for campaign variants at volume."
+    },
+    {
+      "title": "Introducing Stitch Loop",
+      "channel": "Google Labs",
+      "id": "9guiyLXtEzc",
+      "note": "Google Labs' experimental product agent that keeps working toward a live product's numbers after launch; a short look at the kind of agent that will soon be reading your designs and proposing changes, and a good companion to Nielsen's piece on which tasks AI can check."
+    }
+  ],
+  "meetups": [
+    {
+      "name": "The Messy UX Conference 2026",
+      "date": "2026-11-28",
+      "place": "Bengaluru",
+      "details": "Saturday · in-person UX conference · 13 practitioners on real design trade-offs",
+      "url": "https://designshots.org/conference"
+    },
+    {
+      "name": "Asia Connect 2.0",
+      "date": "2026-11-29",
+      "place": "Online",
+      "details": "Sunday · IxDF, all groups in Asia · 6:30 to 8:30pm IST",
+      "url": "https://ixdf.org/meetups/asia-connect-2-0-nov-29th-2026"
+    },
+    {
+      "name": "AI as a design thought partner: beyond prompting",
+      "date": "2026-12-04",
+      "place": "Online",
+      "details": "Friday · IxDF Knoxville · 6:30 to 7:30am IST",
+      "url": "https://ixdf.org/meetups/ai-as-a-design-thought-partner-beyond-prompting-dec-3rd-2026"
+    }
+  ],
+  "edition": {
+    "case": {
+      "title": "The art of playing a supporting role",
+      "url": "https://microsoft.design/articles/the-art-of-playing-a-supporting-role/",
+      "studio": "Microsoft AI's AIX Creative Studio: Jeff Gipson, with illustrator Chi Michalski",
+      "client": "Microsoft Autopilot",
+      "note": "Autopilot, the agent Microsoft introduced in September, needed character and motion design that helps people understand and direct what it does, but an open-ended AI can't be scripted like an animated film. Jeff Gipson, a former Disney Animation writer and director, borrowed timing and anticipation only where they do a job (showing progress, acknowledging input, flagging an error) and kept the agent from competing for attention. The decision that made it work was dropping a single mascot for a flexible visual language built from a line, which can become illustrations of thinking, searching or sending and show state without implying feelings, so the person, not the AI, stays the main character."
+    },
+    "learn": [
+      {
+        "kind": "people",
+        "title": "Automattic's design writers make the agent ask before it writes",
+        "url": "https://automattic.design/2026/11/16/design-writing-working-with-ai-agents/",
+        "person": {
+          "name": "Automattic design writing team",
+          "role": "Automattic Design · write-up by Michael Pick",
+          "initials": "AD"
+        },
+        "intro": "In a month, Automattic's design writing team turned research on the tells of AI writing into two installable agent skills, one for interface copy and one for voiceover scripts. How they built them is a set of habits any team can copy for its own UX copy.",
+        "steps": [
+          "Make the agent ask about audience, voice and constraints before it writes, and give it a short brand file distilled from real copy examples, which carry more voice than a list of adjectives.",
+          "Pair a deterministic linter (47 banned words and 33 banned patterns) with human review of the judgement calls it flags, around three rules: no parroting, no repeated sentence structures, and no concrete verbs on abstract ideas.",
+          "Give every ban list a named owner, date each brand file and re-distil it when the source guide changes, and keep product claims verbatim so the agent can never turn them into bigger promises."
+        ],
+        "source_line": "From Automattic Design's write-up · our takeaways",
+        "take": "Start with the brand file: pick ten lines of copy you are proud of and ten you would never ship, and you have most of what the agent needs. The skills are internal for now, so the steps are ours, drawn from the post.",
+        "links": [
+          {
+            "title": "Design writing: working with AI agents",
+            "url": "https://automattic.design/2026/11/16/design-writing-working-with-ai-agents/",
+            "source": "Automattic Design",
+            "anchor": "two installable agent skills"
+          }
+        ]
+      },
+      {
+        "kind": "decision",
+        "title": "Hand a design task to AI, or keep a person on it?",
+        "url": "https://www.uxtigers.com/post/ai-ux-progress-rate",
+        "intro": "Jakob Nielsen's new verification ladder ranks UX tasks by how fast a verdict arrives: rules first, then experts, then users, then the market. Stef Hutka adds a second test: whether the feature should think with people or for them.",
+        "columns": [
+          {
+            "label": "Hand it to AI when",
+            "items": [
+              "A rule or checklist can judge the result in minutes, as with contrast, spacing or naming",
+              "You want many divergent options and will spend your user-testing time choosing between them",
+              "Your guidelines are written down, which moves the task up the ladder"
+            ]
+          },
+          {
+            "label": "Keep a person on it when",
+            "items": [
+              "The only real verdict comes from users or the market, months later",
+              "Doing the work is how you build the judgement, as with synthesis and critique",
+              "The task decides what is worth doing or gets the team aligned"
+            ]
+          }
+        ],
+        "examples": [
+          {
+            "name": "Baymard UX-Ray",
+            "text": "Reports 95% agreement with human auditors across 346 heuristics because it is built on human-mapped data, while a general model doing open heuristic evaluation reached only slight agreement with experts.",
+            "url": "https://www.uxtigers.com/post/ai-ux-progress-rate"
+          }
+        ],
+        "rule": "If you can't say how, and how quickly, the output will be judged, keep a person on it.",
+        "take": "The columns are our reading of Nielsen's ladder and advice; the think-with test comes from Hutka's book introduction.",
+        "links": [
+          {
+            "title": "AI masters UX tasks by verifiability",
+            "url": "https://www.uxtigers.com/post/ai-ux-progress-rate",
+            "source": "UX Tigers",
+            "anchor": "verification ladder"
+          },
+          {
+            "title": "From golden maidens to agentic AI",
+            "url": "https://sendfull.substack.com/p/from-golden-maidens-to-agentic-ai",
+            "source": "Sendfull",
+            "anchor": "think with people or for them"
+          }
+        ]
+      }
+    ]
+  }
+}

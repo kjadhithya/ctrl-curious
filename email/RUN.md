@@ -10,7 +10,7 @@ The daily run fills `email/template.html` and sends it with Resend.
 | `{{ISSUE}}` | three digits, e.g. `002` (see numbering below) |
 | `{{PREHEADER}}` | one plain line under 110 characters teasing today's issue |
 | `{{HERO_URL}}` | today's hero image URL (see Hero image below) |
-| `{{SUMMARY_HTML}}` | 3–4 sentence paragraph; every claim is a link (format below) |
+| `{{SUMMARY_HTML}}` | 2–3 short sentences (55 words at most); every claim is a link (format below) |
 | `{{READ_ROWS}}` | 5 read rows (format below) |
 | `{{WATCH_ROWS}}` | 3 watch rows (format below) |
 | `{{UNSUB_URL}}` | `https://ctrl-curious.vercel.app/unsubscribe` in the copy sent to the editor; `https://ctrl-curious.vercel.app/unsubscribe?e=` plus the subscriber's percent-encoded email in each subscriber's copy |
@@ -90,6 +90,18 @@ What each one is, and the fields it uses (every item needs `kind`, `title`, `url
 - Never invent a story, video, event, date, venue or price. If a detail is unknown, leave it out.
 - Escape `&` as `&amp;` in text, and use the real `https://` link for every item.
 - Summaries are your own words. Never quote more than a few words from a source.
+
+## Keep it scannable
+
+The editor's rule: designers should get the idea of every item at a glance. Write the least that gets the idea across. No long paragraphs, no stacked stats, no semicolon chains, no "plus X, Y and Z" lists inside a note.
+
+- Read and Watch notes: one short sentence, 16 words at most (aim for 10 to 14). Say the one takeaway: what changed, or what the reader can do with it. Leave out numbers unless the number is the story. The source or channel already shows before the note, so don't repeat it.
+  - Too long: "Canva MCP is out of waitlist, with tools consolidated so agents choose reliably, plus Magic Layers, resize and the Craft image model over MCP and API; nearly 500,000 sign-ups since October."
+  - Right: "Canva's MCP is open to all, so AI agents can now design in Canva."
+- Today, in brief: 2 or 3 short sentences, 55 words at most.
+- Headline under about 70 characters; dek 18 words at most.
+- Edition and practical sections: every text field is one short sentence (about 20 words at most); each step, tip, change or list item is a short line (about 12 words at most). Use the lower end of every count range (3 steps, 3 tips, 3 changes) unless a fourth adds something essential.
+- The builder prints a warning when a summary, dek or note runs long. Shorten it and build again before sending.
 
 ## Who it's for and what every item must do
 

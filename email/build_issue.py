@@ -14,6 +14,16 @@ issue = json.loads(pathlib.Path(sys.argv[1]).read_text())
 out = pathlib.Path(sys.argv[2])
 hero = sys.argv[3] if len(sys.argv) > 3 else issue.get('hero')
 
+# Scannability check (see "Keep it scannable" in RUN.md): warn, never block.
+def _words(s):
+    return len(re.sub(r'\]\([^)]*\)', ']', s or '').split())
+_limits = [('summary', issue.get('summary'), 55), ('dek', issue.get('dek'), 18)]
+_limits += [(f"reads[{i}].note", r.get('note'), 16) for i, r in enumerate(issue.get('reads', []))]
+_limits += [(f"watch[{i}].note", w.get('note'), 16) for i, w in enumerate(issue.get('watch', []))]
+for _name, _text, _max in _limits:
+    if _text and _words(_text) > _max:
+        print(f'warning: {_name} is {_words(_text)} words; keep it to {_max} or fewer (Keep it scannable in RUN.md)')
+
 def block(title):
     return re.search(r'## ' + re.escape(title) + r'.*?```html\n(.*?)\n```', run, re.S).group(1)
 

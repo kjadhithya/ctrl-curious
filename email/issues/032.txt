@@ -1,0 +1,36 @@
+Ctrl+Curious · Weekend edition · Friday, 27 November 2026 · Issue 032
+View online: https://ctrl-curious.vercel.app/issues/032
+
+Today, in brief
+Claude can now turn an artifact into a Mac or Windows app (https://claude.com/resources/articles/install-as-app) that uses your connectors. Matt Ström-Awn makes the case for prototyping on a branch of production (https://mattstromawn.com/writing/mirror-mode/). And Android Auto moves app tabs into a sidebar on wide screens (https://9to5google.com/2026/11/25/android-auto-wide-display-update/).
+
+Read
+Turn artifacts into Mac and Windows apps: https://claude.com/resources/articles/install-as-app
+Mirror mode: designing beside production: https://mattstromawn.com/writing/mirror-mode/
+Futures thinking as an everyday design practice: https://uxdesign.cc/futures-thinking-as-an-everyday-design-practice-465146ee6db8
+Android Auto moves app tabs to a sidebar on wide screens: https://9to5google.com/2026/11/25/android-auto-wide-display-update/
+Google Maps tests an optional high-visibility map style: https://9to5google.com/2026/11/24/google-maps-new-colors-high-visibility/
+
+Power-up
+Interfaces gives your coding agent exact values for motion, type and colour: https://github.com/jakubkrehel/skills
+
+Inspiration shelf
+Posters that sell Portsmouth instead of the festival's headliners (Wildish & Co., for Victorious Festival): https://www.creativeboom.com/news/why-victorious-festival-stopped-selling-its-headliners-and-started-selling-portsmouth/
+A type-led WebGL site for an AI penetration-testing company (Bürocratik, for Ethiack): https://ethiack.com/
+Swipes, long presses and roomier menus when you use Things by touch on a Mac (Cultured Code, Things 3.25): https://culturedcode.com/things/blog/2026/11/things-for-touch-macs/
+
+Weekend watchlist
+Noam Segal: the next big trend in AI research: https://www.youtube.com/watch?v=0JgzsNTCpuU
+Product design engineering with David Eisner: AI and design systems jam session: https://www.youtube.com/watch?v=Jr6MEu3QtbY
+Prototyping for the unknown: design tokens with AI: https://www.youtube.com/watch?v=lxzZ2Gbbg6k
+View Source: from prompt to published: https://www.youtube.com/watch?v=86m1y-Ku6Y8
+Designer breaks down how movie posters manipulate your attention: https://www.youtube.com/watch?v=_BBJl6LwHlU
+
+Meet up
+The Messy UX Conference 2026 (2026-11-28): https://designshots.org/conference
+AI-ready design systems for designers (2026-11-30): https://smashingconf.com/online-workshops/workshops/ai-designsystems-figma-christine-vallaure
+Design for a better world: free watch party (2026-12-08): https://ixdf.org/meetups/design-for-a-better-world-free-watch-party-dec-8th-2026
+
+That's all for today. Stay curious.
+
+Unsubscribe: https://ctrl-curious.vercel.app/unsubscribe
